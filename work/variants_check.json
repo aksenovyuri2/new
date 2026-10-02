@@ -1,0 +1,336 @@
+{
+ "q1.1": {
+  "uncovered": [],
+  "skipped_with_links": [
+   "R2-0026",
+   "R2-0027",
+   "R3-0018",
+   "R3-0019",
+   "R3-0022"
+  ],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "Baek, Chen, Ma, Mitrofanov",
+    [
+     "603153",
+     "603153"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "q1.2": {
+  "uncovered": [],
+  "skipped_with_links": [
+   "R3-0036"
+  ],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q1.3": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q1.4": {
+  "uncovered": [],
+  "skipped_with_links": [
+   "R3-0049"
+  ],
+  "missing_companies": [
+   "Medium",
+   "Pinterest"
+  ],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q2.1": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "Gojek",
+    [
+     "32",
+     "10",
+     "10",
+     "0.81",
+     "922",
+     "32",
+     "10"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "q2.2": {
+  "uncovered": [],
+  "skipped_with_links": [
+   "R3-0067"
+  ],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "ShareChat, Aampe, Simulacra (SIGIR 2026)",
+    [
+     "91",
+     "99.9",
+     "95.2",
+     "99.99",
+     "99.995",
+     "99.7",
+     "91",
+     "95.2",
+     "99.7"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "q2.3": {
+  "uncovered": [
+   "R2-0167",
+   "R2-0168"
+  ],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": [
+   [
+    "CRM Knowledge Base",
+    [
+     "R2-0191"
+    ]
+   ],
+   [
+    "Pedro Monjo",
+    [
+     "R2-0191"
+    ]
+   ],
+   [
+    "Zyabkina",
+    [
+     "R2-0191"
+    ]
+   ]
+  ]
+ },
+ "q2.4": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q3.1": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q3.2": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q3.3": {
+  "uncovered": [
+   "R2-0246",
+   "R2-0247",
+   "R2-0248",
+   "R3-0119"
+  ],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "q4.1": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "Vyberu",
+    [
+     "50"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "q4.2": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "СИНТЕЗ ОТЧЁТА: первичный эффект",
+    [
+     "3.7",
+     "5.7",
+     "3.7",
+     "5.7"
+    ]
+   ],
+   [
+    "Магнит Доставка",
+    [
+     "1.5",
+     "9.2021",
+     "10.2022",
+     "1.5"
+    ]
+   ],
+   [
+    "Inventive (опоры)",
+    [
+     "460",
+     "460"
+    ]
+   ],
+   [
+    "Loblaw (опоры)",
+    [
+     "70",
+     "70"
+    ]
+   ],
+   [
+    "MoneyHero (опоры)",
+    [
+     "90",
+     "60",
+     "90",
+     "60"
+    ]
+   ],
+   [
+    "Scribd (опоры)",
+    [
+     "10",
+     "11",
+     "10",
+     "11"
+    ]
+   ],
+   [
+    "Vyberu (опоры)",
+    [
+     "250",
+     "50",
+     "250",
+     "50"
+    ]
+   ],
+   [
+    "Лента (опоры)",
+    [
+     "2019"
+    ]
+   ],
+   [
+    "РСХБ (опоры)",
+    [
+     "50",
+     "50"
+    ]
+   ],
+   [
+    "Хлынов (опоры)",
+    [
+     "25",
+     "25"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "q4.3": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "Московское областное УФАС (сводка Совета по рекламе 29.09.2025)",
+    [
+     "000",
+     "000",
+     "000",
+     "000",
+     "000",
+     "000",
+     "000"
+    ]
+   ],
+   [
+    "СИНТЕЗ ОТЧЁТА (шаг 7): Поправки к прошлым отчётам",
+    [
+     "000",
+     "000",
+     "000",
+     "000",
+     "000",
+     "000"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "r1_b1": {
+  "uncovered": [
+   "R1-0017"
+  ],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "МегаФон: платформа MegaRITM",
+    [
+     "1500",
+     "1500"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "r1_b2": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ },
+ "r1_b3": {
+  "uncovered": [],
+  "skipped_with_links": [],
+  "missing_companies": [],
+  "bad_numbers": [
+   [
+    "Instacart (кампании и шаблоны)",
+    [
+     "350"
+    ]
+   ]
+  ],
+  "bad_ids": []
+ },
+ "r1_b4": {
+  "uncovered": [],
+  "skipped_with_links": [
+   "R1-0104"
+  ],
+  "missing_companies": [],
+  "bad_numbers": [],
+  "bad_ids": []
+ }
+}

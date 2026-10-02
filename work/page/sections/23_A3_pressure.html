@@ -1,0 +1,155 @@
+<!-- tab: asis -->
+<article class="scheme" id="s-a3">
+  <header>
+    <p class="code"><span>Схема А3</span><span class="core">★ ядро</span><span>Как есть · масштаб проблемы</span></p>
+    <h2>Давление сосредоточено на немногих, и круг разгоняет сам себя</h2>
+    <p class="sub">В среднем человек получает {{sends_per_wau|num1}} сообщения в неделю, и это выглядит безобидно. Но нагрузка распределена неровно, а каждая новая отправка ухудшает канал, в который шлют.</p>
+  </header>
+
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 470" role="img" aria-label="Замкнутый круг: команды шлют больше, давление растёт, люди отписываются, каналы работают хуже, и чтобы выполнить план, команды шлют ещё. Круг подпитывают локальные планы и отчёты, которые завышают эффект.">
+        <defs>
+          <marker id="a3-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-bad"/></marker>
+          <marker id="a3-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-m"/></marker>
+        </defs>
+        <text x="20" y="28" class="t-h">ЧТО ПОДПИТЫВАЕТ</text>
+        <text x="330" y="28" class="t-h">САМ КРУГ</text>
+
+        <!-- топливо -->
+        <rect x="20" y="50" width="240" height="90" rx="10" class="b-task"/>
+        <text x="36" y="80" class="t-b">Локальные планы</text>
+        <text x="36" y="102" class="t-s">каждая команда выполняет</text>
+        <text x="36" y="120" class="t-s">свой показатель</text>
+
+        <rect x="20" y="170" width="240" height="118" rx="10" class="b-task"/>
+        <text x="36" y="200" class="t-b">Отчёты завышают эффект</text>
+        <text x="36" y="222" class="t-s">{{already_active|%}} действий совершают те,</text>
+        <text x="36" y="240" class="t-s">кто и так был активен;</text>
+        <text x="36" y="258" class="t-s">у {{no_control|%}} кампаний нет контроля</text>
+
+        <path d="M260 95 H322" class="ln-m" marker-end="url(#a3-m)"/>
+        <path d="M260 230 H352 V148" class="ln-m" marker-end="url(#a3-m)"/>
+        <text x="270" y="250" class="t-s">кажется,</text>
+        <text x="270" y="266" class="t-s">что работает</text>
+        <!-- где платформа рвёт круг -->
+        <path d="M284 86 l14 18 M298 86 l-14 18" class="ln-prop"/>
+        <path d="M284 221 l14 18 M298 221 l-14 18" class="ln-prop"/>
+
+        <!-- круг -->
+        <rect x="330" y="50" width="250" height="90" rx="10" class="b-task"/>
+        <text x="346" y="80" class="t-b">Команды шлют больше</text>
+        <text x="346" y="104" class="t-n f-task">{{sends_week|млн}} млн</text>
+        <text x="346" y="124" class="t-s">отправок в неделю</text>
+
+        <rect x="690" y="50" width="250" height="90" rx="10" class="b-task"/>
+        <text x="706" y="80" class="t-b">Давление на человека</text>
+        <text x="706" y="104" class="t-n f-task">{{heavy_promo|%}}</text>
+        <text x="706" y="124" class="t-s">получают 3+ промо в сутки</text>
+
+        <rect x="690" y="300" width="250" height="90" rx="10" class="b-task"/>
+        <text x="706" y="330" class="t-b">Отписки и привычка не замечать</text>
+        <text x="706" y="354" class="t-n f-task">{{push_optout|%}}</text>
+        <text x="706" y="374" class="t-s">отписок на каждый пуш</text>
+
+        <rect x="330" y="300" width="250" height="90" rx="10" class="b-task"/>
+        <text x="346" y="330" class="t-b">Каналы работают хуже</text>
+        <text x="346" y="354" class="t-n f-task">CTR {{ctr|%}}</text>
+        <text x="346" y="374" class="t-s">{{per_1000_no_click|num0}} из 1000 отправок без клика</text>
+
+        <path d="M580 95 H682" class="ln-bad" marker-end="url(#a3-bad)"/>
+        <text x="635" y="80" text-anchor="middle" class="t-s">каждому</text>
+        <text x="635" y="122" text-anchor="middle" class="t-s">больше</text>
+        <path d="M815 140 V292" class="ln-bad" marker-end="url(#a3-bad)"/>
+        <text x="827" y="222" class="t-s">люди устают</text>
+        <path d="M690 345 H588" class="ln-bad" marker-end="url(#a3-bad)"/>
+        <text x="635" y="330" text-anchor="middle" class="t-s">охват и</text>
+        <text x="635" y="372" text-anchor="middle" class="t-s">отклик падают</text>
+        <path d="M470 300 V148" class="ln-bad" marker-end="url(#a3-bad)"/>
+        <text x="482" y="216" class="t-s">чтобы выполнить план,</text>
+        <text x="482" y="234" class="t-s">шлют ещё</text>
+
+        <path d="M22 427 l14 18 M36 427 l-14 18" class="ln-prop"/>
+        <text x="48" y="441" class="t-s f-prop">здесь платформа рвёт круг: общая мера вместо локальных планов и замер прироста вместо отчётов по кликам</text>
+      </svg>
+    </div>
+    <figcaption>Красные стрелки — сам круг. Серые — то, что его питает. Пока на месте локальные планы и завышенные отчёты, просьба «слать меньше» не сработает: у каждой команды есть причина слать больше.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 250" role="img" aria-label="Среднее полтора сообщения в неделю скрывает неравномерность: четырнадцать процентов получателей за сутки забирают не меньше трети суточного объёма отправок.">
+        <text x="20" y="28" class="t-h">В СРЕДНЕМ</text>
+        <text x="20" y="96" class="t-b f-task" style="font-size:56px">{{sends_per_wau|num1}}</text>
+        <text x="20" y="124" class="t-s">сообщения на человека</text>
+        <text x="20" y="142" class="t-s">в неделю:</text>
+        <text x="20" y="160" class="t-s">{{sends_week|млн}} млн отправок на {{wau|млн}} млн человек</text>
+
+        <text x="330" y="28" class="t-h">НА САМОМ ДЕЛЕ, ЗА ОДНИ СУТКИ</text>
+        <text x="330" y="62" class="t-b">Получатели</text>
+        <text x="930" y="62" text-anchor="end" class="t-s">не больше {{recipients_day_max|млн}} млн человек</text>
+        <rect x="330" y="72" width="84" height="34" class="fill-bad"/>
+        <rect x="414" y="72" width="516" height="34" class="fill-muted"/>
+        <text x="338" y="94" class="t-b t-on">{{heavy_promo|%}}</text>
+        <text x="426" y="94" class="t-s t-i">{{heavy_rest|%}} получают одно-два сообщения</text>
+
+        <path d="M330 106 L330 152 M414 106 L527 152" class="ln-m" stroke-dasharray="4 4"/>
+
+        <text x="540" y="142" class="t-b">Отправки</text>
+        <text x="930" y="142" text-anchor="end" class="t-s">{{sends_day|млн}} млн в сутки</text>
+        <rect x="330" y="152" width="197" height="34" class="fill-bad"/>
+        <rect x="527" y="152" width="403" height="34" class="fill-muted"/>
+        <text x="338" y="174" class="t-b t-on">минимум {{heavy_volume_share_min|%0}} объёма</text>
+        <text x="330" y="212" class="t-s f-assume">Расчёт при допущении: 14% считаются от получателей за сутки,</text>
+        <text x="330" y="230" class="t-s f-assume">а остальные получают минимум по одному сообщению</text>
+      </svg>
+    </div>
+    <figcaption>Красная часть верхней полосы — люди с тремя и более промо в сутки. Красная часть нижней — доля всех отправок, которая на них приходится. Лимит на человека бьёт именно по этой части объёма.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="draw">
+      <svg class="narrow" viewBox="0 0 720 330" role="img" aria-label="Доля отписавшихся от пушей растёт с каждой отправкой: около семи процентов после тридцати пушей и около двадцати процентов после девяноста.">
+        <g class="grid">
+          <path d="M70 270 H650 M70 224 H650 M70 178 H650 M70 132 H650 M70 86 H650 M70 40 H650"/>
+        </g>
+        <g text-anchor="end">
+          <text x="60" y="274" class="t-s">0%</text><text x="60" y="228" class="t-s">5%</text><text x="60" y="182" class="t-s">10%</text>
+          <text x="60" y="136" class="t-s">15%</text><text x="60" y="90" class="t-s">20%</text><text x="60" y="44" class="t-s">25%</text>
+        </g>
+        <g text-anchor="middle">
+          <text x="70" y="292" class="t-s">0</text><text x="263" y="292" class="t-s">30</text><text x="457" y="292" class="t-s">60</text><text x="650" y="292" class="t-s">90</text>
+          <text x="360" y="316" class="t-s">пушей одному человеку</text>
+        </g>
+        <polyline class="ln-task" points="70.0,270.0 89.3,263.1 108.7,256.3 128.0,249.5 147.3,242.8 166.7,236.1 186.0,229.5 205.3,222.9 224.7,216.4 244.0,209.9 263.3,203.4 282.7,197.1 302.0,190.7 321.3,184.4 340.7,178.2 360.0,172.0 379.3,165.8 398.7,159.7 418.0,153.7 437.3,147.7 456.7,141.7 476.0,135.8 495.3,129.9 514.7,124.1 534.0,118.3 553.3,112.5 572.7,106.8 592.0,101.2 611.3,95.5 630.7,90.0 650.0,84.4"/>
+        <circle cx="205.3" cy="222.9" r="5" class="fill-task"/>
+        <circle cx="263.3" cy="203.4" r="5" class="fill-task"/>
+        <circle cx="650" cy="84.4" r="5" class="fill-task"/>
+        <text x="216" y="246" class="t-s t-i">неделя по 3 пуша в день: {{optout_after_21|%1}}</text>
+        <text x="254" y="192" text-anchor="end" class="t-s t-i">месяц по 1 в день: {{optout_after_30|%1}}</text>
+        <text x="640" y="70" text-anchor="end" class="t-b">месяц по 3 в день: {{optout_after_90|%1}}</text>
+      </svg>
+    </div>
+    <figcaption>Отписка {{push_optout|%}} на отправку кажется мелочью, но она копится: доля оставшихся равна 0,9975 в степени числа пушей. Допущение: шанс отписки одинаков на каждой отправке. В жизни он растёт с усталостью, так что оценка скорее занижена.</figcaption>
+  </figure>
+
+  <div class="answer">
+    <h3>Что из этого следует</h3>
+    <ul>
+      <li>Проблема не в среднем объёме, а в хвосте: {{heavy_promo|%}} получателей за сутки забирают минимум {{heavy_volume_share_min|%0}} отправок.</li>
+      <li>У этого хвоста пуш-канал выгорает быстро: при трёх пушах в день за месяц отписывается каждый пятый.</li>
+      <li>Отписка закрывает канал для всех команд сразу, а платит за неё не тот, кто отправил последним.</li>
+      <li>Круг не разорвать уговорами. Нужны общая мера вместо локальных планов и замер прироста вместо отчётов по кликам.</li>
+    </ul>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> 12 млн отправок в неделю, 8 млн человек в неделю, 14%, CTR 3,2%, отписка 0,25%, 60%, 30%.</li>
+      <li><span class="mark assume">Допущение</span> 14% считаются от получателей за сутки. От недельной аудитории быть не может: понадобилось бы {{heavy_need_if_wau|млн1}} млн отправок в неделю, а их {{sends_week|млн}} млн.</li>
+      <li><span class="mark assume">Допущение</span> Шанс отписки одинаков на каждой отправке.</li>
+      <li><span class="mark prop">Предложение</span> Два места разрыва круга. Подробно — во вкладках «1. Решения» и «2. Метрики».</li>
+    </ul>
+  </div>
+</article>

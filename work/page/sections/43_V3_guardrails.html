@@ -1,0 +1,72 @@
+<!-- tab: b2 -->
+<article class="scheme" id="s-v3">
+  <header>
+    <p class="code"><span>Схема В3</span><span class="core">★ ядро</span><span>Вопрос 2.3 · защитные метрики</span></p>
+    <h2>У каждой защитной метрики есть порог и действие, которое срабатывает само</h2>
+    <p class="sub">Защитная метрика без порога и без автоматической остановки ничего не защищает. Изменение принимается, только если ни одна защитная метрика не стала хуже допуска.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 220" role="img" aria-label="Правило решения: если хотя бы одна защитная метрика хуже допуска, сценарий останавливается. Если все в норме, но ни одна целевая метрика не выросла, изменение не раскатывается. Если все в норме и целевая выросла, изменение принимается.">
+        <defs>
+          <marker id="v3-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+        </defs>
+        <rect x="20" y="66" width="170" height="76" rx="10" class="box"/>
+        <text x="34" y="98" class="t-b">Сценарий или</text>
+        <text x="34" y="116" class="t-b">новое правило</text>
+        <path d="M190 104 H222" class="ln" marker-end="url(#v3-i)"/>
+        <rect x="230" y="60" width="230" height="88" rx="44" class="b-prop"/>
+        <text x="345" y="100" text-anchor="middle" class="t-b">Все защитные метрики</text>
+        <text x="345" y="118" text-anchor="middle" class="t-b">не хуже допуска?</text>
+        <path d="M460 104 H502" class="ln" marker-end="url(#v3-i)"/>
+        <text x="472" y="96" class="t-s t-i">да</text>
+        <rect x="510" y="60" width="230" height="88" rx="44" class="b-prop"/>
+        <text x="625" y="100" text-anchor="middle" class="t-b">Хотя бы одна целевая</text>
+        <text x="625" y="118" text-anchor="middle" class="t-b">метрика выросла?</text>
+        <path d="M740 92 C770 92 770 58 792 58" class="ln" marker-end="url(#v3-i)"/>
+        <text x="748" y="66" class="t-s t-i">да</text>
+        <rect x="800" y="30" width="140" height="56" rx="10" class="b-cian"/>
+        <text x="814" y="63" class="t-b">Принять</text>
+        <path d="M740 116 C770 116 770 150 792 150" class="ln" marker-end="url(#v3-i)"/>
+        <text x="748" y="152" class="t-s t-i">нет</text>
+        <rect x="800" y="122" width="140" height="56" rx="10" class="box"/>
+        <text x="814" y="155" class="t-b">Не раскатывать</text>
+        <path d="M345 148 V172" class="ln" marker-end="url(#v3-i)"/>
+        <text x="355" y="166" class="t-s t-i">нет</text>
+        <rect x="255" y="178" width="180" height="36" rx="10" class="b-bad"/>
+        <text x="345" y="201" text-anchor="middle" class="t-b">Стоп и разбор</text>
+      </svg>
+    </div>
+    <figcaption>Правило фиксируется до теста, а не подбирается под результат.</figcaption>
+  </figure>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Защитная метрика</th><th>Порог</th><th>Что происходит</th><th>Откуда порог</th></tr></thead>
+      <tbody>
+        <tr><td>Отписка от пуша на отправку</td><td>Выше {{guard_optout_stop|%3}}: в {{guard_optout_factor|num1}} раза больше базовых {{push_optout|%}}</td><td>Сценарий останавливается сам. Это порог для одного сценария, цель по каналу в целом задаёт Д2</td><td><span class="mark task">Из задания</span> база; множитель — <span class="mark assume">Допущение</span></td></tr>
+        <tr><td>Жалобы на спам, почта</td><td>{{guard_spam_warn|%1}} — предупреждение, {{guard_spam_stop|%1}} — стоп</td><td>Остановка рассылок домена</td><td><span class="mark market">Практика рынка</span> требования Gmail</td></tr>
+        <tr><td>Люди с 3+ промо в сутки</td><td>Больше нуля среди сценариев, прошедших общий вход. Цель по всем отправкам задаёт Д2</td><td>Ошибка лимита, разбор</td><td><span class="mark task">Из задания</span> сейчас {{heavy_promo|%0}}</td></tr>
+        <tr><td>Удаление приложения после пуша</td><td>Хуже, чем в контроле</td><td>Сценарий на пересмотр</td><td><span class="mark assume">Допущение</span></td></tr>
+        <tr><td>Достижимая база</td><td>Падает две недели подряд</td><td>Общий лимит ужесточается</td><td><span class="mark assume">Допущение</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Пять защитных метрик: отписка от пуша, жалобы на спам, люди с 3+ промо в сутки, удаление приложения, размер достижимой базы.</li>
+      <li>У каждой порог и автоматическое действие. Решает не человек в конце квартала, а правило в день превышения.</li>
+      <li>Парная цель: отправок меньше, добавленных действий не меньше. Иначе цель «меньше отписок» выполняется простым сокращением отправок.</li>
+      <li>Защитные метрики смотрим отдельно у новичков: там отписки растут быстрее всего.</li>
+    </ul>
+  </div>
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark market">Практика рынка</span> Правило решения: Spotify. Пороги жалоб: Gmail и Yahoo. Защита и деньги в одном тесте: Т‑Банк. Отписки при запуске выросли в основном у новых пользователей: Pinterest. Числовых порогов для пушей не публикует никто.</li>
+      <li><span class="mark assume">Допущение</span> Все пороги, кроме почтовых. Подбираются по базовым уровням первого месяца.</li>
+    </ul>
+  </div>
+</article>

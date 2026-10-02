@@ -1,0 +1,155 @@
+<!-- tab: b1 -->
+<article class="scheme" id="s-b5">
+  <header>
+    <p class="code"><span>Схема Б5</span><span class="core">★ ядро</span><span>Вопрос 1.4 · эффект, уместность, усталость, риск</span></p>
+    <h2>Оценка сообщения: польза минус цена контакта</h2>
+    <p class="sub">Четыре множителя дают ожидаемую пользу, два вычитаемых — цену контакта для человека и для канала. В первой версии все числа берутся из таблиц, без личных моделей.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 250" role="img" aria-label="Оценка равна произведению шанса действия, добавленной доли, веса действия и уместности, минус штраф за усталость и минус риск отписки, умноженный на цену канала. Сообщение отправляется, если оценка выше порога.">
+        <text x="20" y="28" class="t-h">ПОЛЬЗА</text>
+        <text x="644" y="28" class="t-h">ЦЕНА КОНТАКТА</text>
+        <path d="M20 38 H596" class="ln-task"/>
+        <path d="M644 38 H940" class="ln-bad"/>
+
+        <rect x="20" y="52" width="128" height="120" rx="10" class="box"/>
+        <text x="32" y="78" class="t-b">Шанс</text>
+        <text x="32" y="96" class="t-b">действия</text>
+        <text x="32" y="124" class="t-s">история по типу</text>
+        <text x="32" y="140" class="t-s">сообщения</text>
+        <text x="32" y="156" class="t-s">и состоянию поиска</text>
+        <text x="158" y="118" class="t-n">×</text>
+
+        <rect x="176" y="52" width="128" height="120" rx="10" class="b-task"/>
+        <text x="188" y="78" class="t-b">Добавленная</text>
+        <text x="188" y="96" class="t-b">доля</text>
+        <text x="188" y="124" class="t-s t-i">ниже для активных:</text>
+        <text x="188" y="140" class="t-s t-i">на них {{already_active|%0}} действий</text>
+        <text x="188" y="156" class="t-s">таблица, потом замер</text>
+        <text x="314" y="118" class="t-n">×</text>
+
+        <rect x="332" y="52" width="128" height="120" rx="10" class="box"/>
+        <text x="344" y="78" class="t-b">Вес</text>
+        <text x="344" y="96" class="t-b">действия</text>
+        <text x="344" y="124" class="t-s">по вертикалям,</text>
+        <text x="344" y="140" class="t-s">утверждает совет,</text>
+        <text x="344" y="156" class="t-s">а не заказчик</text>
+        <text x="470" y="118" class="t-n">×</text>
+
+        <rect x="488" y="52" width="108" height="120" rx="10" class="box"/>
+        <text x="500" y="78" class="t-b">Уместность</text>
+        <text x="500" y="124" class="t-s">совпадает</text>
+        <text x="500" y="140" class="t-s">с поиском:</text>
+        <text x="500" y="156" class="t-s">1 · 0,5 · 0</text>
+        <text x="610" y="118" class="t-n">−</text>
+
+        <rect x="644" y="52" width="128" height="120" rx="10" class="box"/>
+        <text x="656" y="78" class="t-b">Штраф</text>
+        <text x="656" y="96" class="t-b">за усталость</text>
+        <text x="656" y="124" class="t-s">ступени по числу</text>
+        <text x="656" y="140" class="t-s">контактов</text>
+        <text x="656" y="156" class="t-s">за 7 дней</text>
+        <text x="782" y="118" class="t-n">−</text>
+
+        <rect x="800" y="52" width="140" height="120" rx="10" class="b-task"/>
+        <text x="812" y="78" class="t-b">Риск отписки</text>
+        <text x="812" y="96" class="t-b">× цена канала</text>
+        <text x="812" y="124" class="t-s t-i">{{push_optout|%}} на пуш;</text>
+        <text x="812" y="140" class="t-s">цена — потерянные</text>
+        <text x="812" y="156" class="t-s">действия за год</text>
+
+        <text x="20" y="206" class="t-b">Оценка выше порога и лимит не исчерпан — отправляем. Иначе молчим.</text>
+        <text x="20" y="230" class="t-s">Синим отмечены два места, где в формулу прямо входят цифры задания.</text>
+      </svg>
+    </div>
+    <figcaption>Формула — целевое состояние. В первой версии за каждым числом стоит простая таблица: источники перечислены в блоках. Личные модели появятся, когда накопится журнал.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 440" role="img" aria-label="Пример: один человек, один вечер, пять претендентов. Оповещение о цене идёт пушем сразу. Подсказка про ипотеку набирает четырнадцать баллов, но пуш уже был, и она уходит на место в карточке квартиры. Новостройка набирает семь с четвертью, это ниже порога, она идёт в письмо-подборку. Розыгрыш получает отрицательную оценку и не отправляется. Аренда отсечена как неуместная.">
+        <defs>
+          <marker id="b5-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+        </defs>
+        <text x="20" y="24" class="t-s t-i">Человек ищет двухкомнатную квартиру для покупки. Активный поиск, заходил сегодня, пуш включён, за неделю получил {{ex_contacts_7d|num0}} сообщений.</text>
+        <text x="20" y="54" class="t-h">ЗАЯВКА</text>
+        <text x="350" y="54" class="t-h">РАСЧЁТ: ПОЛЬЗА НА 1000 ПОКАЗОВ − УСТАЛОСТЬ − РИСК</text>
+        <text x="720" y="54" class="t-h">РЕШЕНИЕ</text>
+
+        <rect x="20" y="66" width="310" height="62" rx="10" class="box"/>
+        <text x="34" y="90" class="t-b">Вторичный рынок · класс Б</text>
+        <text x="34" y="112" class="t-s">«Квартира из избранного подешевела на {{ex_drop|%0}}»</text>
+        <text x="350" y="94" class="t-s t-i">заказано человеком: без оценки</text>
+        <text x="350" y="112" class="t-s">цена изменилась больше чем на {{price_change_min|%0}}</text>
+        <path d="M690 97 H712" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="720" y="66" width="220" height="62" rx="10" class="b-cian"/>
+        <text x="734" y="90" class="t-b">Пуш сразу</text>
+        <text x="734" y="112" class="t-s t-i">в счётчик записан</text>
+
+        <rect x="20" y="140" width="310" height="62" rx="10" class="box"/>
+        <text x="34" y="164" class="t-b">Ипотека · класс В</text>
+        <text x="34" y="186" class="t-s">«Рассчитайте платёж по этой квартире»</text>
+        <text x="350" y="164" class="t-s t-i">1000 × {{ex_mortgage_p|%1}} × {{u_active_hint|num1}} × {{w_mortgage|num0}} × 1 = {{ex_mortgage_raw|num2}}</text>
+        <text x="350" y="186" class="t-s">{{ex_mortgage_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
+        <text x="680" y="180" text-anchor="end" class="t-n f-task">{{ex_mortgage_push|num2}}</text>
+        <path d="M690 171 H712" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="720" y="140" width="220" height="62" rx="10" class="b-prop"/>
+        <text x="734" y="164" class="t-b">Место в карточке квартиры</text>
+        <text x="734" y="186" class="t-s t-i">пуш уже был: пауза {{push_gap_hours|num0}} часа</text>
+
+        <rect x="20" y="214" width="310" height="62" rx="10" class="box"/>
+        <text x="34" y="238" class="t-b">Первичный рынок · класс В</text>
+        <text x="34" y="260" class="t-s">«Старт продаж в комплексе рядом с вашим поиском»</text>
+        <text x="350" y="238" class="t-s t-i">1000 × {{ex_newbuild_p|%1}} × {{u_active_hint|num1}} × {{w_dev_call|num0}} × {{ex_newbuild_fit|num1}} = {{ex_newbuild_raw|num2}}</text>
+        <text x="350" y="260" class="t-s">{{ex_newbuild_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
+        <text x="680" y="254" text-anchor="end" class="t-n f-task">{{ex_newbuild_push|num2}}</text>
+        <path d="M690 245 H712" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="720" y="214" width="220" height="62" rx="10" class="b-prop"/>
+        <text x="734" y="238" class="t-b">В письмо-подборку</text>
+        <text x="734" y="260" class="t-s t-i">ниже порога {{threshold_push|num0}}</text>
+
+        <rect x="20" y="288" width="310" height="62" rx="10" class="box"/>
+        <text x="34" y="312" class="t-b">Маркетинг · класс Г</text>
+        <text x="34" y="334" class="t-s">«Розыгрыш для пользователей»</text>
+        <text x="350" y="312" class="t-s t-i">1000 × {{ex_promo_p|%0}} × {{u_active_promo|num1}} × {{w_promo|num1}} × {{ex_promo_fit|num1}} = {{ex_promo_raw|num2}}</text>
+        <text x="350" y="334" class="t-s">{{ex_promo_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
+        <text x="680" y="328" text-anchor="end" class="t-n f-bad">{{ex_promo_push|num2}}</text>
+        <path d="M690 319 H712" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="720" y="288" width="220" height="62" rx="10" class="b-bad"/>
+        <text x="734" y="312" class="t-b">Не отправлять</text>
+        <text x="734" y="334" class="t-s t-i">цена контакта выше пользы</text>
+
+        <rect x="20" y="362" width="310" height="62" rx="10" class="box"/>
+        <text x="34" y="386" class="t-b">Аренда · класс В</text>
+        <text x="34" y="408" class="t-s">«Новые квартиры в аренду рядом с вами»</text>
+        <text x="350" y="390" class="t-s t-i">уместность 0: человек покупает, а не снимает</text>
+        <path d="M690 393 H712" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="720" y="362" width="220" height="62" rx="10" class="b-bad"/>
+        <text x="734" y="386" class="t-b">Отсечено на допуске</text>
+        <text x="734" y="408" class="t-s t-i">до оценки не дошло</text>
+      </svg>
+    </div>
+    <figcaption>Числа в примере условные: веса действий ({{w_mortgage|num0}} у ипотечной заявки, {{w_dev_call|num0}} у звонка застройщику, {{w_promo|num1}} у участия в акции), добавленная доля для активного человека ({{u_active_hint|num1}} у подсказки, {{u_active_promo|num1}} у промо), штраф {{fatigue_step|num0}} балл за каждый контакт сверх двух за неделю. Расчёт делает скрипт по формуле из схемы выше, руками можно проверить каждую строку.</figcaption>
+  </figure>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li><b>Бизнес-эффект</b> — шанс действия, умноженный на вес действия, и только та доля, которой без сообщения не случилось бы.</li>
+      <li><b>Уместность</b> — множитель: совпадает ли сообщение с текущим поиском человека. Несовпадение обнуляет оценку.</li>
+      <li><b>Усталость</b> — вычитаемое: чем больше контактов за неделю, тем выше планка для следующего.</li>
+      <li><b>Риск негативной реакции</b> — шанс отписки, умноженный на цену потерянного канала. Отписка закрывает канал для всех команд.</li>
+      <li>Поверх формулы — простые правила: {{ignored_to_pause|num0}} сообщения подряд без реакции включают паузу на {{pause_days|num0}} дней; у сообщений про ипотеку, деньги и адрес личные детали не выносятся на экран блокировки.</li>
+      <li><span class="mark prop">Предложение</span> Откуда стартовые веса. Где ЦИАН получает деньги прямо за действие, вес равен выручке на действие: звонок застройщику от {{lead_call_seconds|num0}} секунд приносит в среднем {{rev_per_lead|тыс1}} тыс. ₽. Где платят за размещение, вес считают финансы: выручка направления за квартал, делённая на число контактов. Совет меняет веса раз в квартал и только по замеру: если действие не ведёт к контакту, его вес снижается.</li>
+    </ul>
+  </div>
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Отписка 0,25% на пуш. 60% действий совершают уже активные: отсюда понижающий коэффициент.</li>
+      <li><span class="mark market">Практика рынка</span> Цена каждого сообщения в оценке: Netflix. Блокировка сообщений людям с высоким риском негатива: Т‑Банк, отписок на 5% меньше без потерь в продажах. Штраф за сходство с недавними сообщениями: Instagram. Отписавшийся клиент тратит на 36% меньше: эксперимент на 603 тыс. клиентов магазина (наука; розница).</li>
+      <li><span class="mark assume">Допущение</span> Все веса, пороги и ступени. Их никто не публикует; подбираются тестами, в которых частоту меняют намеренно.</li>
+    </ul>
+  </div>
+</article>
