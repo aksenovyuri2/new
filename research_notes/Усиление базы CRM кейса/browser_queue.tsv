@@ -1,0 +1,50 @@
+r10	https://www.rshb.ru/news/06082026_000001	первоисточник РСХБ (ошибка сертификата при чтении): дата старта и длительность проекта, состав первой версии, что отложено; в Ведомостях этого нет / 4.1, 4.2
+r10	https://www.tadviser.ru/index.php/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82:%D0%9B%D0%B5%D0%BD%D1%82%D0%B0_%D0%A1%D0%B5%D1%82%D1%8C_%D1%80%D0%BE%D0%B7%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B9_%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D0%BB%D0%B8_(Data_Sapience:_CM_Ocean	TAdviser «Лента (Data Sapience: CM Ocean)» (404 при чтении, страница есть в выдаче): хронология проекта, стоимость, какие сценарии оптимизации, измеренный эффект / 4.1, 4.2
+r10	https://companies.rbc.ru/news/NSlD1nloc9/bank-hlyinov-i-glowbyte-vnedrili-reshenie-cm-ocean-ot-data-sapience/	РБК Компании о «Хлынове» (401): этапы и сроки проекта; CNews уже прочитан, нужен только контроль / 4.2
+r10	https://s203.q4cdn.com/277576744/files/doc_financials/2027/q1/BRZE-USQ_Transcript_2026-05-27.pdf	Braze Q1 FY2027, транскрипт (403): клиентские примеры с датами и числами миграции или консолидации / 4.2
+r10	https://www.magnit.com/upload/iblock/fd7/vcyltyz1s5yttt1dl1hn08nza0663ujq/MAGNIT_AR_2025.pdf	Годовой отчёт «Магнит» 2025 (файл >10 МБ): разделы про CVM, персонализацию, «Магнит Плюс», платформу коммуникаций — сроки запуска, доли персональных предложений, эффект / 4.2
+r10	https://branch8.com/posts/salesforce-marketing-cloud-to-braze-migration-guide-apac	проверить, реальный ли это клиент: «14 недель от старта до отключения SFMC» и «90 дней: 2 пилота, 9 потоков выведено, активация +12%» / 4.2
+r10	https://insiderone.com/customer-engagement-platforms/migration/	цифры 4–6 недель до запуска и 3 месяца миграции с Emarsys: чьи клиентские кейсы, есть ли даты / 4.2
+r10	https://mindbox.ru/journal/cases/magnit-dostavka/	сверить цифры (суммаризация): 60% → 98% доставляемость, 12% → 20% доля CRM, сроки 4 → 13 месяцев и формулировку причин задержки / 4.2
+r10	https://datasapience.ru/implementation-of-targeted-marketing-automation-platform	страница Data Sapience по Финуслугам: сверить период проекта (в извлечении «август–декабрь 2022» противоречит 12.2023–08.2024 и дате новости 09.2024) / 4.1, 4.2
+r10	https://mindbox.ru/journal/cases/inventive-retail-group/	дата публикации; сколько брендов вошло в первые 3 месяца розничной интеграции / 4.2
+r6	https://openreview.net/forum?id=8GH752ZJ5j	Полный текст BUOPLR (Kuaishou, ICML 2026): формулы uplift по бандлам, «скор конкурентоспособности», ограничения, таблицу A/B (DAU, CTR, удержание, доля отключений), абляции / 1.2, 1.4
+r6	https://help.salesforce.com/s/articleView?language=en_US&id=mktg.mc_ees_einstein_feature_overview.htm&type=5	Официальный текст: Einstein STO и Engagement Frequency (окна, минимальные объёмы, классы насыщенности, как классы используются в Journey Builder) / 1.1, 1.2, 1.4
+r6	https://support.iterable.com/hc/en-us/articles/13102589168916-Channel-Optimization	Правила Channel Optimization: окно данных, минимум данных, поведение без истории, определение «вовлечения» / 1.2
+r6	https://support.iterable.com/hc/en-us/articles/7412316462996-Optimizing-Campaign-Delivery	Send Time Optimization: окно, вес свежих данных, запасной вариант / 1.2
+r6	https://communities.sas.com/t5/SAS-Communities-Library/SAS-Customer-Intelligence-360-Decision-management-machine/ta-p/518913	Как SAS CI360 ранжирует конкурирующие кампании (арбитраж, контактные политики, оптимизация), формула приоритета / 1.2
+r6	https://academy.pega.com/topic/configuring-adaptive-model/v1	Адаптивные модели Pega: как калибруется склонность, пороги, сколько ответов нужно для старта / 1.2, 1.4
+r6	https://academy.pega.com/topic/customer-decision-hub-predictions/v2	Предсказания CDH: как склонность входит в приоритет, есть ли термины насыщенности/усталости / 1.2, 1.4
+r6	https://medium.com/@tushargoelml/near-real-time-optimization-of-notifications-at-linkedin-part-i-893dcb8eef41	Описание LinkedIn о стоимости отключения уведомлений, как порог по члену связан с объёмом (фон, дата не проверена) / 1.4
+r6	https://dl.acm.org/doi/10.1145/3219819.3219906	Pinterest: Notification Volume Control and Optimization System — как оценивается приращённая ценность каждого следующего уведомления на пользователя за неделю (фон, KDD 2018, дату проверить) / 1.4
+r6	https://papers.ssrn.com/sol3/Delivery.cfm/6165626.pdf?abstractid=6165626	Дата выпуска и версия статьи Baek, Chen, Ma, Mitrofanov (SSRN 6165626), статус публикации / 1.4
+r6	https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12536414	Растровый PDF: заголовок «Notification management and channel selection», правообладатель, даты, пункты формулы (вероятности и порог) / 1.2
+r6	https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12229804	Растровый PDF: «Multi-objective electronic communication frequency optimization» — правообладатель, даты, формула многоцелевой оптимизации частоты / 1.2, 1.4
+r6	https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10516644	Растровый PDF: LinkedIn «Near real time relevance ranker for notifications» — персональный порог по профилю, выбор канала по оценке релевантности (фон) / 1.2
+r7	https://link.springer.com/chapter/10.1007/978-3-031-94544-1_15	Список 18 метрик по доменам, авторы, точная дата, определения «coverage», «time to insights»; ограничения / 2.1
+r7	https://arxiv.org/html/2606.04110	Таблицы с вариантами порогов страт, дисперсии, MDE; проверить 99,3% против 47,62% и 45% трафика (числа получены из пересказа) / 2.2
+r7	https://tech.instacart.com/instacarts-economics-team-using-surrogate-indices-to-estimate-long-run-heterogeneous-treatment-0bf7bc96c6e6	Раздел Backtesting: точность суррогатного индекса на прошлых экспериментах / 2.2
+r7	https://ar5iv.labs.arxiv.org/html/2210.08338	Таблица 2 (значения вкладов и доверительные интервалы), определение взвешенного Шепли / 2.2
+r7	https://habr.com/ru/companies/garage8/articles/941598/	Полная таблица бенчмарков времени запуска и шаблон PBR (метрика успеха) / 2.1
+r7	https://arxiv.org/pdf/2510.03468	Числа мощности из таблиц симуляций (текст извлечён без таблиц) / 2.2
+r7	https://tech.instacart.com/bandits-for-marketing-optimization-f5a63b9bfaa7	Метрики бюджета и кривые отдачи (видел только фрагмент поиска) / 2.1
+r8	https://fas.gov.ru/publications/19244	Название, дата, позиция ФАС по согласию на SMS-рекламу, суммы штрафов / 4.3
+r8	https://fas.gov.ru/news/8016	Текст новости ФАС про SMS/электросвязь (появилась в выдаче) / 4.3
+r8	https://fas.gov.ru/publications/21602	Содержание публикации (в выдаче по SMS-рекламе) / 4.3
+r8	https://fas.gov.ru/news/33193	Содержание: решения/разъяснения по рекламе по сетям электросвязи / 4.3
+r8	https://fas.gov.ru/publications/20057	Содержание публикации (в выдаче по SMS-рекламе) / 4.3
+r8	https://23.rkn.gov.ru/news/news159224.htm	Текст региональной страницы РКН о порядке отказа от рассылки (в выдаче по постановлению № 1137) / 4.3
+r8	https://rkn.gov.ru/press/news/news74777.htm	Памятка «Рекомендации по размещению идентификатора рекламы»: есть ли SMS/мессенджеры/email / 4.3
+r8	https://www.rbc.ru/technology_and_media/10/02/2026/698afe729a79470c08a17b91	Текст заявления РКН о начале ограничения Telegram (страница отдала 401) / 4.3
+r8	https://www.svoboda.org/a/roskomnadzor-pochti-polnostjyu-zamedlil-rabotu-telegram/33716478.html	Дата и данные о замедлении Telegram (март 2026) / 4.3
+r8	http://publication.pravo.gov.ru/document/0001202504010010	Текст 41-ФЗ: статьи про рассылки, даты вступления п. 1.1 ст. 44.1 / 4.3
+r8	https://www.consultant.ru/document/cons_doc_LAW_43224/b5a11e1f308ded9f4b94bf885bcf76ed577f9576/	Ст. 44.1-1 «Массовые вызовы», аннотации о вводе в действие / 4.3
+r8	https://www.consultant.ru/document/cons_doc_LAW_418000/	Постановление № 974 (ред. от 18.09.2025): нормы об исключениях для email/push / 4.3
+r8	https://www.consultant.ru/document/cons_doc_LAW_482014/d54cdfade7a7dd1f49306a747e3204aa24f7ab41/	Раздел «О распространении рекламы по сетям электросвязи»: актуальная позиция ФАС / 4.3
+r8	https://www.consultant.ru/law/podborki/reklama_bez_soglasiya/	Подборка судебной практики по рекламе без согласия (SMS, email) / 4.3
+r9	https://www.sostav.ru/blogs/286455/75101	Список Telegram-каналов о лояльности, CRM и клиентском опыте: названия, `t.me`-адреса, авторы, должности (страница отдала только скрипт загрузки); затем просканировать каналы через `t.me/s/` по ключевым словам (RACI, контактная политика, комитет, вертикали) / 1.3, 3.1, 3.2, 3.3
+r9	https://lms.matemarketing.ru/content/conference/3	Программы MM'24, MM'25 (20–21.11.2025), MM'26 (май 2026): названия и аннотации докладов про CRM/CVM, оргмодель, контактную политику, приоритеты; наличие видео и слайдов (страницы требуют JS) / 1.3, 3.1, 3.2, 3.3
+r9	https://mailingday.ru	Программа Mailing Day 2025 (06.06.2025, Санкт-Петербург) и 2026: спикеры и темы про команду CRM, согласования, нагрузку на клиента (страница ppc.world даёт только категории) / 3.1, 3.2
+r9	https://conference.mindbox.ru/	Программа конференции Mindbox 23–24.10.2026 (ожидается), прошлые годы: доклады про оргмодель CRM и работу с продуктовыми командами / 3.1, 3.2, 3.3
+r9	https://auditorium-cg.ru/crm25	Есть ли слайды/записи у докладов Кривошеева (Т-Банк) и Мызниковой (Банк «Санкт-Петербург»); дата проведения / 3.1, 3.2
+r9	https://www.pega.com/insights/resources/pegaworld-2025-shifting-high-gear-citibanks-path-scalable-high-powered-marketing	Проверить на видео, что означает «bi monthly» в Citi (раз в месяц дважды или раз в два месяца) / 3.3
