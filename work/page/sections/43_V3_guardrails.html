@@ -2,71 +2,149 @@
 <article class="scheme" id="s-v3">
   <header>
     <p class="code"><span>Схема В3</span><span class="core">★ ядро</span><span>Вопрос 2.3 · защитные метрики</span></p>
-    <h2>У каждой защитной метрики есть порог и действие, которое срабатывает само</h2>
-    <p class="sub">Защитная метрика без порога и без автоматической остановки ничего не защищает. Изменение принимается, только если ни одна защитная метрика не стала хуже допуска.</p>
+    <h2>Внешние пороги задаёт рынок, внутренние допуски — мы до теста; нарушение останавливает само</h2>
+    <p class="sub">Изменение принимается, только если ни одна защитная метрика не хуже допуска и хотя бы одна целевая выросла. Допуск фиксируем до теста, а не подбираем под результат.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 220" role="img" aria-label="Правило решения: если хотя бы одна защитная метрика хуже допуска, сценарий останавливается. Если все в норме, но ни одна целевая метрика не выросла, изменение не раскатывается. Если все в норме и целевая выросла, изменение принимается.">
+      <svg viewBox="0 0 960 548" role="img" aria-label="Защитные метрики. Слева внешние пороги: жалобы на спам в почте, цель ниже ноль целых одной десятой процента, стоп на ноль целых трёх десятых; отказы доставки до двух процентов норма, выше пяти процентов серьёзная проблема; отписка в один клик обязательна. Справа внутренние пороги с действием: отписка от пуша, удаление приложения, три и больше промо в сутки, целевые действия вертикали не хуже контроля с допуском два процента за квартал. Внизу правило решения: все защитные не хуже допуска, и хотя бы одна целевая выросла, тогда принять; иначе не раскатывать или стоп. Точный адрес и суммы ипотеки не выводятся на экран блокировки.">
         <defs>
           <marker id="v3-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
         </defs>
-        <rect x="20" y="66" width="170" height="76" rx="10" class="box"/>
-        <text x="34" y="98" class="t-b">Сценарий или</text>
-        <text x="34" y="116" class="t-b">новое правило</text>
-        <path d="M190 104 H222" class="ln" marker-end="url(#v3-i)"/>
-        <rect x="230" y="60" width="230" height="88" rx="44" class="b-prop"/>
-        <text x="345" y="100" text-anchor="middle" class="t-b">Все защитные метрики</text>
-        <text x="345" y="118" text-anchor="middle" class="t-b">не хуже допуска?</text>
-        <path d="M460 104 H502" class="ln" marker-end="url(#v3-i)"/>
-        <text x="472" y="96" class="t-s t-i">да</text>
-        <rect x="510" y="60" width="230" height="88" rx="44" class="b-prop"/>
-        <text x="625" y="100" text-anchor="middle" class="t-b">Хотя бы одна целевая</text>
-        <text x="625" y="118" text-anchor="middle" class="t-b">метрика выросла?</text>
-        <path d="M740 92 C770 92 770 58 792 58" class="ln" marker-end="url(#v3-i)"/>
-        <text x="748" y="66" class="t-s t-i">да</text>
-        <rect x="800" y="30" width="140" height="56" rx="10" class="b-cian"/>
-        <text x="814" y="63" class="t-b">Принять</text>
-        <path d="M740 116 C770 116 770 150 792 150" class="ln" marker-end="url(#v3-i)"/>
-        <text x="748" y="152" class="t-s t-i">нет</text>
-        <rect x="800" y="122" width="140" height="56" rx="10" class="box"/>
-        <text x="814" y="155" class="t-b">Не раскатывать</text>
-        <path d="M345 148 V172" class="ln" marker-end="url(#v3-i)"/>
-        <text x="355" y="166" class="t-s t-i">нет</text>
-        <rect x="255" y="178" width="180" height="36" rx="10" class="b-bad"/>
-        <text x="345" y="201" text-anchor="middle" class="t-b">Стоп и разбор</text>
+        <text x="20" y="22" class="t-h">ВНЕШНИЕ ПОРОГИ · ИХ ЗАДАЁТ РЫНОК</text>
+        <text x="490" y="22" class="t-h">ВНУТРЕННИЕ · ДОПУСК СТАВИМ ДО ТЕСТА</text>
+
+        <text x="20" y="48" class="t-b">Жалобы на спам, почта</text>
+        <text x="20" y="66" class="t-s">Google и Yahoo: цель ниже {{guard_spam_warn|%1}}, жёстко ниже {{guard_spam_stop|%1}}</text>
+        <rect x="20" y="76" width="100" height="24" class="b-cian"/>
+        <rect x="120" y="76" width="200" height="24" class="soft"/>
+        <rect x="320" y="76" width="100" height="24" class="b-bad"/>
+        <text x="28" y="93" class="t-s t-i">цель</text>
+        <text x="128" y="93" class="t-s t-i">предупреждение</text>
+        <text x="328" y="93" class="t-s t-i">стоп</text>
+        <text x="20" y="118" class="t-s">0</text>
+        <text x="120" y="118" text-anchor="middle" class="t-s">{{guard_spam_warn|%1}}</text>
+        <text x="320" y="118" text-anchor="middle" class="t-s">{{guard_spam_stop|%1}}</text>
+
+        <text x="20" y="152" class="t-b">Отказы доставки, почта</text>
+        <text x="20" y="170" class="t-s">до {{b2_bounce_norm|%0}} норма, выше {{b2_bounce_max|%0}} серьёзная проблема</text>
+        <rect x="20" y="180" width="100" height="24" class="b-cian"/>
+        <rect x="120" y="180" width="150" height="24" class="soft"/>
+        <rect x="270" y="180" width="150" height="24" class="b-bad"/>
+        <text x="28" y="197" class="t-s t-i">норма</text>
+        <text x="128" y="197" class="t-s t-i">аудит</text>
+        <text x="278" y="197" class="t-s t-i">проблема</text>
+        <text x="120" y="222" text-anchor="middle" class="t-s">{{b2_bounce_norm|%0}}</text>
+        <text x="270" y="222" text-anchor="middle" class="t-s">{{b2_bounce_max|%0}}</text>
+
+        <rect x="20" y="244" width="400" height="66" rx="10" class="box"/>
+        <text x="34" y="268" class="t-b">Отписка в один клик</text>
+        <text x="34" y="288" class="t-s t-i">заголовки List-Unsubscribe и List-Unsubscribe-Post</text>
+        <text x="34" y="302" class="t-s t-i">(RFC 8058): условие запуска, а не метрика</text>
+
+        <rect x="490" y="34" width="450" height="64" rx="10" class="box"/>
+        <text x="504" y="56" class="t-b">Отписка от пуша на отправку</text>
+        <text x="504" y="74" class="t-s t-i">стоп выше {{guard_optout_stop|%3}}: {{guard_optout_factor|num1}}× базы {{push_optout|%}}</text>
+        <text x="504" y="90" class="t-s f-assume">множитель — допущение, уточним по A/A</text>
+        <rect x="790" y="44" width="140" height="44" rx="8" class="b-bad"/>
+        <text x="802" y="62" class="t-s t-i">сценарий встаёт</text>
+        <text x="802" y="78" class="t-s t-i">сам, разбор</text>
+
+        <rect x="490" y="108" width="450" height="64" rx="10" class="box"/>
+        <text x="504" y="130" class="t-b">Удаление приложения после пуша</text>
+        <text x="504" y="150" class="t-s t-i">порог: хуже, чем в контроле</text>
+        <rect x="790" y="118" width="140" height="44" rx="8" class="b-bad"/>
+        <text x="802" y="136" class="t-s t-i">сценарий на</text>
+        <text x="802" y="152" class="t-s t-i">пересмотр</text>
+
+        <rect x="490" y="182" width="450" height="64" rx="10" class="box"/>
+        <text x="504" y="204" class="t-b">Люди с 3+ промо в сутки</text>
+        <text x="504" y="222" class="t-s t-i">порог: больше нуля среди прошедших шлюз</text>
+        <text x="504" y="238" class="t-s f-task">сейчас по всем отправкам {{heavy_promo|%0}}</text>
+        <rect x="790" y="192" width="140" height="44" rx="8" class="b-bad"/>
+        <text x="802" y="210" class="t-s t-i">ошибка лимита,</text>
+        <text x="802" y="226" class="t-s t-i">разбор</text>
+
+        <rect x="490" y="256" width="450" height="64" rx="10" class="b-prop"/>
+        <text x="504" y="278" class="t-b">Целевые действия вертикали</text>
+        <text x="504" y="296" class="t-s t-i">не хуже контроля, допуск {{b2_tolerance|%0}} за квартал</text>
+        <text x="504" y="312" class="t-s t-i">сравнение по назначению, как в В2</text>
+        <rect x="790" y="266" width="140" height="44" rx="8" class="b-bad"/>
+        <text x="802" y="284" class="t-s t-i">доля вертикали</text>
+        <text x="802" y="300" class="t-s t-i">на пересмотр</text>
+
+        <path d="M20 338 H940" class="grid"/>
+        <text x="20" y="360" class="t-h">ПРАВИЛО РЕШЕНИЯ · ВСЕ ЗАЩИТНЫЕ НЕ ХУЖЕ ДОПУСКА</text>
+        <rect x="20" y="394" width="170" height="70" rx="10" class="box"/>
+        <text x="34" y="424" class="t-b">Сценарий или</text>
+        <text x="34" y="442" class="t-b">новое правило</text>
+        <path d="M190 429 H222" class="ln" marker-end="url(#v3-i)"/>
+        <rect x="230" y="386" width="230" height="86" rx="43" class="b-prop"/>
+        <text x="345" y="425" text-anchor="middle" class="t-b">Все защитные</text>
+        <text x="345" y="443" text-anchor="middle" class="t-b">не хуже допуска?</text>
+        <path d="M460 429 H502" class="ln" marker-end="url(#v3-i)"/>
+        <text x="472" y="421" class="t-s t-i">да</text>
+        <rect x="510" y="386" width="230" height="86" rx="43" class="b-prop"/>
+        <text x="625" y="425" text-anchor="middle" class="t-b">Хотя бы одна целевая</text>
+        <text x="625" y="443" text-anchor="middle" class="t-b">метрика выросла?</text>
+        <path d="M740 416 C770 416 770 384 792 384" class="ln" marker-end="url(#v3-i)"/>
+        <text x="748" y="410" class="t-s t-i">да</text>
+        <rect x="800" y="358" width="140" height="52" rx="10" class="b-cian"/>
+        <text x="814" y="389" class="t-b">Принять</text>
+        <path d="M740 442 C770 442 770 474 792 474" class="ln" marker-end="url(#v3-i)"/>
+        <text x="748" y="466" class="t-s t-i">нет</text>
+        <rect x="800" y="448" width="140" height="52" rx="10" class="box"/>
+        <text x="814" y="479" class="t-b">Не раскатывать</text>
+        <path d="M345 472 V490" class="ln" marker-end="url(#v3-i)"/>
+        <text x="355" y="486" class="t-s t-i">нет</text>
+        <rect x="255" y="492" width="180" height="40" rx="10" class="b-bad"/>
+        <text x="345" y="517" text-anchor="middle" class="t-b">Стоп и разбор</text>
+        <rect x="490" y="496" width="450" height="40" rx="10" class="b-prop"/>
+        <text x="504" y="512" class="t-s f-prop t-b">Чувствительные темы</text>
+        <text x="504" y="528" class="t-s t-i">точный адрес и суммы ипотеки не выводятся на экран блокировки</text>
       </svg>
     </div>
-    <figcaption>Правило фиксируется до теста, а не подбирается под результат.</figcaption>
+    <figcaption>Зелёным — норма по внешним порогам, красным — стоп. Розовым — то, что вводит платформа. Парная цель: отправок меньше, добавленных действий не меньше. Иначе «меньше отписок» выполняется простым сокращением рассылки.</figcaption>
   </figure>
 
-  <div class="tablewrap">
-    <table>
-      <thead><tr><th>Защитная метрика</th><th>Порог</th><th>Что происходит</th><th>Откуда порог</th></tr></thead>
-      <tbody>
-        <tr><td>Отписка от пуша на отправку</td><td>Выше {{guard_optout_stop|%3}}: в {{guard_optout_factor|num1}} раза больше базовых {{push_optout|%}}</td><td>Сценарий останавливается сам. Это порог для одного сценария, цель по каналу в целом задаёт Д2</td><td><span class="mark task">Из задания</span> база; множитель — <span class="mark assume">Допущение</span></td></tr>
-        <tr><td>Жалобы на спам, почта</td><td>{{guard_spam_warn|%1}} — предупреждение, {{guard_spam_stop|%1}} — стоп</td><td>Остановка рассылок домена</td><td><span class="mark market">Практика рынка</span> требования Gmail</td></tr>
-        <tr><td>Люди с 3+ промо в сутки</td><td>Больше нуля среди сценариев, прошедших общий вход. Цель по всем отправкам задаёт Д2</td><td>Ошибка лимита, разбор</td><td><span class="mark task">Из задания</span> сейчас {{heavy_promo|%0}}</td></tr>
-        <tr><td>Удаление приложения после пуша</td><td>Хуже, чем в контроле</td><td>Сценарий на пересмотр</td><td><span class="mark assume">Допущение</span></td></tr>
-        <tr><td>Достижимая база</td><td>Падает две недели подряд</td><td>Общий лимит ужесточается</td><td><span class="mark assume">Допущение</span></td></tr>
-      </tbody>
-    </table>
+  <div class="market">
+    <h3>Рынок</h3>
+    <ul>
+      <li><span class="who">Google</span> · спам-рейт для массовых отправителей (5000+ писем в сутки): цель ниже 0,10%, жёстко ниже 0,30%; обязательны SPF, DKIM, DMARC · 2026 · <span class="src">П</span> · <span class="fit hi">применимо: наш почтовый домен</span> · <a href="https://support.google.com/a/answer/81126" rel="noopener">источник</a></li>
+      <li><span class="who">Yahoo</span> · спам-рейт ниже 0,3%; отписка в один клик (RFC 8058) для маркетинговых писем · без даты · <span class="src">П</span> · <span class="fit hi">применимо: тот же стандарт</span> · <a href="https://senders.yahooinc.com/best-practices/" rel="noopener">источник</a></li>
+      <li><span class="who">Spotify</span> · все защитные метрики не хуже допуска, допуск задан до теста; поправка на число метрик · 03.2024 · <span class="src">П</span> · <span class="fit mid">применимо частично: даёт правило, не числа</span> · <a href="https://engineering.atspotify.com/2024/03/risk-aware-product-decisions-in-a-b-tests-with-multiple-metrics" rel="noopener">источник</a></li>
+      <li><span class="who">Т-Банк</span> · модель негатива блокировала сообщения топ-4% самых раздражённых: отписки −5,08%, продукты без потерь · 08.2024 · <span class="src">П</span> · <span class="fit mid">применимо частично: банк, редкие продукты</span> · <a href="https://habr.com/ru/companies/tbank/articles/838148/" rel="noopener">источник</a></li>
+      <li><span class="who">Unisender</span> · жалобы выше 0,1% — рассылку могут заблокировать · без даты · <span class="src">В</span> · <span class="fit mid">применимо частично: вендорский ориентир</span> · <a href="https://www.unisender.com/ru/blog/bazovye-metriki/" rel="noopener">источник</a></li>
+    </ul>
   </div>
 
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li>Пять защитных метрик: отписка от пуша, жалобы на спам, люди с 3+ промо в сутки, удаление приложения, размер достижимой базы.</li>
-      <li>У каждой порог и автоматическое действие. Решает не человек в конце квартала, а правило в день превышения.</li>
-      <li>Парная цель: отправок меньше, добавленных действий не меньше. Иначе цель «меньше отписок» выполняется простым сокращением отправок.</li>
-      <li>Защитные метрики смотрим отдельно у новичков: там отписки растут быстрее всего.</li>
+      <li><b>Внешние пороги:</b> жалобы на спам ниже {{guard_spam_warn|%1}} — цель, {{guard_spam_stop|%1}} — стоп; отписка в один клик; отказы доставки выше {{b2_bounce_max|%0}} — серьёзная проблема.</li>
+      <li><b>Внутренние:</b> отписка от пуша, удаление приложения, доля людей с 3+ промо, целевые действия вертикали не хуже контроля с допуском {{b2_tolerance|%0}} за квартал.</li>
+      <li><b>Правило решения:</b> все защитные не хуже допуска, допуск до теста. Решает правило в день превышения, а не человек в конце квартала.</li>
+      <li><span class="mark prop">Предложение</span> Точный адрес и суммы ипотеки не показываем на экране блокировки: пуш по чувствительной теме — тоже риск для доверия.</li>
     </ul>
   </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Внешние пороги как жёсткие, внутренние допуски — до теста</td><td>Только внутренние пороги</td><td>Порогов для пушей никто не публикует: свои берём из A/A и старых тестов, первые месяцы они грубые</td><td>Google, Yahoo, Spotify</td></tr>
+        <tr><td>Каждая защитная метрика не хуже допуска</td><td>Один сводный индекс со штрафом за отписку</td><td>Часть ценных сообщений не уйдёт; зато отписки — ограничение, а не вычитаемое</td><td>LinkedIn NOAH: ценность +2,16%, отписки +1,52% против +8,08%</td></tr>
+        <tr><td>Парная цель: меньше отправок, действия не меньше</td><td>Цель только по отпискам</td><td>Нельзя выполнить простым сокращением; нужен замер действий</td><td>Т-Банк: защитная мера в одном тесте с деньгами</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
-      <li><span class="mark market">Практика рынка</span> Правило решения: Spotify. Пороги жалоб: Gmail и Yahoo. Защита и деньги в одном тесте: Т‑Банк. Отписки при запуске выросли в основном у новых пользователей: Pinterest. Числовых порогов для пушей не публикует никто.</li>
-      <li><span class="mark assume">Допущение</span> Все пороги, кроме почтовых. Подбираются по базовым уровням первого месяца.</li>
+      <li><span class="mark task">Из задания</span> Базовая отписка от пуша {{push_optout|%}} на отправку; {{heavy_promo|%0}} получателей получают 3+ промо в сутки.</li>
+      <li><span class="mark market">Практика рынка</span> Пороги почты: Google, Yahoo; отказы доставки — рекомендация Mindbox и Mailfit. Правило «не хуже допуска»: Spotify.</li>
+      <li><span class="mark assume">Допущение</span> Все внутренние пороги, включая множитель {{guard_optout_factor|num1}}. Стоп-пороги тестов не публикует никто, подбираем по базовым уровням первого месяца.</li>
     </ul>
   </div>
 </article>
