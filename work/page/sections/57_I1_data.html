@@ -1,0 +1,185 @@
+<!-- tab: intel -->
+<p class="intro">Вкладка о том, на чём работает платформа: данные, модели и AI. Порядок такой: сначала один поток событий и согласия, потом модели по ступеням, потом AI для текстов и сборки кампаний. Каждый шаг проверяет контрольная группа, а мерой служит добавленная выручка на человека за 12 месяцев. Цифры рынка показывают, что возможно; эффект для ЦИАН докажет только замер.</p>
+<article class="scheme" id="s-i1">
+  <header>
+    <p class="code"><span>Схема И1</span><span class="core">★ ядро</span><span>Вопрос 1.1 · какие данные нужны платформе и где граница</span></p>
+    <h2>Основа — свой поток событий и согласия; чужие данные берём без выгрузки ПД и только за доказанный эффект</h2>
+    <p class="sub">Для каждого источника на рисунке два столбца: что он даёт платформе и что с ним делать нельзя. Право — граница для всех строк. Новый источник проходит те же три шага: согласие, ПД внутри, эффект в рублях.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 759" role="img" aria-label="Четыре зоны данных. Внутри контура: свой поток событий и вход через Яндекс ID, Сбер ID, VK ID, T-ID. Снаружи без выгрузки персональных данных: открытые данные ЦБ и ДОМ.РФ, партнёры через обезличенный ID и чистую комнату. Выводы из данных: жизненные события и добыча данных. Право — граница для всех: согласие отдельным документом, cookie — персональные данные, штрафы за утечки, реклама только с согласия. Для каждой строки показано, что она даёт платформе и что с ней нельзя. Любой новый источник проходит три шага: согласие и цель, персональные данные остаются внутри, эффект в рублях по контрольной группе.">
+        <defs><marker id="i1-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker><marker id="i1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
+        <text x="48" y="22" class="t-h">ИСТОЧНИК И ОПОРА РЫНКА</text>
+        <text x="290" y="22" class="t-h">ЧТО ДАЁТ ПЛАТФОРМЕ</text>
+        <text x="622" y="22" class="t-h">ЧТО НЕЛЬЗЯ</text>
+        <rect x="48" y="34" width="212" height="70" rx="10" class="b-prop"/>
+        <text x="62" y="56" class="t-b">1. Свой поток событий</text>
+        <text x="62" y="74" class="t-s t-i">Авито: {{in_avito_events|млн0}} млн событий в</text>
+        <text x="62" y="90" class="t-s t-i">минуту, {{in_avito_sources|num0}}+ источников</text>
+        <path d="M262 69 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="34" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="56" class="t-s t-i">Один журнал и справочник событий, граф</text>
+        <text x="304" y="72" class="t-s t-i">«устройство — логин», реестр согласий,</text>
+        <text x="304" y="88" class="t-s t-i">карточка человека</text>
+        <rect x="622" y="34" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="56" class="t-s t-i">Склеивать людей по отпечатку браузера без</text>
+        <text x="636" y="72" class="t-s t-i">согласия. Оставлять в графе «мосты»:</text>
+        <text x="636" y="88" class="t-s t-i">общие устройства и сотрудников</text>
+        <rect x="48" y="111" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="133" class="t-b">2. Вход и опознание</text>
+        <text x="62" y="151" class="t-s t-i">Яндекс ID: {{in_yaid_day|млн0}} млн</text>
+        <text x="62" y="167" class="t-s t-i">аккаунтов в день</text>
+        <path d="M262 146 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="111" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="133" class="t-s t-i">Яндекс ID, Сбер ID, VK ID, T-ID: выше доля</text>
+        <text x="304" y="149" class="t-s t-i">опознанных, один человек на всех</text>
+        <text x="304" y="165" class="t-s t-i">устройствах, вход без SMS</text>
+        <rect x="622" y="111" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="133" class="t-s t-i">Отдавать вход одному банку: Сбер ID</text>
+        <text x="636" y="149" class="t-s t-i">усиливает Домклик. Брать паспортные и</text>
+        <text x="636" y="165" class="t-s t-i">семейные поля без цели</text>
+        <rect x="48" y="188" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="210" class="t-b">3. Открытые данные</text>
+        <text x="62" y="228" class="t-s t-i">ЕИСЖС ДОМ.РФ: {{in_eisg_flats|млн1}} млн</text>
+        <text x="62" y="244" class="t-s t-i">квартир</text>
+        <path d="M262 223 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="188" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="210" class="t-s t-i">ЦБ: выдачи и ставки ипотеки как повод для</text>
+        <text x="304" y="226" class="t-s t-i">сообщения. ДОМ.РФ: сверка цены и статуса</text>
+        <text x="304" y="242" class="t-s t-i">лота по ДДУ</text>
+        <rect x="622" y="188" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="210" class="t-s t-i">Данные собственников из ЕГРН: они</text>
+        <text x="636" y="226" class="t-s t-i">закрыты, их получают владельцы, суды и</text>
+        <text x="636" y="242" class="t-s t-i">др.</text>
+        <rect x="48" y="265" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="287" class="t-b">4. Партнёрские данные</text>
+        <text x="62" y="305" class="t-s t-i">Stable ID МТС: конверсии</text>
+        <text x="62" y="321" class="t-s t-i">+{{in_stable_conv|%0}}</text>
+        <path d="M262 300 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="265" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="287" class="t-s t-i">Обезличенный ID связывает показы и</text>
+        <text x="304" y="303" class="t-s t-i">конверсии без обмена ПД. Чистая комната</text>
+        <text x="304" y="319" class="t-s t-i">VK: совместное обучение</text>
+        <rect x="622" y="265" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="287" class="t-s t-i">Выгружать хэши своей базы в чужой DSP: ПД</text>
+        <text x="636" y="303" class="t-s t-i">уходят из контура, нужны согласие и ст.</text>
+        <text x="636" y="319" class="t-s t-i">18 38-ФЗ</text>
+        <rect x="48" y="342" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="364" class="t-b">5. Жизненные события</text>
+        <text x="62" y="382" class="t-s t-i">{{in_life_baby|%0}} купили или планируют</text>
+        <text x="62" y="398" class="t-s t-i">жильё при рождении ребёнка</text>
+        <path d="M262 377 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="342" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="364" class="t-s t-i">Контакт до начала поиска: рост дохода,</text>
+        <text x="304" y="380" class="t-s t-i">рождение ребёнка, новоселье</text>
+        <rect x="622" y="342" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="364" class="t-s t-i">Считать сигнал фактом: у Сбера точность</text>
+        <text x="636" y="380" class="t-s t-i">{{in_life_lo|num0}}–{{in_life_hi|num0}}%. Называть событие в тексте</text>
+        <rect x="48" y="419" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="441" class="t-b">6. Добыча данных</text>
+        <text x="62" y="459" class="t-s t-i">Т-Банк Perseus: +{{in_perseus_lo|num0}}–{{in_perseus_hi|num0}}%</text>
+        <text x="62" y="475" class="t-s t-i">метрик</text>
+        <path d="M262 454 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="419" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="441" class="t-s t-i">Все события в одну последовательность и</text>
+        <text x="304" y="457" class="t-s t-i">трансформер; граф «человек — ЖК»;</text>
+        <text x="304" y="473" class="t-s t-i">look-alike на своих данных: у Сбера ×{{in_lookalike|num1}}</text>
+        <rect x="622" y="419" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="441" class="t-s t-i">Look-alike площадок: чёрный ящик и</text>
+        <text x="636" y="457" class="t-s t-i">выгрузка ПД. Верить модели без</text>
+        <text x="636" y="473" class="t-s t-i">контрольной группы</text>
+        <rect x="48" y="496" width="212" height="126" rx="10" class="box"/>
+        <text x="62" y="518" class="t-b">7. Право</text>
+        <text x="62" y="536" class="t-s t-i">Закон задаёт, что можно</text>
+        <text x="62" y="552" class="t-s t-i">собирать и слать</text>
+        <path d="M262 559 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="496" width="322" height="126" rx="10" class="box"/>
+        <text x="304" y="518" class="t-s t-i">Условия в самом согласии: цель, срок,</text>
+        <text x="304" y="534" class="t-s t-i">третьи лица. Обезличенные данные по методу</text>
+        <text x="304" y="550" class="t-s t-i">РКН — без согласия. Реестр согласий —</text>
+        <text x="304" y="566" class="t-s t-i">условие любого запроса к данным</text>
+        <rect x="622" y="496" width="318" height="126" rx="10" class="b-bad"/>
+        <text x="636" y="518" class="t-s t-i">—</text>
+        <text x="652" y="518" class="t-s t-i">Согласие на ПД — отдельным документом с</text>
+        <text x="652" y="534" class="t-s t-i">01.09.2025; cookie — ПД</text>
+        <text x="636" y="554" class="t-s t-i">—</text>
+        <text x="652" y="554" class="t-s t-i">Утечка: от {{in_leak_min|млн0}} до {{in_leak_max|млн0}} млн ₽; повторная —</text>
+        <text x="652" y="570" class="t-s t-i">{{in_leak_rep_lo|num0}}–{{in_leak_rep_hi|num0}}% выручки</text>
+        <text x="636" y="590" class="t-s t-i">—</text>
+        <text x="652" y="590" class="t-s t-i">Реклама без согласия: {{d3_fine_min|тыс0}} тыс.–{{d3_fine_max|млн0}} млн ₽</text>
+        <text x="652" y="606" class="t-s t-i">(38-ФЗ)</text>
+        <rect x="20" y="34" width="22" height="147" rx="6" class="soft"/>
+        <text transform="translate(35 107.5) rotate(-90)" text-anchor="middle" class="t-h">ВНУТРИ КОНТУРА</text>
+        <rect x="20" y="188" width="22" height="147" rx="6" class="soft"/>
+        <text transform="translate(35 261.5) rotate(-90)" text-anchor="middle" class="t-h">СНАРУЖИ, БЕЗ ПД</text>
+        <rect x="20" y="342" width="22" height="147" rx="6" class="soft"/>
+        <text transform="translate(35 415.5) rotate(-90)" text-anchor="middle" class="t-h">ВЫВОДЫ</text>
+        <rect x="20" y="496" width="22" height="126" rx="6" class="soft"/>
+        <text transform="translate(35 559) rotate(-90)" text-anchor="middle" class="t-h">ГРАНИЦА</text>
+        <text x="20" y="643" class="t-h">ПРАВИЛО ПОДКЛЮЧЕНИЯ ЛЮБОГО ИСТОЧНИКА · ПРЕДЛОЖЕНИЕ</text>
+        <path d="M20 649 H940" class="grid"/>
+        <rect x="20" y="659" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="34" y="681" class="t-b">1. Согласие и цель</text>
+        <text x="34" y="699" class="t-s t-i">Источник записан в реестр: цель,</text>
+        <text x="34" y="715" class="t-s t-i">срок, третьи лица. Нет записи — нет</text>
+        <text x="34" y="731" class="t-s t-i">данных</text>
+        <path d="M312 702 H333" class="ln-prop" marker-end="url(#i1-p)"/>
+        <rect x="335" y="659" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="349" y="681" class="t-b">2. ПД остаются внутри</text>
+        <text x="349" y="699" class="t-s t-i">Наружу идёт только обезличенный ID.</text>
+        <text x="349" y="715" class="t-s t-i">Чужие данные приходят без ПД</text>
+        <path d="M627 702 H648" class="ln-prop" marker-end="url(#i1-p)"/>
+        <rect x="650" y="659" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="664" y="681" class="t-b">3. Эффект в рублях</text>
+        <text x="664" y="699" class="t-s t-i">Контрольная группа показывает</text>
+        <text x="664" y="715" class="t-s t-i">добавленную выручку на человека. Нет</text>
+        <text x="664" y="731" class="t-s t-i">прироста — закрываем</text>
+      </svg>
+    </div>
+    <figcaption>Розовым — что строит платформа, оранжевым — практика рынка, красным — запреты. Цифры слева — опора рынка, а не обещание для ЦИАН. В первом квартале платформа делает строки 1 и 2: поток, согласия и долю опознанных; остальное подключается по правилу внизу. Данные собственников из ЕГРН закрыты законом; что для платформы доступны только открытые сводки — наш вывод.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито</span> · один поток событий для всей компании: {{in_avito_events|млн0}} млн событий в минуту, {{in_avito_sources|num0}}+ источников, единый справочник событий; в рекламные кабинеты события уходят только не-ПД полями · 04.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка, прямой аналог потока и кабинетов</span> · <a href="https://habr.com/ru/companies/avito/articles/904054/" rel="noopener">источник</a> · <a href="https://habr.com/ru/companies/avito/articles/840694/" rel="noopener">кабинеты</a></li>
+    <li><span class="who">Яндекс ID, Сбер ID</span> · Яндекс ID: {{in_yaid_day|млн0}} млн аккаунтов в день, 11,1 млн семейных групп; Сбер ID: 81 млн аккаунтов, 9 тыс.+ сайтов; T-ID отдаёт паспортные и семейные данные · 07.2025, 07.2024 · <span class="src">П, Т</span> · <span class="fit mid">применимо: готовый вход, РФ; Сбер ID усиливает Домклик</span> · <a href="https://yandex.ru/company/news/18-07-2025-02" rel="noopener">Яндекс</a> · <a href="https://kommersant.ru/doc/6852567" rel="noopener">Коммерсантъ</a></li>
+    <li><span class="who">ДОМ.РФ, Банк России</span> · API ЕИСЖС: 4,3 тыс. застройщиков, {{in_eisg_flats|млн1}} млн квартир, ID квартиры по ДДУ для сверки цены и статуса; ЦБ: в августе 2026 — 86,4 тыс. ИЖК на 380,6 млрд ₽, ставка 10,1% · 07.2025, 09.2026 · <span class="src">П</span> · <span class="fit hi">применимо: данные открыты, РФ, новостройки</span> · <a href="https://kommersant.ru/doc/7854981" rel="noopener">ДОМ.РФ</a> · <a href="https://cbr.ru/statistics/bank_sector/mortgage/Indicator_mortgage/0826/" rel="noopener">ЦБ</a></li>
+    <li><span class="who">МТС AdTech, VK</span> · стабильный ID связывает показы и Telegram без ПД: знание бренда ×3, конверсии +{{in_stable_conv|%0}}; чистые комнаты VK: обмен обезличенными параметрами и совместное обучение без обмена данными · 12.2025, 05.2024 · <span class="src">Т</span> · <span class="fit mid">применимо: чужая аудитория, ранний рынок; в РФ нет результатов чистых комнат с цифрами</span> · <a href="https://lenta.ru/news/2025/12/02/mts-adtech-zapustila-kross-platformennuyu-mehaniku-reklamnyh-kampaniy-dlya-biznesa/" rel="noopener">МТС</a> · <a href="https://habr.com/ru/news/815069/" rel="noopener">VK</a></li>
+    <li><span class="who">Harant, Гарант</span> · с 01.09.2025 согласие на ПД — отдельным документом, cookie и пиксели — ПД; с 30.05.2025 утечка — от {{in_leak_min|млн0}} до {{in_leak_max|млн0}} млн ₽ по числу людей, повторная — {{in_leak_rep_lo|num0}}–{{in_leak_rep_hi|num0}}% выручки · 09.2025, 05.2025 · <span class="src">В, Т</span> · <span class="fit hi">применимо: закон для любого онлайн-бизнеса РФ</span> · <a href="https://harant.ru/blog/internet-pravo/chto-izmenilos-s-1-sentyabrya-2025-goda-v-oblasti-personalnyh-dannyh-dlya-onlajn-biznesa/" rel="noopener">Harant</a> · <a href="https://garant.ru/news/1816746/" rel="noopener">Гарант</a> · <a href="https://consultant.ru/legalnews/28492" rel="noopener">КонсультантПлюс</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Центр данных — один поток событий с единым справочником и реестр согласий. Карточка человека собирается из потока, а не из кабинетов команд. У Авито это {{in_avito_events|млн0}} млн событий в минуту из {{in_avito_sources|num0}}+ источников.</li>
+      <li>Долю опознанных растим через Яндекс ID, Сбер ID, VK ID и T-ID, а не через отпечаток браузера. Вход не отдаём одному банку: Сбер ID усиливает Домклик.</li>
+      <li>Внешние данные идут без выгрузки ПД. ЦБ и ДОМ.РФ дают поводы для сообщений и сверку лотов; партнёры — только обезличенный ID или чистая комната.</li>
+      <li>Право — граница. Согласие на ПД отдельным документом, cookie — ПД, реклама только с согласия. Любой новый источник проходит три шага: согласие и цель, ПД внутри, эффект в рублях.</li>
+      <li>Жизненные события и добычу данных включаем, когда есть контрольная группа и модели прироста (схема И2). Событие считаем догадкой с точностью {{in_life_lo|num0}}–{{in_life_hi|num0}}%, а не фактом, и в тексте не называем.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Свой поток событий и граф «устройство — логин»</td><td>Вендор CDP</td><td>Дольше стартуем и сами держим схему событий; зато схема и данные не у вендора</td><td>Авито: свой поток и выгрузка в кабинеты без ПД; Elama: граф с вырезанием «мостов»</td></tr>
+        <tr><td>Внешний ID: Яндекс ID, Сбер ID, VK ID, T-ID</td><td>Свой вход по SMS</td><td>Зависим от чужого входа, а Сбер ID усиливает Домклик; зато доля опознанных выше и нет расходов на SMS и трения</td><td>Яндекс ID: {{in_yaid_day|млн0}} млн аккаунтов в день; Сбер ID: 81 млн</td></tr>
+        <tr><td>Партнёры через обезличенный ID и чистую комнату</td><td>Хэши своей базы в чужой DSP</td><td>Охват и точность ниже, рынок ранний; зато ПД не уходят из контура и не нужно отдельное согласие на передачу</td><td>МТС AdTech: конверсии +{{in_stable_conv|%0}}; VK: пилот «Рив Гош»</td></tr>
+        <tr><td>Жизненные события как ранний сигнал</td><td>Только поведение на сайте</td><td>Точность {{in_life_lo|num0}}–{{in_life_hi|num0}}%: нужны осторожные тексты без названия события; зато видим человека до начала поиска</td><td>Сбер «Ромашка»; Авито Реклама: рост дохода как сигнал</td></tr>
+        <tr><td>Согласия по всем целям, реклама только с согласия</td><td>Только сервисные сообщения</td><td>Охват CRM меньше; зато нет штрафа за рекламу без согласия — {{d3_fine_min|тыс0}} тыс.–{{d3_fine_max|млн0}} млн ₽ — и нет риска для базы</td><td>Требование 38-ФЗ и закона о ПД; Wildberries: УФАС просит отделять рекламные пуши от сервисных</td></tr>
+        <tr><td>Свои модели на потоке событий</td><td>Look-alike площадок</td><td>Нужна своя команда; зато нет чёрного ящика и выгрузки ПД</td><td>Т-Банк Perseus: +{{in_perseus_lo|num0}}–{{in_perseus_hi|num0}}% метрик; Сбер: look-alike ×{{in_lookalike|num1}}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark market">Практика рынка</span> Т-Банк: все события клиента в одну последовательность, трансформер, плюс 3–17% метрик, даже без покупок (<a href="https://habr.com/ru/companies/tbank/articles/1061236/" rel="noopener">Perseus, 07.2026</a>). Сбер: look-alike на 900+ признаках, конверсия ×1,6 (<a href="https://osp.ru/articles/2024/0313/13058159" rel="noopener">03.2024</a>); трансформер прогнозирует {{in_life_needs|num0}} потребностей с точностью {{in_life_lo|num0}}–{{in_life_hi|num0}}% (<a href="https://vc.ru/marketing/846365-kak-ii-i-metodologiya-romashka" rel="noopener">«Ромашка», 09.2023</a>). По данным Авито, {{in_life_baby|%0}} россиян купили или планируют жильё при рождении или взрослении ребёнка (<a href="https://ruinformer.com/page/kak-rozhdenie-detej-izmenjaet-otnoshenie-rossijan-k-zhilju" rel="noopener">пересказ, проверено 02.10.2026</a>).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Аудитория {{cian_mau|млн1}} млн человек в месяц; {{in_cian_ai|%0}} целевых действий уже идут от ИИ-рекомендаций. Модели работают на тех же событиях, которые собирает платформа. Единого журнала отправок и согласий в ЦИАН нет (схема А2).</li>
+      <li><span class="mark assume">Допущение</span> Доля опознанных у ЦИАН неизвестна: у площадок открыты только числа аккаунтов ID, а не доли авторизованных. Меряем в первые недели. Слово «агрегаты» про ЕГРН — наш вывод: закон закрывает данные собственников, но слова не использует.</li>
+      <li><span class="mark prop">Предложение</span> Правило подключения источника из трёх шагов, реестр согласий как условие любого запроса к данным, запрет на склейку по отпечатку браузера и на показ события человеку в тексте.</li>
+    </ul>
+  </div>
+</article>

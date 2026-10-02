@@ -1,0 +1,169 @@
+<!-- tab: channels -->
+<article class="scheme" id="s-k3">
+  <header>
+    <p class="code"><span>Схема К3</span><span class="core">★ ядро</span><span>Правила нового канала · пример MAX</span></p>
+    <h2>Новый канал проходит четыре этапа, и масштаб получает только тот, что окупается в рублях</h2>
+    <p class="sub">Охват канала ещё не довод. Сначала проверяем право и цену, потом меряем прирост на своей базе с контролем, и только потом растим. Раз в квартал канал без прироста закрываем.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 638" role="img" aria-label="Новый канал проходит четыре этапа. Песочница: право и согласия, доставляемость, цена контакта, владелец канала. Дальше, если все четыре есть. Пилот на своей базе: только с согласием, контроль 50 процентов, окно влияния 7 дней, добавленные действия на контакт, ранний заменитель выручки по 14–28 дням. Дальше, если прирост виден против контроля. Масштаб: добавленная выручка на контакт выше цены канала и теневой цены, защитные метрики в норме; раскатка волнами, общая контрольная группа остаётся. Пересмотр раз в квартал: канал без прироста закрываем. Пример: пилот подписки на поиск в MAX во втором квартале. Факты: 86,2 млн человек в месяц, массовой рассылки нет, тариф до 12,2 рубля за клиента в месяц. Пилот: половина людей с сохранённым поиском получает оповещения ещё и в MAX, вторая половина контроль. Условие масштаба: выручка выше 146 рублей на человека в год. Через квартал пересчёт или закрытие.">
+        <defs>
+          <marker id="k3-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="k3-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-m"/></marker>
+          <marker id="k3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="20" class="t-h">ЧЕТЫРЕ ЭТАПА ЗАПУСКА НОВОГО КАНАЛА</text>
+        <rect x="20" y="30" width="215" height="62" rx="10" class="b-prop"/>
+        <text x="30" y="56" class="t-b">1 · Песочница</text>
+        <text x="30" y="72" class="t-s">Можно ли вообще?</text>
+        <path d="M235 61 H251" class="ln" marker-end="url(#k3-i)"/>
+        <rect x="20" y="104" width="215" height="150" rx="10" class="box"/>
+        <text x="30" y="128" class="t-h">ПРОВЕРЯЕМ</text>
+        <text x="30" y="144" class="t-s">— право и согласия</text>
+        <text x="30" y="160" class="t-s">— доставляемость</text>
+        <text x="30" y="176" class="t-s">— цена контакта</text>
+        <text x="30" y="192" class="t-s">— владелец канала</text>
+        <path d="M127 92 V100" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="20" y="266" width="215" height="90" rx="10" class="b-prop"/>
+        <text x="30" y="290" class="t-h">ДАЛЬШЕ, ЕСЛИ</text>
+        <text x="30" y="306" class="t-s">четыре «да». Нет согласий или</text>
+        <text x="30" y="322" class="t-s">владельца — стоп</text>
+        <path d="M127 254 V262" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="255" y="30" width="215" height="62" rx="10" class="b-prop"/>
+        <text x="265" y="56" class="t-b">2 · Пилот</text>
+        <text x="265" y="72" class="t-s">Работает ли?</text>
+        <path d="M470 61 H486" class="ln" marker-end="url(#k3-i)"/>
+        <rect x="255" y="104" width="215" height="150" rx="10" class="box"/>
+        <text x="265" y="128" class="t-h">ПРОВЕРЯЕМ</text>
+        <text x="265" y="144" class="t-s">— своя база, только с согласием</text>
+        <text x="265" y="160" class="t-s">— контроль {{campaign_control_new|%0}} людей, окно</text>
+        <text x="265" y="176" class="t-s">влияния {{ch_avito_window|num0}} дней</text>
+        <text x="265" y="192" class="t-s">— добавленные действия на</text>
+        <text x="265" y="208" class="t-s">контакт</text>
+        <text x="265" y="224" class="t-s">— ранний заменитель выручки:</text>
+        <text x="265" y="240" class="t-s">{{ch_proxy_min|num0}}–{{ch_proxy_max|num0}} дней</text>
+        <path d="M362 92 V100" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="255" y="266" width="215" height="90" rx="10" class="b-prop"/>
+        <text x="265" y="290" class="t-h">ДАЛЬШЕ, ЕСЛИ</text>
+        <text x="265" y="306" class="t-s">прирост виден против контроля,</text>
+        <text x="265" y="322" class="t-s">а не по кликам; отписки и</text>
+        <text x="265" y="338" class="t-s">жалобы не растут</text>
+        <path d="M362 254 V262" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="490" y="30" width="215" height="62" rx="10" class="b-prop"/>
+        <text x="500" y="56" class="t-b">3 · Масштаб</text>
+        <text x="500" y="72" class="t-s">Окупается ли?</text>
+        <path d="M705 61 H721" class="ln" marker-end="url(#k3-i)"/>
+        <rect x="490" y="104" width="215" height="150" rx="10" class="box"/>
+        <text x="500" y="128" class="t-h">ПРОВЕРЯЕМ</text>
+        <text x="500" y="144" class="t-s">— добавленная выручка на</text>
+        <text x="500" y="160" class="t-s">контакт выше цены канала и</text>
+        <text x="500" y="176" class="t-s">теневой цены</text>
+        <text x="500" y="192" class="t-s">— защитные метрики в норме:</text>
+        <text x="500" y="208" class="t-s">отписки не выше базы в {{guard_optout_factor|num1}} раза,</text>
+        <text x="500" y="224" class="t-s">спам ниже {{guard_spam_stop|%1}}, отказы</text>
+        <text x="500" y="240" class="t-s">доставки ниже {{b2_bounce_max|%0}}</text>
+        <path d="M597 92 V100" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="490" y="266" width="215" height="90" rx="10" class="b-prop"/>
+        <text x="500" y="290" class="t-h">ДАЛЬШЕ, ЕСЛИ</text>
+        <text x="500" y="306" class="t-s">раскатка волнами; общая</text>
+        <text x="500" y="322" class="t-s">контрольная группа {{holdout_share|%0}} остаётся</text>
+        <path d="M597 254 V262" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="725" y="30" width="215" height="62" rx="10" class="b-prop"/>
+        <text x="735" y="56" class="t-b">4 · Пересмотр</text>
+        <text x="735" y="72" class="t-s">Раз в квартал: нужен ли ещё?</text>
+        <rect x="725" y="104" width="215" height="150" rx="10" class="box"/>
+        <text x="735" y="128" class="t-h">ПРОВЕРЯЕМ</text>
+        <text x="735" y="144" class="t-s">— каждые {{ch_review_months|num0}} месяца смотрим те</text>
+        <text x="735" y="160" class="t-s">же числа</text>
+        <text x="735" y="176" class="t-s">— цены и правила канала</text>
+        <text x="735" y="192" class="t-s">пересчитываем</text>
+        <text x="735" y="208" class="t-s">— канал без прироста</text>
+        <text x="735" y="224" class="t-s">закрываем</text>
+        <path d="M832 92 V100" class="ln-m" marker-end="url(#k3-m)"/>
+        <rect x="725" y="266" width="215" height="90" rx="10" class="b-prop"/>
+        <text x="735" y="290" class="t-h">ДАЛЬШЕ, ЕСЛИ</text>
+        <text x="735" y="306" class="t-s">прирост есть — канал остаётся;</text>
+        <text x="735" y="322" class="t-s">нет — закрываем. Портфель не</text>
+        <text x="735" y="338" class="t-s">растёт про запас</text>
+        <path d="M832 254 V262" class="ln-m" marker-end="url(#k3-m)"/>
+        <text x="20" y="384" class="t-h">ПРИМЕР: ПИЛОТ ПОДПИСКИ НА ПОИСК В MAX, 2-Й КВАРТАЛ РОАДМАПА</text>
+        <rect x="20" y="396" width="215" height="150" rx="10" class="b-market"/>
+        <text x="30" y="420" class="t-h">ЭТАП 1 · ФАКТЫ О MAX</text>
+        <text x="30" y="436" class="t-s">{{ch_max_mau|млн1}} млн человек в месяц</text>
+        <text x="30" y="452" class="t-s">(Mediascope). Массовой</text>
+        <text x="30" y="468" class="t-s">рассылки нет: только бот и</text>
+        <text x="30" y="484" class="t-s">согласие. Тариф до {{ch_max_price|num1}} ₽ за</text>
+        <text x="30" y="500" class="t-s">клиента в месяц; пока бесплатно</text>
+        <rect x="255" y="396" width="215" height="150" rx="10" class="b-prop"/>
+        <text x="265" y="420" class="t-h">ЭТАП 2 · КАК ПРОВОДИМ</text>
+        <text x="265" y="436" class="t-s">половине людей с сохранённым</text>
+        <text x="265" y="452" class="t-s">поиском предлагаем</text>
+        <text x="265" y="468" class="t-s">оповещения ещё и в MAX,</text>
+        <text x="265" y="484" class="t-s">вторая половина — контроль.</text>
+        <text x="265" y="500" class="t-s">Окно {{ch_avito_window|num0}} дней. Ориентир ДОМ.РФ:</text>
+        <text x="265" y="516" class="t-s">{{ch_domrf_subs|тыс0}} тыс. подписчиков за {{ch_domrf_weeks|num0}}</text>
+        <text x="265" y="532" class="t-s">недели</text>
+        <rect x="490" y="396" width="215" height="150" rx="10" class="b-assume"/>
+        <text x="500" y="420" class="t-h">ЭТАП 3 · УСЛОВИЕ</text>
+        <text x="500" y="436" class="t-s">добавленная выручка на</text>
+        <text x="500" y="452" class="t-s">человека за 12 месяцев выше</text>
+        <text x="500" y="468" class="t-s">цены канала и теневой цены</text>
+        <text x="500" y="484" class="t-s">внимания. Цена канала — до</text>
+        <text x="500" y="500" class="t-s">{{ch_max_year_cost|num0}} ₽ в год ({{ch_max_price|num1}} ₽ × 12)</text>
+        <rect x="725" y="396" width="215" height="150" rx="10" class="b-prop"/>
+        <text x="735" y="420" class="t-h">ЭТАП 4 · ПЕРЕСМОТР</text>
+        <text x="735" y="436" class="t-s">через квартал смотрим те же</text>
+        <text x="735" y="452" class="t-s">числа. Когда станет известна</text>
+        <text x="735" y="468" class="t-s">цена после бесплатного</text>
+        <text x="735" y="484" class="t-s">периода, пересчитываем. Нет</text>
+        <text x="735" y="500" class="t-s">прироста — закрываем</text>
+        <rect x="20" y="562" width="920" height="62" rx="10" class="b-assume"/>
+        <text x="32" y="590" class="t-b">Чего нет в открытых данных</text>
+        <text x="32" y="606" class="t-s">цены MAX после бесплатного периода и доставляемости; считаем в песочнице. Владелец канала — PM жизненного цикла (допущение)</text>
+      </svg>
+    </div>
+    <figcaption>Каждый этап отвечает на свой вопрос и пускает дальше по своему критерию. Внизу те же четыре этапа на примере MAX: оранжевым — факты рынка, розовым — наши решения, жёлтым пунктиром — допущения. Пилот стоит во 2-м квартале роадмапа. MAX не входит в первую версию платформы: сначала песочница.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито</span> · глобальный контроль {{avito_holdout|%0}} людей без маркетинга с 2022 года; тест {{ch_avito_test_share|%0}}/{{ch_avito_test_share|%0}}, окно влияния {{ch_avito_window|num0}} дней, раскатка после проверки аналитиком · 01.2025 и 06.2025 · <span class="src">П</span> · <span class="fit hi">применимо: тот же класс задачи, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/918634" rel="noopener">источник</a> · <a href="https://habr.com/ru/companies/avito/articles/875012" rel="noopener">источник 2</a></li>
+    <li><span class="who">ДОМ.РФ</span> · подписка на избранное и поиск новостроек, уведомления в MAX: {{ch_domrf_subs|тыс0}} тыс. человек за {{ch_domrf_weeks|num0}} недели · 12.2025 · <span class="src">Т</span> · <span class="fit hi">применимо: тот же сценарий, что и пилот</span> · <a href="https://newsinfo.ru/news/stroika-bolshe-1pt/959655/" rel="noopener">источник</a></li>
+    <li><span class="who">VK, тариф MAX</span> · сервис и бот до {{ch_max_price|num1}} ₽, одноразовые коды до {{ch_max_otp|num1}} ₽ за клиента в месяц; пока бесплатно, тариф не окончательный; подписчик через рекламу ~50 ₽ против 10–15 ₽ в Telegram (сниппет) · 07–08.2025 · <span class="src">Т</span> · <span class="fit hi">применимо: цена контакта в пилоте</span> · <a href="https://frankmedia.ru/211906" rel="noopener">источник</a> · <a href="https://workspace.ru/blog/chat-boty-v-mah-v-2026-polnoe-rukovodstvo-po-zahodu-na-ploschadku-dlya-biznesa-i-agentstv/" rel="noopener">workspace.ru</a></li>
+    <li><span class="who">Mediascope</span> · MAX: {{ch_max_mau|млн1}} млн человек в месяц и {{ch_max_dau|млн0}} млн в день; Telegram {{ch_tg_mau|млн1}} и WhatsApp {{ch_wa_mau|млн1}} млн в месяц · 06.2026 · <span class="src">Т</span> · <span class="fit hi">применимо: массовый канал, РФ</span> · <a href="https://vedomosti.ru/technology/articles/2026/07/21/1215425-max-ohvatu" rel="noopener">источник</a></li>
+    <li><span class="who">НПФ «ГАЗФОНД пенсионные накопления»</span> · в MAX 13 тыс. подписчиков без затрат на рекламу, продажи как в Telegram, 3–6 месяцев до ядра аудитории; сниппет пресс-релиза · 07.2026 · <span class="src">В</span> · <span class="fit mid">применимо: канал тот же, отрасль другая</span> · <a href="https://vedomosti.ru/press_releases/2026/07/14/kak-biznesu-prodvigatsya-v-messendzhere-max-v-2026-godu-razbor-na-zhivom-keise-npf-gazfond-pn" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Новый канал проходит четыре этапа: песочница, пилот на своей базе с контролем, масштаб, пересмотр раз в квартал.</li>
+      <li>Песочница отвечает «можно ли»: право и согласия, доставляемость, цена контакта, владелец. Пилот отвечает «работает ли»: контроль {{campaign_control_new|%0}} людей, окно влияния {{ch_avito_window|num0}} дней.</li>
+      <li>Масштаб — только если добавленная выручка на контакт выше цены канала и теневой цены, а защитные метрики в норме. Охват канала не довод.</li>
+      <li>MAX: пилот во 2-м квартале на подписке на сохранённый поиск. Только бот и согласие. Цена до {{ch_max_price|num1}} ₽ за клиента в месяц — это до {{ch_max_year_cost|num0}} ₽ на человека в год.</li>
+      <li>Раз в {{ch_review_months|num0}} месяца смотрим весь портфель: канал без прироста закрываем.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Пилот на своей базе с контрольной группой</td><td>Сразу запустить на всех и смотреть клики</td><td>Дольше, чем запуск на всех; зато видим прирост, а не клики</td><td>Авито: тест {{ch_avito_test_share|%0}}/{{ch_avito_test_share|%0}}, окно влияния {{ch_avito_window|num0}} дней, раскатка после проверки аналитиком; глобальный контроль {{avito_holdout|%0}}</td></tr>
+        <tr><td>Первый сценарий — подписка на поиск, который человек сам сохранил</td><td>Массовая рассылка по базе</td><td>Меньше охват на старте; зато согласие есть, а массовой рассылки в MAX нет</td><td>ДОМ.РФ: {{ch_domrf_subs|тыс0}} тыс. подписчиков MAX за {{ch_domrf_weeks|num0}} недели на подписке на поиск и избранное новостроек</td></tr>
+        <tr><td>Решение по рублям: добавленная выручка на контакт выше цены канала и теневой цены</td><td>Решение по охвату и числу подписчиков</td><td>Рубли видны не сразу: ранний заменитель по {{ch_proxy_min|num0}}–{{ch_proxy_max|num0}} дням, потом сверка с постоянной группой</td><td>Netflix: решение по {{ch_netflix_days|num0}} дням совпало с решением по {{ch_netflix_check_days|num0}}-му дню примерно в {{ch_netflix_share|%0}} из {{ch_netflix_tests|num0}} тестов (сниппет) · <a href="https://arxiv.org/abs/2311.11922" rel="noopener">источник</a></td></tr>
+        <tr><td>Пересмотр портфеля раз в квартал: канал без прироста закрываем</td><td>Держать канал на всякий случай</td><td>Теряем охват и вложенное; зато портфель не раздувается, и платим только за работающее</td><td>Airbnb: SMS — главная статья затрат, ищут перенос на дешёвые каналы (сниппет) · <a href="https://medium.com/airbnb-engineering/airbnbs-promotions-and-communications-platform-6266f1ffe2bd" rel="noopener">источник</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Частоту оповещений по сохранённому поиску человек задаёт сам: сохранённые поиски — готовая база для пилота.</li>
+      <li><span class="mark market">Практика рынка</span> Контроль и тест {{ch_avito_test_share|%0}}/{{ch_avito_test_share|%0}} у Авито; подписка на поиск в MAX у ДОМ.РФ; тариф VK; охват по Mediascope; опыт НПФ; проверка раннего заменителя у Netflix. Всё в полосе выше и в таблице.</li>
+      <li><span class="mark assume">Допущение</span> Цена MAX после бесплатного периода и доставляемость неизвестны. «До {{ch_max_year_cost|num0}} ₽ в год» — верхняя планка из черновика тарифа ({{ch_max_price|num1}} ₽ × 12 месяцев), а не прогноз. Владелец канала — PM жизненного цикла: наше допущение.</li>
+      <li><span class="mark prop">Предложение</span> Четыре этапа и критерии выхода из каждого; пилот на подписке на сохранённый поиск; решение по добавленной выручке в рублях; пересмотр портфеля раз в квартал; общая контрольная группа {{holdout_share|%0}} остаётся и после масштаба.</li>
+    </ul>
+  </div>
+</article>

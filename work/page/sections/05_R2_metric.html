@@ -1,0 +1,134 @@
+<!-- tab: role -->
+<article class="scheme" id="s-r2">
+  <header>
+    <p class="code"><span>Схема С2</span><span class="core">★ ядро</span><span>Вопросы 2.1 и 1.4 · главная метрика</span></p>
+    <h2>Главная метрика — добавленная выручка на человека за 12 месяцев</h2>
+    <p class="sub">Сколько выручки ЦИАН за следующие 12 месяцев принесёт человек при действиях платформы минус сколько он принёс бы без них. Считаем на одного человека, по назначению в группу, к контрольной группе.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 610" role="img" aria-label="Слева направо: человек, который ищет жильё и сам не платит; действия платформы: сообщение, место в продукте, ИИ-подборка; шесть потоков выручки ЦИАН: новостройки — платный звонок застройщику от 30 секунд, 22,6 тысячи рублей; вторичка и аренда — контакты агентам, премиум-подписки, тарифы, доля неизвестна; сделка — 20–30% комиссии продавца, более тысячи сделок; ипотека — 243 миллиона за полугодие; медиа и реклама — 974 миллиона за полугодие; ранний доступ — 179–599 рублей. Потоки складываются в сумму за 12 месяцев, из неё вычитается то же у людей в контрольной группе, получается добавленная выручка на человека за 12 месяцев. Внизу: ранний заменитель по 14–28 дням поведения и проверка постоянной контрольной группой; звонки, чаты и заявки остаются опережающими показателями.">
+        <defs>
+          <marker id="r2-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="r2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="26" class="t-h">ЧЕЛОВЕК И ДЕЙСТВИЯ</text>
+        <text x="304" y="26" class="t-h">ШЕСТЬ ПОТОКОВ ВЫРУЧКИ ЦИАН</text>
+        <text x="730" y="26" class="t-h">СЧЁТ ЗА 12 МЕСЯЦЕВ</text>
+        <rect x="20" y="158" width="104" height="116" rx="10" class="box"/>
+        <text x="32" y="182" class="t-b">Человек</text>
+        <text x="32" y="204" class="t-s t-i">ищет жильё,</text>
+        <text x="32" y="221" class="t-s t-i">сам почти</text>
+        <text x="32" y="238" class="t-s t-i">не платит</text>
+        <path d="M124 216 H146" class="ln" marker-end="url(#r2-i)"/>
+        <rect x="148" y="158" width="136" height="116" rx="10" class="b-prop"/>
+        <text x="160" y="180" class="t-b">Действия</text>
+        <text x="160" y="197" class="t-b">платформы</text>
+        <text x="160" y="220" class="t-s t-i">сообщение,</text>
+        <text x="160" y="236" class="t-s t-i">место в продукте,</text>
+        <text x="160" y="252" class="t-s t-i">ИИ-подборка</text>
+        <path d="M284 216 H302" class="ln" marker-end="url(#r2-i)"/>
+        <rect x="304" y="40" width="390" height="52" rx="10" class="b-cian"/>
+        <text x="316" y="61" class="t-b">Новостройки</text>
+        <text x="682" y="61" text-anchor="end" class="t-s t-b f-cian">{{rev_per_lead|тыс1}} тыс. ₽ за звонок</text>
+        <text x="316" y="80" class="t-s t-i">платный звонок застройщику от {{lead_call_seconds|num0}} с</text>
+        <path d="M694 66 H712" class="ln-m"/>
+        <rect x="304" y="98" width="390" height="52" rx="10" class="b-assume"/>
+        <text x="316" y="119" class="t-b">Вторичка и аренда</text>
+        <text x="682" y="119" text-anchor="end" class="t-s t-b f-assume">доля k не известна</text>
+        <text x="316" y="138" class="t-s t-i">контакты агентам, премиум ({{role_prem_share|%0}} подписок), тарифы</text>
+        <path d="M694 124 H712" class="ln-m"/>
+        <rect x="304" y="156" width="390" height="52" rx="10" class="b-cian"/>
+        <text x="316" y="177" class="t-b">Сделка</text>
+        <text x="682" y="177" text-anchor="end" class="t-s t-b f-cian">более {{role_deals|тыс0}} тыс. сделок</text>
+        <text x="316" y="196" class="t-s t-i">ЦИАН берёт {{role_fee_min|%0}}–{{role_fee_max|%0}} комиссии продавца</text>
+        <path d="M694 182 H712" class="ln-m"/>
+        <rect x="304" y="214" width="390" height="52" rx="10" class="b-cian"/>
+        <text x="316" y="235" class="t-b">Ипотека</text>
+        <text x="682" y="235" text-anchor="end" class="t-s t-b f-cian">{{role_mortgage_h1|млн0}} млн ₽ за полугодие</text>
+        <text x="316" y="254" class="t-s t-i">комиссия банка; {{asis_g_trans|%0}} к 1 пол. 2025</text>
+        <path d="M694 240 H712" class="ln-m"/>
+        <rect x="304" y="272" width="390" height="52" rx="10" class="b-cian"/>
+        <text x="316" y="293" class="t-b">Медиа и реклама</text>
+        <text x="682" y="293" text-anchor="end" class="t-s t-b f-cian">{{role_media_h1|млн0}} млн ₽ за полугодие</text>
+        <text x="316" y="312" class="t-s t-i">показы и клики рекламы застройщиков и банков</text>
+        <path d="M694 298 H712" class="ln-m"/>
+        <rect x="304" y="330" width="390" height="52" rx="10" class="b-cian"/>
+        <text x="316" y="351" class="t-b">Ранний доступ</text>
+        <text x="682" y="351" text-anchor="end" class="t-s t-b f-cian">{{early_access_min|num0}}–{{early_access_max|num0}} ₽</text>
+        <text x="316" y="370" class="t-s t-i">платит сам ищущий: первым видит объявление</text>
+        <path d="M694 356 H712" class="ln-m"/>
+        <path d="M712 66 V356" class="ln-m"/>
+        <path d="M712 136 H728" class="ln" marker-end="url(#r2-i)"/>
+        <rect x="730" y="98" width="210" height="76" rx="10" class="box"/>
+        <text x="742" y="122" class="t-b">Сумма за 12 месяцев</text>
+        <text x="742" y="142" class="t-s t-i">выручка человека за год</text>
+        <text x="742" y="159" class="t-s t-i">при действиях платформы</text>
+        <text x="835" y="198" text-anchor="middle" class="t-n">−</text>
+        <rect x="730" y="208" width="210" height="76" rx="10" class="soft"/>
+        <text x="742" y="232" class="t-b">Контроль</text>
+        <text x="742" y="252" class="t-s t-i">то же у людей без</text>
+        <text x="742" y="269" class="t-s t-i">действий платформы</text>
+        <text x="835" y="308" text-anchor="middle" class="t-n">=</text>
+        <rect x="730" y="318" width="210" height="92" rx="10" class="b-prop"/>
+        <text x="742" y="341" class="t-b">Добавленная выручка</text>
+        <text x="742" y="358" class="t-b">на человека</text>
+        <text x="742" y="375" class="t-b">за 12 месяцев</text>
+        <text x="742" y="396" class="t-s t-i">по назначению в группу</text>
+        <path d="M835 410 V428" class="ln-prop" marker-end="url(#r2-p)"/>
+        <rect x="20" y="430" width="450" height="96" rx="10" class="b-market"/>
+        <text x="34" y="454" class="t-b">Ранний заменитель: по {{role_proxy_lo|num0}}–{{role_proxy_hi|num0}} дням поведения</text>
+        <text x="34" y="476" class="t-s t-i">прогноз 12-месячной выручки по первым дням поведения.</text>
+        <text x="34" y="493" class="t-s t-i">Netflix: решение по {{role_nflx_days|num0}} дням совпало с решением</text>
+        <text x="34" y="510" class="t-s t-i">по {{role_nflx_ctrl_days|num0}}-му дню в ~{{role_nflx_match|%0}} из {{role_nflx_tests|num0}} тестов</text>
+        <rect x="490" y="430" width="450" height="96" rx="10" class="b-prop"/>
+        <text x="504" y="454" class="t-b">Проверка: постоянная контрольная группа</text>
+        <text x="504" y="476" class="t-s t-i">{{b2_holdout_perm|%0}} людей год без воздействия платформы;</text>
+        <text x="504" y="493" class="t-s t-i">сверяет заменитель с настоящей выручкой</text>
+        <text x="504" y="510" class="t-s t-i">и показывает, как эффект затухает</text>
+        <path d="M490 478 H474" class="ln-prop" marker-end="url(#r2-p)"/>
+        <rect x="20" y="544" width="920" height="52" rx="10" class="soft" stroke-dasharray="6 4"/>
+        <text x="34" y="566" class="t-s t-i">Звонки, чаты и заявки — прошлые целевые действия — остаются опережающими показателями: они быстрее и мощнее по статистике.</text>
+        <text x="34" y="585" class="t-s t-i">Бюджет и ранжирование решаются в рублях: по добавленной выручке на человека за 12 месяцев.</text>
+      </svg>
+    </div>
+    <figcaption>Зелёным — потоки выручки ЦИАН по открытым данным, жёлтым пунктиром — поток, где доля пока не известна. Розовым — то, что добавляет платформа. Оранжевым — практика рынка. Метрика считается по назначению в группу: человек остаётся в своей группе, даже если не получил сообщение.</figcaption>
+  </figure>
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Airbnb</span> · ценность объявления — брони за следующие 365 дней минус каннибализация; прогноз правят каждый день · 2024 · <span class="src">П</span> · <span class="fit hi">применимо: двусторонняя площадка</span> · <a href="https://airbnb.tech/ai-ml/how-airbnb-measures-listing-lifetime-value/" rel="noopener">источник</a></li>
+    <li><span class="who">Netflix</span> · по 14 дням поведения решение совпало с решением по 63-му дню в ~95% из 200 тестов; точность 79%, полнота 65% (по сниппету) · 11.2023 · <span class="src">Т</span> · <span class="fit hi">применимо: метод заменителя; подписка, не площадка</span> · <a href="https://arxiv.org/abs/2311.11922" rel="noopener">статья</a></li>
+    <li><span class="who">Spotify</span> · в примере ранний показатель вырос на 20%, а удержание осталось на месте; после теста 10% людей остаются на старой версии, удержание мерят на 6-й неделе (по сниппету) · 01.2026 · <span class="src">П</span> · <span class="fit hi">применимо: заменитель сверяют с настоящей метрикой</span> · <a href="https://confidence.spotify.com/blog/proxy-metrics" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · 10% пользователей без маркетинга с 2022 года; перед отправкой проверка согласия и «охлаждения» · 06.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка, РФ, постоянная контрольная группа</span> · <a href="https://habr.com/ru/companies/avito/articles/918634" rel="noopener">источник</a></li>
+    <li><span class="who">Pinterest</span> · эффект +7% в первые недели осел до 2,5% за год в постоянной контрольной группе · 02.2015 · <span class="src">П</span> · <span class="fit lo">фон: старый кейс, ежедневное использование</span> · <a href="https://medium.com/pinterest-engineering/how-holdout-groups-drive-sustainable-growth-35a4786c3801" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Метрика считает рубли ЦИАН, а не клики: что человек принёс за 12 месяцев при действиях платформы минус что принёс бы в контроле.</li>
+      <li>Ищущий почти не платит сам. Его выручка идёт через шесть потоков: звонок застройщику, размещение агента, сделку, ипотеку, рекламу и ранний доступ.</li>
+      <li>Год ждать долго. Быстрый ответ даёт заменитель по {{role_proxy_lo|num0}}–{{role_proxy_hi|num0}} дням, а правду показывает постоянная контрольная группа.</li>
+      <li>Целевые действия остаются опережающими. Чего не знаем: долю k выручки размещения, которая зависит от контактов. Её проверяем когортами агентов.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap"><table class="tradeoff">
+    <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+    <tbody>
+      <tr><td>Выручка на человека за 12 месяцев</td><td>Целевые действия или прибыль на сессию</td><td>Ждать год или опираться на заменитель; нужна постоянная контрольная группа</td><td>Airbnb: брони за 365 дней минус каннибализация</td></tr>
+      <tr><td>Заменитель по {{role_proxy_lo|num0}}–{{role_proxy_hi|num0}} дням</td><td>Ждать 63–90 дней до результата</td><td>Заменитель может разойтись с настоящей выручкой; нужна сверка на постоянной группе</td><td>Netflix: решения по 14 и 63 дням совпали в ~{{role_nflx_match|%0}} тестов; Spotify</td></tr>
+      <tr><td>Сравнение с контролем по назначению в группу</td><td>До и после или атрибуция по кликам</td><td>Группа без сообщений теряет часть эффекта: это цена честного замера</td><td>Авито: {{avito_holdout|%0}} людей без маркетинга; Pinterest: эффект осел с 7% до 2,5%</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Звонок застройщику от {{lead_call_seconds|num0}} с — {{rev_per_lead|тыс1}} тыс. ₽; премиум-подписки — {{role_prem_share|%0}} подписочной выручки; «Сделка на Циане» — более {{role_deals|тыс0}} тыс. сделок ко 2 кварталу 2026, ЦИАН берёт около {{role_fee_min|%0}}–{{role_fee_max|%0}} комиссии продавца (по презентации — 20%, по словам коммерческого директора — около 30%); ипотечный маркетплейс и SmartDeal — {{role_mortgage_h1|млн0}} млн ₽ за полугодие ({{asis_g_trans|%0}}); медиа — {{role_media_h1|млн0}} млн ₽ ({{asis_g_media|%0}} за год).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Ранний доступ {{early_access_min|num0}}–{{early_access_max|num0}} ₽ — по публикации Т-Ж, не по отчётности ЦИАН; что платит именно ищущий — по пересказу.</li>
+      <li><span class="mark market">Практика рынка</span> Airbnb, Netflix, Spotify, Авито, Pinterest: горизонт, заменитель и постоянная группа.</li>
+      <li><span class="mark assume">Допущение</span> Доля k выручки размещения, зависящая от контактов; до проверки по когортам агентов в бюджете k = 0. Окно заменителя {{role_proxy_lo|num0}}–{{role_proxy_hi|num0}} дней.</li>
+      <li><span class="mark prop">Предложение</span> Определение метрики, горизонт 12 месяцев, постоянная группа {{b2_holdout_perm|%0}}.</li>
+    </ul>
+  </div>
+</article>

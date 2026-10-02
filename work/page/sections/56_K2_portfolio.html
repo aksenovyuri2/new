@@ -1,0 +1,220 @@
+<!-- tab: channels -->
+<article class="scheme" id="s-k2">
+  <header>
+    <p class="code"><span>Схема К2</span><span class="core">★ ядро</span><span>Вопрос 1.2 · портфель каналов и оркестрация</span></p>
+    <h2>Шесть каналов с разной ролью и ценой, а между ними выбирает одна точка решения</h2>
+    <p class="sub">У каждого канала своя роль, охват, цена, согласие и надёжность доставки. Выбирать между ними должен один механизм, а не каждая команда по-своему: он держит лимит на человека, план на неделю, запасной канал и настройки самого человека.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 742" role="img" aria-label="Портфель из шести каналов: пуш — основной, почта — дешёвый рабочий канал, места в продукте — бесплатные и внутри сессии, MAX — новый массовый, только через бота и с согласием, SMS — только критичное и каскад, Telegram и WhatsApp ограничены и не опора. Для каждого канала показаны охват, цена, согласие и доставка. Ниже оркестрация: заявки от CRM, вертикалей и рекламы проходят одну точку решения с лимитом на человека; затем недельный план частоты и выбор в момент; затем каскад по статусу доставки: пуш, письмо, SMS только для критичного. Один центр предпочтений человека питает точку решения и план; сейчас у ЦИАН единого центра нет.">
+        <defs>
+          <marker id="k2-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="k2-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-m"/></marker>
+          <marker id="k2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="22" class="t-h">ПОРТФЕЛЬ КАНАЛОВ</text>
+        <text x="148" y="46" class="t-h">РОЛЬ</text>
+        <text x="286" y="46" class="t-h">ОХВАТ</text>
+        <text x="446" y="46" class="t-h">ЦЕНА</text>
+        <text x="600" y="46" class="t-h">СОГЛАСИЕ</text>
+        <text x="768" y="46" class="t-h">ДОСТАВКА</text>
+        <rect x="136" y="56" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="56" width="112" height="64" rx="10" class="b-prop"/>
+        <text x="28" y="93.0" class="t-b">Пуш</text>
+        <text x="150" y="80" class="t-b">основной</text>
+        <text x="150" y="96" class="t-s">срочное, поиск</text>
+        <text x="288" y="78" class="t-s">{{ch_leads_app|%0}} лидов идут из</text>
+        <text x="288" y="94" class="t-s">приложения и</text>
+        <text x="288" y="110" class="t-s">мобильного веба</text>
+        <text x="448" y="78" class="t-s">RuStore Push</text>
+        <text x="448" y="94" class="t-s">бесплатный</text>
+        <text x="602" y="78" class="t-s">разрешение в системе;</text>
+        <text x="602" y="94" class="t-s">просим после {{ch_pages_min|num0}}–{{ch_pages_max|num0}}</text>
+        <text x="602" y="110" class="t-s">страниц</text>
+        <text x="770" y="78" class="t-s">RuStore + HMS + APNs;</text>
+        <text x="770" y="94" class="t-s">FCM ненадёжен; Huawei</text>
+        <text x="770" y="110" class="t-s">{{ch_huawei_min|num0}}–{{ch_huawei_max|num0}}% устройств</text>
+        <path d="M280 64 V112" class="grid"/>
+        <path d="M440 64 V112" class="grid"/>
+        <path d="M594 64 V112" class="grid"/>
+        <path d="M762 64 V112" class="grid"/>
+        <rect x="136" y="126" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="126" width="112" height="64" rx="10" class="b-prop"/>
+        <text x="28" y="163.0" class="t-b">Почта</text>
+        <text x="150" y="150" class="t-b">дешёвый</text>
+        <text x="150" y="166" class="t-s">рабочий канал</text>
+        <text x="288" y="148" class="t-s">в недвижимости:</text>
+        <text x="288" y="164" class="t-s">открытий {{ch_email_open|%1}}, кликов</text>
+        <text x="288" y="180" class="t-s">от открытий {{ch_email_ctor|%1}}</text>
+        <text x="448" y="148" class="t-s">дешевле SMS</text>
+        <text x="602" y="148" class="t-s">реклама — только с</text>
+        <text x="602" y="164" class="t-s">согласия (38-ФЗ)</text>
+        <text x="770" y="148" class="t-s">гигиена базы: жалобы ниже</text>
+        <text x="770" y="164" class="t-s">{{guard_spam_stop|%1}}</text>
+        <path d="M280 134 V182" class="grid"/>
+        <path d="M440 134 V182" class="grid"/>
+        <path d="M594 134 V182" class="grid"/>
+        <path d="M762 134 V182" class="grid"/>
+        <rect x="136" y="196" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="196" width="112" height="64" rx="10" class="b-prop"/>
+        <text x="28" y="224.0" class="t-b">Места в</text>
+        <text x="28" y="242.0" class="t-b">продукте</text>
+        <text x="150" y="220" class="t-b">бесплатный</text>
+        <text x="150" y="236" class="t-s">внутри сессии</text>
+        <text x="288" y="218" class="t-s">{{ch_ai_reco_share|%0}} целевых действий</text>
+        <text x="288" y="234" class="t-s">— от ИИ-рекомендаций</text>
+        <text x="448" y="218" class="t-s">бесплатно: своё место</text>
+        <text x="602" y="218" class="t-s">не нужно: человек уже в</text>
+        <text x="602" y="234" class="t-s">приложении</text>
+        <text x="770" y="218" class="t-s">решается, когда открыт</text>
+        <text x="770" y="234" class="t-s">экран</text>
+        <path d="M280 204 V252" class="grid"/>
+        <path d="M440 204 V252" class="grid"/>
+        <path d="M594 204 V252" class="grid"/>
+        <path d="M762 204 V252" class="grid"/>
+        <rect x="136" y="266" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="266" width="112" height="64" rx="10" class="b-prop"/>
+        <text x="28" y="303.0" class="t-b">MAX</text>
+        <text x="150" y="290" class="t-b">массовый</text>
+        <text x="150" y="306" class="t-s">новый, пилот</text>
+        <text x="288" y="288" class="t-s">{{ch_max_mau|млн1}} млн в месяц,</text>
+        <text x="288" y="304" class="t-s">{{ch_max_dau|млн0}} млн в день</text>
+        <text x="288" y="320" class="t-s">(Mediascope)</text>
+        <text x="448" y="288" class="t-s">до {{ch_max_price|num1}} ₽ за клиента в</text>
+        <text x="448" y="304" class="t-s">месяц; тариф не</text>
+        <text x="448" y="320" class="t-s">окончательный</text>
+        <text x="602" y="288" class="t-s">массовой рассылки нет:</text>
+        <text x="602" y="304" class="t-s">только бот и согласие</text>
+        <text x="770" y="288" class="t-s">через бота;</text>
+        <text x="770" y="304" class="t-s">доставляемость проверяем</text>
+        <text x="770" y="320" class="t-s">в песочнице</text>
+        <path d="M280 274 V322" class="grid"/>
+        <path d="M440 274 V322" class="grid"/>
+        <path d="M594 274 V322" class="grid"/>
+        <path d="M762 274 V322" class="grid"/>
+        <rect x="136" y="336" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="336" width="112" height="64" rx="10" class="b-prop"/>
+        <text x="28" y="373.0" class="t-b">SMS</text>
+        <text x="150" y="360" class="t-b">критичное</text>
+        <text x="150" y="376" class="t-s">и каскад</text>
+        <text x="288" y="358" class="t-s">по номеру телефона;</text>
+        <text x="288" y="374" class="t-s">резерв, если пуш не</text>
+        <text x="288" y="390" class="t-s">дошёл</text>
+        <text x="448" y="358" class="t-s">сервис {{ch_sms_serv_min|num0}}–{{ch_sms_serv_max|num0}} ₽; реклама</text>
+        <text x="448" y="374" class="t-s">{{ch_sms_ad_min|num0}}–{{ch_sms_ad_max|num0}} ₽</text>
+        <text x="602" y="358" class="t-s">реклама — с согласия;</text>
+        <text x="602" y="374" class="t-s">штраф юрлицу до</text>
+        <text x="602" y="390" class="t-s">{{d3_fine_max|млн0}} млн ₽</text>
+        <text x="770" y="358" class="t-s">самый конверсионный и</text>
+        <text x="770" y="374" class="t-s">самый дорогой канал</text>
+        <path d="M280 344 V392" class="grid"/>
+        <path d="M440 344 V392" class="grid"/>
+        <path d="M594 344 V392" class="grid"/>
+        <path d="M762 344 V392" class="grid"/>
+        <rect x="136" y="406" width="804" height="64" rx="10" class="soft"/>
+        <rect x="20" y="406" width="112" height="64" rx="10" class="b-bad"/>
+        <text x="28" y="434.0" class="t-b">Telegram,</text>
+        <text x="28" y="452.0" class="t-b">WhatsApp</text>
+        <text x="150" y="430" class="t-b">не опора</text>
+        <text x="150" y="446" class="t-s">ограничены РКН</text>
+        <text x="288" y="428" class="t-s">Telegram {{ch_tg_mau|млн1}} млн,</text>
+        <text x="288" y="444" class="t-s">WhatsApp {{ch_wa_mau|млн1}} млн в</text>
+        <text x="288" y="460" class="t-s">месяц</text>
+        <text x="448" y="428" class="t-s">—</text>
+        <text x="602" y="428" class="t-s">—</text>
+        <text x="770" y="428" class="t-s">риск блокировки:</text>
+        <text x="770" y="444" class="t-s">критичным каналом не</text>
+        <text x="770" y="460" class="t-s">делаем</text>
+        <path d="M280 414 V462" class="grid"/>
+        <path d="M440 414 V462" class="grid"/>
+        <path d="M594 414 V462" class="grid"/>
+        <path d="M762 414 V462" class="grid"/>
+        <text x="20" y="492" class="t-h">ОРКЕСТРАЦИЯ: ОДНО РЕШЕНИЕ НА ЧЕЛОВЕКА</text>
+        <rect x="20" y="504" width="170" height="124" rx="10" class="box"/>
+        <text x="30" y="530" class="t-b">Заявки</text>
+        <text x="30" y="546" class="t-s">CRM, вертикали,</text>
+        <text x="30" y="562" class="t-s">реклама застройщиков и</text>
+        <text x="30" y="578" class="t-s">банков. У Авито больше</text>
+        <text x="30" y="594" class="t-s">{{ch_avito_campaigns|num0}} кампаний в день</text>
+        <path d="M190 544 H206" class="ln" marker-end="url(#k2-i)"/>
+        <rect x="210" y="504" width="230" height="124" rx="10" class="b-prop"/>
+        <text x="220" y="530" class="t-b">1 · Одна точка решения</text>
+        <text x="220" y="546" class="t-s">лимит на человека, согласие, пауза</text>
+        <text x="220" y="562" class="t-s">между сообщениями. Авито: {{ch_avito_ex_campaigns|num0}}</text>
+        <text x="220" y="578" class="t-s">кампании при лимите {{ch_avito_ex_limit|num0}} — уходят</text>
+        <text x="220" y="594" class="t-s">лучшие {{ch_avito_ex_limit|num0}}</text>
+        <path d="M440 544 H456" class="ln" marker-end="url(#k2-i)"/>
+        <rect x="460" y="504" width="230" height="124" rx="10" class="b-prop"/>
+        <text x="470" y="530" class="t-b">2 · Недельный план и выбор</text>
+        <text x="470" y="548" class="t-b">в момент</text>
+        <text x="470" y="564" class="t-s">частота на неделю по каждому</text>
+        <text x="470" y="580" class="t-s">человеку (Netflix). Пока простой</text>
+        <text x="470" y="596" class="t-s">лимит: {{limit_push_day|num0}} пуш в сутки и {{limit_week|num0}} сообщения</text>
+        <text x="470" y="612" class="t-s">в неделю</text>
+        <path d="M690 544 H706" class="ln" marker-end="url(#k2-i)"/>
+        <rect x="710" y="504" width="230" height="124" rx="10" class="b-prop"/>
+        <text x="720" y="530" class="t-b">3 · Каскад по статусу</text>
+        <text x="720" y="548" class="t-b">доставки</text>
+        <text x="720" y="564" class="t-s">пуш не дошёл — письмо; SMS</text>
+        <text x="720" y="580" class="t-s">только для критичного. Статус</text>
+        <text x="720" y="596" class="t-s">доставки по каждому каналу —</text>
+        <text x="720" y="612" class="t-s">обязателен</text>
+        <path d="M325 650 V632" class="ln-prop" marker-end="url(#k2-p)"/>
+        <path d="M575 650 V632" class="ln-prop" marker-end="url(#k2-p)"/>
+        <rect x="210" y="650" width="480" height="76" rx="10" class="b-prop"/>
+        <text x="220" y="676" class="t-b">Один центр предпочтений человека</text>
+        <text x="220" y="692" class="t-s">каналы, частота и темы в одной карточке; человек меняет их сам, точка</text>
+        <text x="220" y="708" class="t-s">решения и план читают их отсюда</text>
+        <rect x="710" y="650" width="230" height="76" rx="10" class="b-bad"/>
+        <text x="720" y="676" class="t-b">Сейчас</text>
+        <text x="720" y="692" class="t-s">единого центра у ЦИАН нет</text>
+        <text x="720" y="708" class="t-s">(допущение)</text>
+      </svg>
+    </div>
+    <figcaption>Сверху — портфель: роль канала, охват, цена, согласие и доставка. Снизу — оркестрация: заявки проходят одну точку решения, затем недельный план и выбор в момент, затем каскад по статусу доставки. Центр предпочтений человека питает и точку решения, и план. «Сейчас» — по открытым данным; как устроено внутри ЦИАН, неизвестно. MAX — новый канал в пилоте, правила его запуска — в схеме К3.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито</span> · балансировщик: больше {{ch_avito_campaigns|num0}} регулярных кампаний в день, лимит на человека (пример: {{ch_avito_ex_campaigns|num0}} кампании при лимите {{ch_avito_ex_limit|num0}} — уходят лучшие {{ch_avito_ex_limit|num0}}), проверка согласия и паузы; каналы push, email, мессенджер и лента уведомлений · 01.2025 · <span class="src">П</span> · <span class="fit hi">применимо: тот же класс задачи, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/875012" rel="noopener">источник</a></li>
+    <li><span class="who">Netflix</span> · недельный план частоты по каналам (порядка сотни вариантов) отдельно от выбора сообщения в момент; штраф за каждое сообщение · 06.2026 · <span class="src">П</span> · <span class="fit hi">применимо: люди заходят редко, как наши ищущие</span> · <a href="https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd" rel="noopener">источник</a></li>
+    <li><span class="who">T-PUSH (SmsGold)</span> · сервисный push в приложение Т-Банка по номеру телефона; при недоставке — доотправка в SMS или Telegram; каскад — сервис агрегатора, а не банка · без даты · <span class="src">В</span> · <span class="fit mid">применимо: только сервисные сообщения</span> · <a href="https://smsgold.ru/baza-znaniy/t-push-push-uvedomleniya/" rel="noopener">источник</a></li>
+    <li><span class="who">Яндекс ID</span> · с 06.2026 показывает человеку все сервисы, которые могут ему писать, и объединяет управление уведомлениями · 06.2026 · <span class="src">Т</span> · <span class="fit mid">применимо: идея единого центра; у нас одна платформа, а не экосистема</span> · <a href="https://www.seonews.ru/events/yandeks-obedinil-upravlenie-uvedomleniyami-ot-vsekh-servisov-v-edinom-tsentre/" rel="noopener">источник</a></li>
+    <li><span class="who">Mindbox</span> · в недвижимости почта — лидер: открытий {{ch_email_open|%1}}, CTOR {{ch_email_ctor|%1}}; из 62 млрд сообщений 2025 года 36,8 млрд — пуши; SMS самый конверсионный и самый дорогой · 05.2026 · <span class="src">В</span> · <span class="fit hi">применимо: РФ, недвижимость</span> · <a href="https://adindex.ru/news/researches/2026/05/4/344757.phtml" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Канал выбираем по роли: пуш — основной, почта — дешёвый рабочий, места в продукте — бесплатные и внутри сессии, MAX — новый массовый (только бот и согласие), SMS — критичное и каскад. Telegram и WhatsApp не опора.</li>
+      <li>Решает одна точка: заявки CRM, вертикалей и рекламы проходят через неё. Она проверяет согласие, лимит на человека и паузу между сообщениями.</li>
+      <li>Недельный план: частоту на человека задаём на неделю, сообщение выбираем в момент. Пока — простой лимит: {{limit_push_day|num0}} пуш в сутки и {{limit_week|num0}} сообщения в неделю (<a href="#s-b2">Б2</a>, <a href="#s-b4">Б4</a>).</li>
+      <li>Каскад по статусу доставки: пуш не дошёл — письмо; SMS только для критичного: сервис {{ch_sms_serv_min|num0}}–{{ch_sms_serv_max|num0}} ₽, реклама {{ch_sms_ad_min|num0}}–{{ch_sms_ad_max|num0}} ₽ за сообщение.</li>
+      <li>Центр предпочтений: человек сам видит и меняет каналы, частоту и темы, а решение читает его настройки. Единого центра у ЦИАН по открытым данным нет.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Одна точка решения над всеми отправщиками</td><td>Каждая команда шлёт сама и договаривается о лимитах</td><td>Команды теряют часть свободы запуска; нужны срок ответа и быстрая полоса для срочных событий</td><td>Авито: больше {{ch_avito_campaigns|num0}} кампаний в день через один балансировщик; Uber: слой на уровне человека вместо ручной координации в {{ch_uber_manual|num0}} часов в неделю на человека · <a href="https://uber.com/en-CA/blog/how-uber-optimizes-push-notifications-using-ml" rel="noopener">источник</a></td></tr>
+        <tr><td>Недельный план частоты и выбор в момент</td><td>Выбирать только в момент отправки</td><td>Нужны модель и данные о привычках; в первой версии план — простой лимит</td><td>Netflix: недельная политика отдельно от выбора сообщения; Uber: расписание на 7 дней, пример — не больше {{ch_uber_day|num0}} пушей в день и {{ch_uber_gap|num0}} ч между ними</td></tr>
+        <tr><td>Каскад по статусу доставки: пуш, письмо, SMS</td><td>Слать во все каналы сразу</td><td>Нужен статус доставки по каждому каналу; SMS платный ({{ch_sms_serv_min|num0}}–{{ch_sms_serv_max|num0}} ₽ сервис, {{ch_sms_ad_min|num0}}–{{ch_sms_ad_max|num0}} ₽ реклама), поэтому только для критичного</td><td>T-PUSH (SmsGold): доотправка в SMS или Telegram; Airbnb: SMS — главная статья затрат, цель — 90% доставки по всем каналам (сниппет) · <a href="https://medium.com/airbnb-engineering/airbnbs-promotions-and-communications-platform-6266f1ffe2bd" rel="noopener">источник</a></td></tr>
+        <tr><td>Один центр предпочтений</td><td>Настройки отдельно в каждом продукте</td><td>Нужно собрать настройки вертикалей и реестр согласий в одну карточку; зато человек видит всё в одном месте</td><td>Яндекс ID: все сервисы, которые могут писать человеку, в одном центре</td></tr>
+        <tr><td>MAX — только через бота и с согласием; Telegram и WhatsApp не опора</td><td>Строить рассылки на Telegram и WhatsApp</td><td>Меньше охват сегодня; зато нет риска, что канал закроют: у обоих ограничения РКН</td><td>Mediascope, 06.2026: MAX {{ch_max_mau|млн1}} млн в месяц против Telegram {{ch_tg_mau|млн1}} и WhatsApp {{ch_wa_mau|млн1}} млн</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> В неделю уходит {{sends_week|млн0}} млн коммуникаций; через единый инструментарий идут только {{unified|%0}} сценариев.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> {{ch_leads_app|%0}} лидов агентам и собственникам идут из приложения и мобильного веба. {{ch_ai_reco_share|%0}} целевых действий приходит от ИИ-рекомендаций. Во 2-м квартале 2026 года оптимизация частоты CRM и похожие объявления дали +{{target_actions_growth|%0}} целевых действий. В вакансии CRM-менеджера: email, push, SMS, мессенджеры, сторис.</li>
+      <li><span class="mark market">Практика рынка</span> Авито, Netflix, Uber, T-PUSH, Яндекс ID, Mindbox — в полосе выше. Охват мессенджеров — <a href="https://vedomosti.ru/technology/articles/2026/07/21/1215425-max-ohvatu" rel="noopener">Mediascope через «Ведомости»</a>, тариф MAX — <a href="https://frankmedia.ru/211906" rel="noopener">презентация VK</a>, цены SMS — <a href="https://vakas.ru/articles/skolko-stoit-sms-rassylka/" rel="noopener">Vakas</a> (вендор, сниппет). Huawei {{ch_huawei_min|num0}}–{{ch_huawei_max|num0}}% устройств (проверено, но блог без первоисточника), «FCM ненадёжен» и «RuStore Push бесплатный» — тот же <a href="https://internet10k.com/blog/push-bez-firebase-rf-rustore-sdk-alternativy/" rel="noopener">блог</a>, сниппет.</li>
+      <li><span class="mark assume">Допущение</span> Доли пуша и приложения в трафике ЦИАН в открытых данных нет («{{ch_leads_app|%0}}» — это лиды). Доставляемость RuStore, FCM, HMS и цена MAX после бесплатного периода неизвестны. Что единого центра предпочтений у ЦИАН нет — вывод по открытым данным.</li>
+      <li><span class="mark prop">Предложение</span> Шесть ролей каналов; одна точка решения; недельный план и выбор в момент; каскад по статусу доставки; центр предпочтений человека.</li>
+    </ul>
+  </div>
+</article>

@@ -1,0 +1,175 @@
+<!-- tab: role -->
+<p class="intro">Эта вкладка — стратегия роли: зачем нужна платформа, как она связана с выручкой и EBITDA ЦИАН и что делается по кварталам. Четыре схемы идут от миссии к плану. Цифры ЦИАН — из открытой отчётности и вакансий, рынок — из публикаций компаний; расчёты и допущения помечены.</p>
+<article class="scheme" id="s-r1">
+  <header>
+    <p class="code"><span>Схема С1</span><span>Стратегия роли · миссия и путь человека</span></p>
+    <h2>Платформа превращает внимание в долгосрочную выручку: приводит, удерживает и продаёт внимание по одной цене</h2>
+    <p class="sub">Человека нужно привести, опознать, вернуть, довести до следующей покупки и аккуратно монетизировать его внимание. Сейчас это делают разные команды без общего счёта. Платформа даёт этот счёт.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 664" role="img" aria-label="Сверху три сдвига, которые бьют по модели ЦИАН: привлечение дорожает и уходит в ИИ-ответы; маркетинг занимает 30,6% выручки; внимание продаётся несколькими командами без общей цены. Ниже миссия: превратить внимание людей в долгосрочную выручку. Дальше слева направо пять этапов пути человека: привлечение, опознание, возврат, перелив из аренды в покупку, ипотеку и сделку, монетизация внимания. Под каждым этапом цифра ЦИАН и метрика этапа. Внизу: прошлые целевые действия остаются опережающими показателями, а решения принимаются в рублях.">
+        <defs>
+          <marker id="r1-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="r1-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-bad"/></marker>
+        </defs>
+        <text x="20" y="26" class="t-h">ТРИ СДВИГА, КОТОРЫЕ БЬЮТ ПО МОДЕЛИ ЦИАН</text>
+        <rect x="20" y="38" width="294" height="112" rx="10" class="b-bad"/>
+        <text x="34" y="64" class="t-b">1. Привлечение дорожает</text>
+        <text x="34" y="86" class="t-s t-i">цена клиента с 2023 года: +{{role_cpl_growth|%0}}</text>
+        <text x="34" y="103" class="t-s t-i">нейроответ Яндекса в {{role_neuro_share|%0}} запросов</text>
+        <text x="34" y="120" class="t-s t-i">органика сайтов РФ за 2025 год:</text>
+        <text x="34" y="137" class="t-s t-i">от −{{role_organic_loss_min|%0}} до −{{role_organic_loss_max|%0}}</text>
+        <path d="M167 150 V172" class="ln-bad" marker-end="url(#r1-b)"/>
+        <rect x="333" y="38" width="294" height="112" rx="10" class="b-bad"/>
+        <text x="347" y="64" class="t-b">2. Маркетинг дорог</text>
+        <text x="347" y="86" class="t-s t-i">{{role_mkt_share_2025|%1}} выручки в 2025 ({{role_mkt_rub_2025|млрд1}} млрд ₽)</text>
+        <text x="347" y="103" class="t-s t-i">{{role_mkt_share_h1|%1}} в 1 пол. 2026: перенос в сезон</text>
+        <text x="347" y="120" class="t-s t-i">1 п.п. маржи ≈ {{role_pp_rub|млн0}} млн ₽ в год</text>
+        <text x="347" y="137" class="t-s t-i">маржа 2025: {{role_ebitda_2025|%1}}, цель: от {{role_ebitda_goal|%0}}</text>
+        <path d="M480 150 V172" class="ln-bad" marker-end="url(#r1-b)"/>
+        <rect x="646" y="38" width="294" height="112" rx="10" class="b-bad"/>
+        <text x="660" y="64" class="t-b">3. Внимание без общей цены</text>
+        <text x="660" y="86" class="t-s t-i">медиа: {{role_media_h1|млн0}} млн ₽ за полугодие, +{{asis_g_media|%0}}</text>
+        <text x="660" y="103" class="t-s t-i">застройщикам: «Продвижение 360»,</text>
+        <text x="660" y="120" class="t-s t-i">аукцион звонков; CRM шлёт своё</text>
+        <text x="660" y="137" class="t-s t-i">ритейл-медиа: X5 ×{{role_x5_x|num1}}, Магнит +{{role_magnit_g|%0}}</text>
+        <path d="M793 150 V172" class="ln-bad" marker-end="url(#r1-b)"/>
+        <rect x="20" y="176" width="920" height="62" rx="10" class="b-prop"/>
+        <text x="34" y="200" class="t-b">Миссия: превратить внимание людей в долгосрочную выручку ЦИАН</text>
+        <text x="34" y="222" class="t-s t-i">Приводит, удерживает и продаёт внимание по одной цене. Мера — добавленная выручка на человека за 12 месяцев</text>
+        <text x="20" y="266" class="t-h">ПУТЬ ЧЕЛОВЕКА: ПЯТЬ ЭТАПОВ И ОДНА МЕРА</text>
+        <rect x="20" y="276" width="168" height="86" rx="10" class="b-prop"/>
+        <text x="32" y="298" class="t-b">Привлечение</text>
+        <text x="32" y="318" class="t-s t-i">SEO, ИИ-ответы,</text>
+        <text x="32" y="334" class="t-s t-i">свой ИИ-вход</text>
+        <path d="M104 362 V376" class="ln-m"/>
+        <rect x="20" y="376" width="168" height="112" rx="10" class="b-cian"/>
+        <text x="32" y="406" class="t-n f-cian">более {{organic_share|%0}}</text>
+        <text x="32" y="428" class="t-s t-i">трафика бесплатный</text>
+        <text x="32" y="445" class="t-s t-i">ЦианGPT: {{role_ciangpt|млн1}} млн</text>
+        <text x="32" y="462" class="t-s t-i">пользователей за год</text>
+        <path d="M104 488 V502" class="ln-m"/>
+        <rect x="20" y="502" width="168" height="80" rx="10" class="box"/>
+        <text x="32" y="520" class="t-h">МЕТРИКА ЭТАПА</text>
+        <text x="32" y="540" class="t-s t-i">новые достижимые люди</text>
+        <text x="32" y="556" class="t-s t-i">× их добавленная</text>
+        <text x="32" y="572" class="t-s t-i">выручка за 12 месяцев</text>
+        <path d="M188 319 H208" class="ln" marker-end="url(#r1-i)"/>
+        <rect x="208" y="276" width="168" height="86" rx="10" class="b-prop"/>
+        <text x="220" y="298" class="t-b">Опознание</text>
+        <text x="220" y="318" class="t-s t-i">человек вошёл и дал</text>
+        <text x="220" y="334" class="t-s t-i">согласие на связь</text>
+        <path d="M292 362 V376" class="ln-m"/>
+        <rect x="208" y="376" width="168" height="112" rx="10" class="b-cian"/>
+        <text x="220" y="406" class="t-n f-cian">{{role_app_leads|%0}}</text>
+        <text x="220" y="428" class="t-s t-i">лидов — из приложения</text>
+        <text x="220" y="445" class="t-s t-i">и мобильного веба;</text>
+        <text x="220" y="462" class="t-s t-i">доля опознанных</text>
+        <text x="220" y="479" class="t-s t-i">не раскрыта</text>
+        <path d="M292 488 V502" class="ln-m"/>
+        <rect x="208" y="502" width="168" height="80" rx="10" class="box"/>
+        <text x="220" y="520" class="t-h">МЕТРИКА ЭТАПА</text>
+        <text x="220" y="540" class="t-s t-i">доля опознанных с</text>
+        <text x="220" y="556" class="t-s t-i">согласием и каналом;</text>
+        <text x="220" y="572" class="t-s t-i">сейчас цифры нет</text>
+        <path d="M376 319 H396" class="ln" marker-end="url(#r1-i)"/>
+        <rect x="396" y="276" width="168" height="86" rx="10" class="b-prop"/>
+        <text x="408" y="298" class="t-b">Возврат</text>
+        <text x="408" y="318" class="t-s t-i">CRM, места в</text>
+        <text x="408" y="334" class="t-s t-i">продукте,</text>
+        <text x="408" y="350" class="t-s t-i">мессенджеры</text>
+        <path d="M480 362 V376" class="ln-m"/>
+        <rect x="396" y="376" width="168" height="112" rx="10" class="b-cian"/>
+        <text x="408" y="406" class="t-n f-cian">+{{target_actions_growth|%0}}</text>
+        <text x="408" y="428" class="t-s t-i">целевых действий</text>
+        <text x="408" y="445" class="t-s t-i">за 2 кв. 2026;</text>
+        <text x="408" y="462" class="t-s t-i">{{role_ai_share|%0}} действий — из</text>
+        <text x="408" y="479" class="t-s t-i">ИИ-рекомендаций</text>
+        <path d="M480 488 V502" class="ln-m"/>
+        <rect x="396" y="502" width="168" height="80" rx="10" class="box"/>
+        <text x="408" y="520" class="t-h">МЕТРИКА ЭТАПА</text>
+        <text x="408" y="540" class="t-s t-i">добавленная выручка</text>
+        <text x="408" y="556" class="t-s t-i">на контакт против</text>
+        <text x="408" y="572" class="t-s t-i">цены канала</text>
+        <path d="M564 319 H584" class="ln" marker-end="url(#r1-i)"/>
+        <rect x="584" y="276" width="168" height="86" rx="10" class="b-prop"/>
+        <text x="596" y="298" class="t-b">Перелив</text>
+        <text x="596" y="318" class="t-s t-i">аренда → покупка →</text>
+        <text x="596" y="334" class="t-s t-i">ипотека → сделка</text>
+        <path d="M668 362 V376" class="ln-m"/>
+        <rect x="584" y="376" width="168" height="112" rx="10" class="b-cian"/>
+        <text x="596" y="406" class="t-n f-cian">>{{role_deals|тыс0}} тыс.</text>
+        <text x="596" y="428" class="t-s t-i">сделок «Сделки на</text>
+        <text x="596" y="445" class="t-s t-i">Циане» ко 2 кв. 2026;</text>
+        <text x="596" y="462" class="t-s t-i">выручка модели ×{{role_deals_x|num0}}</text>
+        <text x="596" y="479" class="t-s t-i">за год (1 кв. 2026)</text>
+        <path d="M668 488 V502" class="ln-m"/>
+        <rect x="584" y="502" width="168" height="80" rx="10" class="box"/>
+        <text x="596" y="520" class="t-h">МЕТРИКА ЭТАПА</text>
+        <text x="596" y="540" class="t-s t-i">доля людей, дошедших</text>
+        <text x="596" y="556" class="t-s t-i">до следующего шага</text>
+        <text x="596" y="572" class="t-s t-i">за 12 месяцев</text>
+        <path d="M752 319 H772" class="ln" marker-end="url(#r1-i)"/>
+        <rect x="772" y="276" width="168" height="86" rx="10" class="b-prop"/>
+        <text x="784" y="298" class="t-b">Монетизация</text>
+        <text x="784" y="318" class="t-s t-i">рекламные места и</text>
+        <text x="784" y="334" class="t-s t-i">спонсорские</text>
+        <text x="784" y="350" class="t-s t-i">коммуникации</text>
+        <path d="M856 362 V376" class="ln-m"/>
+        <rect x="772" y="376" width="168" height="112" rx="10" class="b-cian"/>
+        <text x="784" y="406" class="t-n f-cian">{{role_media_h1|млн0}} млн ₽</text>
+        <text x="784" y="428" class="t-s t-i">медиа за полугодие</text>
+        <text x="784" y="445" class="t-s t-i">2026, +{{asis_g_media|%0}} за год</text>
+        <text x="784" y="462" class="t-s t-i">(застройщики, банки)</text>
+        <path d="M856 488 V502" class="ln-m"/>
+        <rect x="772" y="502" width="168" height="80" rx="10" class="box"/>
+        <text x="784" y="520" class="t-h">МЕТРИКА ЭТАПА</text>
+        <text x="784" y="540" class="t-s t-i">выручка продажи</text>
+        <text x="784" y="556" class="t-s t-i">минус потеря будущей</text>
+        <text x="784" y="572" class="t-s t-i">выручки человека</text>
+        <rect x="20" y="600" width="920" height="54" rx="10" class="soft" stroke-dasharray="6 4"/>
+        <text x="34" y="622" class="t-s t-i">Прошлые целевые действия — звонки, чаты, заявки — остаются опережающими показателями: они быстрее и мощнее по статистике.</text>
+        <text x="34" y="641" class="t-s t-i">Бюджет и ранжирование решаются в рублях: по добавленной выручке на человека за 12 месяцев.</text>
+      </svg>
+    </div>
+    <figcaption>Красным — три сдвига на рынке. Розовым — этапы пути, которые ведёт платформа. Зелёным — цифры ЦИАН из открытых данных. Белым — метрика этапа. Все этапы мерятся одной мерой: добавленной выручкой на человека за 12 месяцев.</figcaption>
+  </figure>
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Zillow</span> · «почти каждый покупатель начинает арендатором», на этом держится перелив «аренда → покупка → ипотека»; приложение в ChatGPT ведёт человека обратно за туром, агентом и ипотекой · 02.2024, 05.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка с арендой, покупкой и ипотекой</span> · <a href="https://s25.q4cdn.com/975009107/files/doc_financials/2023/ar/zillow-group-inc-_annual_report_2023.pdf" rel="noopener">отчёт 2023</a> · <a href="https://zillow.com/news/strategy-behind-zillows-strong-q1-results/" rel="noopener">Q1 2026</a></li>
+    <li><span class="who">Rightmove</span> · выручка ипотеки +46% до £6,8 млн; подписчики маркетингового CRM +15% до ~10 млн; больше 85% трафика прямой и органический · 02.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка недвижимости со своим CRM</span> · <a href="https://plc.rightmove.co.uk/content/uploads/2026/02/Rightmove-RNS-27.02.26.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · ранжирует выдачу по сумме выручки, конверсии и качества: «модели не должны ухудшать поиск ради выручки» · 08.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка с вертикалями, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/1069352" rel="noopener">источник</a></li>
+    <li><span class="who">Яндекс</span> · нейроответ стоит в 42% запросов Поиска (+7 п.п. за квартал); вертикаль «Квартиры» склеивает объявления агрегаторов и застройщиков в одну карточку · 07.2026, 05.2025 · <span class="src">Т, П</span> · <span class="fit hi">применимо: прямой конкурент за вход, РФ</span> · <a href="https://habr.com/ru/news/1064406/" rel="noopener">нейроответ</a> · <a href="https://webmaster.yandex.ru/blog/yandex-search-vertikali" rel="noopener">«Квартиры»</a></li>
+    <li><span class="who">X5 и Магнит</span> · реклама в ритейл-медиа за 1 полугодие 2026: X5 17,3 млрд ₽ (×1,5), Магнит 12,1 млрд ₽ (+36%) · 09.2026 · <span class="src">Т</span> · <span class="fit mid">применимо частично: ритейл, но та же идея — внимание в приложении продаётся</span> · <a href="https://retail-life.ru/riteyl-media-x5-magnit-lenta-reklama/" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Роль отвечает за весь путь человека, а не за отдельные рассылки: от первого захода до продажи внимания.</li>
+      <li>У каждого этапа своя цифра ЦИАН и своя метрика. Общая мера у всех этапов — добавленная выручка на человека за 12 месяцев.</li>
+      <li>Почему сейчас: привлечение дорожает и уходит в ИИ-ответы, маркетинг занимает {{role_mkt_share_2025|%1}} выручки, а внимание продают несколько команд без общей цены.</li>
+      <li>Чего ещё не знаем: какая доля людей опознана и достижима по каналам. Это первая цифра, которую платформа измерит в первом квартале.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap"><table class="tradeoff">
+    <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+    <tbody>
+      <tr><td>Роль по всему пути человека: от привлечения до продажи внимания</td><td>Роль только про CRM-рассылки</td><td>Больше зависимостей: SEO, продукт, реклама. Нужны общий счёт и общая контрольная группа</td><td>Zillow и Rightmove: аренда, покупка и ипотека на одной платформе</td></tr>
+      <tr><td>Продавать внимание по цене не ниже теневой цены</td><td>Не продавать или продавать без общей цены</td><td>Риск слепоты к рекламе. Долгосрочный вред нужно мерить тестом, а не угадывать</td><td>Авито и Wayfair: органика и реклама в одной оценке</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Роль — Head of Product «Привлечение и удержание»; платформа управляет коммуникациями с людьми.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Маркетинг {{role_mkt_share_2025|%1}} выручки в 2025 году ({{role_mkt_rub_2025|млрд1}} млрд ₽) и {{role_mkt_share_h1|%1}} в 1 полугодии 2026 (часть расходов перенесена в сезон); скорректированная EBITDA {{role_ebitda_2025|%1}} в 2025; медиа {{role_media_h1|млн0}} млн ₽ за полугодие; {{role_app_leads|%0}} лидов — из приложения и мобильного веба; {{role_ai_share|%0}} целевых действий — от ИИ-рекомендаций; ЦианGPT — {{role_ciangpt|млн1}} млн пользователей за год; более {{role_deals|тыс0}} тыс. сделок.</li>
+      <li><span class="mark market">Практика рынка</span> Цена клиента на классифайдах +{{role_cpl_growth|%0}} с 2023 года (Постмаркетинг, по сниппету выдачи); нейроответ Яндекса в {{role_neuro_share|%0}} запросов (подтверждено по первоисточнику); органика сайтов РФ от −{{role_organic_loss_min|%0}} до −{{role_organic_loss_max|%0}} (данные Brand Analytics в блоге агентства); ритейл-медиа X5 и Магнита.</li>
+      <li><span class="mark assume">Оценка</span> 1 п.п. маржи ≈ {{role_pp_rub|млн0}} млн ₽ в год: один процент от выручки 2026 года 17,7–18,5 млрд ₽.</li>
+      <li><span class="mark assume">Допущение</span> Доля опознанных людей в открытых данных не раскрыта. Цель 2026 — маржа от {{role_ebitda_goal|%0}} — взята из пересказа прогноза ЦИАН брокером (сниппет).</li>
+      <li><span class="mark prop">Предложение</span> Пять этапов пути и метрика каждого этапа.</li>
+    </ul>
+  </div>
+</article>
