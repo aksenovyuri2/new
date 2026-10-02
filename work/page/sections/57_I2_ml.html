@@ -2,115 +2,154 @@
 <article class="scheme" id="s-i2">
   <header>
     <p class="code"><span>Схема И2</span><span class="core">★ ядро</span><span>Вопросы 1.2 и 1.4 · какая модель выбирает человека, текст и момент</span></p>
-    <h2>Пять ступеней ML: каждая включается, только если на контрольной группе обыграла предыдущую</h2>
-    <p class="sub">Начинаем с правил и контроля: без контрольной группы моделям учиться не на чем. Дальше идут прирост, недельный план, бандиты и оптимизатор выручки. На каждую задачу нужна команда из {{in_team_lo|num0}}–{{in_team_hi|num0}} человек.</p>
+    <h2>Пять ступеней ML: в год 1 — три; шаг вверх только при нижней границе 90% интервала выше нуля</h2>
+    <p class="sub">Начинаем с правил и контроля: без контрольной группы моделям учиться не на чем. Прирост — кв. 2, недельный план — кв. 3, бандиты и оптимизатор — год 2. В год 1 эффект ступеней 3–4 (+{{in_duo_dau|%1}}…+{{in_lin_sessions|%1}}) ниже порога замера: его не увидеть. ML-команда года 1 — {{p5_team_ds|num0}} DS/ML, в год 2 добавляются ещё {{p5_team_ml_y2|num0}}.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 718" role="img" aria-label="Лестница из пяти ступеней, включаем снизу вверх. Условие для каждой ступени: на контрольной группе обыграть предыдущую по добавленной выручке на человека за 12 месяцев, защитные метрики в норме. Ступень 0, правила: шлюз, лимит и контроль, квартал 1; опора Авито. Ступень 1, модель прироста: промо только тем, на кого оно влияет, квартал 2; учится на случайном контроле; опора Купер и Альфа-Банк. Ступень 2, недельный план частоты на человека; учится на логах случайной отправки; опора Netflix и Uber. Ступень 3, бандиты: выбор текста и темы; опора Duolingo и Uber. Ступень 4, оптимизатор выручки: одна модель для всех слотов с ограничениями; опора Kuaishou и LinkedIn. Команда: три-четыре человека на одну задачу, аналитик эффекта отдельно от платформы.">
-        <defs><marker id="i2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
-        <rect x="20" y="12" width="920" height="70" rx="10" class="b-prop"/>
-        <text x="34" y="34" class="t-b">Условие для каждой ступени</text>
-        <text x="34" y="52" class="t-s t-i">Ступень включается, только если на контрольной группе обыгрывает предыдущую: выше добавленная выручка на человека за 12 месяцев</text>
-        <text x="34" y="68" class="t-s t-i">(ранний заменитель — прогноз по {{in_proxy_lo|num0}}–{{in_proxy_hi|num0}} дням), защитные метрики в норме. Не обыграла — остаёмся на прежней ступени.</text>
-        <text x="20" y="102" class="t-h">СНИЗУ ВВЕРХ</text>
-        <text x="154" y="102" class="t-h">СТУПЕНЬ</text>
-        <text x="374" y="102" class="t-h">УЧИТСЯ НА ЧЁМ</text>
-        <text x="664" y="102" class="t-h">ОПОРА РЫНКА</text>
-        <rect x="116" y="114" width="24" height="70" rx="10" class="b-prop"/>
-        <text x="128" y="156" text-anchor="middle" class="t-n f-prop">4</text>
-        <rect x="154" y="114" width="210" height="70" rx="10" class="box"/>
-        <text x="168" y="136" class="t-b">4. Оптимизатор выручки</text>
-        <text x="168" y="154" class="t-s t-i">Одна модель на все слоты.</text>
-        <text x="168" y="170" class="t-s t-i">Версия 0 — кв. 4</text>
-        <rect x="374" y="114" width="280" height="70" rx="10" class="box"/>
-        <text x="388" y="136" class="t-s t-i">На добавленной выручке за 12</text>
-        <text x="388" y="152" class="t-s t-i">месяцев. Ограничения: лимит,</text>
-        <text x="388" y="168" class="t-s t-i">отписки, доля рекламы</text>
-        <rect x="664" y="114" width="276" height="70" rx="10" class="b-market"/>
-        <text x="678" y="136" class="t-s t-i">Kuaishou: DAU +{{in_kuai_dau|%1}} при {{in_kuai_constr|num0}}</text>
-        <text x="678" y="152" class="t-s t-i">ограничениях. LinkedIn: сессии</text>
-        <text x="678" y="168" class="t-s t-i">+{{in_lin_sessions|%2}} к CQL</text>
-        <rect x="92" y="214" width="48" height="70" rx="10" class="b-prop"/>
-        <text x="128" y="256" text-anchor="middle" class="t-n f-prop">3</text>
-        <rect x="154" y="214" width="210" height="70" rx="10" class="box"/>
-        <text x="168" y="236" class="t-b">3. Бандиты</text>
-        <text x="168" y="254" class="t-s t-i">Выбор текста и темы. Кв. 4</text>
-        <rect x="374" y="214" width="280" height="70" rx="10" class="box"/>
-        <text x="388" y="236" class="t-s t-i">На ответах людей на варианты текста,</text>
-        <text x="388" y="252" class="t-s t-i">со штрафом за повтор. Вариантов</text>
-        <text x="388" y="268" class="t-s t-i">сотни, а не {{in_uber_ab_lo|num0}}–{{in_uber_ab_hi|num0}}</text>
-        <rect x="664" y="214" width="276" height="70" rx="10" class="b-market"/>
-        <text x="678" y="236" class="t-s t-i">Duolingo: DAU +{{in_duo_dau|%1}}. Uber: {{in_uber_var|num0}}+</text>
-        <text x="678" y="252" class="t-s t-i">вариантов за недели; A/B на {{in_uber_ab_lo|num0}}–{{in_uber_ab_hi|num0}}</text>
-        <text x="678" y="268" class="t-s t-i">варианта идёт {{in_uber_wk_lo|num0}}–{{in_uber_wk_hi|num0}} недель</text>
-        <rect x="68" y="314" width="72" height="70" rx="10" class="b-prop"/>
-        <text x="128" y="356" text-anchor="middle" class="t-n f-prop">2</text>
-        <rect x="154" y="314" width="210" height="70" rx="10" class="box"/>
-        <text x="168" y="336" class="t-b">2. Недельный план</text>
-        <text x="168" y="354" class="t-s t-i">Частота на человека и</text>
-        <text x="168" y="370" class="t-s t-i">день. Кв. 3, допущение</text>
-        <rect x="374" y="314" width="280" height="70" rx="10" class="box"/>
-        <text x="388" y="336" class="t-s t-i">На логах случайной отправки: {{random_decisions|%0}}</text>
-        <text x="388" y="352" class="t-s t-i">решений случайные. Цели — визит и</text>
-        <text x="388" y="368" class="t-s t-i">отписка</text>
-        <rect x="664" y="314" width="276" height="70" rx="10" class="b-market"/>
-        <text x="678" y="336" class="t-s t-i">Netflix: недельный план отдельно от</text>
-        <text x="678" y="352" class="t-s t-i">выбора сообщения. Uber: не больше {{in_uber_day|num0}}</text>
-        <text x="678" y="368" class="t-s t-i">в день (пример)</text>
-        <rect x="44" y="414" width="96" height="70" rx="10" class="b-prop"/>
-        <text x="128" y="456" text-anchor="middle" class="t-n f-prop">1</text>
-        <rect x="154" y="414" width="210" height="70" rx="10" class="box"/>
-        <text x="168" y="436" class="t-b">1. Модель прироста</text>
-        <text x="168" y="454" class="t-s t-i">Промо тем, на кого оно</text>
-        <text x="168" y="470" class="t-s t-i">влияет. Кв. 2</text>
-        <rect x="374" y="414" width="280" height="70" rx="10" class="box"/>
-        <text x="388" y="436" class="t-s t-i">На случайном контроле: показали и не</text>
-        <text x="388" y="452" class="t-s t-i">показали. Цель — ближние действия;</text>
-        <text x="388" y="468" class="t-s t-i">рубли — по заменителю за {{in_proxy_lo|num0}}–{{in_proxy_hi|num0}} дней</text>
-        <rect x="664" y="414" width="276" height="70" rx="10" class="b-market"/>
-        <text x="678" y="436" class="t-s t-i">Купер: цена возврата {{in_kuper_cost|%0}},</text>
-        <text x="678" y="452" class="t-s t-i">возвращённых ×{{in_kuper_mult|num1}}. Альфа: модель за</text>
-        <text x="678" y="468" class="t-s t-i">{{in_alfa_h_lo|num0}}–{{in_alfa_h_hi|num0}} ч вместо {{in_alfa_d_lo|num0}}–{{in_alfa_d_hi|num0}} дней</text>
-        <rect x="20" y="514" width="120" height="70" rx="10" class="b-prop"/>
-        <text x="128" y="556" text-anchor="middle" class="t-n f-prop">0</text>
-        <rect x="154" y="514" width="210" height="70" rx="10" class="box"/>
-        <text x="168" y="536" class="t-b">0. Правила</text>
-        <text x="168" y="554" class="t-s t-i">Шлюз, лимит, контроль.</text>
-        <text x="168" y="570" class="t-s t-i">Кв. 1</text>
-        <rect x="374" y="514" width="280" height="70" rx="10" class="box"/>
-        <text x="388" y="536" class="t-s t-i">Не учится: правила пишут по журналу</text>
-        <text x="388" y="552" class="t-s t-i">отправок и событий. Контроль даёт</text>
-        <text x="388" y="568" class="t-s t-i">данные для ступени 1</text>
-        <rect x="664" y="514" width="276" height="70" rx="10" class="b-market"/>
-        <text x="678" y="536" class="t-s t-i">Авито: {{in_avito_camp|num0}}+ кампаний в день, лимит</text>
-        <text x="678" y="552" class="t-s t-i">на человека, общий контроль {{avito_holdout|%0}}</text>
-        <path d="M128 211 V187" class="ln-prop" marker-end="url(#i2-p)"/>
-        <rect x="154" y="187" width="786" height="24" rx="6" class="soft"/>
-        <text x="168" y="203" class="t-s t-i"><tspan class="t-b">Условие на 4: </tspan>обыграть ступени 1–3 по добавленной выручке за 12 месяцев; защитные метрики не хуже</text>
-        <path d="M128 311 V287" class="ln-prop" marker-end="url(#i2-p)"/>
-        <rect x="154" y="287" width="786" height="24" rx="6" class="soft"/>
-        <text x="168" y="303" class="t-s t-i"><tspan class="t-b">Условие на 3: </tspan>обыграть A/B на двух вариантах: выше добавленные действия при той же частоте</text>
-        <path d="M128 411 V387" class="ln-prop" marker-end="url(#i2-p)"/>
-        <rect x="154" y="387" width="786" height="24" rx="6" class="soft"/>
-        <text x="168" y="403" class="t-s t-i"><tspan class="t-b">Условие на 2: </tspan>обыграть ступень 1: те же добавленные действия при меньшем числе сообщений и отписок</text>
-        <path d="M128 511 V487" class="ln-prop" marker-end="url(#i2-p)"/>
-        <rect x="154" y="487" width="786" height="24" rx="6" class="soft"/>
-        <text x="168" y="503" class="t-s t-i"><tspan class="t-b">Условие на 1: </tspan>обыграть правила: больше добавленных действий на тех же показах</text>
-        <rect x="20" y="602" width="920" height="104" rx="10" class="box"/>
-        <text x="34" y="626" class="t-b">Команда на одну ML-задачу: {{in_team_lo|num0}}–{{in_team_hi|num0}} человека</text>
-        <rect x="34" y="638" width="150" height="28" rx="8" class="soft"/>
-        <text x="109.0" y="657" class="t-s t-i" text-anchor="middle">продакт-лид</text>
-        <rect x="208" y="638" width="190" height="28" rx="8" class="soft"/>
-        <text x="303.0" y="657" class="t-s t-i" text-anchor="middle">учёный по данным</text>
-        <rect x="422" y="638" width="150" height="28" rx="8" class="soft"/>
-        <text x="497.0" y="657" class="t-s t-i" text-anchor="middle">ML-инженер</text>
-        <rect x="596" y="638" width="310" height="28" rx="8" class="b-prop"/>
-        <text x="751.0" y="657" class="t-s t-i" text-anchor="middle">аналитик эффекта — вне платформы</text>
-        <text x="34" y="690" class="t-s">Опора: Купер — {{in_kuper_eng|num0}} ML-инженера на uplift-реактивацию; Uber — продакт-лид, учёный и инженер в авторах работы</text>
+      <svg viewBox="0 0 960 1056" role="img" aria-label="Лестница из пяти ступеней, включаем снизу вверх. Правило перехода: только если нижняя граница 90-процентного интервала прироста к прошлой ступени больше нуля; прирост мерим на контрольной группе, 12-месячную выручку по заменителю — модели по 90 дням. Ступень 0, правила: шлюз, лимит и контроль, квартал 1; опора Авито. Ступень 1, модель прироста, квартал 2, на архиве A/B-тестов CRM, недели 4–12 в обучение не берём; опора Купер и Альфа-Банк. Ступень 2, недельный план частоты на человека, квартал 3, если ступень 1 дала не меньше 1 процента; опора Netflix и Uber. Ступень 3, бандиты: выбор текста и темы, год 2; опора Duolingo и Uber. Ступень 4, оптимизатор выручки: одна модель для всех слотов с ограничениями, год 2; опора Kuaishou и LinkedIn. Мощность: порог замера целевых действий 1,7–2,2 процента при общей группе 5 процентов и около 0,9 процента при тесте 50 на 50; эффект ступеней 3–4 у рынка плюс 0,5–0,7 процента ниже порога, к концу второго квартала в контроле около тысячи платных звонков, поэтому в год 1 ступени 3 и 4 не видны. Модель ценности Ц1: квартал 3 в режиме тени, решения после сверки заменителя, не раньше 9–12-го месяца. Команда года 1: 14 человек, из них 2 DS/ML; в год 2 добавляются 2 ML и 2 разработчика.">
+      <defs><marker id="i2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
+      <rect x="20" y="12" width="920" height="70" rx="10" class="b-prop"/>
+      <text x="34" y="34" class="t-b">Правило перехода между ступенями</text>
+      <text x="34" y="52" class="t-s t-i">Переход — только если нижняя граница 90%-го интервала прироста к прошлой ступени больше 0. Прирост мерим на контрольной группе:</text>
+      <text x="34" y="68" class="t-s t-i">ближние действия — сразу, 12-месячную выручку — по заменителю (модель по {{p5_proxy_days|num0}} дням). Не доказано — остаёмся на прежней ступени.</text>
+      <text x="20" y="102" class="t-h">СНИЗУ ВВЕРХ</text>
+      <text x="154" y="102" class="t-h">СТУПЕНЬ</text>
+      <text x="374" y="102" class="t-h">УЧИТСЯ НА ЧЁМ</text>
+      <text x="664" y="102" class="t-h">ОПОРА РЫНКА</text>
+      <rect x="116" y="114" width="24" height="70" rx="10" class="b-prop"/>
+      <text x="128" y="156" class="t-n f-prop" text-anchor="middle">4</text>
+      <rect x="154" y="114" width="210" height="70" rx="10" class="box"/>
+      <text x="168" y="136" class="t-b">4. Оптимизатор выручки</text>
+      <text x="168" y="154" class="t-s t-i">Одна модель на все слоты.</text>
+<text x="168" y="170" class="t-s t-i">Год 2</text>
+      <rect x="374" y="114" width="280" height="70" rx="10" class="box"/>
+      <text x="388" y="136" class="t-s t-i">На добавленной выручке за 12</text>
+<text x="388" y="152" class="t-s t-i">месяцев. Ограничения: лимит,</text>
+<text x="388" y="168" class="t-s t-i">отписки, доля рекламы</text>
+      <rect x="664" y="114" width="276" height="70" rx="10" class="b-market"/>
+      <text x="678" y="136" class="t-s t-i">Kuaishou: DAU +{{in_kuai_dau|%1}} при {{in_kuai_constr|num0}}</text>
+<text x="678" y="152" class="t-s t-i">ограничениях. LinkedIn: сессии</text>
+<text x="678" y="168" class="t-s t-i">+{{in_lin_sessions|%2}} к CQL</text>
+      <rect x="92" y="214" width="48" height="70" rx="10" class="b-prop"/>
+      <text x="128" y="256" class="t-n f-prop" text-anchor="middle">3</text>
+      <rect x="154" y="214" width="210" height="70" rx="10" class="box"/>
+      <text x="168" y="236" class="t-b">3. Бандиты</text>
+      <text x="168" y="254" class="t-s t-i">Выбор текста и темы.</text>
+<text x="168" y="270" class="t-s t-i">Год 2</text>
+      <rect x="374" y="214" width="280" height="70" rx="10" class="box"/>
+      <text x="388" y="236" class="t-s t-i">На ответах людей на варианты текста,</text>
+<text x="388" y="252" class="t-s t-i">со штрафом за повтор. Вариантов</text>
+<text x="388" y="268" class="t-s t-i">сотни, а не {{in_uber_ab_lo|num0}}–{{in_uber_ab_hi|num0}}</text>
+      <rect x="664" y="214" width="276" height="70" rx="10" class="b-market"/>
+      <text x="678" y="236" class="t-s t-i">Duolingo: DAU +{{in_duo_dau|%1}}. Uber: {{in_uber_var|num0}}+</text>
+<text x="678" y="252" class="t-s t-i">вариантов за недели; A/B на {{in_uber_ab_lo|num0}}–{{in_uber_ab_hi|num0}}</text>
+<text x="678" y="268" class="t-s t-i">варианта идёт {{in_uber_wk_lo|num0}}–{{in_uber_wk_hi|num0}} недель</text>
+      <rect x="68" y="314" width="72" height="70" rx="10" class="b-prop"/>
+      <text x="128" y="356" class="t-n f-prop" text-anchor="middle">2</text>
+      <rect x="154" y="314" width="210" height="70" rx="10" class="box"/>
+      <text x="168" y="336" class="t-b">2. Недельный план</text>
+      <text x="168" y="354" class="t-s t-i">Частота на человека и день.</text>
+<text x="168" y="370" class="t-s t-i">Кв. 3, если ступень 1 ≥ {{p5_step1_gain|%0}}</text>
+      <rect x="374" y="314" width="280" height="70" rx="10" class="box"/>
+      <text x="388" y="336" class="t-s t-i">На логах случайной отправки: {{random_decisions|%0}}</text>
+<text x="388" y="352" class="t-s t-i">решений случайные. Цели — визит и</text>
+<text x="388" y="368" class="t-s t-i">отписка</text>
+      <rect x="664" y="314" width="276" height="70" rx="10" class="b-market"/>
+      <text x="678" y="336" class="t-s t-i">Netflix: недельный план отдельно от</text>
+<text x="678" y="352" class="t-s t-i">выбора сообщения. Uber: не больше {{in_uber_day|num0}}</text>
+<text x="678" y="368" class="t-s t-i">в день (пример)</text>
+      <rect x="44" y="414" width="96" height="70" rx="10" class="b-prop"/>
+      <text x="128" y="456" class="t-n f-prop" text-anchor="middle">1</text>
+      <rect x="154" y="414" width="210" height="70" rx="10" class="box"/>
+      <text x="168" y="436" class="t-b">1. Модель прироста</text>
+      <text x="168" y="454" class="t-s t-i">Промо тем, на кого влияет.</text>
+<text x="168" y="470" class="t-s t-i">Кв. 2, на архиве A/B CRM</text>
+      <rect x="374" y="414" width="280" height="70" rx="10" class="box"/>
+      <text x="388" y="436" class="t-s t-i">На архиве A/B-тестов CRM со случайным</text>
+<text x="388" y="452" class="t-s t-i">контролем. Недели 4–12 в обучение</text>
+<text x="388" y="468" class="t-s t-i">не берём. Цель — ближние действия</text>
+      <rect x="664" y="414" width="276" height="70" rx="10" class="b-market"/>
+      <text x="678" y="436" class="t-s t-i">Купер: цена возврата {{in_kuper_cost|%0}},</text>
+<text x="678" y="452" class="t-s t-i">возвращённых ×{{in_kuper_mult|num1}}. Альфа: модель за</text>
+<text x="678" y="468" class="t-s t-i">{{in_alfa_h_lo|num0}}–{{in_alfa_h_hi|num0}} ч вместо {{in_alfa_d_lo|num0}}–{{in_alfa_d_hi|num0}} дней</text>
+      <rect x="20" y="514" width="120" height="70" rx="10" class="b-prop"/>
+      <text x="128" y="556" class="t-n f-prop" text-anchor="middle">0</text>
+      <rect x="154" y="514" width="210" height="70" rx="10" class="box"/>
+      <text x="168" y="536" class="t-b">0. Правила</text>
+      <text x="168" y="554" class="t-s t-i">Шлюз, лимит, контроль.</text>
+<text x="168" y="570" class="t-s t-i">Кв. 1</text>
+      <rect x="374" y="514" width="280" height="70" rx="10" class="box"/>
+      <text x="388" y="536" class="t-s t-i">Не учится: правила пишут по журналу</text>
+<text x="388" y="552" class="t-s t-i">отправок и событий. Контроль даёт</text>
+<text x="388" y="568" class="t-s t-i">данные для ступени 1</text>
+      <rect x="664" y="514" width="276" height="70" rx="10" class="b-market"/>
+      <text x="678" y="536" class="t-s t-i">Авито: {{in_avito_camp|num0}}+ кампаний в день, лимит</text>
+<text x="678" y="552" class="t-s t-i">на человека, общий контроль {{avito_holdout|%0}}</text>
+      <path d="M128 211 V187" class="ln-prop" marker-end="url(#i2-p)"/>
+      <rect x="154" y="187" width="786" height="24" rx="6" class="soft"/>
+      <text x="168" y="203" class="t-s t-i"><tspan class="t-b">Условие на 4: </tspan>нижняя граница 90% интервала прироста к ступени 3 больше 0; защитные метрики не хуже</text>
+      <path d="M128 311 V287" class="ln-prop" marker-end="url(#i2-p)"/>
+      <rect x="154" y="287" width="786" height="24" rx="6" class="soft"/>
+      <text x="168" y="303" class="t-s t-i"><tspan class="t-b">Условие на 3: </tspan>нижняя граница 90% интервала прироста к ступени 2 больше 0 при той же частоте сообщений</text>
+      <path d="M128 411 V387" class="ln-prop" marker-end="url(#i2-p)"/>
+      <rect x="154" y="387" width="786" height="24" rx="6" class="soft"/>
+      <text x="168" y="403" class="t-s t-i"><tspan class="t-b">Условие на 2: </tspan>ступень 1 дала ≥ {{p5_step1_gain|%0}}; нижняя граница 90% интервала прироста к ней больше 0 при меньшем числе сообщений</text>
+      <path d="M128 511 V487" class="ln-prop" marker-end="url(#i2-p)"/>
+      <rect x="154" y="487" width="786" height="24" rx="6" class="soft"/>
+      <text x="168" y="503" class="t-s t-i"><tspan class="t-b">Условие на 1: </tspan>нижняя граница 90% интервала прироста к правилам больше 0 на тех же показах</text>
+      <rect x="20" y="598" width="920" height="206" rx="10" class="box"/>
+      <text x="34" y="620" class="t-h">ПОЧЕМУ СТУПЕНИ 3–4 В ГОД 1 НЕ ВИДНЫ · МОЩНОСТЬ, ОЦЕНКА</text>
+      <path d="M300 630 V728" class="grid"/>
+      <text x="300" y="744" class="t-s" text-anchor="middle">0</text>
+      <path d="M410.0 630 V728" class="grid"/>
+      <text x="410.0" y="744" class="t-s" text-anchor="middle">0,5%</text>
+      <path d="M520 630 V728" class="grid"/>
+      <text x="520" y="744" class="t-s" text-anchor="middle">1%</text>
+      <path d="M630.0 630 V728" class="grid"/>
+      <text x="630.0" y="744" class="t-s" text-anchor="middle">1,5%</text>
+      <path d="M740 630 V728" class="grid"/>
+      <text x="740" y="744" class="t-s" text-anchor="middle">2%</text>
+      <path d="M300 728 H850.0" class="ln-m"/>
+      <text x="34" y="649" class="t-s t-i">Порог при общей группе 5% (схема В2)</text>
+      <rect x="674.0" y="636" width="110.00000000000004" height="18" rx="3" class="soft"/>
+      <rect x="300" y="636" width="374.0" height="18" rx="3" class="fill-muted"/>
+      <text x="792.0" y="649" class="t-s t-i">{{b2_mde_act_lo|%1}}–{{b2_mde_act_hi|%1}}</text>
+      <text x="34" y="681" class="t-s t-i">Порог при тесте 50/50 (3–5 млн людей)</text>
+      <rect x="300" y="668" width="198.0" height="18" rx="3" class="fill-muted"/>
+      <text x="506.0" y="681" class="t-s t-i">≈ {{p5_mde_5050|%1}}</text>
+      <text x="34" y="713" class="t-s t-i">Эффект ступеней 3–4 у рынка</text>
+      <rect x="410.0" y="700" width="48.39999999999999" height="18" rx="3" class="b-prop"/>
+      <rect x="300" y="700" width="110.0" height="18" rx="3" class="f-prop"/>
+      <text x="466.4" y="713" class="t-s t-i">+{{in_duo_dau|%1}}…+{{in_lin_sessions|%1}}: Duolingo, Kuaishou, LinkedIn</text>
+      <text x="34" y="772" class="t-s t-i">К концу кв. 2 в контроле ≈ {{p5_calls_q2|тыс0}} тыс. платных звонков (оценка): ступень от нуля не отличить.</text>
+      <text x="34" y="790" class="t-s t-i">Поэтому ступени 3 и 4 идут в год 2. Без нижней границы выше 0 остаёмся на ступени 2.</text>
+      <rect x="20" y="820" width="300" height="76" rx="10" class="b-prop"/>
+      <text x="34" y="842" class="t-b">Модель ценности Ц1</text>
+      <text x="34" y="860" class="t-s t-i">Кв. 3 — режим тени: считаем и</text>
+<text x="34" y="876" class="t-s t-i">пишем в журнал, не решаем</text>
+      <rect x="340" y="820" width="600" height="76" rx="10" class="b-assume"/>
+      <text x="354" y="842" class="t-b">Решения по Ц1 — после сверки заменителя, не раньше 9–12-го месяца</text>
+      <text x="354" y="860" class="t-s t-i">Сверка: ≥ {{p5_proxy_exp|num0}} опытов с исходом за 12 месяцев, знак верен в {{p5_proxy_sign|num0}} из {{p5_proxy_exp|num0}}</text>
+<text x="354" y="876" class="t-s t-i">(логи 2024–2025, к {{p5_proxy_week|num0}}-й неделе). До сверки Ц1–Ц3 работают в тени</text>
+      <rect x="20" y="912" width="920" height="128" rx="10" class="box"/>
+      <text x="34" y="936" class="t-b">Команда года 1 — {{p5_team_total|num0}} человек (≈ {{p5_cost_lo|млн0}}–{{p5_cost_hi|млн0}} млн ₽ в год), в ML — {{p5_team_ds|num0}} DS/ML</text>
+      <rect x="34" y="948" width="130" height="28" rx="8" class="soft"/>
+      <text x="99.0" y="967" class="t-s t-i" text-anchor="middle">PM данных и ML</text>
+      <rect x="176" y="948" width="110" height="28" rx="8" class="b-prop"/>
+      <text x="231.0" y="967" class="t-s t-i" text-anchor="middle">{{p5_team_ds|num0}} DS/ML</text>
+      <rect x="298" y="948" width="190" height="28" rx="8" class="soft"/>
+      <text x="393.0" y="967" class="t-s t-i" text-anchor="middle">разработчик из {{p5_team_dev|num0}} в команде</text>
+      <rect x="500" y="948" width="170" height="28" rx="8" class="soft"/>
+      <text x="585.0" y="967" class="t-s t-i" text-anchor="middle">{{p5_team_an|num0}} аналитика эффекта</text>
+      <rect x="682" y="948" width="238" height="28" rx="8" class="b-assume"/>
+      <text x="801.0" y="967" class="t-s t-i" text-anchor="middle">год 2: +{{p5_team_ml_y2|num0}} ML, +{{p5_team_dev_y2|num0}} разработчика</text>
+      <text x="34" y="998" class="t-s t-i">Одна ML-задача за раз: ступень 1 в кв. 2, ступень 2 в кв. 3. Бандиты и оптимизатор — год 2, когда приходят ещё {{p5_team_ml_y2|num0}} ML.</text>
+      <text x="34" y="1014" class="t-s t-i">Купер сделал uplift-реактивацию силами {{in_kuper_eng|num0}} ML-инженеров; у нас в год 1 два DS/ML и разработчик из {{p5_team_dev|num0}}, поэтому задачи идут по очереди.</text>
+      <text x="34" y="1030" class="t-s t-i">Методику эффекта проверяют финансы (схема Г1), а не аналитики платформы.</text>
       </svg>
     </div>
-    <figcaption>Розовым — то, что строит платформа: ступени и условия перехода. Оранжевым — опора рынка. Номера кварталов — из роадмапа роли; для ступени 2 квартал наш (допущение). Правила остаются под моделями как запасной вариант.</figcaption>
+    <figcaption>Розовым — то, что строит платформа: ступени, правило перехода, команда. Оранжевым — опора рынка, серым — пороги мощности, жёлтым пунктиром — допущения. Кварталы — из роадмапа роли (схема С4). Правила остаются под моделями как запасной вариант.</figcaption>
   </figure>
 
   <div class="market"><h3>Рынок</h3><ul>
@@ -118,17 +157,17 @@
     <li><span class="who">Купер, Альфа-Банк</span> · ступень 1: у Купера uplift-реактивация силами {{in_kuper_eng|num0}} ML-инженеров — цена возврата {{in_kuper_cost|%0}}, возвращённых ×{{in_kuper_mult|num1}} (до и после); Альфа-Банк строит модель за {{in_alfa_h_lo|num0}}–{{in_alfa_h_hi|num0}} часов вместо {{in_alfa_d_lo|num0}}–{{in_alfa_d_hi|num0}} дней, 4 модели в проде · 04.2026 · <span class="src">П</span> · <span class="fit hi">применимо: повторные касания, РФ; у банка метод тот же</span> · <a href="https://unisender.com/ru/blog/kak-sdelat-reaktivacziyu-effektivnoj-i-sekonomit/" rel="noopener">Купер</a> · <a href="https://habr.com/ru/companies/alfa/articles/1024090" rel="noopener">Альфа</a></li>
     <li><span class="who">Netflix, Uber</span> · ступень 2: у Netflix недельный план по каналам решается отдельно от выбора сообщения, числа не раскрыты; у Uber расписание на 7 дней с лимитами (пример — не больше {{in_uber_day|num0}} в день), отписок меньше, числа нет · 06.2026, 11.2022 · <span class="src">П</span> · <span class="fit hi">применимо: люди заходят редко, как на ЦИАН</span> · <a href="https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd" rel="noopener">Netflix</a> · <a href="https://uber.com/us/en/blog/how-uber-optimizes-push-notifications-using-ml/" rel="noopener">Uber</a></li>
     <li><span class="who">Duolingo, Uber</span> · ступень 3: бандит по шаблонам пуша со штрафом за повтор — DAU +{{in_duo_dau|%1}}; у Uber бандит для темы письма: {{in_uber_var|num0}}+ вариантов за недели вместо {{in_uber_ab_lo|num0}}–{{in_uber_ab_hi|num0}} за {{in_uber_wk_lo|num0}}–{{in_uber_wk_hi|num0}} недель, эффект не раскрыт · 2020, 03.2025 · <span class="src">П</span> · <span class="fit mid">применимо: у Duolingo частые пуши, у ЦИАН контактов меньше</span> · <a href="https://research.duolingo.com/papers/yancey.kdd20.pdf" rel="noopener">Duolingo</a> · <a href="https://uber.com/us/en/blog/enhancing-personalized-crm/" rel="noopener">Uber</a></li>
-    <li><span class="who">Kuaishou, LinkedIn</span> · ступень 4: оптимизатор с uplift и множителями Лагранжа при {{in_kuai_constr|num0}} ограничениях — DAU +{{in_kuai_dau|%1}} в A/B; LinkedIn, Decision Transformer — сессии +{{in_lin_sessions|%2}} к CQL при меньшем объёме данных · 05.2026, 09.2025 · <span class="src">Т</span> · <span class="fit lo">применимо: масштаб соцсетей; для ЦИАН ступень поздняя</span> · <a href="https://icml.cc/virtual/2026/poster/65977" rel="noopener">Kuaishou</a> · <a href="https://arxiv.org/abs/2509.02458" rel="noopener">LinkedIn</a></li>
+    <li><span class="who">Kuaishou, LinkedIn</span> · ступень 4: оптимизатор с uplift и множителями Лагранжа при {{in_kuai_constr|num0}} ограничениях — DAU +{{in_kuai_dau|%1}} в A/B; LinkedIn, Decision Transformer — сессии +{{in_lin_sessions|%2}} к CQL при меньшем объёме данных · 05.2026, 09.2025 · <span class="src">Т</span> · <span class="fit lo">применимо: масштаб соцсетей; для ЦИАН ступень поздняя — год 2</span> · <a href="https://icml.cc/virtual/2026/poster/65977" rel="noopener">Kuaishou</a> · <a href="https://arxiv.org/abs/2509.02458" rel="noopener">LinkedIn</a></li>
   </ul></div>
 
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li>Порядок: правила, прирост, недельный план, бандиты, оптимизатор выручки. Начинаем с правил и контроля: у {{no_control|%0}} кампаний нет корректной контрольной группы, и учить модели не на чем.</li>
-      <li>Ступень включается, только если на контрольной группе обыгрывает предыдущую: выше добавленная выручка на человека за 12 месяцев (ранний заменитель — прогноз по {{in_proxy_lo|num0}}–{{in_proxy_hi|num0}} дням), защитные метрики не хуже. Не обыграла — остаёмся на прежней.</li>
-      <li>Учим на данных, где есть «что было бы без сообщения»: прирост — на случайном контроле, недельный план — на логах случайной отправки ({{random_decisions|%0}} решений), бандиты — на ответах на варианты, оптимизатор — на выручке за 12 месяцев с ограничениями.</li>
-      <li>Модель принимаем по рублям, а не по Qini и AUC: охват × эффект × маржа − затраты. Хорошая кривая прироста без расчёта в рублях ничего не решает.</li>
-      <li>Команда: {{in_team_lo|num0}}–{{in_team_hi|num0}} человека на ML-задачу (продакт-лид, учёный по данным, инженер). Аналитика эффекта работает отдельно от платформы, чтобы не проверять самих себя.</li>
+      <li>Порядок и сроки: правила — кв. 1; модель прироста — кв. 2, на архиве A/B-тестов CRM (недели 4–12 в обучение не берём); недельный план — кв. 3, если ступень 1 дала ≥ {{p5_step1_gain|%0}}; бандиты и оптимизатор выручки — год 2. Начинаем с правил и контроля: у {{no_control|%0}} кампаний нет корректной контрольной группы, и учить модели не на чем.</li>
+      <li>Переход на ступень — только если нижняя граница {{p5_ci_level|%0}}-го интервала прироста к прошлой ступени больше 0. Прирост считаем по ближним действиям и по заменителю 12-месячной выручки: модель по {{p5_proxy_days|num0}} дням, сверка на логах 2024–2025 к {{p5_proxy_week|num0}}-й неделе. Защитные метрики не хуже. Не доказано — остаёмся на прежней ступени.</li>
+      <li>Почему ступени 3–4 в год 1 не видны: у рынка их эффект +{{in_duo_dau|%1}}…+{{in_lin_sessions|%1}}, а порог замера целевых действий — {{b2_mde_act_lo|%1}}–{{b2_mde_act_hi|%1}} при общей группе 5% и около {{p5_mde_5050|%1}} при тесте 50/50 (3–5 млн достижимых). К концу кв. 2 в контроле ≈ {{p5_calls_q2|тыс0}} тыс. платных звонков: ступень от нуля не отличить.</li>
+      <li>Учим на данных, где есть «что было бы без сообщения»: прирост — на архиве A/B-тестов со случайным контролем, недельный план — на логах случайной отправки ({{random_decisions|%0}} решений), бандиты — на ответах на варианты, оптимизатор — на выручке за 12 месяцев с ограничениями. Модель принимаем по рублям, а не по Qini и AUC: охват × эффект × маржа − затраты.</li>
+            <li>Команда — по схеме Э2 и мандату: в году 1 из {{p5_team_total|num0}} человек {{p5_team_ds|num0}} DS/ML, задачи идут по очереди; в год 2 добавляются {{p5_team_ml_y2|num0}} ML и {{p5_team_dev_y2|num0}} разработчика. Модель ценности Ц1 — кв. 3 в режиме тени; решения — после сверки заменителя, не раньше 9–12-го месяца.</li>
     </ul>
   </div>
 
@@ -137,10 +176,11 @@
       <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
       <tbody>
         <tr><td>Ступени по порядку, каждая против предыдущей</td><td>Сразу оптимизатор на всё</td><td>Дольше до «умной» модели; зато каждая ступень доказана, и её можно откатить</td><td>Авито, Купер, Netflix, Uber: сначала правила и контроль, потом модели</td></tr>
+        <tr><td>Переход по нижней границе {{p5_ci_level|%0}}-го интервала больше 0</td><td>Переход по среднему приросту</td><td>Часть настоящих улучшений не докажем и дольше останемся на старой ступени; зато не включим ступень на шуме</td><td>Авито: сумма прироста отдельных тестов не равна общему эффекту CRM</td></tr>
         <tr><td>Модель прироста для промо</td><td>RFM и сегменты</td><td>Нужен случайный контроль: часть людей остаётся без промо; зато промо идёт тем, на кого влияет</td><td>Купер: цена возврата {{in_kuper_cost|%0}}; Альфа-Банк: модель за {{in_alfa_h_lo|num0}}–{{in_alfa_h_hi|num0}} ч</td></tr>
-        <tr><td>Недельный план частоты на человека</td><td>Недельный лимит правилом</td><td>Нужны логи случайной отправки (у Pinterest {{random_decisions|%0}} решений случайные); зато частота подстроена под человека</td><td>Netflix, Uber, Pinterest</td></tr>
-        <tr><td>Бандиты для текста и темы</td><td>A/B на двух вариантах</td><td>Скромный эффект (DAU +{{in_duo_dau|%1}}) и нужен поток контактов; зато вариантов сотни и результат за недели</td><td>Duolingo, Uber</td></tr>
-        <tr><td>Оптимизатор выручки с ограничениями</td><td>Лимиты по состоянию человека</td><td>Дорогая ступень, мало открытых чисел за срок больше двух месяцев; поэтому она последняя</td><td>Kuaishou, LinkedIn</td></tr>
+        <tr><td>Недельный план частоты на человека — кв. 3, если ступень 1 дала ≥ {{p5_step1_gain|%0}}</td><td>Недельный лимит правилом</td><td>Нужны логи случайной отправки (у Pinterest {{random_decisions|%0}} решений случайные); зато частота подстроена под человека</td><td>Netflix, Uber, Pinterest</td></tr>
+        <tr><td>Бандиты для текста и темы — год 2</td><td>A/B на двух вариантах</td><td>Скромный эффект (DAU +{{in_duo_dau|%1}}) ниже порога замера в год 1 и нужен поток контактов; зато вариантов сотни и результат за недели</td><td>Duolingo, Uber</td></tr>
+        <tr><td>Оптимизатор выручки с ограничениями — год 2</td><td>Лимиты по состоянию человека</td><td>Дорогая ступень, эффект у рынка ниже порога замера, мало открытых чисел за срок больше двух месяцев; поэтому она последняя</td><td>Kuaishou, LinkedIn</td></tr>
       </tbody>
     </table>
   </div>
@@ -149,10 +189,10 @@
     <h3>Откуда это</h3>
     <ul>
       <li><span class="mark task">Из задания</span> У {{no_control|%0}} кампаний нет корректного контроля, а {{already_active|%0}} целевых действий совершают уже активные люди. Отсюда ступень 0: сначала контроль, потом модели.</li>
-      <li><span class="mark market">Практика рынка</span> Порядок «правила, прирост, недельный бюджет, бандиты, RL» собран из кейсов Авито, Купера, Netflix, Uber, Duolingo и Kuaishou. Qini не равен рублям: нужен расчёт охват × эффект × маржа − затраты (<a href="https://habr.com/ru/articles/1079904" rel="noopener">Хабр, 09.2026, сниппет</a>). Ранний заменитель: у Netflix решение по 14 дням совпало с решением по 63-му дню в ~{{in_netflix_match|%0}} из {{in_netflix_tests|num0}} тестов (<a href="https://arxiv.org/abs/2311.11922" rel="noopener">статья, 11.2023, сниппет</a>). Размер команды: Авито — {{in_avito_an|num0}} аналитика на {{in_avito_mk|num0}}+ маркетологов (<a href="https://habr.com/ru/companies/avito/articles/918634" rel="noopener">06.2025, сниппет</a>).</li>
+      <li><span class="mark market">Практика рынка</span> Порядок «правила, прирост, недельный бюджет, бандиты, RL» собран из кейсов Авито, Купера, Netflix, Uber, Duolingo и Kuaishou. Qini не равен рублям: нужен расчёт охват × эффект × маржа − затраты (<a href="https://habr.com/ru/articles/1079904" rel="noopener">Хабр, 09.2026, сниппет</a>). Ранний заменитель: у Netflix решение по 14 дням совпало с решением по 63-му дню в ~{{in_netflix_match|%0}} из {{in_netflix_tests|num0}} тестов (<a href="https://arxiv.org/abs/2311.11922" rel="noopener">статья, 11.2023, сниппет</a>). Размер команды: Авито — {{in_avito_an|num0}} аналитика на {{in_avito_mk|num0}}+ маркетологов (<a href="https://habr.com/ru/companies/avito/articles/918634" rel="noopener">06.2025, сниппет</a>). Netflix: совпадение решений по 14 и 63 дням — знак одной метрики, а не 12-месячной выручки.</li>
       <li><span class="mark cian">ЦИАН, открытые данные</span> Во втором квартале 2026 года оптимизация частоты CRM и похожие объявления дали +{{target_actions_growth|%0}} целевых действий; ЦИАН уже использует ИИ-время пуша. Модели платформы ставятся поверх этого.</li>
-      <li><span class="mark assume">Допущение</span> Оптимизация частоты в ЦИАН — правила или простая модель, то есть ступени 0–2: публично сказано только «оптимизация частоты». Ступень 2 в квартале 3: в записке для неё квартал не назван. Доля людей в тесте ступени и его окно подбираем по мощности. Числа эффекта у Купера «до и после», а не против случайного таргета; для РФ открытых сравнений с рублями нет.</li>
-      <li><span class="mark prop">Предложение</span> Единое условие перехода для всех ступеней, обучение только на данных с контролем, приёмка модели по рублям, команда из {{in_team_lo|num0}}–{{in_team_hi|num0}} человек и аналитик эффекта вне платформы.</li>
+      <li><span class="mark assume">Допущение</span> Оптимизация частоты в ЦИАН — правила или простая модель, то есть ступени 0–2: публично сказано только «оптимизация частоты». Недели 4–12 в обучение не берём: идёт запуск контрольной группы у отправщиков, данные нестабильны (наше допущение). Порог {{b2_mde_act_lo|%1}}–{{b2_mde_act_hi|%1}} — расчёт схемы В2 (база 10%, мощность 80%, 3–5 млн достижимых); {{p5_mde_5050|%1}} при тесте 50/50 — тот же расчёт, у нас выходит 0,75–0,97%; ≈{{p5_calls_q2|тыс0}} тыс. платных звонков в контроле к кв. 2 — оценка при базе звонка около 3% в год. Доля людей в тесте ступени и его окно подбираем по мощности. Числа эффекта у Купера «до и после», а не против случайного таргета; для РФ открытых сравнений с рублями нет.</li>
+      <li><span class="mark prop">Предложение</span> Единое условие перехода для всех ступеней (нижняя граница {{p5_ci_level|%0}}-го интервала прироста больше 0), обучение только на данных с контролем, приёмка модели по рублям, бандиты и оптимизатор — год 2, команда ML по мандату: {{p5_team_ds|num0}} DS/ML в год 1 и ещё {{p5_team_ml_y2|num0}} в год 2.</li>
     </ul>
   </div>
 </article>
