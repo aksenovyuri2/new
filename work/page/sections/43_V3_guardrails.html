@@ -16,7 +16,7 @@
 
         <text x="20" y="48" class="t-b">Жалобы на спам, почта</text>
         <text x="20" y="66" class="t-s">Google и Yahoo: цель ниже {{guard_spam_warn|%1}}, жёстко ниже {{guard_spam_stop|%1}}</text>
-        <rect x="20" y="76" width="100" height="24" class="b-cian"/>
+        <rect x="20" y="76" width="100" height="24" class="box"/>
         <rect x="120" y="76" width="200" height="24" class="soft"/>
         <rect x="320" y="76" width="100" height="24" class="b-bad"/>
         <text x="28" y="93" class="t-s t-i">цель</text>
@@ -28,7 +28,7 @@
 
         <text x="20" y="152" class="t-b">Отказы доставки, почта</text>
         <text x="20" y="170" class="t-s">до {{b2_bounce_norm|%0}} норма, выше {{b2_bounce_max|%0}} серьёзная проблема</text>
-        <rect x="20" y="180" width="100" height="24" class="b-cian"/>
+        <rect x="20" y="180" width="100" height="24" class="box"/>
         <rect x="120" y="180" width="150" height="24" class="soft"/>
         <rect x="270" y="180" width="150" height="24" class="b-bad"/>
         <text x="28" y="197" class="t-s t-i">норма</text>
@@ -87,14 +87,14 @@
         <rect x="510" y="386" width="230" height="86" rx="43" class="b-prop"/>
         <text x="625" y="425" text-anchor="middle" class="t-b">Хотя бы одна целевая</text>
         <text x="625" y="443" text-anchor="middle" class="t-b">метрика выросла?</text>
-        <path d="M740 416 C770 416 770 384 792 384" class="ln" marker-end="url(#v3-i)"/>
-        <text x="748" y="410" class="t-s t-i">да</text>
+        <path d="M740 416 H766 V384 H792" class="ln" marker-end="url(#v3-i)"/>
+        <text x="746" y="409" class="t-s t-i">да</text>
         <rect x="800" y="358" width="140" height="52" rx="10" class="b-cian"/>
         <text x="814" y="389" class="t-b">Принять</text>
-        <path d="M740 442 C770 442 770 474 792 474" class="ln" marker-end="url(#v3-i)"/>
-        <text x="748" y="466" class="t-s t-i">нет</text>
-        <rect x="800" y="448" width="140" height="52" rx="10" class="box"/>
-        <text x="814" y="479" class="t-b">Не раскатывать</text>
+        <path d="M740 442 H766 V462 H792" class="ln" marker-end="url(#v3-i)"/>
+        <text x="746" y="458" class="t-s t-i">нет</text>
+        <rect x="800" y="440" width="140" height="44" rx="10" class="box"/>
+        <text x="814" y="467" class="t-b">Не раскатывать</text>
         <path d="M345 472 V490" class="ln" marker-end="url(#v3-i)"/>
         <text x="355" y="486" class="t-s t-i">нет</text>
         <rect x="255" y="492" width="180" height="40" rx="10" class="b-bad"/>
@@ -104,7 +104,7 @@
         <text x="504" y="528" class="t-s t-i">точный адрес и суммы ипотеки не выводятся на экран блокировки</text>
       </svg>
     </div>
-    <figcaption>Зелёным — норма по внешним порогам, красным — стоп. Розовым — то, что вводит платформа. Парная цель: отправок меньше, добавленных действий не меньше. Иначе «меньше отписок» выполняется простым сокращением рассылки.</figcaption>
+    <figcaption>Белым — норма по внешним порогам, красным — стоп. Розовым — то, что вводит платформа. Парная цель: отправок меньше, добавленных действий не меньше. Иначе «меньше отписок» выполняется простым сокращением рассылки.</figcaption>
   </figure>
 
   <div class="market">

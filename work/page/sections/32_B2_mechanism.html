@@ -1,108 +1,185 @@
 <!-- tab: b1 -->
 <article class="scheme" id="s-b2">
   <header>
-    <p class="code"><span>Схема Б2</span><span class="core">★ ядро</span><span>Вопрос 1.2 и механизм решения</span></p>
-    <h2>Команда подаёт заявку, а решение о контакте принимает платформа</h2>
-    <p class="sub">Две дорожки с общим журналом и общей оценкой. Первая решает, прерывать ли человека пушем или письмом. Вторая решает, что показать на месте внутри продукта, когда он пришёл сам.</p>
+    <p class="code"><span>Схема Б2</span><span class="core">★ ядро</span><span>Вопрос 1.2 · механизм решения</span></p>
+    <h2>В первой версии шлюз только запрещает; оценивать он начнёт после квартала данных</h2>
+    <p class="sub">Отправщик перед каждой отправкой спрашивает шлюз. Шлюз проходит шесть проверок и отвечает за {{b1_gate_ms|num0}} мс: разрешено, отложено или отказ. Всё записывается в журнал. Оценка пользы и формула — вторая версия.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 640" role="img" aria-label="Заявки команд попадают в две дорожки. В дорожке отправки шесть шагов: претенденты, допуск, сервисное и заказанное идёт сразу, оценка остальных, выбор лучшего выше порога, канал и момент. Проигравшие переходят в дорожку мест внутри продукта, где на каждое место выбирается один победитель. Всё записывается в общий журнал.">
+      <svg viewBox="0 0 960 740" role="img" aria-label="Отправщик спрашивает шлюз. Шлюз по порядку проверяет исключения, контрольную группу, класс сообщения, общий лимит, тихие часы и дубль. Результат: разрешено, отложено или отказ с причиной. Всё записывается в общий журнал. Внизу вторая версия: оценка пользы, бюджет отписок и порог по сегменту.">
         <defs>
           <marker id="b2-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
           <marker id="b2-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-m"/></marker>
         </defs>
-        <rect x="70" y="16" width="850" height="50" rx="10" class="b-prop"/>
-        <text x="86" y="38" class="t-b">Заявки команд и события человека</text>
-        <text x="86" y="56" class="t-s t-i">в заявке: что сказать, на кого, зачем, сколько сообщение живёт. Аудиторию, канал и время команда больше не выбирает</text>
+        <text x="20" y="28" class="t-h">ОТПРАВЩИК</text>
+        <text x="230" y="28" class="t-h">ШЛЮЗ: ЗАПРЕЩАЕТ, НЕ ОЦЕНИВАЕТ</text>
+        <text x="600" y="28" class="t-h">ЕСЛИ НЕ ПРОШЛО</text>
 
-        <text x="70" y="98" class="t-h">ДОРОЖКА «ОТПРАВКА»: ПУШ И ПИСЬМО</text>
-        <text x="70" y="116" class="t-s">решает платформа, когда пришло событие или время</text>
-        <text x="560" y="98" class="t-h">ДОРОЖКА «МЕСТО ВНУТРИ ПРОДУКТА»</text>
-        <text x="560" y="116" class="t-s">решается, когда человек открыл экран</text>
-        <path d="M410 66 V122" class="ln" marker-end="url(#b2-i)"/>
-        <path d="M900 66 V122" class="ln" marker-end="url(#b2-i)"/>
+        <rect x="20" y="44" width="170" height="388" rx="10" class="box"/>
+        <text x="34" y="68" class="t-b">Кто спрашивает</text>
+        <text x="34" y="92" class="t-s">команды вертикалей,</text>
+        <text x="34" y="108" class="t-s">маркетинг, письма и</text>
+        <text x="34" y="124" class="t-s">пуши провайдеров</text>
+        <text x="34" y="156" class="t-b">Что присылают</text>
+        <text x="34" y="180" class="t-s">кому, что и класс</text>
+        <text x="34" y="196" class="t-s">сообщения; аудиторию</text>
+        <text x="34" y="212" class="t-s">выбирает заказчик</text>
+        <text x="34" y="244" class="t-b">Обойти нельзя</text>
+        <text x="34" y="268" class="t-s">ключи провайдеров</text>
+        <text x="34" y="284" class="t-s">за шлюзом с</text>
+        <text x="34" y="300" class="t-s">{{b1_week_keys|num0}}-й недели</text>
+        <text x="34" y="332" class="t-b">Сбой шлюза</text>
+        <text x="34" y="356" class="t-s">промо не уходит,</text>
+        <text x="34" y="372" class="t-s">сервисные уходят</text>
+        <path d="M190 73 H222" class="ln" marker-end="url(#b2-i)"/>
 
-        <rect x="70" y="130" width="360" height="60" rx="10" class="box"/>
-        <text x="86" y="154" class="t-b">1. Претенденты</text>
-        <text x="86" y="174" class="t-s">все заявки, которые хотят этого человека сегодня</text>
+        <rect x="230" y="44" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="66" class="t-b">1. Исключения</text>
+        <text x="246" y="86" class="t-s">единый список для всех отправщиков</text>
+        <rect x="230" y="110" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="132" class="t-b">2. Контрольная группа</text>
+        <text x="246" y="152" class="t-s">{{holdout_share|%0}} людей; список у всех отправщиков</text>
+        <rect x="230" y="176" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="198" class="t-b">3. Класс сообщения</text>
+        <text x="246" y="218" class="t-s">класс присваивает платформа, не заказчик</text>
+        <rect x="230" y="242" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="264" class="t-b">4. Общий лимит промо</text>
+        <text x="246" y="284" class="t-s">{{limit_push_day|num0}} в сутки, {{limit_week|num0}} в неделю; нижние планки вертикалей</text>
+        <rect x="230" y="308" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="330" class="t-b">5. Тихие часы</text>
+        <text x="246" y="350" class="t-s">по часовому поясу региона поиска</text>
+        <rect x="230" y="374" width="350" height="58" rx="10" class="b-prop"/>
+        <text x="246" y="396" class="t-b">6. Дубль</text>
+        <text x="246" y="416" class="t-s">то же событие за последние {{b1_dedup_hours|num0}} часа</text>
+        <path d="M405 102 V108" class="ln" marker-end="url(#b2-i)"/><path d="M405 168 V174" class="ln" marker-end="url(#b2-i)"/>
+        <path d="M405 234 V240" class="ln" marker-end="url(#b2-i)"/><path d="M405 300 V306" class="ln" marker-end="url(#b2-i)"/>
+        <path d="M405 366 V372" class="ln" marker-end="url(#b2-i)"/>
 
-        <rect x="70" y="204" width="360" height="60" rx="10" class="box"/>
-        <text x="86" y="228" class="t-b">2. Допуск</text>
-        <text x="86" y="248" class="t-s">согласие, тема, тихие часы, стоп-сигнал, контроль</text>
+        <path d="M580 73 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="44" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="62" class="t-b">В списке: отказ</text>
+        <text x="614" y="79" class="t-s">отписка, жалоба, нет согласия, идёт диалог</text>
+        <text x="614" y="94" class="t-s">с продавцом, сделка за {{b1_deal_days|num0}} дней, сотрудник</text>
+        <path d="M580 139 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="110" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="128" class="t-b">В контроле: промо не уходит</text>
+        <text x="614" y="145" class="t-s">сервисное и заказанное идёт как обычно;</text>
+        <text x="614" y="160" class="t-s">список у всех отправщиков с {{b1_week_holdout|num0}}-й недели</text>
+        <path d="M580 205 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="176" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="194" class="t-b">Сервисное: мимо лимита и контроля</text>
+        <text x="614" y="211" class="t-s">код, сделка, ответ продавца идут сразу;</text>
+        <text x="614" y="226" class="t-s">подписки — под своим потолком</text>
+        <path d="M580 271 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="242" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="260" class="t-b">Лимит исчерпан: отложено или отказ</text>
+        <text x="614" y="277" class="t-s">очередь: быстрая полоса для событий,</text>
+        <text x="614" y="292" class="t-s">дальше свежее событие (схема Б4)</text>
+        <path d="M580 337 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="308" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="326" class="t-b">Ночью: отложено до утра</text>
+        <text x="614" y="343" class="t-s">с {{b1_quiet_from|num0}}:00 до {{b1_quiet_to|num0}}:00; срок жизни {{b1_ttl_hours|num0}} ч,</text>
+        <text x="614" y="358" class="t-s">не дождалось — отказ</text>
+        <path d="M580 403 H598" class="ln-m" marker-end="url(#b2-m)"/>
+        <rect x="600" y="374" width="340" height="58" rx="10" class="soft"/>
+        <text x="614" y="392" class="t-b">Дубль: отказ, события склеены</text>
+        <text x="614" y="409" class="t-s">одинаковые события за сутки уходят</text>
+        <text x="614" y="424" class="t-s">одним сообщением</text>
 
-        <rect x="70" y="278" width="360" height="60" rx="10" class="box"/>
-        <text x="86" y="302" class="t-b">3. Сервисное и заказанное идёт сразу</text>
-        <text x="86" y="322" class="t-s">классы А и Б; в счётчик записываются</text>
+        <path d="M405 432 V444 M343 444 H827 M343 444 V450 M585 444 V450 M827 444 V450" class="ln-m"/>
+        <path d="M343 444 V450" class="ln" marker-end="url(#b2-i)"/><path d="M585 444 V450" class="ln" marker-end="url(#b2-i)"/><path d="M827 444 V450" class="ln" marker-end="url(#b2-i)"/>
+        <rect x="230" y="452" width="226" height="56" rx="10" class="box"/>
+        <text x="246" y="472" class="t-b">Разрешено</text>
+        <text x="246" y="490" class="t-s">уходит в канал, схема Б3</text>
+        <rect x="472" y="452" width="226" height="56" rx="10" class="box"/>
+        <text x="488" y="472" class="t-b">Отложено</text>
+        <text x="488" y="490" class="t-s">до утра или завтра, срок жизни</text>
+        <rect x="714" y="452" width="226" height="56" rx="10" class="box"/>
+        <text x="730" y="472" class="t-b">Отказ</text>
+        <text x="730" y="490" class="t-s">с причиной; отправщик её видит</text>
+        <path d="M343 508 V522" class="ln" marker-end="url(#b2-i)"/><path d="M585 508 V522" class="ln" marker-end="url(#b2-i)"/><path d="M827 508 V522" class="ln" marker-end="url(#b2-i)"/>
 
-        <rect x="70" y="352" width="360" height="60" rx="10" class="box"/>
-        <text x="86" y="376" class="t-b">4. Оценка остальных</text>
-        <text x="86" y="396" class="t-s">польза − усталость − риск отписки</text>
+        <rect x="20" y="524" width="920" height="60" rx="10" class="b-prop"/>
+        <text x="36" y="546" class="t-b">Общий журнал</text>
+        <text x="146" y="546" class="t-s t-i">что ушло, что отложено, что отказано и почему. Заказчику — экран «почему не ушло», аналитике — замер</text>
+        <text x="36" y="568" class="t-s">Места внутри продукта: показ записывается как {{b1_placement_weight|num1}} контакта. Платные места застройщиков считаются, но не режутся</text>
 
-        <rect x="70" y="426" width="360" height="60" rx="10" class="b-prop"/>
-        <text x="86" y="450" class="t-b">5. Выбор</text>
-        <text x="86" y="470" class="t-s t-i">лучший, если выше порога и лимит не исчерпан</text>
-
-        <rect x="70" y="500" width="360" height="60" rx="10" class="box"/>
-        <text x="86" y="524" class="t-b">6. Канал и момент</text>
-        <text x="86" y="544" class="t-s">пуш или письмо; срочное сразу, остальное в привычный час</text>
-
-        <path d="M250 190 V198" class="ln" marker-end="url(#b2-i)"/><path d="M250 264 V272" class="ln" marker-end="url(#b2-i)"/>
-        <path d="M250 338 V346" class="ln" marker-end="url(#b2-i)"/><path d="M250 412 V420" class="ln" marker-end="url(#b2-i)"/>
-        <path d="M250 486 V494" class="ln" marker-end="url(#b2-i)"/><path d="M250 560 V582" class="ln" marker-end="url(#b2-i)"/>
-
-        <path d="M430 234 H452" class="ln-m" marker-end="url(#b2-m)"/>
-        <text x="458" y="230" class="t-s">не прошло:</text>
-        <text x="458" y="246" class="t-s">стоп</text>
-        <path d="M430 442 H452" class="ln-m" marker-end="url(#b2-m)"/>
-        <text x="458" y="446" class="t-b f-prop">молчим</text>
-
-        <path d="M430 470 H536 V252 H552" class="ln" marker-end="url(#b2-i)"/>
-        <text x="438" y="488" class="t-s">проигравшие</text>
-        <text x="438" y="504" class="t-s">не пропадают</text>
-
-        <rect x="560" y="130" width="360" height="60" rx="10" class="box"/>
-        <text x="576" y="154" class="t-b">Человек открыл экран</text>
-        <text x="576" y="174" class="t-s">главная, выдача, карточка, центр уведомлений</text>
-
-        <rect x="560" y="222" width="360" height="60" rx="10" class="box"/>
-        <text x="576" y="246" class="t-b">Претенденты на место</text>
-        <text x="576" y="266" class="t-s">свои заявки и проигравшие из дорожки отправки</text>
-
-        <rect x="560" y="314" width="360" height="60" rx="10" class="box"/>
-        <text x="576" y="338" class="t-b">Допуск и та же оценка</text>
-        <text x="576" y="358" class="t-s">прерывания нет: штраф за усталость мягче</text>
-
-        <rect x="560" y="406" width="360" height="60" rx="10" class="b-prop"/>
-        <text x="576" y="430" class="t-b">Один победитель на место</text>
-        <text x="576" y="450" class="t-s t-i">у показов свой лимит; платные места — отдельно</text>
-
-        <path d="M740 190 V214" class="ln" marker-end="url(#b2-i)"/><path d="M740 282 V306" class="ln" marker-end="url(#b2-i)"/>
-        <path d="M740 374 V398" class="ln" marker-end="url(#b2-i)"/><path d="M740 466 V582" class="ln" marker-end="url(#b2-i)"/>
-
-        <rect x="70" y="590" width="850" height="40" rx="10" class="b-prop"/>
-        <text x="86" y="615" class="t-b">Общий журнал</text>
-        <text x="200" y="615" class="t-s t-i">что ушло, что показано, что нет и почему. Заказчику — экран «почему не ушло». Аналитике — замер прироста</text>
+        <rect x="20" y="604" width="920" height="124" rx="12" class="soft"/>
+        <text x="36" y="628" class="t-h">ВТОРАЯ ВЕРСИЯ, МЕСЯЦЫ {{b1_v2_from|num0}}–{{b1_v2_to|num0}}: ОЦЕНКА ПОЯВЛЯЕТСЯ ВНУТРИ ЛИМИТА</text>
+        <rect x="36" y="640" width="280" height="76" rx="10" class="box"/>
+        <text x="50" y="662" class="t-b">Польза = Δшанс × вес</text>
+        <text x="50" y="680" class="t-s">добавленный шанс действия</text>
+        <text x="50" y="695" class="t-s">× вес вертикали; учим на</text>
+        <text x="50" y="710" class="t-s">просмотрах и контактах</text>
+        <rect x="340" y="640" width="280" height="76" rx="10" class="box"/>
+        <text x="354" y="662" class="t-b">Бюджет отписок</text>
+        <text x="354" y="680" class="t-s">ограничение, а не штраф:</text>
+        <text x="354" y="695" class="t-s">сумма ожидаемых отписок</text>
+        <text x="354" y="710" class="t-s">не выше бюджета</text>
+        <rect x="644" y="640" width="280" height="76" rx="10" class="box"/>
+        <text x="658" y="662" class="t-b">Порог по сегменту</text>
+        <text x="658" y="680" class="t-s">слать, если польза выше</text>
+        <text x="658" y="695" class="t-s">порога сегмента активности</text>
+        <text x="658" y="710" class="t-s">(Pinterest, Tencent)</text>
       </svg>
     </div>
-    <figcaption>Розовым выделены три места, которых нет сегодня: заявка вместо самостоятельной отправки, общий выбор с правом промолчать и общий журнал. Сообщение, которое проиграло спор за пуш, получает шанс на месте внутри продукта: там оно никого не прерывает.</figcaption>
+    <figcaption>Розовым выделено то, чего нет сегодня: общий вопрос перед отправкой, общий список исключений и общий журнал. Первая версия не знает, полезно ли сообщение, она знает только, можно ли его слать. Нулевая версия «лимит без оценки» — точка сравнения: оценка обязана её обыграть, прежде чем включаться.</figcaption>
   </figure>
+
+  <div class="basis">
+    <h3>Псевдокод первой версии</h3>
+<pre>def gate(person, msg, now):                    # ответ за {{b1_gate_ms|num0}} мс
+    if person in EXCLUSIONS:           return deny("исключение")
+    if msg.cls == "promo" and person in CONTROL:  return deny("контроль")
+    if msg.cls == "promo" and over_limit(person): # {{limit_push_day|num0}} в сутки, {{limit_week|num0}} в неделю
+        return wait_or_deny(msg)
+    if msg.cls == "subscription" and over_cap(person):  # потолок {{b1_sub_cap_day|num0}} в сутки
+        return wait_or_deny(msg)
+    if quiet_hours(person.region, now) and msg.cls != "service":
+        return wait_or_deny(msg, until=morning, ttl_hours={{b1_ttl_hours|num0}})
+    if same_event_seen(person, msg, hours={{b1_dedup_hours|num0}}):  return deny("дубль")
+    return allow(msg)           # любой исход пишется в журнал
+# сбой шлюза: промо не уходит, сервисные уходят</pre>
+  </div>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Adobe</span> · порядок слоёв: допустимость, затем кап, затем ранжирование · ред. 2026 · <span class="src">В</span> · <span class="fit hi">применимо: прямой порядок слоёв для нашего шлюза</span> · <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/decisioning/offer-decisioning/create-manage-activities/configure-offer-selection" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · шлюз: капы по сегментам активности, тихие часы, приоритет транзакционных над промо · 01.2025 · <span class="src">П</span> · <span class="fit hi">применимо: российский маркетплейс, те же правила</span> · <a href="https://habr.com/ru/companies/avito/articles/875012/" rel="noopener">источник</a></li>
+    <li><span class="who">Netflix</span> · две скорости: раз в неделю план частоты по каналам (порядка сотни вариантов), в момент отправки выбор сообщения внутри плана · 06.2026 · <span class="src">П</span> · <span class="fit mid">применимо: пригодится во второй версии, сильнее у редко заходящих</span> · <a href="https://netflixtechblog.medium.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd" rel="noopener">источник</a></li>
+    <li><span class="who">LinkedIn, NOAH</span> · бюджет ожидаемых отписок вместо множителя: индекс 12-месячной ценности +2,16%, отписки +1,52% против +8,08% у прежней системы с расширением аудитории · 06.2024 · <span class="src">Т</span> · <span class="fit mid">применимо: письма, вторая версия</span> · <a href="https://arxiv.org/abs/2405.10490" rel="noopener">источник</a></li>
+  </ul></div>
+
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li><b>Кому.</b> Человеку и его текущему поиску, если он прошёл допуск и не попал в контрольную группу.</li>
-      <li><b>Что.</b> Заказанное им самим идёт всегда. Из остального — одно сообщение с лучшей оценкой, и только если она выше порога.</li>
-      <li><b>В каком канале.</b> Человек в продукте — место внутри. Не в продукте и сообщение срочное — пуш. Иначе письмо.</li>
-      <li><b>Когда.</b> Срочное сразу, кроме тихих часов. Остальное — в час, когда человек обычно заходит.</li>
-      <li>«Не отправлять» — полноправный исход, а не ошибка.</li>
+      <li><b>Кому.</b> Человеку, которого нет в списке исключений и в контрольной группе. Аудиторию выбирает заказчик, шлюз её только проверяет.</li>
+      <li><b>Что.</b> Сервисное идёт всегда. Подписки идут под своим потолком. Промо идёт в пределах общего лимита; побеждает быстрая полоса, затем более свежее событие.</li>
+      <li><b>В каком канале и когда.</b> По схеме Б3: в продукте — место внутри, не в продукте и срочно — пуш, иначе письмо; ночью ждёт утра.</li>
+      <li>«Не отправлять» — полноправный исход. У каждого отказа есть причина, и отправщик её видит.</li>
+      <li>Оценка пользы, бюджет отписок и порог по сегменту — вторая версия, после квартала данных. Решение «свой слой или российский вендор» принимаем на 6-й неделе по двум предложениям.</li>
     </ul>
   </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Сначала лимит без оценки</td><td>Умный подбор сразу</td><td>Первая версия выглядит простой и не отличает полезное сообщение от пустого</td><td>Gojek: сначала инвентаризация и единая система; Финуслуги, Лента (R2-0250, R3-0122, R3-0123)</td></tr>
+        <tr><td>Гибрид: свой шлюз и журнал, текущие отправщики остаются</td><td>Купить платформу целиком</td><td>Своя команда {{b1_team_min|num0}}–{{b1_team_max|num0}} человек (допущение)</td><td>Instacart, Zalando Lounge (R1-0087); зарубежные вендоры в РФ недоступны (R2-0334)</td></tr>
+        <tr><td>Ключи провайдеров за шлюзом к {{b1_week_keys|num0}}-й неделе</td><td>Договорённость «команды сами вызывают шлюз»</td><td>Трудоёмкий перенос, команды теряют прямой доступ к провайдеру</td><td>Авито: общий балансировщик для всех вертикалей (R2-0081)</td></tr>
+        <tr><td>При сбое промо не уходит, сервисные уходят</td><td>При сбое пропускать всё</td><td>Часть промо теряется при сбое; зато нет залпа без лимита</td><td>В открытых данных не нашли: решение наше</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
-      <li><span class="mark market">Практика рынка</span> Порядок «допуск, лимит, оценка» одинаков у Adobe, Braze и в собственных системах Авито и Pinterest. Авито: из четырёх кампаний при лимите три проходят три лучшие. ЦентрКредит и iFood называют умение промолчать частью продукта.</li>
-      <li><span class="mark cian">ЦИАН, открытые данные</span> Время отправки пушей ЦИАН уже подбирает алгоритмом. Как именно, неизвестно.</li>
-      <li><span class="mark assume">Допущение</span> Порог отправки, срок жизни сообщений по типам, лимит показов на местах.</li>
+      <li><span class="mark market">Практика рынка</span> Порядок «допуск, лимит, оценка» одинаков у Adobe и в собственных системах Авито и Pinterest. Авито: из четырёх кампаний при лимите три проходят три лучшие. ЦентрКредит и iFood называют умение промолчать частью продукта.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Время отправки пушей ЦИАН уже подбирает алгоритмом, как именно — неизвестно. Есть ли у ЦИАН общий лимит и журнал, тоже неизвестно: если есть, первая версия сжимается до контрольной группы. Выясняем в первые три недели.</li>
+      <li><span class="mark prop">Предложение</span> Шесть проверок в таком порядке; ответ за {{b1_gate_ms|num0}} мс; ключи провайдеров за шлюзом к {{b1_week_keys|num0}}-й неделе; список контроля у всех отправщиков с {{b1_week_holdout|num0}}-й недели.</li>
+      <li><span class="mark assume">Допущение</span> Лимит промо, потолок подписок, тихие часы, срок жизни отложенного сообщения. Значения подбираем по журналу и тестам.</li>
     </ul>
   </div>
 </article>
