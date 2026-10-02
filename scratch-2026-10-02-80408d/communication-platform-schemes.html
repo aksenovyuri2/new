@@ -1,0 +1,671 @@
+<title>Схемы платформы коммуникаций</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; every diagram sits on its own panel and scrolls sideways on narrow screens.
+   Colour is semantic: blue = under shared control, red-orange = uncontrolled pressure or risk. */
+:root{
+  --bg:#F2F4F8; --surface:#FFFFFF; --box:#F2F4F8; --ink:#131A2A; --muted:#566076; --line:#C6CEDB;
+  --accent:#1E55D6; --accent-soft:#E2EAFC; --on-accent:#FFFFFF;
+  --hot:#C73E1D; --hot-soft:#FBE7E0;
+  --font-body:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --text-sm:.875rem; --text-xs:.75rem;
+  --space-section:clamp(3rem,2rem + 4vw,5rem);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F131C; --surface:#171D2A; --box:#202838; --ink:#E8ECF4; --muted:#9AA4B8; --line:#36425A;
+    --accent:#82A8FF; --accent-soft:#1A2848; --on-accent:#0F131C;
+    --hot:#FF8F6B; --hot-soft:#3D2018; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F131C; --surface:#171D2A; --box:#202838; --ink:#E8ECF4; --muted:#9AA4B8; --line:#36425A;
+  --accent:#82A8FF; --accent-soft:#1A2848; --on-accent:#0F131C;
+  --hot:#FF8F6B; --hot-soft:#3D2018; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1rem;line-height:1.55;margin:0;padding-inline:clamp(16px,4vw,40px);padding-block:clamp(28px,5vw,64px)}
+.page{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:var(--space-section)}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.15}
+h1{font-size:clamp(1.9rem,1.2rem + 2.6vw,3rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.3rem,1.1rem + .8vw,1.7rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1rem;font-weight:600}
+p{margin:0;max-width:65ch}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.eyebrow{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+
+.top{display:flex;flex-direction:column;gap:1rem}
+.top .lede{font-size:1.125rem}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:var(--text-sm);color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:.5rem}
+.legend i{width:.875rem;height:.875rem;border-radius:3px;border:1.5px solid var(--accent);background:var(--accent-soft)}
+.legend i.h{border-color:var(--hot);background:var(--hot-soft)}
+.toc{display:flex;flex-wrap:wrap;gap:.375rem 1.25rem;margin:0;padding:0;list-style:none;font-size:var(--text-sm)}
+.toc a{text-decoration:none;border-bottom:1px solid var(--line)}
+.toc a:hover{border-bottom-color:var(--accent)}
+
+section{display:flex;flex-direction:column;gap:1.25rem;scroll-margin-top:1rem}
+.sec-head{display:flex;flex-direction:column;gap:.5rem}
+.fig{margin:0;display:flex;flex-direction:column;gap:.75rem}
+.fig-panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(12px,2vw,24px);overflow-x:auto}
+.fig-panel svg{display:block;width:100%;min-width:780px;height:auto}
+.fig-panel.narrow svg{min-width:520px;max-width:720px}
+figcaption{font-size:var(--text-sm);color:var(--muted);max-width:75ch}
+
+/* diagram marks */
+.dg text{font-family:var(--font-body);font-size:12.5px;fill:var(--ink)}
+.dg .tb{font-weight:600;font-size:13px}
+.dg .tm{fill:var(--muted);font-size:11.5px}
+.dg .tn{font-family:var(--font-mono);font-size:11px;font-weight:500;fill:var(--accent)}
+.dg .th{fill:var(--hot)}
+.dg .to{fill:var(--on-accent)}
+.dg .cap{font-size:10.5px;font-weight:600;letter-spacing:.08em;fill:var(--muted)}
+.dg .bx{fill:var(--box);stroke:var(--line)}
+.dg .bx-p{fill:var(--surface);stroke:var(--line)}
+.dg .bx-a{fill:var(--accent-soft);stroke:var(--accent)}
+.dg .bx-h{fill:var(--hot-soft);stroke:var(--hot)}
+.dg .bx-s{fill:var(--accent);stroke:var(--accent)}
+.dg .strong{stroke-width:2}
+.dg .dash{stroke-dasharray:5 4}
+.dg .ln{fill:none;stroke:var(--muted);stroke-width:1.2}
+.dg .ln-a{stroke:var(--accent)}
+.dg .ln-h{stroke:var(--hot)}
+.dg .thin{stroke-width:.9;opacity:.8}
+.dg .grid{stroke:var(--line);stroke-width:1;fill:none}
+.dg .ah{fill:var(--muted)}
+.dg .ah-a{fill:var(--accent)}
+.dg .ah-h{fill:var(--hot)}
+.dg .dot{fill:var(--hot);stroke:var(--surface);stroke-width:2}
+
+/* consequences under figure 1 */
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem 2rem;margin:0;padding:0;list-style:none}
+.trio li{border-top:2px solid var(--hot);padding-top:.625rem;min-width:0}
+.trio b{display:block;font-weight:600}
+.trio span{font-size:var(--text-sm);color:var(--muted)}
+
+/* numbers */
+.nums{display:flex;flex-direction:column;gap:2rem}
+.num-group{display:flex;flex-direction:column;gap:.25rem}
+.num-group h3{font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;padding-bottom:.5rem}
+.num-row{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.25rem 1.5rem;padding-block:.875rem;border-top:1px solid var(--line);align-items:start}
+.num-val{font-family:var(--font-mono);font-size:1.5rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1;white-space:nowrap}
+.num-val small{display:block;font-size:var(--text-xs);font-weight:400;color:var(--muted);white-space:normal;padding-top:.25rem}
+.num-body{display:flex;flex-direction:column;gap:.375rem;min-width:0}
+.num-body b{font-weight:600}
+.num-body span{font-size:var(--text-sm);color:var(--muted);max-width:65ch}
+.bar{height:6px;border-radius:3px;background:var(--line);max-width:28rem;overflow:hidden}
+.bar i{display:block;height:100%;min-width:3px;background:var(--accent);border-radius:3px}
+.bar.h i{background:var(--hot)}
+@media (max-width:520px){.num-row{grid-template-columns:1fr}}
+
+/* open questions */
+.checks{display:flex;flex-direction:column;gap:0;margin:0;padding:0;list-style:none;counter-reset:q}
+.checks li{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.25rem .5rem;padding-block:.875rem;border-top:1px solid var(--line);counter-increment:q}
+.checks li::before{content:counter(q);font-family:var(--font-mono);font-size:var(--text-sm);color:var(--muted)}
+.checks b{display:block;font-weight:600}
+.checks span{font-size:var(--text-sm);color:var(--muted);max-width:70ch;display:block}
+.foot{font-size:var(--text-sm);color:var(--muted);border-top:1px solid var(--line);padding-top:1rem}
+</style>
+
+<main class="page">
+
+<header class="top">
+  <span class="eyebrow">Кейс · Head of Product · Привлечение и удержание</span>
+  <h1>Кому, что, когда и в каком канале</h1>
+  <p class="lede">Шесть схем по вводным кейса. Сначала как устроено сейчас и где это ломается. Потом как должна работать единая платформа решений.</p>
+  <div class="legend" aria-label="Обозначения">
+    <span><i></i>под общим управлением</span>
+    <span><i class="h"></i>без общего управления, зона риска</span>
+  </div>
+  <nav aria-label="Содержание">
+    <ul class="toc">
+      <li><a href="#as-is">1. Как есть</a></li>
+      <li><a href="#numbers">Вводные в цифрах</a></li>
+      <li><a href="#loop">2. Замкнутый круг</a></li>
+      <li><a href="#optout">3. Цена давления</a></li>
+      <li><a href="#blind">4. Слепая зона</a></li>
+      <li><a href="#to-be">5. Как должно быть</a></li>
+      <li><a href="#example">6. Одно решение</a></li>
+      <li><a href="#check">Что уточнить</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ 1. AS-IS ============ -->
+<section id="as-is" aria-labelledby="h-as-is">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 1 · Как есть</span>
+    <h2 id="h-as-is">Каждая команда решает сама, а получает всё один человек</h2>
+    <p>Команд много, каналов шесть, человек один. Точки, где кто-то видит всю картину целиком, нет.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel">
+      <svg class="dg" viewBox="0 0 1000 400" role="img" aria-label="Пять команд запускают коммуникации через единый инструмент (40% сценариев) и собственные инструменты (60%) в шесть каналов. Все сообщения сходятся на одном человеке, общего счётчика контактов нет.">
+        <defs>
+          <marker id="m1a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah-a"/></marker>
+          <marker id="m1h" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah-h"/></marker>
+          <marker id="m1m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah"/></marker>
+        </defs>
+
+        <text class="cap" x="20" y="28">КТО ОТПРАВЛЯЕТ</text>
+        <text class="cap" x="270" y="28">ЧЕРЕЗ ЧТО ЗАПУСКАЮТ</text>
+        <text class="cap" x="560" y="28">КАНАЛЫ</text>
+        <text class="cap" x="810" y="28">КТО ПОЛУЧАЕТ</text>
+
+        <!-- senders -> tools -->
+        <g class="ln ln-a thin">
+          <path d="M190,72 L270,96" marker-end="url(#m1a)"/>
+          <path d="M190,132 L270,104" marker-end="url(#m1a)"/>
+          <path d="M190,192 L270,112" marker-end="url(#m1a)"/>
+          <path d="M190,252 L270,120" marker-end="url(#m1a)"/>
+          <path d="M190,312 L270,128" marker-end="url(#m1a)"/>
+        </g>
+        <g class="ln ln-h thin">
+          <path d="M190,72 L270,236" marker-end="url(#m1h)"/>
+          <path d="M190,132 L270,244" marker-end="url(#m1h)"/>
+          <path d="M190,192 L270,252" marker-end="url(#m1h)"/>
+          <path d="M190,252 L270,260" marker-end="url(#m1h)"/>
+          <path d="M190,312 L270,268" marker-end="url(#m1h)"/>
+        </g>
+        <!-- tools -> channels -->
+        <g class="ln ln-a thin">
+          <path d="M470,112 L560,83" marker-end="url(#m1a)"/>
+          <path d="M470,112 L560,125" marker-end="url(#m1a)"/>
+          <path d="M470,112 L560,193" marker-end="url(#m1a)"/>
+          <path d="M470,112 L560,235" marker-end="url(#m1a)"/>
+          <path d="M470,112 L560,277" marker-end="url(#m1a)"/>
+          <path d="M470,112 L560,319" marker-end="url(#m1a)"/>
+        </g>
+        <g class="ln ln-h thin">
+          <path d="M470,252 L560,91" marker-end="url(#m1h)"/>
+          <path d="M470,252 L560,133" marker-end="url(#m1h)"/>
+          <path d="M470,252 L560,201" marker-end="url(#m1h)"/>
+          <path d="M470,252 L560,243" marker-end="url(#m1h)"/>
+          <path d="M470,252 L560,285" marker-end="url(#m1h)"/>
+          <path d="M470,252 L560,327" marker-end="url(#m1h)"/>
+        </g>
+        <!-- channels -> person -->
+        <g class="ln thin">
+          <path d="M720,87 L810,175" marker-end="url(#m1m)"/>
+          <path d="M720,129 L810,189" marker-end="url(#m1m)"/>
+          <path d="M720,197 L810,203" marker-end="url(#m1m)"/>
+          <path d="M720,239 L810,217" marker-end="url(#m1m)"/>
+          <path d="M720,281 L810,231" marker-end="url(#m1m)"/>
+          <path d="M720,323 L810,245" marker-end="url(#m1m)"/>
+        </g>
+
+        <!-- senders -->
+        <g>
+          <rect class="bx" x="20" y="50" width="170" height="44" rx="4"/><text class="tb" x="36" y="77">Аренда</text>
+          <rect class="bx" x="20" y="110" width="170" height="44" rx="4"/><text class="tb" x="36" y="137">Продажа</text>
+          <rect class="bx" x="20" y="170" width="170" height="44" rx="4"/><text class="tb" x="36" y="197">Новостройки</text>
+          <rect class="bx" x="20" y="230" width="170" height="44" rx="4"/><text class="tb" x="36" y="257">Ипотека</text>
+          <rect class="bx" x="20" y="290" width="170" height="44" rx="4"/><text class="tb" x="36" y="317">Маркетинг</text>
+          <text x="20" y="362">Каждая команда сама решает,</text>
+          <text class="tm" x="20" y="379">кому, что, когда и как часто</text>
+        </g>
+
+        <!-- tools -->
+        <g>
+          <rect class="bx-a" x="270" y="70" width="200" height="84" rx="4"/>
+          <text class="tb" x="286" y="106">Единый инструмент</text>
+          <text class="tn" x="286" y="128">40% сценариев</text>
+          <rect class="bx-h dash" x="270" y="210" width="200" height="84" rx="4"/>
+          <text class="tb" x="286" y="238">Свои инструменты</text>
+          <text class="tb" x="286" y="255">и ручные запуски</text>
+          <text class="tn th" x="286" y="277">60% сценариев</text>
+          <text x="270" y="326">Общей очереди и общего</text>
+          <text class="tm" x="270" y="343">лимита между ними нет</text>
+        </g>
+
+        <!-- channels -->
+        <g>
+          <text class="tm" x="560" y="62">вне продукта</text>
+          <rect class="bx" x="560" y="70" width="160" height="34" rx="4"/><text x="576" y="92">Push</text>
+          <rect class="bx" x="560" y="112" width="160" height="34" rx="4"/><text x="576" y="134">Email</text>
+          <text class="tm" x="560" y="172">внутри продукта</text>
+          <rect class="bx" x="560" y="180" width="160" height="34" rx="4"/><text x="576" y="202">Уведомления</text>
+          <rect class="bx" x="560" y="222" width="160" height="34" rx="4"/><text x="576" y="244">Баннеры</text>
+          <rect class="bx" x="560" y="264" width="160" height="34" rx="4"/><text x="576" y="286">Placements</text>
+          <rect class="bx" x="560" y="306" width="160" height="34" rx="4"/><text x="576" y="328">Stories</text>
+        </g>
+
+        <!-- person -->
+        <g>
+          <rect class="bx-h strong" x="810" y="150" width="170" height="120" rx="4"/>
+          <text class="tb" x="895" y="204" text-anchor="middle">Один человек</text>
+          <text class="tm" x="895" y="224" text-anchor="middle">одно внимание на всех</text>
+          <text x="895" y="298" text-anchor="middle">Сколько всего он получил,</text>
+          <text class="tm" x="895" y="315" text-anchor="middle">не видит никто</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Вертикали названы для примера. Каналы делятся на два типа: пуш и письмо достают человека вне продукта, остальные четыре он видит, только когда уже зашёл сам.</figcaption>
+  </figure>
+  <ul class="trio">
+    <li><b>Конкуренция за внимание</b><span>Несколько команд пишут одному человеку в один день и перебивают друг друга.</span></li>
+    <li><b>Избыточное давление</b><span>Частоту никто не ограничивает сверху, поэтому она растёт.</span></li>
+    <li><b>Локальные метрики</b><span>Каждая команда улучшает свой показатель. Общий результат компании при этом может падать.</span></li>
+  </ul>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section id="numbers" aria-labelledby="h-numbers">
+  <div class="sec-head">
+    <span class="eyebrow">Вводные в цифрах</span>
+    <h2 id="h-numbers">Девять цифр и что стоит за каждой</h2>
+    <p>Все показатели условные, взяты из задания. Расчёты рядом с ними простые, их можно проверить в уме.</p>
+  </div>
+  <div class="nums">
+    <div class="num-group">
+      <h3>Масштаб</h3>
+      <div class="num-row">
+        <div class="num-val">20 / 8 млн<small>в месяц / в неделю</small></div>
+        <div class="num-body"><b>Пользователи</b><div class="bar"><i style="width:40%"></i></div><span>За неделю приходит 40% месячной аудитории. До остальных дотягиваются только пуш и письмо.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">12 млн<small>в неделю</small></div>
+        <div class="num-body"><b>Отправленных коммуникаций</b><span>В среднем 1,5 на недельного пользователя. Среднее обманчиво: нагрузка распределена неровно, см. ниже.</span></div>
+      </div>
+    </div>
+    <div class="num-group">
+      <h3>Давление</h3>
+      <div class="num-row">
+        <div class="num-val">35%</div>
+        <div class="num-body"><b>Получателей контактируют более чем с одной вертикалью</b><div class="bar h"><i style="width:35%"></i></div><span>Каждый третий получатель общий. Его внимание делят несколько команд, и ни одна не знает о планах другой.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">14%</div>
+        <div class="num-body"><b>Получают три и более промо в сутки</b><div class="bar h"><i style="width:14%"></i></div><span>Зона перегрева. Здесь быстрее всего копятся отписки.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">3,2%</div>
+        <div class="num-body"><b>Средний CTR</b><div class="bar h"><i style="width:3.2%"></i></div><span>Из 1000 отправок 32 клика. Остальные 968 тратят внимание без отклика.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">0,25%</div>
+        <div class="num-body"><b>Отписок от пушей на каждую отправку</b><div class="bar h"><i style="width:.25%"></i></div><span>Из 1000 пушей 2–3 отписки. Отписка закрывает канал для всех команд сразу.</span></div>
+      </div>
+    </div>
+    <div class="num-group">
+      <h3>Измерение и управление</h3>
+      <div class="num-row">
+        <div class="num-val">60%</div>
+        <div class="num-body"><b>Целевых действий совершают те, кто и так был активен в последние три дня</b><div class="bar"><i style="width:60%"></i></div><span>Большая часть «результата» может быть не заслугой сообщения. Человек шёл к действию сам.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">30%</div>
+        <div class="num-body"><b>Кампаний без корректной контрольной группы</b><div class="bar"><i style="width:30%"></i></div><span>У них нельзя отличить настоящий эффект от того, что случилось бы и так.</span></div>
+      </div>
+      <div class="num-row">
+        <div class="num-val">40%</div>
+        <div class="num-body"><b>Сценариев идут через единый инструмент</b><div class="bar"><i style="width:40%"></i></div><span>Остальные 60% запускаются в обход. Общие правила на них сегодня не распространить.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. LOOP ============ -->
+<section id="loop" aria-labelledby="h-loop">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 2 · Механика проблемы</span>
+    <h2 id="h-loop">Замкнутый круг: чем хуже работают каналы, тем больше в них шлют</h2>
+    <p>У круга два источника топлива слева. Пока они на месте, уговоры «слать меньше» не помогут.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel">
+      <svg class="dg" viewBox="0 0 1000 390" role="img" aria-label="Круг из четырёх шагов: команды шлют больше, давление на человека растёт, люди отписываются и перестают замечать сообщения, каналы работают хуже, и чтобы выполнить план, команды шлют ещё больше. Круг подпитывают локальные метрики команд и отчёты, которые завышают эффект.">
+        <defs>
+          <marker id="m3h" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah-h"/></marker>
+          <marker id="m3m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah"/></marker>
+        </defs>
+
+        <!-- drivers -->
+        <rect class="bx" x="20" y="40" width="210" height="64" rx="4"/>
+        <text class="tb" x="34" y="66">Локальные метрики</text>
+        <text class="tm" x="34" y="86">у каждой команды своя цель</text>
+        <path class="ln" d="M230,72 L290,72" marker-end="url(#m3m)"/>
+
+        <rect class="bx" x="20" y="160" width="210" height="104" rx="4"/>
+        <text class="tb" x="34" y="186">Отчёты завышают эффект</text>
+        <text class="tm" x="34" y="208">60% действий совершают те,</text>
+        <text class="tm" x="34" y="224">кто и так активен.</text>
+        <text class="tm" x="34" y="246">У 30% кампаний нет контроля.</text>
+        <path class="ln" d="M230,215 H340 V104" marker-end="url(#m3m)"/>
+        <text class="tm" x="240" y="233">кажется, что работает</text>
+
+        <!-- ring -->
+        <rect class="bx-h" x="290" y="40" width="230" height="64" rx="4"/>
+        <text class="tb" x="304" y="66">Команды шлют больше и чаще</text>
+        <text class="tm" x="304" y="86">12 млн отправок в неделю</text>
+
+        <path class="ln ln-h" d="M520,72 L730,72" marker-end="url(#m3h)"/>
+        <text class="tm" x="625" y="62" text-anchor="middle">каждому достаётся больше</text>
+
+        <rect class="bx-h" x="730" y="40" width="230" height="64" rx="4"/>
+        <text class="tb" x="744" y="66">Давление на человека</text>
+        <text class="tm" x="744" y="86">14% получают 3+ промо в сутки</text>
+
+        <path class="ln ln-h" d="M845,104 L845,300" marker-end="url(#m3h)"/>
+        <text class="tm" x="857" y="206">люди устают</text>
+
+        <rect class="bx-h" x="730" y="300" width="230" height="64" rx="4"/>
+        <text class="tb" x="744" y="326">Отписки и «слепота»</text>
+        <text class="tm" x="744" y="346">отписка 0,25% на каждый пуш</text>
+
+        <path class="ln ln-h" d="M730,332 L520,332" marker-end="url(#m3h)"/>
+        <text class="tm" x="625" y="322" text-anchor="middle">охват сужается</text>
+
+        <rect class="bx-h" x="290" y="300" width="230" height="64" rx="4"/>
+        <text class="tb" x="304" y="326">Каналы работают хуже</text>
+        <text class="tm" x="304" y="346">средний CTR 3,2%</text>
+
+        <path class="ln ln-h" d="M405,300 L405,104" marker-end="url(#m3h)"/>
+        <text class="tm" x="417" y="198">чтобы выполнить план,</text>
+        <text class="tm" x="417" y="214">шлют ещё</text>
+
+        <text class="tb th" x="700" y="206" text-anchor="middle">круг разгоняет сам себя</text>
+      </svg>
+    </div>
+    <figcaption>Красным показан сам круг, серым то, что его подпитывает. Платформа должна разорвать обе серые стрелки: дать общую метрику вместо локальных и честное измерение вместо завышенных отчётов.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 3. OPT-OUT ============ -->
+<section id="optout" aria-labelledby="h-optout">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 3 · Цена давления</span>
+    <h2 id="h-optout">0,25% на отправку выглядит мелочью, но отписки копятся</h2>
+    <p>Каждый пуш отнимает небольшую долю подписчиков. При трёх пушах в день за месяц уходит примерно каждый пятый.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel narrow">
+      <svg class="dg" viewBox="0 0 660 300" role="img" aria-label="График: доля отписавшихся от пушей растёт с числом отправок. После 30 пушей около 7 процентов, после 90 пушей около 20 процентов.">
+        <g class="grid">
+          <path d="M60,250 H600"/><path d="M60,206 H600"/><path d="M60,162 H600"/><path d="M60,118 H600"/><path d="M60,74 H600"/><path d="M60,30 H600"/>
+        </g>
+        <g>
+          <text class="tm" x="52" y="254" text-anchor="end">0%</text>
+          <text class="tm" x="52" y="210" text-anchor="end">5%</text>
+          <text class="tm" x="52" y="166" text-anchor="end">10%</text>
+          <text class="tm" x="52" y="122" text-anchor="end">15%</text>
+          <text class="tm" x="52" y="78" text-anchor="end">20%</text>
+          <text class="tm" x="52" y="34" text-anchor="end">25%</text>
+          <text class="tm" x="60" y="268" text-anchor="middle">0</text>
+          <text class="tm" x="240" y="268" text-anchor="middle">30</text>
+          <text class="tm" x="420" y="268" text-anchor="middle">60</text>
+          <text class="tm" x="600" y="268" text-anchor="middle">90</text>
+          <text class="tm" x="330" y="290" text-anchor="middle">пушей одному человеку за месяц</text>
+        </g>
+        <path class="ln ln-h" style="stroke-width:2.5" d="M60,250 L120,228.3 L180,207.1 L240,186.4 L300,166.1 L360,146.5 L420,127.3 L480,108.6 L540,90.3 L600,72.5"/>
+        <circle class="dot" cx="240" cy="186.4" r="5"/>
+        <text x="252" y="212">1 пуш в день: отписались ≈7%</text>
+        <circle class="dot" cx="600" cy="72.5" r="5"/>
+        <text x="590" y="56" text-anchor="end">3 пуша в день: отписались ≈20%</text>
+      </svg>
+    </div>
+    <figcaption>Расчёт: доля оставшихся = 0,9975 в степени числа пушей. Это упрощение: считаем, что шанс отписки одинаков на каждой отправке. В жизни он растёт с усталостью, так что оценка скорее занижена.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 4. BLIND SPOT ============ -->
+<section id="blind" aria-labelledby="h-blind">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 4 · Слепая зона</span>
+    <h2 id="h-blind">Кампания записывает на себя то, что случилось бы и так</h2>
+    <p>Без контрольной группы отчёт считает все действия после сообщения своей заслугой. Отсюда вера в то, что рассылки работают лучше, чем на самом деле.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel">
+      <svg class="dg" viewBox="0 0 1000 316" role="img" aria-label="Целевые действия после сообщения делятся на две части: 60% совершают люди, уже активные в последние три дня, 40% — неактивные. Отчёт кампании записывает все 100% на счёт сообщения. Контрольная группа показала бы, что случилось бы и так, но у 30% кампаний её нет.">
+        <defs>
+          <marker id="m5m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah"/></marker>
+        </defs>
+        <text class="cap" x="20" y="24">СООБЩЕНИЕ</text>
+        <text class="cap" x="280" y="24">КТО СОВЕРШИЛ ЦЕЛЕВОЕ ДЕЙСТВИЕ</text>
+        <text class="cap" x="720" y="24">ЧТО ВИДИТ КОМАНДА</text>
+
+        <rect class="bx" x="20" y="106" width="190" height="64" rx="4"/>
+        <text class="tb" x="36" y="134">Кампания отправила</text>
+        <text class="tb" x="36" y="151">сообщение</text>
+
+        <path class="ln" d="M210,128 L280,92" marker-end="url(#m5m)"/>
+        <path class="ln" d="M210,148 L280,196" marker-end="url(#m5m)"/>
+
+        <rect class="bx-h" x="280" y="36" width="340" height="108" rx="4"/>
+        <text class="tb" x="296" y="62">Был активен в последние 3 дня</text>
+        <text class="tn th" x="296" y="82">60% целевых действий</text>
+        <text class="tm" x="296" y="106">Часть сделал бы и без сообщения.</text>
+        <text class="tm" x="296" y="124">Какую часть — неизвестно.</text>
+
+        <rect class="bx" x="280" y="164" width="340" height="64" rx="4"/>
+        <text class="tb" x="296" y="190">Не был активен</text>
+        <text class="tn" x="296" y="210">40% целевых действий</text>
+
+        <path class="ln" d="M620,90 L720,120" marker-end="url(#m5m)"/>
+        <text class="tm" x="680" y="86" text-anchor="middle">засчитано</text>
+        <path class="ln" d="M620,196 L720,146" marker-end="url(#m5m)"/>
+        <text class="tm" x="652" y="206">засчитано</text>
+
+        <rect class="bx" x="720" y="90" width="260" height="84" rx="4"/>
+        <text class="tb" x="736" y="118">Отчёт кампании</text>
+        <text class="tm" x="736" y="140">Все 100% действий записаны</text>
+        <text class="tm" x="736" y="157">на счёт сообщения</text>
+
+        <rect class="bx-a dash" x="280" y="256" width="700" height="40" rx="4"/>
+        <text x="296" y="281">Контрольная группа показала бы, что случилось бы и так. У 30% кампаний её нет.</text>
+      </svg>
+    </div>
+    <figcaption>Правильный вопрос не «сколько действий было после сообщения», а «сколько действий добавило сообщение». Разницу между ними даёт только сравнение с теми, кому не отправляли.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 5. TO-BE ============ -->
+<section id="to-be" aria-labelledby="h-to-be">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 5 · Как должно быть</span>
+    <h2 id="h-to-be">Команды подают заявки, решение принимает одна платформа</h2>
+    <p>Команда больше не выбирает сама аудиторию, канал, время и частоту. Она говорит, что хочет донести и зачем. Платформа решает, дойдёт ли это до конкретного человека, где и когда.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel">
+      <svg class="dg" viewBox="0 0 1000 610" role="img" aria-label="Команды подают заявки на контакт в единую платформу. Платформа в четыре шага — единый профиль, общие правила, арбитр, выбор канала и времени — принимает одно решение на человека и отправляет в один из шести каналов. Реакция человека идёт в блок измерения прироста, который учит платформу и возвращает командам общий итог.">
+        <defs>
+          <marker id="m6a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah-a"/></marker>
+          <marker id="m6m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah"/></marker>
+        </defs>
+
+        <!-- teams -->
+        <text class="cap" x="70" y="30">КОМАНДЫ</text>
+        <rect class="bx" x="70" y="44" width="156" height="40" rx="4"/><text class="tb" x="148" y="69" text-anchor="middle">Аренда</text>
+        <rect class="bx" x="246" y="44" width="156" height="40" rx="4"/><text class="tb" x="324" y="69" text-anchor="middle">Продажа</text>
+        <rect class="bx" x="422" y="44" width="156" height="40" rx="4"/><text class="tb" x="500" y="69" text-anchor="middle">Новостройки</text>
+        <rect class="bx" x="598" y="44" width="156" height="40" rx="4"/><text class="tb" x="676" y="69" text-anchor="middle">Ипотека</text>
+        <rect class="bx" x="774" y="44" width="156" height="40" rx="4"/><text class="tb" x="852" y="69" text-anchor="middle">Маркетинг</text>
+
+        <g class="ln ln-a">
+          <path d="M148,84 V126" marker-end="url(#m6a)"/>
+          <path d="M324,84 V126" marker-end="url(#m6a)"/>
+          <path d="M500,84 V126" marker-end="url(#m6a)"/>
+          <path d="M676,84 V126" marker-end="url(#m6a)"/>
+          <path d="M852,84 V126" marker-end="url(#m6a)"/>
+        </g>
+        <text class="tm" x="236" y="110" text-anchor="middle">заявки на контакт</text>
+
+        <!-- platform -->
+        <rect class="bx-a" x="70" y="128" width="860" height="190" rx="6"/>
+        <text class="tb" x="84" y="152">Единая платформа решений</text>
+        <text class="tn" x="916" y="152" text-anchor="end">вход один: 40% → 100% сценариев</text>
+
+        <rect class="bx-p" x="84" y="166" width="193" height="132" rx="4"/>
+        <text class="tb" x="96" y="190">1. Единый профиль</text>
+        <text class="tm" x="96" y="212">Интерес, этап сделки</text>
+        <text class="tm" x="96" y="228">и история всех контактов</text>
+        <text class="tm" x="96" y="244">по всем вертикалям</text>
+        <text class="tn" x="96" y="282">35% — в 2+ вертикалях</text>
+
+        <rect class="bx-p" x="297" y="166" width="193" height="132" rx="4"/>
+        <text class="tb" x="309" y="190">2. Общие правила</text>
+        <text class="tm" x="309" y="212">Согласия, лимит частоты,</text>
+        <text class="tm" x="309" y="228">приоритеты, тихие часы</text>
+        <text class="tn" x="309" y="282">14% — 3+ промо в сутки</text>
+
+        <rect class="bx-p strong" x="510" y="166" width="193" height="132" rx="4" style="stroke:var(--accent)"/>
+        <text class="tb" x="522" y="190">3. Арбитр</text>
+        <text class="tm" x="522" y="212">Из всех заявок выбирает</text>
+        <text class="tm" x="522" y="228">одну — с наибольшим</text>
+        <text class="tm" x="522" y="244">приростом для компании</text>
+        <text class="tn" x="522" y="282">60% — и так активны</text>
+
+        <rect class="bx-p" x="723" y="166" width="193" height="132" rx="4"/>
+        <text class="tb" x="735" y="190">4. Канал и время</text>
+        <text class="tm" x="735" y="212">Пуш, письмо или баннер.</text>
+        <text class="tm" x="735" y="228">Сейчас, позже</text>
+        <text class="tm" x="735" y="244">или не отправлять</text>
+        <text class="tn" x="735" y="282">отписка 0,25% на пуш</text>
+
+        <g class="ln ln-a">
+          <path d="M277,232 H297" marker-end="url(#m6a)"/>
+          <path d="M490,232 H510" marker-end="url(#m6a)"/>
+          <path d="M703,232 H723" marker-end="url(#m6a)"/>
+        </g>
+
+        <!-- platform -> channels -->
+        <g class="ln ln-a">
+          <path d="M500,318 V356"/>
+          <path d="M135,356 H865"/>
+          <path d="M135,356 V378" marker-end="url(#m6a)"/>
+          <path d="M281,356 V378" marker-end="url(#m6a)"/>
+          <path d="M427,356 V378" marker-end="url(#m6a)"/>
+          <path d="M573,356 V378" marker-end="url(#m6a)"/>
+          <path d="M719,356 V378" marker-end="url(#m6a)"/>
+          <path d="M865,356 V378" marker-end="url(#m6a)"/>
+        </g>
+        <text class="tm" x="512" y="342">одно решение на человека: что, где, когда — или ничего</text>
+
+        <rect class="bx" x="70" y="380" width="130" height="34" rx="4"/><text x="135" y="402" text-anchor="middle">Push</text>
+        <rect class="bx" x="216" y="380" width="130" height="34" rx="4"/><text x="281" y="402" text-anchor="middle">Email</text>
+        <rect class="bx" x="362" y="380" width="130" height="34" rx="4"/><text x="427" y="402" text-anchor="middle">Уведомления</text>
+        <rect class="bx" x="508" y="380" width="130" height="34" rx="4"/><text x="573" y="402" text-anchor="middle">Баннеры</text>
+        <rect class="bx" x="654" y="380" width="130" height="34" rx="4"/><text x="719" y="402" text-anchor="middle">Placements</text>
+        <rect class="bx" x="800" y="380" width="130" height="34" rx="4"/><text x="865" y="402" text-anchor="middle">Stories</text>
+
+        <!-- channels -> person -->
+        <g class="ln">
+          <path d="M135,414 V432"/><path d="M281,414 V432"/><path d="M427,414 V432"/><path d="M573,414 V432"/><path d="M719,414 V432"/><path d="M865,414 V432"/>
+          <path d="M135,432 H865"/>
+          <path d="M500,432 V454" marker-end="url(#m6m)"/>
+        </g>
+        <rect class="bx-a" x="330" y="456" width="340" height="44" rx="4"/>
+        <text class="tb" x="500" y="483" text-anchor="middle">Человек: сообщений меньше, пользы больше</text>
+
+        <path class="ln" d="M500,500 V534" marker-end="url(#m6m)"/>
+        <text class="tm" x="512" y="522">клики, действия, отписки</text>
+
+        <!-- measurement -->
+        <rect class="bx-p strong" x="200" y="536" width="600" height="58" rx="4" style="stroke:var(--accent)"/>
+        <text class="tb" x="216" y="560">Измерение прироста</text>
+        <text class="tm" x="216" y="579">Общая контрольная группа + контроль в каждой кампании</text>
+        <text class="tn" x="784" y="560" text-anchor="end">30% кампаний без контроля</text>
+
+        <!-- feedback loops -->
+        <path class="ln ln-a" d="M200,565 H35 V232 H68" marker-end="url(#m6a)"/>
+        <text class="tm" transform="translate(24,400) rotate(-90)" text-anchor="middle">учит платформу: что даёт прирост</text>
+        <path class="ln ln-a" d="M800,565 H965 V64 H932" marker-end="url(#m6a)"/>
+        <text class="tm" transform="translate(984,320) rotate(-90)" text-anchor="middle">командам: общий итог и вклад каждой</text>
+      </svg>
+    </div>
+    <figcaption>Синим моноширинным шрифтом подписано, какую цифру из вводных закрывает блок. Две обратные стрелки по краям и есть разрыв замкнутого круга: платформа учится на реальном приросте, а команды видят общий результат вместо локального.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ 6. EXAMPLE ============ -->
+<section id="example" aria-labelledby="h-example">
+  <div class="sec-head">
+    <span class="eyebrow">Схема 6 · Пример</span>
+    <h2 id="h-example">Одно решение для одного человека</h2>
+    <p>Человек ищет двухкомнатную квартиру для покупки, заходил вчера, пуши включены. На сегодня ему хотят написать четыре команды. Пример выдуманный, чтобы показать логику.</p>
+  </div>
+  <figure class="fig">
+    <div class="fig-panel">
+      <svg class="dg" viewBox="0 0 1000 350" role="img" aria-label="Четыре заявки на одного человека. Продажа: высокий прирост, пуш сейчас. Ипотека: средний прирост, пуш на сегодня занят, показать баннером. Новостройки: низкий прирост, включить в недельную подборку. Маркетинг: прирост около нуля, не отправлять.">
+        <defs>
+          <marker id="m7m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L8,4 L0,8 z" class="ah"/></marker>
+        </defs>
+        <text class="cap" x="20" y="28">ЗАЯВКА КОМАНДЫ</text>
+        <text class="cap" x="380" y="28">ОЖИДАЕМЫЙ ПРИРОСТ</text>
+        <text class="cap" x="590" y="28">РЕШЕНИЕ АРБИТРА</text>
+
+        <!-- row 1 -->
+        <rect class="bx" x="20" y="44" width="310" height="60" rx="4"/>
+        <text class="tb" x="36" y="69">Продажа · пуш</text>
+        <text class="tm" x="36" y="88">«Квартира из избранного подешевела»</text>
+        <path class="ln" d="M330,74 H378" marker-end="url(#m7m)"/>
+        <rect class="bx-a" x="380" y="58" width="150" height="32" rx="16"/>
+        <text x="455" y="79" text-anchor="middle">высокий</text>
+        <path class="ln" d="M530,74 H588" marker-end="url(#m7m)"/>
+        <rect class="bx-s" x="590" y="44" width="390" height="60" rx="4"/>
+        <text class="tb to" x="606" y="69">Пуш сейчас</text>
+        <text class="to" x="606" y="88" style="font-size:11.5px">Самый большой прирост. Событие свежее.</text>
+
+        <!-- row 2 -->
+        <rect class="bx" x="20" y="120" width="310" height="60" rx="4"/>
+        <text class="tb" x="36" y="145">Ипотека · пуш</text>
+        <text class="tm" x="36" y="164">«Рассчитайте платёж по этой квартире»</text>
+        <path class="ln" d="M330,150 H378" marker-end="url(#m7m)"/>
+        <rect class="bx-a" x="380" y="134" width="150" height="32" rx="16"/>
+        <text x="455" y="155" text-anchor="middle">средний</text>
+        <path class="ln" d="M530,150 H588" marker-end="url(#m7m)"/>
+        <rect class="bx-a" x="590" y="120" width="390" height="60" rx="4"/>
+        <text class="tb" x="606" y="145">Баннер в карточке квартиры</text>
+        <text class="tm" x="606" y="164">Пуш на сегодня занят: лимит — один в день.</text>
+
+        <!-- row 3 -->
+        <rect class="bx" x="20" y="196" width="310" height="60" rx="4"/>
+        <text class="tb" x="36" y="221">Новостройки · письмо</text>
+        <text class="tm" x="36" y="240">«Старт продаж в новом квартале»</text>
+        <path class="ln" d="M330,226 H378" marker-end="url(#m7m)"/>
+        <rect class="bx" x="380" y="210" width="150" height="32" rx="16"/>
+        <text x="455" y="231" text-anchor="middle">низкий</text>
+        <path class="ln" d="M530,226 H588" marker-end="url(#m7m)"/>
+        <rect class="bx" x="590" y="196" width="390" height="60" rx="4"/>
+        <text class="tb" x="606" y="221">В недельную подборку</text>
+        <text class="tm" x="606" y="240">Отдельное письмо ради этого не нужно.</text>
+
+        <!-- row 4 -->
+        <rect class="bx" x="20" y="272" width="310" height="60" rx="4"/>
+        <text class="tb" x="36" y="297">Маркетинг · пуш всем</text>
+        <text class="tm" x="36" y="316">«Розыгрыш для пользователей»</text>
+        <path class="ln" d="M330,302 H378" marker-end="url(#m7m)"/>
+        <rect class="bx-h" x="380" y="286" width="150" height="32" rx="16"/>
+        <text x="455" y="307" text-anchor="middle">около нуля</text>
+        <path class="ln" d="M530,302 H588" marker-end="url(#m7m)"/>
+        <rect class="bx-h dash" x="590" y="272" width="390" height="60" rx="4"/>
+        <text class="tb" x="606" y="297">Не отправлять</text>
+        <text class="tm" x="606" y="316">Человек и так активен, прироста не будет.</text>
+      </svg>
+    </div>
+    <figcaption>Четыре исхода покрывают все четыре вопроса из задания. Кому: маркетинговый пуш этому человеку не идёт. Что: побеждает сообщение о цене. Когда: новостройки ждут подборки. В каком канале: ипотека уходит из пуша в баннер.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ CHECKS ============ -->
+<section id="check" aria-labelledby="h-check">
+  <div class="sec-head">
+    <span class="eyebrow">Перед защитой</span>
+    <h2 id="h-check">Что стоит уточнить в цифрах</h2>
+    <p>Четыре места, где вводные можно прочитать по-разному. Лучше назвать их самому, чем ждать вопроса.</p>
+  </div>
+  <ol class="checks">
+    <li><div><b>14% — это доля от кого?</b><span>Если 14% всей недельной аудитории получают по три промо каждый день, нужно минимум 23,5 млн отправок в неделю (8 млн × 14% × 3 × 7). Отправок всего 12 млн. Значит, 14% считаются от тех, кто получил хоть что-то за сутки, либо от другой базы.</span></div></li>
+    <li><div><b>Сколько из 12 млн приходится на пуши?</b><span>От этого зависит число отписок. Верхняя граница, если пуши все: 12 млн × 0,25% = 30 тыс. отписок в неделю.</span></div></li>
+    <li><div><b>12 млн — это только отправки или показы тоже?</b><span>Баннеры, placements и stories не «отправляют», их показывают. Если они не входят в 12 млн, реальное давление выше.</span></div></li>
+    <li><div><b>Как пересекаются 30% и 40%?</b><span>Первая цифра про кампании, вторая про сценарии. Неясно, есть ли контрольные группы у сценариев вне единого инструмента. Если нет, честно измеряется меньше, чем кажется.</span></div></li>
+  </ol>
+  <p class="foot">Все показатели условные и взяты из задания. Названия вертикалей и пример с покупателем квартиры добавлены для наглядности.</p>
+</section>
+
+</main>
