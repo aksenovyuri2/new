@@ -69,6 +69,27 @@ def main() -> int:
     for sid in ("s-m2", "s-d2"):
         if sid in schemes and "2028" not in schemes[sid] and sid == "s-m2":
             problems.append(f"{sid}: нет связи с целью 2028")
+    # версия 4: новые вкладки, единое имя главной метрики, связь роадмапа с деревом метрик
+    for pid in ("role", "value", "channels", "intel"):
+        m = re.search(r'<section class="panel" id="p-%s"[^>]*>(.*?)</section>' % pid, page, flags=re.S)
+        if not m:
+            problems.append(f"вкладка {pid}: нет")
+            continue
+        body = m.group(1)
+        n = body.count('<article class="scheme"')
+        if n < 3:
+            problems.append(f"вкладка {pid}: схем меньше трёх ({n})")
+        for need, what in (('class="market"', "данных рынка"), ("mark assume", "допущений"),
+                           ('class="tradeoff"', "таблицы компромиссов")):
+            if need not in body:
+                problems.append(f"вкладка {pid}: нет {what}")
+    plain = text_of(page)
+    for old in re.findall(r"главн\w* метрик\w*\s*[—:]\s*(?:добавленн|дополнительн)\w* (?:контакт|целев)\w*", plain):
+        problems.append(f"старое имя главной метрики: «{old}»")
+    if "добавленная выручка на человека за 12 месяцев" not in plain:
+        problems.append("нет главной метрики «добавленная выручка на человека за 12 месяцев»")
+    if "s-r4" in schemes and 'href="#s-r3"' not in schemes["s-r4"]:
+        problems.append("s-r4: роадмап не ссылается на дерево метрик s-r3")
     print(f"на схемах ядра: внешних источников {len(core_links)}, компаний в полосах «Рынок» {len(core_who)}")
     if len(core_links) < 50:
         problems.append(f"на схемах ядра меньше 50 источников ({len(core_links)})")

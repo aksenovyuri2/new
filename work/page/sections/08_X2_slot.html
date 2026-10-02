@@ -1,0 +1,199 @@
+<!-- tab: value -->
+<article class="scheme" id="s-x2">
+  <header>
+    <p class="code"><span>Схема Ц2</span><span class="core">★ ядро</span><span>Вопрос 3.3 · кто занимает слот: своё сообщение или реклама</span></p>
+    <h2>В одном слоте свои и рекламные кандидаты равны: слот получает тот, кто добавляет больше выручки</h2>
+    <p class="sub">Один и тот же слот у двух людей даёт разных победителей. Дорогое внимание горячего ищущего получает своё сообщение, дешёвое внимание случайного гостя — реклама. Цену внимания находят тестом, а утверждает совет раз в квартал.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 724" role="img" aria-label="Слева экран с одним слотом, верхней карточкой. Справа два человека, условный пример. Человек А шестой день ищет новостройку, теневая цена внимания 4,5 рубля за контакт. Своё сообщение: польза 15,8 минус внимание 4,5 минус канал 0,2, ценность 11,1, побеждает. Промо Ипотека: 5,8. Реклама застройщика: сейчас 1,3, ценность минус 3,4. Спонсорская подборка: сейчас 9, польза 2,3, ценность 6,5. Чтобы выиграть здесь, рекламе нужно платить 15,8 рубля за показ вместо 1,3. Человек Б зашёл по ссылке и жильё не ищет, теневая цена внимания 0,3 рубля. Своё сообщение: ценность 0,3. Реклама застройщика: ценность 0,8, побеждает. Спонсорская подборка отсеяна фильтром уместности. Внизу как находят теневую цену: кривая по архиву на 100 тысячах решений, неделя на 2 процентах людей, долгий контроль, потому что слепота к рекламе копится с полупериодом около 60 дней. Справа совет по вниманию раз в квартал: утверждает теневую цену по слотам и долю рекламы на экранах.">
+        <defs>
+          <marker id="x2-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="x2-ip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="24" class="t-h">СЛОТ НА ЭКРАНЕ</text>
+        <rect x="20" y="40" width="150" height="412" rx="22" class="box"/>
+        <rect x="32" y="54" width="126" height="24" rx="6" class="soft"/>
+        <text x="44" y="71" class="t-s">Поиск</text>
+        <rect x="32" y="88" width="126" height="96" rx="8" class="b-prop"/>
+        <text x="44" y="116" class="t-b">СЛОТ №1</text>
+        <text x="44" y="136" class="t-s t-i">верхняя</text>
+        <text x="44" y="152" class="t-s t-i">карточка</text>
+        <rect x="32" y="196" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="232" class="t-s">Новые ЖК</text>
+        <rect x="32" y="272" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="308" class="t-s">Объекты</text>
+        <rect x="32" y="348" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="384" class="t-s">Объекты</text>
+        <text x="44" y="432" class="t-s t-i">один слот,</text>
+        <text x="44" y="447" class="t-s t-i">два человека</text>
+        <path d="M158 130 H190" class="ln-prop" marker-end="url(#x2-ip)"/>
+        <path d="M158 176 H177 V331 H190" class="ln-prop" marker-end="url(#x2-ip)"/>
+        <text x="196" y="52" class="t-b">Человек А: шестой день ищет новостройку</text>
+        <rect x="626" y="36" width="314" height="26" rx="8" class="b-prop"/>
+        <text x="640" y="53" class="t-s t-i">теневая цена внимания: {{val_shadow_a|num1}} ₽ за контакт</text>
+        <text x="204" y="78" class="t-h">КАНДИДАТ</text>
+        <text x="418" y="78" class="t-h">СЕЙЧАС</text>
+        <text x="488" y="78" class="t-h">ПОЛЬЗА</text>
+        <text x="554" y="78" class="t-h">ВНИМАНИЕ</text>
+        <text x="652" y="78" class="t-h">КАНАЛ</text>
+        <text x="720" y="78" class="t-h">ЦЕННОСТЬ</text>
+        <rect x="196" y="86" width="744" height="38" rx="8" class="b-prop"/>
+        <text x="204" y="102" class="t-b">Своё сообщение (CRM)</text>
+        <text x="204" y="117" class="t-s">«3 новых ЖК по вашему поиску»</text>
+        <text x="418" y="111" class="t-b">0</text>
+        <text x="488" y="111" class="t-b">+{{val_gain_crm|num1}}</text>
+        <text x="554" y="111" class="t-b f-bad">−{{val_shadow_a|num1}}</text>
+        <text x="652" y="111" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="113" class="t-n f-prop">{{val_v_crm|num1}}</text>
+        <line x1="852" y1="93" x2="852" y2="117" class="ln-m"/>
+        <rect x="852" y="100" width="55.5" height="10" class="f-prop"/>
+        <text x="858" y="97" class="t-s"></text>
+        <rect x="196" y="130" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="146" class="t-b">Промо вертикали</text>
+        <text x="204" y="161" class="t-s">Ипотека: «Рассчитайте платёж»</text>
+        <text x="418" y="155" class="t-b">0</text>
+        <text x="488" y="155" class="t-b">+{{val_gain_mort|num1}}</text>
+        <text x="554" y="155" class="t-b f-bad">−{{val_shadow_a|num1}}</text>
+        <text x="652" y="155" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="157" class="t-n">{{val_v_mort|num1}}</text>
+        <line x1="852" y1="137" x2="852" y2="161" class="ln-m"/>
+        <rect x="852" y="144" width="29" height="10" class="fill-muted"/>
+        <rect x="196" y="174" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="190" class="t-b">Реклама застройщика</text>
+        <text x="204" y="205" class="t-s">платит за клик, пользы людям нет</text>
+        <text x="418" y="199" class="t-b">{{val_ad_now|num1}}</text>
+        <text x="488" y="199" class="t-b">0</text>
+        <text x="554" y="199" class="t-b f-bad">−{{val_shadow_a|num1}}</text>
+        <text x="652" y="199" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="201" class="t-n f-bad">{{val_v_ad|num1}}</text>
+        <line x1="852" y1="181" x2="852" y2="205" class="ln-m"/>
+        <rect x="834.8" y="188" width="17.2" height="10" class="fill-bad"/>
+        <rect x="196" y="218" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="234" class="t-b">Спонсорская подборка</text>
+        <text x="204" y="249" class="t-s">платит за контакт, с лимитом</text>
+        <text x="418" y="243" class="t-b">{{val_sp_price|num0}}</text>
+        <text x="488" y="243" class="t-b">+{{val_gain_sp|num1}}</text>
+        <text x="554" y="243" class="t-b f-bad">−{{val_shadow_a|num1}}</text>
+        <text x="652" y="243" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="245" class="t-n">{{val_v_sp|num1}}</text>
+        <line x1="852" y1="225" x2="852" y2="249" class="ln-m"/>
+        <rect x="852" y="232" width="32.7" height="10" class="fill-muted"/>
+        <text x="196" y="274" class="t-s t-i">Чтобы выиграть здесь, рекламе нужно платить {{val_ad_win|num1}} ₽ за показ, а не {{val_ad_now|num1}} ₽.</text>
+        <text x="196" y="306" class="t-b">Человек Б: зашёл по ссылке, жильё не ищет</text>
+        <rect x="626" y="290" width="314" height="26" rx="8" class="b-prop"/>
+        <text x="640" y="307" class="t-s t-i">теневая цена внимания: {{val_shadow_b|num1}} ₽ за контакт</text>
+        <rect x="196" y="318" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="334" class="t-b">Своё сообщение (CRM)</text>
+        <text x="204" y="349" class="t-s">«Подпишитесь на поиск»</text>
+        <text x="418" y="343" class="t-b">0</text>
+        <text x="488" y="343" class="t-b">+{{val_b_gain_crm|num1}}</text>
+        <text x="554" y="343" class="t-b f-bad">−{{val_shadow_b|num1}}</text>
+        <text x="652" y="343" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="345" class="t-n">{{val_b_v_crm|num1}}</text>
+        <line x1="852" y1="325" x2="852" y2="349" class="ln-m"/>
+        <rect x="852" y="332" width="11" height="10" class="fill-muted"/>
+        <rect x="196" y="362" width="744" height="38" rx="8" class="b-prop"/>
+        <text x="204" y="378" class="t-b">Реклама застройщика</text>
+        <text x="204" y="393" class="t-s">платит за клик, пользы людям нет</text>
+        <text x="418" y="387" class="t-b">{{val_ad_now|num1}}</text>
+        <text x="488" y="387" class="t-b">0</text>
+        <text x="554" y="387" class="t-b f-bad">−{{val_shadow_b|num1}}</text>
+        <text x="652" y="387" class="t-b">−{{val_chan|num1}}</text>
+        <text x="720" y="389" class="t-n f-prop">{{val_b_v_ad|num1}}</text>
+        <line x1="852" y1="369" x2="852" y2="393" class="ln-m"/>
+        <rect x="852" y="376" width="21" height="10" class="f-prop"/>
+        <text x="858" y="373" class="t-s"></text>
+        <rect x="196" y="406" width="744" height="30" rx="8" class="soft"/>
+        <text x="208" y="426" class="t-s">Спонсорская подборка отсеяна до оценки: человек не ищет новостройку. Уместность — фильтр.</text>
+        <text x="196" y="452" class="t-s t-i">Внимание такого человека дёшево: слот получает реклама. Если у всех ценность ниже нуля, слот остаётся пустым.</text>
+        <text x="20" y="488" class="t-h">КАК НАХОДИМ ТЕНЕВУЮ ЦЕНУ ВНИМАНИЯ</text>
+        <text x="660" y="488" class="t-h">КТО УТВЕРЖДАЕТ</text>
+        <line x1="48" y1="508" x2="48" y2="668" class="ln-m"/>
+        <line x1="48" y1="668" x2="244" y2="668" class="ln-m"/>
+        <text x="54" y="504" class="t-s">₽ на человека</text>
+        <path d="M56 532 C100 572 170 642 240 660" class="ln-bad"/>
+        <path d="M56 662 C110 646 170 590 240 544" class="ln-task"/>
+        <path d="M56 600 C90 574 120 552 150 550 C185 550 215 578 240 606" class="ln-prop"/>
+        <line x1="150" y1="550" x2="150" y2="668" class="ln-m" stroke-dasharray="4 3"/>
+        <circle cx="150" cy="550" r="5" class="f-prop"/>
+        <text x="56" y="524" class="t-s f-bad">реклама</text>
+        <text x="244" y="532" class="t-s f-task" text-anchor="end">люди за 12 мес.</text>
+        <text x="60" y="622" class="t-s f-prop">сумма</text>
+        <text x="150" y="686" class="t-s t-i" text-anchor="middle">лучшая цена</text>
+        <text x="244" y="704" class="t-s" text-anchor="end">теневая цена внимания →</text>
+        <rect x="270" y="500" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="530" r="13" class="f-prop"/>
+        <text x="294" y="535" class="t-b t-on" text-anchor="middle">1</text>
+        <text x="318" y="522" class="t-b">Кривая по архиву</text>
+        <text x="318" y="540" class="t-s">{{val_li_queries|тыс0}} тыс. решений: для каждой цены</text>
+        <text x="318" y="554" class="t-s">считаем выручку сейчас и за 12 месяцев</text>
+        <rect x="270" y="568" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="598" r="13" class="f-prop"/>
+        <text x="294" y="603" class="t-b t-on" text-anchor="middle">2</text>
+        <text x="318" y="590" class="t-b">Неделя на малой доле людей</text>
+        <text x="318" y="608" class="t-s">{{val_li_traffic|%0}} людей, четыре значения цены;</text>
+        <text x="318" y="622" class="t-s">берём лучшее по сумме двух выручек</text>
+        <rect x="270" y="636" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="666" r="13" class="f-prop"/>
+        <text x="294" y="671" class="t-b t-on" text-anchor="middle">3</text>
+        <text x="318" y="658" class="t-b">Долгий контроль</text>
+        <text x="318" y="676" class="t-s">слепота к рекламе копится, полупериод</text>
+        <text x="318" y="690" class="t-s">около {{val_g_halflife|num0}} дней: цену сверяем по контролю</text>
+        <path d="M630 596 H654" class="ln" marker-end="url(#x2-i)"/>
+        <rect x="660" y="500" width="280" height="196" rx="10" class="b-prop"/>
+        <text x="676" y="526" class="t-b">Совет по вниманию</text>
+        <text x="676" y="544" class="t-s t-i">раз в квартал</text>
+        <text x="676" y="574" class="t-s t-b">Утверждает:</text>
+        <text x="676" y="594" class="t-s t-i">• теневую цену по слотам</text>
+        <text x="676" y="612" class="t-s t-i">• долю рекламы на экранах</text>
+        <text x="676" y="630" class="t-s t-i">• итоги тестов и журнал</text>
+        <text x="676" y="662" class="t-s t-i">Спор решают тест и формула,</text>
+        <text x="676" y="678" class="t-s t-i">а не переговоры</text>
+      </svg>
+    </div>
+    <figcaption>Числа условные (допущение). Теневая цена внимания входит в Δ каждого кандидата: Δ = польза − цена внимания. У человека А она {{val_shadow_a|num1}} ₽, у человека Б — {{val_shadow_b|num1}} ₽, поэтому победители разные. Кривая внизу схематична: настоящую строят по архиву решений.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">LinkedIn</span> · «теневая ставка» подбирается тестом: кривая по 100 тыс. запросов, затем неделя на 2% трафика; лучший из четырёх вариантов дал выручку +5,3% и вовлечённость +0,7% · статья, 2020 · <span class="src">Т</span> · <span class="fit mid">метод применим, числа соцсети нет</span> · <a href="https://dl.acm.org/doi/10.1145/3394486.3403391" rel="noopener">источник</a></li>
+    <li><span class="who">Google</span> · слепота к рекламе копится, полупериод около 60 дней: поэтому короткий тест вред недооценивает, а долгие группы нужны (вывод наш) · статья, 2015 · <span class="src">Т</span> · <span class="fit mid">давнее: берём метод, не числа</span> · <a href="https://gwern.net/doc/economics/advertising/2015-hohnhold.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Wayfair</span> · рекламных мест 12 из 48 вместо 6, лимит рекламы подряд: доход рекламы +35%, конверсия +1%; рекламе не режут места, а раздают по ценности · статья, 2025 · <span class="src">Т</span> · <span class="fit hi">применимо: общая оценка органики и рекламы</span> · <a href="https://papers.adkdd.org/2025/papers/adkdd25-kolbin-ads.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Facebook</span> · если скрыть 82% рекламы, время на платформе вырастет лишь на 6%: вред рекламы может быть мал, поэтому теневую цену мерят, а не берут «с потолка» · статья, 12.2025 · <span class="src">Т</span> · <span class="fit mid">соцсеть, не недвижимость</span> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5952337" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · одна точка решения: из 400+ кампаний в день человеку проходят лучшие в пределах лимита · 01.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка с вертикалями, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/875012/" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li><b>Один слот, одна оценка.</b> Свои сообщения и реклама сравниваются по ценности из <a href="#s-x1">Ц1</a>. Побеждает наибольшая; если у всех она ниже нуля, слот остаётся пустым.</li>
+      <li><b>Внимание у людей стоит по-разному.</b> У человека А теневая цена {{val_shadow_a|num1}} ₽ за контакт, и рекламе нужно платить {{val_ad_win|num1}} ₽ за показ, чтобы выиграть. У человека Б она {{val_shadow_b|num1}} ₽, и слот получает реклама.</li>
+      <li><b>Теневую цену находят тестом, а не назначают.</b> Кривая по архиву, неделя на {{val_li_traffic|%0}} людей, долгий контроль: вред рекламы копится с полупериодом около {{val_g_halflife|num0}} дней, недельный тест его недооценит.</li>
+      <li><b>Совет по вниманию раз в квартал</b> утверждает теневую цену по слотам и долю рекламы на экранах. Состав: директор по продукту, финансы, аналитика эффекта, владельцы экранов. Спор решают тест и формула, а не переговоры.</li>
+      <li><b>Когда включаем.</b> В первой версии платные места застройщиков живут на своих местах (<a href="#s-g4">Г4</a>). Единая оценка входит в места продукта в третьем квартале, на все слоты — во втором году.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Теневая цена — своя для слота и сегмента, ставится тестом</td><td>Одна цена на всю площадку или потолок доли рекламы</td><td>Тест на каждый слот; недельный тест недооценивает накопленный вред, нужна долгая контрольная группа</td><td>LinkedIn: кривая и неделя на 2%; Google: полупериод около 60 дней</td></tr>
+        <tr><td>Реклама и свои в одном слоте по одной оценке</td><td>Реклама на своих постоянных местах, свои на остальных (первая версия, <a href="#s-g4">Г4</a>)</td><td>Застройщик теряет гарантированное место: часть показов уходит своему сообщению; нужна понятная цена слота</td><td>Wayfair: 12 рекламных мест из 48 вместо 6 при общей оценке; Авито: одна точка решения</td></tr>
+        <tr><td>Совет раз в квартал утверждает цену и долю рекламы</td><td>Ручной комитет по каждому запросу</td><td>Цена устаревает внутри квартала; срочное идёт по быстрой полосе (<a href="#s-g2">Г2</a>)</td><td>Своё решение: тот же ритм, что у весов в <a href="#s-b5">Б5</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Места внутри продукта: баннеры, placements, stories; кто занимает место, сейчас решают вручную (<a href="#s-g4">Г4</a>).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Звонок застройщику — {{rev_per_lead|тыс1}} тыс. ₽: так велика польза от одного ищущего. Медиа и реклама — {{val_media_h1|млн0}} млн ₽ за полугодие, +{{asis_g_media|%1}}: реклама растёт, поэтому спор за слот реальный.</li>
+      <li><span class="mark market">Практика рынка</span> LinkedIn: подбор ставки. Google: накопление вреда. Wayfair: общая оценка. Facebook: вред рекламы мал, значит цену измеряют. Авито: одна точка решения.</li>
+      <li><span class="mark assume">Допущение</span> Теневая цена {{val_shadow_a|num1}} и {{val_shadow_b|num1}} ₽, польза сообщений, цена показа {{val_chan|num1}} ₽. Публичных значений для недвижимости нет; находим тестом с контрольной группой.</li>
+      <li><span class="mark prop">Предложение</span> Совет по вниманию раз в квартал и единая оценка в местах продукта с третьего квартала.</li>
+    </ul>
+  </div>
+</article>
