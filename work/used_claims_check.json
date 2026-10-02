@@ -1,0 +1,632 @@
+[
+ {
+  "claim": "Baek: 603 153 клиентов, после отписки выручка −36/−44%",
+  "verdict": "страницы не открылись",
+  "pages": [
+   {
+    "url": "http://www.columbia.edu/~wm2428/papers/customer_engagement.pdf",
+    "status": "pdf",
+    "hits": null
+   },
+   {
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6165626",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Nubank: наборы кампаний ×10, потолок 40 сегментов",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://building.nubank.com/how-nubank-uses-spark-to-process-data/",
+    "status": "открылась",
+    "hits": [
+     true,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Kcell: баннер на весь экран, ×5 конверсии",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://digitalbusiness.kz/2026-01-05/ot-offerov-do-dokumentooborota-kak-halyk-vnedryaet-ii/",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://www.osp.ru/articles/2025/01/13059269",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://forbes.kz/articles/evolyutsiya-bankov-kak-strategiya-cvm-menyaet-situatsiyu-na-rynke-cf5e86",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Netflix: недельный план частоты и цена сообщения",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/decisioning/offer-decisioning/create-manage-activities/configure-offer-selection",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://netflixtechblog.medium.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://blog.bytebytego.com/p/how-reddit-delivers-notifications",
+    "status": "открылась",
+    "hits": [
+     true,
+     true,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Pinterest: порог по сегментам активности; отписки выросли у новых",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/tbank/articles/838148/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://medium.com/pinterest-engineering/nep-notification-system-and-relevance-a7fff21986c7",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Duolingo: рост числа уведомлений только с одобрения CEO",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/avito/articles/875012/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://kod.ru/marketingovy-optimizator-gazprombank",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.uber.com/us/en/blog/solving-multiple-knapsack/",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://tech.ifood.com.br/sem-categoria/how-ifoods-generative-ai-connects-personalization-and-communication-through-rigorous-engineering-patterns-to-scale-unique-user-experiences/",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://habr.com/ru/companies/beeline_tech/articles/915778/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://sharechat.com/blogs/engineering/how-we-built-notification-rate-limiter-for-eight-billion-notifications-per-day-for-400-million",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://www.braze.com/customers/papa-johns-uk",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "iFood: промо как сквозная вертикаль; приоритеты",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/avito/articles/875012/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://kod.ru/marketingovy-optimizator-gazprombank",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.uber.com/us/en/blog/solving-multiple-knapsack/",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://tech.ifood.com.br/sem-categoria/how-ifoods-generative-ai-connects-personalization-and-communication-through-rigorous-engineering-patterns-to-scale-unique-user-experiences/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://habr.com/ru/companies/beeline_tech/articles/915778/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth",
+    "status": "открылась",
+    "hits": [
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "url": "https://sharechat.com/blogs/engineering/how-we-built-notification-rate-limiter-for-eight-billion-notifications-per-day-for-400-million",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.braze.com/customers/papa-johns-uk",
+    "status": "открылась",
+    "hits": [
+     true,
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "YouTube: не слать пуш тем, кто не реагирует",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://arxiv.org/html/2509.02458v1",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://www.socialmediatoday.com/news/youtube-tests-update-channel-notification-frequency/743645/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://ppc.land/youtube-ends-push-notifications-for-inactive-subscribers-in-new-rollout/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://sites.ualberta.ca/~dniu/Homepage/Publications_files/Online_Volume_Optimization_for_Notifications_via_Long_Short_Term_Value_Modeling.pdf",
+    "status": "pdf",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Авито Авто: обратный эксперимент 70/30, 6 месяцев, MDE 1,92%",
+  "verdict": "страницы не открылись",
+  "pages": [
+   {
+    "url": "https://arxiv.org/pdf/2608.08043",
+    "status": "pdf",
+    "hits": null
+   },
+   {
+    "url": "https://medium.com/pinterest-engineering/how-holdout-groups-drive-sustainable-growth-35a4786c3801",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://tech.instacart.com/instacarts-economics-team-using-surrogate-indices-to-estimate-long-run-heterogeneous-treatment-0bf7bc96c6e6",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Citi: библиотека действий −60%",
+  "verdict": "страницы не открылись",
+  "pages": [
+   {
+    "url": "https://www.pega.com/insights/resources/pegaworld-2025-shifting-high-gear-citibanks-path-scalable-high-powered-marketing",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Gojek: 32% пользователей, на 10% меньше пушей",
+  "verdict": "страницы не открылись",
+  "pages": [
+   {
+    "url": "https://medium.com/gojekengineering/behind-the-screens-the-evolution-of-gojeks-user-communications-63eb6f81acdb",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Магнит Доставка: план 4 месяца, факт 13",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://mindbox.ru/journal/cases/magnit-dostavka/",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Авито: 40+ маркетологов, 30 A/B-тестов в неделю",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/avito/articles/918634/",
+    "status": "открылась",
+    "hits": [
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://habr.com/ru/companies/avito/articles/875012/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Instagram: штраф за сходство уведомлений",
+  "verdict": "не найдено",
+  "pages": [
+   {
+    "url": "https://vc.ru/ai/1865035-kak-personalizirovat-35-mlrd-soobshenii-v-mesyac-s-pomoshyu-neirosetei-i-uvelichit-prodazhi-do-40",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://medium.com/gojekengineering/behind-the-screens-the-evolution-of-gojeks-user-communications-63eb6f81acdb",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://habr.com/ru/companies/megafon/articles/773722/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://growth.airship.com/rs/313-QPJ-195/images/Airship-2025-Push-Notification-Benchmarks-EN.pdf?version=0",
+    "status": "pdf",
+    "hits": null
+   }
+  ]
+ },
+ {
+  "claim": "Spotify: правило решения с защитными метриками",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://arxiv.org/abs/2402.11609",
+    "status": "открылась",
+    "hits": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://engineering.atspotify.com/2024/03/risk-aware-product-decisions-in-a-b-tests-with-multiple-metrics",
+    "status": "открылась",
+    "hits": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://docs.geteppo.com/data-management/organizing-metrics/guardrails/",
+    "status": "открылась",
+    "hits": [
+     true,
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://www.statsig.com/updates/update/metric-alerts",
+    "status": "открылась",
+    "hits": [
+     true,
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Авито: балансировщик общий, 400+ кампаний, лимит",
+  "verdict": "частично",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/avito/articles/875012/",
+    "status": "открылась",
+    "hits": [
+     true,
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://kod.ru/marketingovy-optimizator-gazprombank",
+    "status": "открылась",
+    "hits": [
+     false,
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://www.uber.com/us/en/blog/solving-multiple-knapsack/",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   },
+   {
+    "url": "https://tech.ifood.com.br/sem-categoria/how-ifoods-generative-ai-connects-personalization-and-communication-through-rigorous-engineering-patterns-to-scale-unique-user-experiences/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://habr.com/ru/companies/beeline_tech/articles/915778/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     true
+    ]
+   },
+   {
+    "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://sharechat.com/blogs/engineering/how-we-built-notification-rate-limiter-for-eight-billion-notifications-per-day-for-400-million",
+    "status": "открылась",
+    "hits": [
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "url": "https://www.braze.com/customers/papa-johns-uk",
+    "status": "открылась",
+    "hits": [
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "url": "https://habr.com/ru/companies/vk/articles/1010840/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://www.gazprombank.tech/blog/1092/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "url": "https://t.me/s/crmcjmfm",
+    "status": "открылась",
+    "hits": [
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "url": "https://t.me/crmcjmfm/711",
+    "status": "пустая или заглушка",
+    "hits": null
+   },
+   {
+    "url": "https://mindbox.ru/journal/cases/komus/",
+    "status": "открылась",
+    "hits": [
+     false,
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "LinkedIn: сессии +0,72%, объём −1,68%",
+  "verdict": "не найдено",
+  "pages": [
+   {
+    "url": "https://arxiv.org/pdf/2509.02458",
+    "status": "pdf",
+    "hits": null
+   },
+   {
+    "url": "https://arxiv.org/abs/2405.10490",
+    "status": "открылась",
+    "hits": [
+     false,
+     false
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Monzo: контрольная группа 2,5% на 6 месяцев",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://monzo.com/blog/beyond-the-last-click-how-monzo-measures-crms-true-impact",
+    "status": "открылась",
+    "hits": [
+     true,
+     true,
+     true
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Купер: контроль 5% без коммуникаций",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://mindbox.ru/journal/experts/kuper-analitika/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://mindbox.ru/journal/cases/kuper/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   }
+  ]
+ },
+ {
+  "claim": "Т-Банк: топ-4%, отписки −5,08%",
+  "verdict": "подтверждено скриптом",
+  "pages": [
+   {
+    "url": "https://habr.com/ru/companies/tbank/articles/838148/",
+    "status": "открылась",
+    "hits": [
+     true,
+     true
+    ]
+   },
+   {
+    "url": "https://medium.com/pinterest-engineering/nep-notification-system-and-relevance-a7fff21986c7",
+    "status": "не открылась: HTTPError",
+    "hits": null
+   }
+  ]
+ }
+]
