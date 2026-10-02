@@ -157,14 +157,20 @@ footer.note { color: var(--muted); font-size: 15px; line-height: 22px; max-width
 @media (prefers-reduced-motion: no-preference) { .tabs button { transition: background-color 160ms; } }
 
 /* полоса «Рынок» и таблица компромиссов */
-.market { display: grid; gap: 6px; border: 1px solid var(--line); border-radius: var(--radius-block); padding: 12px 16px; background: var(--bg); }
-.market h3 { margin: 0; font: 700 13px/16px var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--m-market); }
-.market ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 15px; line-height: 22px; max-width: 92ch; }
-.market .who { font-weight: 700; color: var(--ink-strong); }
-.market .src { font: 700 12px/18px var(--font); color: var(--muted); border: 1px solid var(--line-strong); border-radius: 4px; padding: 0 5px; }
-.market .fit { color: var(--muted); font-size: 14px; }
-.market .fit.hi { color: var(--m-cian); } .market .fit.mid { color: var(--m-market); } .market .fit.lo { color: var(--bad); }
+div.market { display: grid; gap: 6px; border: 1px solid var(--line); border-radius: var(--radius-block); padding: 12px 16px; background: var(--bg); }
+div.market h3 { margin: 0; font: 700 13px/16px var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--m-market); }
+div.market ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 15px; line-height: 22px; max-width: 92ch; }
+div.market .who { font-weight: 700; color: var(--ink-strong); }
+div.market .src { font: 700 12px/18px var(--font); color: var(--muted); border: 1px solid var(--line-strong); border-radius: 4px; padding: 0 5px; }
+div.market .fit { color: var(--muted); font-size: 14px; }
+div.market .fit.hi { color: var(--m-cian); } div.market .fit.mid { color: var(--m-market); } div.market .fit.lo { color: var(--bad); }
 table.tradeoff td:first-child { font-weight: 700; color: var(--ink-strong); }
+
+/* карточки ответов: стратегия → тактика */
+table.qa th { width: 13ch; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink-strong); background: var(--bg); vertical-align: top; }
+table.qa td { line-height: 24px; }
+table.qa pre { margin-top: 8px; white-space: pre; }
+table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); }
 </style>
 
 <div class="band"></div>

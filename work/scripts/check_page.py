@@ -36,7 +36,7 @@ def main() -> int:
     for sid, body in schemes.items():
         if "<svg" not in body or "<figcaption>" not in body:
             problems.append(f"{sid}: нет рисунка или подписи")
-        if sid != "s-e1" and ('class="answer"' not in body or 'class="basis"' not in body):
+        if sid not in ("s-e1", "s-e2") and ('class="answer"' not in body or 'class="basis"' not in body):
             problems.append(f"{sid}: нет ответа или источников")
         for svg in re.findall(r"<svg[^>]*>", body):
             if 'role="img"' not in svg or "aria-label=" not in svg:
@@ -51,7 +51,7 @@ def main() -> int:
     # критерии приёмки уровня CPO
     core_links, core_who = set(), set()
     for sid, body in schemes.items():
-        if sid == "s-e1":
+        if sid in ("s-e1", "s-e2"):
             continue
         if 'class="market"' not in body:
             problems.append(f"{sid}: нет полосы «Рынок»")
@@ -74,6 +74,16 @@ def main() -> int:
         problems.append(f"на схемах ядра меньше 50 источников ({len(core_links)})")
     if len(core_who) < 40:
         problems.append(f"на схемах ядра меньше 40 компаний ({len(core_who)})")
+    # карточки ответов на вопросы кейса
+    qa = re.findall(r'<article class="doc" id="(q[^"]+)">(.*?)</article>', page, flags=re.S)
+    for qid, body in qa:
+        if body.count("<tr><th>") != 6:
+            problems.append(f"карточка {qid}: не шесть строк стратегия → допущения")
+        if not re.search(r'href="#s-', body):
+            problems.append(f"карточка {qid}: нет ссылки на схему")
+        if 'mark assume' not in body:
+            problems.append(f"карточка {qid}: не помечены допущения")
+    print(f"карточек ответов: {len(qa)}")
     order = [sid for sid in re.findall(r'<article class="scheme" id="([^"]+)">', page)]
     with open(os.path.join(WORK, "test", "schemes_text.md"), "w", encoding="utf-8") as f:
         for sid in order:
