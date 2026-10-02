@@ -1,0 +1,86 @@
+<!-- tab: econ -->
+<article class="scheme" id="s-m2">
+  <header>
+    <p class="code"><span>Схема Э2</span><span class="core">★ ядро</span><span>Бизнес-кейс и цель 2028</span></p>
+    <h2>Платформа окупается при приросте платных действий от 0,7–1,2%. Разрыв до цели 2028 она не закрывает</h2>
+    <p class="sub">Расчёт на прогнозе 2028 года при росте +20% в год, а не на цели. Прирост a считается только сверх нынешних +{{econ_crm_growth|%0}} целевых действий, о которых ЦИАН уже отчитался.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 330" role="img" aria-label="Вклад платформы в выручку 2028 года по сценариям: слабый 41 миллион рублей, базовый 122 миллиона без учёта размещения и 172 миллиона с учётом, сильный 459 миллионов. Стоимость платформы 60–100 миллионов в год. Разрыв до цели 4,1 миллиарда — далеко за краем шкалы.">
+        <text x="20" y="28" class="t-h">ВКЛАД В ВЫРУЧКУ 2028, МЛН ₽ В ГОД</text>
+        <rect x="338" y="40" width="52" height="210" class="b-assume"/>
+        <text x="396" y="54" class="t-s t-i">стоимость платформы</text>
+        <text x="396" y="70" class="t-s">{{econ_cost_min|млн0}}–{{econ_cost_max|млн0}} млн в год</text>
+
+        <text x="20" y="96" class="t-b">Слабый</text>
+        <text x="20" y="114" class="t-s">a {{econ_a_low|%1}}, k 0</text>
+        <rect x="260" y="88" width="53" height="26" rx="4" class="b-prop"/>
+        <text x="320" y="106" class="t-b">{{econ_v_low|млн0}}</text>
+
+        <text x="20" y="144" class="t-b">Базовый</text>
+        <text x="20" y="162" class="t-s">a {{econ_a_base|%1}}, k 0 — в бюджет</text>
+        <rect x="260" y="136" width="159" height="26" rx="4" class="b-prop"/>
+        <text x="426" y="154" class="t-b">{{econ_v_base|млн0}}</text>
+
+        <text x="20" y="192" class="t-b">Базовый с размещением</text>
+        <text x="20" y="210" class="t-s">a {{econ_a_base|%1}}, k {{econ_k|num2}}</text>
+        <rect x="260" y="184" width="224" height="26" rx="4" class="b-prop"/>
+        <text x="491" y="202" class="t-b">{{econ_v_base_k|млн0}}</text>
+
+        <text x="20" y="240" class="t-b">Сильный, верхняя граница</text>
+        <text x="20" y="258" class="t-s">a {{econ_a_high|%0}}, k {{econ_k|num2}}</text>
+        <rect x="260" y="232" width="597" height="26" rx="4" class="b-prop"/>
+        <text x="864" y="250" class="t-b">{{econ_v_high|млн0}}</text>
+
+        <path d="M260 274 H910" class="grid"/>
+        <path d="M260 270 V278 M390 270 V278 M520 270 V278 M650 270 V278 M780 270 V278 M910 270 V278" class="grid"/>
+        <text x="260" y="294" text-anchor="middle" class="t-s">0</text>
+        <text x="390" y="294" text-anchor="middle" class="t-s">100</text>
+        <text x="520" y="294" text-anchor="middle" class="t-s">200</text>
+        <text x="650" y="294" text-anchor="middle" class="t-s">300</text>
+        <text x="780" y="294" text-anchor="middle" class="t-s">400</text>
+        <text x="910" y="294" text-anchor="middle" class="t-s">500</text>
+        <text x="20" y="320" class="t-s t-i">Разрыв до цели 2028 — {{econ_gap|млрд1}} млрд ₽, в восемь раз правее края шкалы. Его закроют цена, медиа и транзакции.</text>
+      </svg>
+    </div>
+    <figcaption>Вклад = a × выручка лидов + a × k × выручка размещения. База — прогноз 2028 года: выручка {{econ_fc2028|млрд1}} млрд ₽, лиды {{econ_leads2028|млрд2}} млрд, размещение {{econ_place2028|млрд2}} млрд. Жёлтая полоса — стоимость самой платформы.</figcaption>
+  </figure>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th>Что считаем</th><th>Значение</th><th>Как получено</th></tr></thead>
+    <tbody>
+      <tr><td>Безубыточность при k = 0</td><td>a {{econ_be_k0_min|%2}}–{{econ_be_k0_max|%2}}</td><td>стоимость {{econ_cost_min|млн0}}–{{econ_cost_max|млн0}} млн ÷ выручка лидов 2028 <span class="mark assume">Оценка</span></td></tr>
+      <tr><td>Безубыточность при k = {{econ_k|num2}}</td><td>a {{econ_be_k_min|%2}}–{{econ_be_k_max|%2}}</td><td>то же, плюс четверть выручки размещения <span class="mark assume">Оценка</span></td></tr>
+      <tr><td>Цена общей контрольной группы {{holdout_share|%0}}</td><td>{{econ_hold_min|млн0}}–{{econ_hold_max|млн0}} млн ₽ в год</td><td>группа теряет весь эффект коммуникаций; если они дают 5–25% лидов <span class="mark assume">Оценка</span></td></tr>
+      <tr><td>Когда виден эффект в деньгах</td><td>с 12-го месяца</td><td>платных звонков ~{{econ_calls_year|тыс0}} тыс. в год; в группе {{holdout_share|%0}} прирост виден от 2,8% за год (схема В2)</td></tr>
+      <tr><td>Что в бюджете первого года</td><td>ноль эффекта</td><td>решение о втором годе — на 12-м месяце по порогу окупаемости <span class="mark prop">Предложение</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито Авто</span> · обратный эксперимент одной команды: ожидали прирост около 1%, порог обнаружения 1,92% при контроле 30% и полугоде · 12.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка, длинный цикл</span> · <a href="https://habr.com/ru/articles/981260/" rel="noopener">источник</a></li>
+    <li><span class="who">Mindbox</span> · прирост всей CRM к обороту 7,92% при контроле 5% · 05.2025 · <span class="src">В</span> · <span class="fit lo">мало применимо: ритейл, частая покупка, вся CRM, а не координация</span> · <a href="https://mindbox.ru/journal/education/incrementality-marketing/" rel="noopener">источник</a></li>
+    <li><span class="who">ClientCore</span> · письма: 22% оборота по атрибуции против 9% по контрольной группе · 06.2026 · <span class="src">В</span> · <span class="fit mid">один пример; показывает порядок завышения</span> · <a href="https://clientcore.ru/blog/articles/inkrementalnost-rassylok-kak-ponyat-skolko-vyruchki-prinosit-imenno-crm" rel="noopener">источник</a></li>
+    <li><span class="who">Pinterest</span> · эффект +7% за первые недели осел до 2,5% за год в постоянной контрольной группе · 02.2015 · <span class="src">П</span> · <span class="fit lo">фон: старый, ежедневное использование</span> · <a href="https://medium.com/pinterest-engineering/how-holdout-groups-drive-sustainable-growth-35a4786c3801" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Что из этого следует</h3>
+    <ul>
+      <li>Платформа — не рычаг роста выручки, а защита канала и честный счёт. В базовом сценарии она даёт 3–4% разрыва до цели 2028.</li>
+      <li>Окупаемость реальна: порог 0,7–1,2% ниже ожиданий рынка для одной команды (около 1% у Авито Авто). Но доказать её в деньгах можно только к 12-му месяцу.</li>
+      <li>Итог держат два числа: прирост a и доля k. Первые полгода мы измеряем a на целевых действиях; k согласуем с финансами и до проверки держим равной нулю.</li>
+      <li>Эффект затухает. Постоянная контрольная группа 1% на год показывает, сколько осталось.</li>
+    </ul>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Выручка 2025 года {{econ_rev2025|млн0}} млн ₽, структура выручки, цель удвоить выручку к 2028 году, +{{econ_crm_growth|%0}} целевых действий за квартал.</li>
+      <li><span class="mark assume">Оценка</span> Прогноз 2028 года при +20% в год, сценарии, безубыточность, цена контрольной группы, число платных звонков.</li>
+      <li><span class="mark assume">Допущение</span> Стоимость платформы 60–100 млн ₽ в год: 8–12 человек и провайдеры. Уточнить у финансов.</li>
+    </ul>
+  </div>
+</article>

@@ -14,15 +14,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WORK = os.path.join(HERE, "..")
 OUT = os.path.join(WORK, "..", "cian-comms-schemes.html")
 TABS = [
-    ("position", "Позиция"),
+    ("position", "Записка"),
     ("asis", "Как есть"),
+    ("econ", "Экономика"),
     ("b1", "1. Решения"),
     ("b2", "2. Метрики"),
     ("b3", "3. Взаимодействие"),
     ("b4", "4. MVP и запуск"),
     ("nav", "Навигатор"),
-    ("assume", "Допущения"),
-    ("market", "Варианты рынка"),
+    ("assume", "Допущения и пробелы"),
+    ("market", "Доказательства"),
 ]
 PH_RE = re.compile(r"\{\{\s*([a-z0-9_%]+)\s*(?:\|\s*([^}\s]+)\s*)?\}\}")
 
@@ -38,6 +39,8 @@ def fmt(value: float, spec: str | None) -> str:
     spec = spec or "num"
     if spec.startswith("%"):
         return trim(value * 100, int(spec[1:] or 2)) + "%"
+    if spec.startswith("млрд"):
+        return trim(value / 1e9, int(spec[4:] or 1))
     if spec.startswith("млн"):
         return trim(value / 1e6, int(spec[3:] or 2))
     if spec.startswith("тыс"):
@@ -48,7 +51,13 @@ def fmt(value: float, spec: str | None) -> str:
 
 
 def main() -> int:
-    numbers = {r["code"]: r["value"] for r in json.load(open(os.path.join(WORK, "numbers.json"), encoding="utf-8"))}
+    numbers = {}
+    # общий каркас + отдельные файлы чисел по блокам (numbers_*.json), чтобы исполнители не правили один файл
+    for npath in [os.path.join(WORK, "numbers.json")] + sorted(glob.glob(os.path.join(WORK, "numbers_*.json"))):
+        for r in json.load(open(npath, encoding="utf-8")):
+            if r["code"] in numbers and numbers[r["code"]] != r["value"]:
+                print(f"ОШИБКА: код {r['code']} задан по-разному в {os.path.basename(npath)}")
+            numbers[r["code"]] = r["value"]
     used, errors, literal = set(), [], []
     panels = {tid: [] for tid, _ in TABS}
     for path in sorted(glob.glob(os.path.join(HERE, "sections", "*.html"))):
