@@ -1,0 +1,168 @@
+<!-- tab: intel -->
+<article class="scheme" id="s-i3">
+  <header>
+    <p class="code"><span>Схема И3</span><span class="core">★ ядро</span><span>Вопрос 1.4 · AI и бизнес-эффект в рублях</span></p>
+    <h2>AI пишет тексты и собирает кампании по редполитике, а его работу мерим в рублях, а не в кликах</h2>
+    <p class="sub">Три задачи AI: тексты, сборка кампаний, вход и ответы ИИ. Все идут через один контроль качества и сравниваются с контрольной группой по добавленной выручке на человека за 12 месяцев.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 700" role="img" aria-label="Три задачи AI. Первая: тексты с редполитикой; опора Сбер, около 30 правил проверки; нельзя выпускать без проверки и мерить по CTR. Вторая: агенты сборки кампаний; опора МТС, запуск за две минуты вместо часов; нельзя давать агенту менять лимит и согласия. Третья: AI-вход ЦианGPT и оптимизация под ответы ИИ; нельзя считать показ в нейроответе результатом. Контроль качества: редполитика, автопроверка с перегенерацией, человек утверждает шаблон, шлюз и журнал. Мерить в рублях: в примере ОТП у текстов ИИ выше CTR и ниже конверсия в клике, но лидов на двадцать процентов больше и цена лида ниже на четверть. Решает добавленная выручка на человека за 12 месяцев против контрольной группы.">
+        <defs><marker id="i3-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker><marker id="i3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
+        <text x="20" y="22" class="t-h">ЗАДАЧА AI И ОПОРА РЫНКА</text>
+        <text x="290" y="22" class="t-h">ЧТО ДЕЛАЕТ AI</text>
+        <text x="640" y="22" class="t-h">ЧТО НЕЛЬЗЯ</text>
+        <rect x="20" y="34" width="240" height="86" rx="10" class="b-market"/>
+        <text x="34" y="56" class="t-b">1. Тексты с редполитикой</text>
+        <text x="34" y="74" class="t-s t-i">Сбер: около {{in_giga_rules|num0}} правил</text>
+        <text x="34" y="90" class="t-s t-i">проверки; больше {{in_sber_ai|%0}} контента</text>
+        <text x="34" y="106" class="t-s t-i">предложений делает ИИ</text>
+        <path d="M262 77 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="34" width="330" height="86" rx="10" class="box"/>
+        <text x="304" y="56" class="t-s t-i">Пишет варианты пуша, письма и подборки под</text>
+        <text x="304" y="72" class="t-s t-i">сегмент и состояние поиска. Цены, адреса и</text>
+        <text x="304" y="88" class="t-s t-i">числа подставляет шаблон из каталога</text>
+        <rect x="640" y="34" width="300" height="86" rx="10" class="b-bad"/>
+        <text x="654" y="56" class="t-s t-i">Выпускать текст без проверки</text>
+        <text x="654" y="72" class="t-s t-i">правилами. Мерить текст по CTR. Верить</text>
+        <text x="654" y="88" class="t-s t-i">длинным промптам: Сберу они не помогли</text>
+        <rect x="20" y="128" width="240" height="70" rx="10" class="b-market"/>
+        <text x="34" y="150" class="t-b">2. Агенты сборки кампаний</text>
+        <text x="34" y="168" class="t-s t-i">МТС: запуск рекламы «часы →</text>
+        <text x="34" y="184" class="t-s t-i">{{in_mts_min|num0}} минуты»</text>
+        <path d="M262 163 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="128" width="330" height="70" rx="10" class="box"/>
+        <text x="304" y="150" class="t-s t-i">Собирает черновик: текст, аудиторию,</text>
+        <text x="304" y="166" class="t-s t-i">расписание. Человек утверждает, запуск идёт</text>
+        <text x="304" y="182" class="t-s t-i">через общий шлюз</text>
+        <rect x="640" y="128" width="300" height="70" rx="10" class="b-bad"/>
+        <text x="654" y="150" class="t-s t-i">Давать агенту менять лимит,</text>
+        <text x="654" y="166" class="t-s t-i">контрольную группу и согласия.</text>
+        <text x="654" y="182" class="t-s t-i">Запускать без утверждения человеком</text>
+        <rect x="20" y="206" width="240" height="86" rx="10" class="b-cian"/>
+        <text x="34" y="228" class="t-b">3. AI-вход и ИИ-ответы</text>
+        <text x="34" y="246" class="t-s t-i">ЦианGPT: {{in_ciangpt|млн1}} млн человек за</text>
+        <text x="34" y="262" class="t-s t-i">первый год</text>
+        <path d="M262 249 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="206" width="330" height="86" rx="10" class="box"/>
+        <text x="304" y="228" class="t-s t-i">Свой AI-вход приводит и опознаёт людей.</text>
+        <text x="304" y="244" class="t-s t-i">Страницы районов, метро и ЖК держим в</text>
+        <text x="304" y="260" class="t-s t-i">топ-10: вне него в нейроответ попадают всё</text>
+        <text x="304" y="276" class="t-s t-i">реже</text>
+        <rect x="640" y="206" width="300" height="86" rx="10" class="b-bad"/>
+        <text x="654" y="228" class="t-s t-i">Считать показ в нейроответе</text>
+        <text x="654" y="244" class="t-s t-i">результатом: нужен достижимый человек.</text>
+        <text x="654" y="260" class="t-s t-i">Отдавать ассистенту весь путь</text>
+        <text x="20" y="316" class="t-h">КОНТРОЛЬ КАЧЕСТВА: ОДИН КОНВЕЙЕР ДЛЯ ВСЕХ ТРЁХ ЗАДАЧ · ПРЕДЛОЖЕНИЕ</text>
+        <path d="M20 322 H940" class="grid"/>
+        <rect x="20" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="34" y="354" class="t-b">1. Редполитика</text>
+        <text x="34" y="372" class="t-s t-i">Правила тона, закона и</text>
+        <text x="34" y="388" class="t-s t-i">согласий. У Сбера около {{in_giga_rules|num0}}</text>
+        <text x="34" y="404" class="t-s t-i">правил</text>
+        <path d="M237 375 H253" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="255" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="269" y="354" class="t-b">2. Автопроверка</text>
+        <text x="269" y="372" class="t-s t-i">Правила кодом и LLM. Не</text>
+        <text x="269" y="388" class="t-s t-i">прошёл — перегенерация, а</text>
+        <text x="269" y="404" class="t-s t-i">не отправка</text>
+        <path d="M472 375 H488" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="490" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="504" y="354" class="t-b">3. Человек</text>
+        <text x="504" y="372" class="t-s t-i">Утверждает шаблон, сегмент</text>
+        <text x="504" y="388" class="t-s t-i">и границы, а не каждый</text>
+        <text x="504" y="404" class="t-s t-i">текст</text>
+        <path d="M707 375 H723" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="725" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="739" y="354" class="t-b">4. Шлюз и журнал</text>
+        <text x="739" y="372" class="t-s t-i">Лимит, согласия, контроль</text>
+        <text x="739" y="388" class="t-s t-i">как у любого сообщения.</text>
+        <text x="739" y="404" class="t-s t-i">Версия текста — в журнале</text>
+        <text x="20" y="442" class="t-h">МЕРИТЬ В РУБЛЯХ, А НЕ В КЛИКАХ</text>
+        <path d="M20 448 H940" class="grid"/>
+        <rect x="20" y="458" width="480" height="230" rx="10" class="box"/>
+        <text x="34" y="482" class="t-b">ОТП: тексты ИИ против текстов специалиста</text>
+        <rect x="34" y="494" width="12" height="12" rx="3" class="f-market"/>
+        <text x="52" y="505" class="t-s t-i">тексты ИИ</text>
+        <rect x="126" y="494" width="12" height="12" rx="3" class="fill-muted"/>
+        <text x="144" y="505" class="t-s t-i">тексты специалиста</text>
+        <text x="34" y="540" class="t-s t-i">CTR</text>
+        <rect x="170" y="524" width="200.0" height="14" rx="3" class="f-market"/>
+        <rect x="170" y="542" width="74.7" height="14" rx="3" class="fill-muted"/>
+        <text x="378" y="536" class="t-s t-i">{{in_otp_ctr_ai|%2}}</text>
+        <text x="253" y="554" class="t-s t-i">{{in_otp_ctr_hum|%2}}</text>
+        <text x="34" y="588" class="t-s t-i">Конверсия в клике</text>
+        <rect x="170" y="572" width="67.7" height="14" rx="3" class="f-market"/>
+        <rect x="170" y="590" width="200.0" height="14" rx="3" class="fill-muted"/>
+        <text x="246" y="584" class="t-s t-i">{{in_otp_cr_ai|%2}}</text>
+        <text x="378" y="602" class="t-s t-i">{{in_otp_cr_hum|%2}}</text>
+        <text x="34" y="636" class="t-s t-i">Лиды и цена лида</text>
+        <text x="170" y="640" class="t-n f-market">+{{in_otp_leads|%0}}</text>
+        <text x="226" y="640" class="t-s t-i">лидов</text>
+        <text x="300" y="640" class="t-n f-market">{{in_otp_cpl|%0}}</text>
+        <text x="356" y="640" class="t-s t-i">цена лида</text>
+        <text x="34" y="662" class="t-s t-b t-i">У ИИ выше CTR, но ниже конверсия в клике; лидов больше, а</text>
+        <text x="34" y="678" class="t-s t-b t-i">цена лида ниже. Решает рубль, а не одна метрика</text>
+        <rect x="520" y="458" width="420" height="230" rx="10" class="b-prop"/>
+        <text x="534" y="482" class="t-b">Как мерим AI</text>
+        <text x="534" y="504" class="t-s t-i">—</text>
+        <text x="550" y="504" class="t-s t-i">Добавленная выручка на человека за 12 месяцев: группа</text>
+        <text x="550" y="520" class="t-s t-i">с AI-версией минус контрольная группа</text>
+        <text x="534" y="544" class="t-s t-i">—</text>
+        <text x="550" y="544" class="t-s t-i">Ранний заменитель: прогноз по {{in_proxy_lo|num0}}–{{in_proxy_hi|num0}} дням поведения;</text>
+        <text x="550" y="560" class="t-s t-i">проверка — постоянная контрольная группа</text>
+        <text x="534" y="584" class="t-s t-i">—</text>
+        <text x="550" y="584" class="t-s t-i">AI-вход: новые достижимые люди × их добавленная</text>
+        <text x="550" y="600" class="t-s t-i">выручка за 12 месяцев</text>
+        <text x="534" y="624" class="t-s t-i">—</text>
+        <text x="550" y="624" class="t-s t-i">Защитные метрики: отписки, жалобы, доля текстов, не</text>
+        <text x="550" y="640" class="t-s t-i">прошедших проверку</text>
+        <text x="534" y="672" class="t-s t-b t-i">Решение по AI принимает рубль, а не клик</text>
+      </svg>
+    </div>
+    <figcaption>Розовым — что добавляет платформа, оранжевым — практика рынка, зелёным — ЦИАН по открытым данным, красным — запреты. Пример ОТП показывает, почему мерить надо в рублях: тексты ИИ выигрывают по одним метрикам и проигрывают по другим. Столбцы в примере даны в масштабе внутри каждой пары.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Сбер</span> · GigaChat пишет SMS по полу и поколению; около {{in_giga_rules|num0}} правил проверяют PyMorphy и LLM, плохой текст перегенерируют; «сотни млн ₽» допдохода; длинные промпты и агенты не помогли; больше {{in_sber_ai|%0}} контента персональных предложений делает ИИ · 04.2025, 11.2025 · <span class="src">П</span> · <span class="fit hi">применимо: шаблоны по сегментам, РФ</span> · <a href="https://habr.com/ru/companies/sberbank/articles/890262" rel="noopener">GigaChat</a> · <a href="https://sberbank.ru/ru/sberpress/all/article?blockID=1303&amp;newsID=7706b0f6-97fe-438a-ab46-b99ea335e480" rel="noopener">Сбер</a></li>
+    <li><span class="who">ОТП Банк</span> · тексты YandexGPT против текстов специалиста: CTR {{in_otp_ctr_ai|%2}} против {{in_otp_ctr_hum|%2}}, конверсия в клике {{in_otp_cr_ai|%2}} против {{in_otp_cr_hum|%2}}, но лидов +{{in_otp_leads|%0}} и цена лида {{in_otp_cpl|%0}} · 04.2025 · <span class="src">В</span> · <span class="fit mid">применимо: банк; урок один: клики и рубли расходятся</span> · <a href="https://adpass.ru/ii-v-marketinge-kejs-otp-banka-i-adventum/" rel="noopener">источник</a></li>
+    <li><span class="who">МТС AdTech</span> · ИИ-агент собирает текст, аудиторию и кампанию; запуск рекламы сокращается «с нескольких часов до {{in_mts_min|num0}} минут» · 03.2026 · <span class="src">П</span> · <span class="fit mid">применимо: реклама для малого бизнеса, но тот же приём сборки</span> · <a href="https://adpass.ru/mts-adtech-predstavila-chat-s-ii-agentom-dlya-zapuska-reklamy/" rel="noopener">источник</a></li>
+    <li><span class="who">Яндекс</span> · нейроответ показывается в {{in_yandex_neuro|%0}} поисковых запросов (+7 п.п. за квартал); в ответах Алисы доля источников вне топ-10 упала с {{in_top10_before|%0}} до {{in_top10_after|%0}}; органика сайтов РФ за 2025 год — минус {{in_organic_lo|num0}}–{{in_organic_hi|num0}}% · 07.2026, 06.2026 · <span class="src">Т</span> · <span class="fit hi">применимо: РФ, прямой вход в ответ</span> · <a href="https://habr.com/ru/news/1064406/" rel="noopener">нейроответ</a> · <a href="https://kommersant.ru/doc/8728568" rel="noopener">вне топ-10</a> · <a href="https://vc.ru/marketing/3043185-yandeks-neiro-zabiraet-trafik-u-saytov" rel="noopener">органика</a></li>
+    <li><span class="who">Zillow</span> · приложение в ChatGPT ведёт человека обратно за туром, агентом и ипотекой · 05.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка недвижимости, тот же путь «ассистент → сайт»</span> · <a href="https://zillow.com/news/strategy-behind-zillows-strong-q1-results/" rel="noopener">Zillow</a> · <a href="https://rismedia.com/2025/10/06/zillow-debuts-real-estate-app-chatgpt/" rel="noopener">запуск</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Тексты пишет AI, но по редполитике: правила кодом и LLM-проверка, перегенерация, шаблон утверждает человек. Цены, адреса и числа подставляются из каталога, а не придумываются моделью. У Сбера таких правил около {{in_giga_rules|num0}}.</li>
+      <li>Агент собирает черновик кампании: текст, аудиторию, расписание. Человек утверждает, запуск идёт через общий шлюз, поэтому лимит, согласия и контроль не обойти. У МТС запуск сократился с часов до {{in_mts_min|num0}} минут.</li>
+      <li>AI-вход и ИИ-ответы — привлечение. ЦианGPT приводит и опознаёт людей, а страницы районов, метро и ЖК борются за место в нейроответе: у Яндекса он стоит в {{in_yandex_neuro|%0}} запросов, а органика сайтов за 2025 год упала на {{in_organic_lo|num0}}–{{in_organic_hi|num0}}%.</li>
+      <li>Качество — один конвейер для всех задач: редполитика, автопроверка, утверждение шаблона человеком, шлюз и журнал версий. Не прошёл проверку — не отправляем, а перегенерируем.</li>
+      <li>AI меряем в рублях. У ОТП тексты ИИ дали CTR {{in_otp_ctr_ai|%2}} против {{in_otp_ctr_hum|%2}}, но конверсия в клике была {{in_otp_cr_ai|%2}} против {{in_otp_cr_hum|%2}}; лидов вышло на {{in_otp_leads|%0}} больше, а лид подешевел на {{in_otp_cpl|%0}}. Поэтому сравниваем AI-версию с контролем по добавленной выручке на человека за 12 месяцев, а не по кликам.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>AI пишет варианты, человек утверждает шаблон и правила</td><td>Человек пишет, AI предлагает</td><td>Ошибка в шаблоне уходит всем получателям, поэтому нужны автопроверка и откат; зато быстрее</td><td>Сбер: правила и перегенерация. Против: в ПромоСтраницах Т-Банка нейросетевых текстов нет (сниппет)</td></tr>
+        <tr><td>Агент собирает кампанию, человек утверждает</td><td>Шаблоны без кода</td><td>Агенту нужен доступ к каталогу и шлюзу; зато есть персонализация и запуск за минуты</td><td>МТС AdTech; Iterable: Journey Assist, +25% конверсий (данные вендора, сниппет)</td></tr>
+        <tr><td>Мерить AI по добавленной выручке с контролем</td><td>Мерить по CTR и конверсии в клике</td><td>Дольше ждать результата (ранний заменитель — {{in_proxy_lo|num0}}–{{in_proxy_hi|num0}} дней) и нужна контрольная группа; зато клики не обманывают</td><td>ОТП: CTR, конверсия и лиды дали три разных ответа</td></tr>
+        <tr><td>Свой AI-вход и присутствие в ассистентах</td><td>Только чужие ответы</td><td>Свой вход — свои затраты и поддержка; зато контакт и согласие остаются у ЦИАН, а не у ассистента</td><td>ЦианGPT; Zillow: приложение в ChatGPT возвращает человека на сайт</td></tr>
+        <tr><td>Оптимизация страниц под нейроответ</td><td>Больше статей</td><td>Нужна SEO-команда по вертикалям и страницы под вопрос; зато вне топ-10 в ответ попадают всё реже: доля таких источников упала с {{in_top10_before|%0}} до {{in_top10_after|%0}}</td><td>Яндекс: нейроответ; SEO-команда ЦИАН уже работает по вертикалям</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Средний CTR — {{ctr|%1}}. Это клик, а не рубли: решение по AI принимается по добавленной выручке, а CTR остаётся диагностикой.</li>
+      <li><span class="mark market">Практика рынка</span> Сбер, ОТП, МТС, Яндекс и Zillow — в полосе «Рынок». Против AI-текстов: Т-Банк в ПромоСтраницах не использует нейросетевые тексты (<a href="https://vc.ru/marketing/1998211-kontent-marketing-v-t-banke" rel="noopener">vc.ru, 05.2025, сниппет</a>). Iterable заявляет +25% конверсий от Journey Assist (<a href="https://globenewswire.com/news-release/2024/10/17/2964938/0/en/Iterable-s-GenAI-Journey-Assist-Soars-as-Marketers-Report-a-25-Increase-in-Conversions-Due-to-Enhanced-Efficiency.html" rel="noopener">вендор, 10.2024, сниппет</a>). Вывод «мерить надо по выручке» — наш, из примера ОТП.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> {{in_cian_ai|%0}} целевых действий приходят от ИИ-рекомендаций (<a href="https://ir.ciangroup.ru/files/ru/Cian_Investor_Day_2025_Presentation.pdf" rel="noopener">Investor Day, 11.2025</a>). ЦианGPT — {{in_ciangpt|млн1}} млн пользователей за первый год (<a href="https://sostav.ru/blogs/271015/68761" rel="noopener">данные вендора, 10.2025</a>). Бесплатных каналов (органика, прямой заход, email, push) — больше {{organic_share|%0}} трафика; часть органики уходит в нейроответы.</li>
+      <li><span class="mark assume">Допущение</span> Доля нейроответов по запросам о недвижимости и клики из них неизвестны: открытых данных нет. Эффект AI-текстов на выручку ЦИАН не известен; кейс ОТП — банк, а не площадка.</li>
+      <li><span class="mark prop">Предложение</span> Конвейер из четырёх проверок для всех AI-задач, числа и факты из каталога, право агента только собирать черновик, метрика в рублях против контрольной группы.</li>
+    </ul>
+  </div>
+</article>

@@ -191,12 +191,13 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
 <button type="button" role="tab" data-tab="qa" aria-selected="false">Ответы на вопросы</button>
 <button type="button" role="tab" data-tab="asis" aria-selected="false">Как есть<span class="n">3</span></button>
 <button type="button" role="tab" data-tab="econ" aria-selected="false">Экономика<span class="n">2</span></button>
+<button type="button" role="tab" data-tab="value" aria-selected="false">Модель ценности<span class="n">3</span></button>
 <button type="button" role="tab" data-tab="b1" aria-selected="false">1. Решения<span class="n">5</span></button>
 <button type="button" role="tab" data-tab="b2" aria-selected="false">2. Метрики<span class="n">4</span></button>
 <button type="button" role="tab" data-tab="b3" aria-selected="false">3. Взаимодействие<span class="n">4</span></button>
 <button type="button" role="tab" data-tab="b4" aria-selected="false">4. MVP и запуск<span class="n">3</span></button>
 <button type="button" role="tab" data-tab="channels" aria-selected="false">Каналы и привлечение<span class="n">3</span></button>
-<button type="button" role="tab" data-tab="intel" aria-selected="false">Данные, ML и AI<span class="n">2</span></button>
+<button type="button" role="tab" data-tab="intel" aria-selected="false">Данные, ML и AI<span class="n">3</span></button>
 <button type="button" role="tab" data-tab="assume" aria-selected="false">Допущения и пробелы</button>
 <button type="button" role="tab" data-tab="market" aria-selected="false">Доказательства</button></div></div></nav>
 <main class="wrap" id="main"><section class="panel" id="p-position" role="tabpanel" aria-label="Записка">
@@ -797,7 +798,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
     <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
     <tbody>
       <tr><td>Выручка на человека за 12 месяцев</td><td>Целевые действия или прибыль на сессию</td><td>Ждать год или опираться на заменитель; нужна постоянная контрольная группа</td><td>Airbnb: брони за 365 дней минус каннибализация</td></tr>
-      <tr><td>Заменитель по 14–28 дням</td><td>Ждать 63–90 дней до результата</td><td>Заменитель может разойтись с настоящей выручкой; нужна сверка на постоянной группе</td><td>Netflix: решения по 14 и 63 дням совпали в ~95% тестов; Spotify</td></tr>
+      <tr><td>Заменитель по 14–28 дням</td><td>Ждать результата до 63-го дня и дольше</td><td>Заменитель может разойтись с настоящей выручкой; нужна сверка на постоянной группе</td><td>Netflix: решения по 14 и 63 дням совпали в ~95% тестов; Spotify</td></tr>
       <tr><td>Сравнение с контролем по назначению в группу</td><td>До и после или атрибуция по кликам</td><td>Группа без сообщений теряет часть эффекта: это цена честного замера</td><td>Авито: 10% людей без маркетинга; Pinterest: эффект осел с 7% до 2,5%</td></tr>
     </tbody>
   </table></div>
@@ -991,7 +992,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
     <ul>
       <li><span class="mark cian">ЦИАН, открытые данные</span> Выручка 2025 года 15,2 млрд ₽; скорректированная EBITDA 23,6%; маркетинг 30,6% выручки; прогноз 2026 — маржа от 30% (в изложении брокера Атон, сниппет).</li>
       <li><span class="mark assume">Оценка</span> 1 п.п. маржи ≈ 180 млн ₽ в год; добавленная выручка 122–459 млн ₽ в год к 2028 — из схемы Э2 (базовый и сильный сценарий).</li>
-      <li><span class="mark assume">Допущение</span> Продажа внимания: +5%–10% к выручке медиа даёт 100–200 млн ₽ в год при выручке медиа около 2 млрд ₽ в год.</li>
+      <li><span class="mark assume">Допущение</span> Продажа внимания: +5%–10% к выручке медиа даёт 100–200 млн ₽ в год при выручке медиа около 1,95 млрд ₽ в год (974 млн за полугодие, умноженные на два).</li>
       <li><span class="mark market">Практика рынка</span> Рычаг 4 — запуск рекламы за 2 минуты у МТС AdTech (подтверждено по первоисточнику); рычаг 3 — Wayfair, ритейл-медиа X5 и Магнита.</li>
       <li><span class="mark prop">Предложение</span> Разложение на две величины и пять драйверов, закрепление за PM, защитные метрики.</li>
     </ul>
@@ -1140,7 +1141,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
     <h3>Ответ на вопрос кейса</h3>
     <ul>
       <li>План идёт от фундамента к уму: сначала общий лимит, контрольная группа и метрика v0, потом модели прироста, единая оценка и оптимизатор.</li>
-      <li>У каждой инициативы есть узел дерева метрик (схема С3): известно, чем проверять, что она сработала.</li>
+      <li>У каждой инициативы есть узел дерева метрик (<a href="#s-r3">схема С3</a>): известно, чем проверять, что она сработала.</li>
       <li>Результат года: добавленная выручка на человека за 12 месяцев измерена, её рост доказан; доля маркетинга в выручке снижается за счёт своих каналов; спонсорские коммуникации запущены.</li>
       <li>Команда — 4 PM по узлам дерева и аналитика эффекта отдельно от платформы. В каждом PRD: метрика в рублях, паспорт сценария, план контрольной группы.</li>
       <li>Честно: деньги видны к концу года; до этого решения принимаются по раннему заменителю и опережающим действиям (схема С2).</li>
@@ -2098,6 +2099,550 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
       <li><span class="mark assume">Допущение</span> Надбавка +5–10% к медиа за спонсорские коммуникации и эффект автоматизации для ЦИАН.</li>
       <li><span class="mark market">Практика рынка</span> Ритейл-медиа X5 и Магнита — в полосе «Рынок»; МТС — запуск рекламы «часы → 2 минуты» (подтверждено по первоисточнику).</li>
       <li><span class="mark assume">Допущение</span> Стоимость платформы 60–100 млн ₽ в год: 8–12 человек и провайдеры. Уточнить у финансов.</li>
+    </ul>
+  </div>
+</article>
+
+</section>
+<section class="panel" id="p-value" role="tabpanel" aria-label="Модель ценности">
+
+<p class="intro">Здесь внимание человека получает одну цену. По одной формуле сравниваются свои сообщения, промо вертикалей, реклама застройщиков и банков и проданные коммуникации. Главная метрика везде одна: добавленная выручка на человека за 12 месяцев.</p>
+
+<article class="scheme" id="s-x1">
+  <header>
+    <p class="code"><span>Схема Ц1</span><span class="core">★ ядро</span><span>Вопрос 1.4 · бизнес-эффект, усталость и риск в одной цене</span></p>
+    <h2>Одна оценка для всех, кто хочет внимания: выручка сейчас плюс прирост за 12 месяцев минус цена канала</h2>
+    <p class="sub">Свои сообщения, промо вертикалей, реклама и проданные коммуникации получают одну оценку. Побеждает не тот, кто платит больше сейчас, а тот, кто приносит больше выручки.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 700" role="img" aria-label="Формула: ценность равна выручке сейчас плюс прирост выручки человека за 12 месяцев минус цена канала. Условный пример, допущение: один слот, верхняя карточка главного экрана, человек ищет новостройку. Четыре кандидата. Своё сообщение: сейчас 0, прирост 11,3 рубля, канал 0,2, ценность 11,1, первое место. Промо вертикали Ипотека: 0, прирост 6, канал 0,2, ценность 5,8, третье место. Реклама застройщика: сейчас 1,3, прирост минус 4,5, канал 0,2, ценность минус 3,4, ниже нуля. Спонсорская подборка: сейчас 9, прирост минус 2,3, канал 0,2, ценность 6,5, второе место. Внизу цена канала: показ в приложении 0,2 рубля, SMS сервисное 2–4, SMS реклама 8–35, MAX до 12,2 рубля в месяц. В рекламном SMS за 8 рублей выше нуля остаётся только свой CRM.">
+        <defs>
+          <marker id="x1-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="x1-ip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="24" class="t-h">ОДНА ОЦЕНКА ДЛЯ ЛЮБОГО КАНДИДАТА НА ВНИМАНИЕ</text>
+        <rect x="20" y="34" width="250" height="84" rx="10" class="b-prop"/>
+        <text x="36" y="58" class="t-b">Выручка сейчас</text>
+        <text x="36" y="78" class="t-s t-i">платит сам кандидат: показ,</text>
+        <text x="36" y="94" class="t-s t-i">клик или цена продажи;</text>
+        <text x="36" y="110" class="t-s t-i">у своих сообщений — 0</text>
+        <text x="286" y="84" class="t-n" text-anchor="middle">+</text>
+        <rect x="303" y="34" width="270" height="84" rx="10" class="b-prop"/>
+        <text x="319" y="58" class="t-b">Δ выручки за 12 месяцев</text>
+        <text x="319" y="78" class="t-s t-i">насколько изменится выручка</text>
+        <text x="319" y="94" class="t-s t-i">этого человека по сравнению</text>
+        <text x="319" y="110" class="t-s t-i">с контрольной группой</text>
+        <text x="590" y="84" class="t-n" text-anchor="middle">−</text>
+        <rect x="606" y="34" width="150" height="84" rx="10" class="b-prop"/>
+        <text x="622" y="58" class="t-b">Цена канала</text>
+        <text x="622" y="78" class="t-s t-i">показ, пуш, SMS,</text>
+        <text x="622" y="94" class="t-s t-i">почта, мессенджер</text>
+        <text x="773" y="84" class="t-n" text-anchor="middle">=</text>
+        <rect x="789" y="34" width="151" height="84" rx="10" class="b-prop"/>
+        <text x="805" y="58" class="t-b">Ценность</text>
+        <text x="805" y="78" class="t-s t-i">слот получает</text>
+        <text x="805" y="94" class="t-s t-i">наибольшая</text>
+        <text x="805" y="110" class="t-s t-i">из ценностей</text>
+        <rect x="20" y="134" width="920" height="436" rx="12" class="b-assume"/>
+        <text x="36" y="156" class="t-h">ДОПУЩЕНИЕ · УСЛОВНЫЙ ПРИМЕР: ЧЕТЫРЕ КАНДИДАТА В ОДНОМ СЛОТЕ</text>
+        <text x="36" y="178" class="t-s t-i">Слот: верхняя карточка главного экрана, вечер. Человек шестой день ищет новостройку.</text>
+        <text x="36" y="196" class="t-s t-i">Числа — рубли на одного человека за один показ. Шансы даны после вычета перетекания между застройщиками.</text>
+        <text x="44" y="224" class="t-h">КАНДИДАТ</text>
+        <text x="316" y="224" class="t-h">СЕЙЧАС</text>
+        <text x="440" y="224" class="t-h">Δ ЗА 12 МЕС.</text>
+        <text x="616" y="224" class="t-h">КАНАЛ</text>
+        <text x="686" y="224" class="t-h">ЦЕННОСТЬ</text>
+        <text x="806" y="224" class="t-h">СРАВНЕНИЕ</text>
+        <rect x="30" y="232" width="900" height="70" rx="10" class="b-prop"/>
+        <text x="44" y="256" class="t-b">1. Своё сообщение (CRM)</text>
+        <text x="44" y="275" class="t-s t-i">«3 новых ЖК по вашему поиску»</text>
+        <text x="44" y="292" class="t-s">платит позже, не сейчас</text>
+        <text x="316" y="265" class="t-n">0</text>
+        <text x="316" y="284" class="t-s">свои не платят</text>
+        <text x="410" y="265" class="t-n" text-anchor="middle">+</text>
+        <text x="440" y="265" class="t-n">11,3</text>
+        <text x="440" y="284" class="t-s t-i">0,05% × 22,6 тыс. ₽</text>
+        <text x="440" y="298" class="t-s">вернётся и позвонит</text>
+        <text x="598" y="265" class="t-n" text-anchor="middle">−</text>
+        <text x="616" y="265" class="t-n">0,2</text>
+        <text x="668" y="265" class="t-n" text-anchor="middle">=</text>
+        <text x="686" y="265" class="t-n f-prop">11,1</text>
+        <text x="686" y="284" class="t-s">1-е место</text>
+        <line x1="868" y1="246" x2="868" y2="288" class="ln-m"/>
+        <rect x="868" y="258" width="55.5" height="16" class="f-prop"/>
+        <rect x="30" y="310" width="900" height="70" rx="10" class="box"/>
+        <text x="44" y="334" class="t-b">2. Промо вертикали</text>
+        <text x="44" y="353" class="t-s t-i">Ипотека: «Рассчитайте платёж»</text>
+        <text x="44" y="370" class="t-s">платит позже, не сейчас</text>
+        <text x="316" y="343" class="t-n">0</text>
+        <text x="316" y="362" class="t-s">не платит сейчас</text>
+        <text x="410" y="343" class="t-n" text-anchor="middle">+</text>
+        <text x="440" y="343" class="t-n">6</text>
+        <text x="440" y="362" class="t-s t-i">0,04% × 15 тыс. ₽</text>
+        <text x="440" y="376" class="t-s">комиссия банка</text>
+        <text x="598" y="343" class="t-n" text-anchor="middle">−</text>
+        <text x="616" y="343" class="t-n">0,2</text>
+        <text x="668" y="343" class="t-n" text-anchor="middle">=</text>
+        <text x="686" y="343" class="t-n">5,8</text>
+        <text x="686" y="362" class="t-s">3-е место</text>
+        <line x1="868" y1="324" x2="868" y2="366" class="ln-m"/>
+        <rect x="868" y="336" width="29" height="16" class="fill-muted"/>
+        <rect x="30" y="388" width="900" height="70" rx="10" class="box"/>
+        <text x="44" y="412" class="t-b">3. Реклама застройщика</text>
+        <text x="44" y="431" class="t-s t-i">Баннер, оплата за клик</text>
+        <text x="44" y="448" class="t-s">платит сейчас, вредит потом</text>
+        <text x="316" y="421" class="t-n">1,3</text>
+        <text x="316" y="440" class="t-s">3,2% × 40 ₽</text>
+        <text x="410" y="421" class="t-n" text-anchor="middle">+</text>
+        <text x="440" y="421" class="t-n f-bad">(−4,5)</text>
+        <text x="440" y="440" class="t-s t-i">−0,02% × 22,6 тыс. ₽</text>
+        <text x="440" y="454" class="t-s">слепота, отписки</text>
+        <text x="598" y="421" class="t-n" text-anchor="middle">−</text>
+        <text x="616" y="421" class="t-n">0,2</text>
+        <text x="668" y="421" class="t-n" text-anchor="middle">=</text>
+        <text x="686" y="421" class="t-n f-bad">−3,4</text>
+        <text x="686" y="440" class="t-s">ниже нуля</text>
+        <line x1="868" y1="402" x2="868" y2="444" class="ln-m"/>
+        <rect x="850.8" y="414" width="17.2" height="16" class="fill-bad"/>
+        <rect x="30" y="466" width="900" height="70" rx="10" class="box"/>
+        <text x="44" y="490" class="t-b">4. Спонсорская подборка</text>
+        <text x="44" y="509" class="t-s t-i">Продана за контакт, с лимитом</text>
+        <text x="44" y="526" class="t-s">платит сейчас больше всех</text>
+        <text x="316" y="499" class="t-n">9</text>
+        <text x="316" y="518" class="t-s">цена продажи</text>
+        <text x="410" y="499" class="t-n" text-anchor="middle">+</text>
+        <text x="440" y="499" class="t-n f-bad">(−2,3)</text>
+        <text x="440" y="518" class="t-s t-i">−0,01% × 22,6 тыс. ₽</text>
+        <text x="440" y="532" class="t-s">звонки − усталость</text>
+        <text x="598" y="499" class="t-n" text-anchor="middle">−</text>
+        <text x="616" y="499" class="t-n">0,2</text>
+        <text x="668" y="499" class="t-n" text-anchor="middle">=</text>
+        <text x="686" y="499" class="t-n">6,5</text>
+        <text x="686" y="518" class="t-s">2-е место</text>
+        <line x1="868" y1="480" x2="868" y2="522" class="ln-m"/>
+        <rect x="868" y="492" width="32.7" height="16" class="fill-muted"/>
+        <text x="36" y="558" class="t-s t-i">Больше всех платит сейчас спонсор (9 ₽), но слот получает сообщение, которое платит позже: 0 ₽ сейчас, 11,3 ₽ за год.</text>
+        <text x="20" y="598" class="t-h">ЦЕНА КАНАЛА: КОНТАКТ СТОИТ ПО-РАЗНОМУ</text>
+        <rect x="20" y="608" width="215" height="54" rx="10" class="b-assume"/>
+        <text x="34" y="629" class="t-s t-i">Показ в приложении</text>
+        <text x="34" y="651" class="t-b">0,2 ₽ за показ</text>
+        <rect x="250" y="608" width="215" height="54" rx="10" class="b-market"/>
+        <text x="264" y="629" class="t-s t-i">SMS, сервисное</text>
+        <text x="264" y="651" class="t-b">2–4 ₽ за SMS</text>
+        <rect x="480" y="608" width="215" height="54" rx="10" class="b-market"/>
+        <text x="494" y="629" class="t-s t-i">SMS, реклама</text>
+        <text x="494" y="651" class="t-b">8–35 ₽ за SMS</text>
+        <rect x="710" y="608" width="230" height="54" rx="10" class="b-market"/>
+        <text x="724" y="629" class="t-s t-i">MAX, бот и сервис</text>
+        <text x="724" y="651" class="t-b">до 12,2 ₽ в месяц</text>
+        <text x="20" y="684" class="t-s t-i">В рекламном SMS за 8 ₽ выше нуля остаётся только свой CRM: 11,3 − 8 = 3,3 ₽. Остальные трое уходят в минус.</text>
+      </svg>
+    </div>
+    <figcaption>Пример условный: все числа — допущение, кроме цены звонка застройщику (22,6 тыс. ₽, ЦИАН), среднего CTR (3,2%, задание) и цен SMS и MAX (рынок). Розовым выделен победитель. Δ каждого кандидата измеряется по контрольной группе. Это и есть главная метрика: добавленная выручка на человека за 12 месяцев.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито</span> · скор в выдаче складывается из выручки, конверсии и качества: «модели не должны ухудшать поиск ради выручки»; ставка корректируется по вероятности целевого действия, средняя цена не растёт · 08.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка с вертикалями, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/1069352" rel="noopener">источник</a></li>
+    <li><span class="who">Wayfair</span> · показ оценивается в деньгах: доход рекламы плюс вероятность конверсии × прибыль; рекламных мест 12 из 48 вместо 6: доход рекламы +35%, конверсия +1% · статья, 2025 · <span class="src">Т</span> · <span class="fit hi">применимо: общая валюта для органики и рекламы</span> · <a href="https://papers.adkdd.org/2025/papers/adkdd25-kolbin-ads.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">LinkedIn</span> · «теневая ставка» между доходом рекламы и вовлечённостью: кривая по 100 тыс. запросов, затем неделя на 2% трафика; лучший из четырёх вариантов дал выручку +5,3% и вовлечённость +0,7% · статья, 2020 · <span class="src">Т</span> · <span class="fit mid">метод применим, числа соцсети нет</span> · <a href="https://dl.acm.org/doi/10.1145/3394486.3403391" rel="noopener">источник</a></li>
+    <li><span class="who">Google</span> · после более чем 100 долгих тестов: слепота к рекламе от низкого качества копится, полупериод около 60 дней; после сокращения мобильной рекламы вдвое долгая выручка осталась прежней · статья, 2015 · <span class="src">Т</span> · <span class="fit mid">давнее: берём метод, не числа</span> · <a href="https://gwern.net/doc/economics/advertising/2015-hohnhold.pdf" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li><b>Одна валюта.</b> Оценка равна выручке сейчас плюс Δ выручки человека за 12 месяцев минус цена канала. Так считаются свои сообщения, промо вертикалей, реклама застройщиков и банков и проданные коммуникации.</li>
+      <li><b>Платит сейчас — не значит выигрывает.</b> В примере спонсор платит 9 ₽, но слот получает своё сообщение: оно не платит сейчас, зато добавляет 11,3 ₽ за год. У рекламы Δ часто отрицательна: слепота, отписки.</li>
+      <li><b>Δ — по контрольной группе, а не на глаз.</b> Сравниваем выручку человека за 12 месяцев с теми, кому сообщение не показывали; ранний заменитель — поведение за 14–28 дней. Пока Δ не измерена, действуют ручные доли из <a href="#s-b4">Б4</a> и <a href="#s-b5">Б5</a>.</li>
+      <li><b>Цена канала.</b> Показ в приложении стоит 0,2 ₽, рекламный SMS — 8–35 ₽. Канал выбирают по той же формуле: в SMS за 8 ₽ выше нуля остаётся только свой CRM.</li>
+      <li><b>Кто решает.</b> Формулу и веса утверждает совет по вниманию раз в квартал (<a href="#s-x2">Ц2</a>). Спор решают тест и формула, а не переговоры.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Одна оценка для своих сообщений и рекламы</td><td>Фиксированные места: реклама на своих, свои на остальных</td><td>Нужно мерить Δ и у рекламы, а вред показа в рублях для недвижимости никто не публиковал; до замера ошибка модели двигает слоты</td><td>Авито, Wayfair</td></tr>
+        <tr><td>Горизонт 12 месяцев и ранний заменитель по 14–28 дням</td><td>Цели по звонкам, чатам и заявкам</td><td>Нужна постоянная контрольная группа, а заменитель надо сверять с настоящей выручкой; опережающие метрики остаются для скорости</td><td>Airbnb: бронирования за 365 дней минус каннибализация; Netflix: решение по 14 дням совпало с решением по 63-му в ~95% тестов (сниппет)</td></tr>
+        <tr><td>У своих сообщений нет цены показа: ценность — только Δ</td><td>Назначить своим сообщениям условную цену показа в рублях</td><td>Ценность своего сообщения целиком зависит от модели прироста; ошибка модели прямо двигает слоты</td><td>Авито: «модели не должны ухудшать поиск ради выручки»</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Средний CTR 3,2%: отсюда выручка рекламы на один показ.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Звонок застройщику от 30 секунд приносит 22,6 тыс. ₽ (1 полугодие 2026), сутки объявления — 11 ₽. Медиа и реклама — 974 млн ₽ за полугодие, +33,2%.</li>
+      <li><span class="mark market">Практика рынка</span> Авито и Wayfair: общая валюта для органики и рекламы. LinkedIn: теневая ставка подбирается тестом. Google: вред от рекламы накапливается. Цены SMS — вендор, MAX — тарифы презентации VK, не окончательные.</li>
+      <li><span class="mark assume">Допущение</span> Все числа примера: шансы действий, комиссия банка 15 тыс. ₽, цена клика 40 ₽, цена продажи 9 ₽, цена показа 0,2 ₽. Проверка: обратный эксперимент с контрольной группой и модель прироста; публичных значений нет ни у кого.</li>
+      <li><span class="mark prop">Предложение</span> Одна оценка вместо ручных долей: во второй версии <a href="#s-b4">Б4</a> и <a href="#s-b5">Б5</a> веса заменяются рублями прироста. Решение «рубли — плата профессионала» из <a href="#s-m1">Э1</a> сохраняется: Δ считается по контролю с поправкой на перетекание между застройщиками, а не по цене звонка.</li>
+    </ul>
+  </div>
+</article>
+
+
+<article class="scheme" id="s-x2">
+  <header>
+    <p class="code"><span>Схема Ц2</span><span class="core">★ ядро</span><span>Вопрос 3.3 · кто занимает слот: своё сообщение или реклама</span></p>
+    <h2>В одном слоте свои и рекламные кандидаты равны: слот получает тот, кто добавляет больше выручки</h2>
+    <p class="sub">Один и тот же слот у двух людей даёт разных победителей. Дорогое внимание горячего ищущего получает своё сообщение, дешёвое внимание случайного гостя — реклама. Цену внимания находят тестом, а утверждает совет раз в квартал.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 724" role="img" aria-label="Слева экран с одним слотом, верхней карточкой. Справа два человека, условный пример. Человек А шестой день ищет новостройку, теневая цена внимания 4,5 рубля за контакт. Своё сообщение: польза 15,8 минус внимание 4,5 минус канал 0,2, ценность 11,1, побеждает. Промо Ипотека: 5,8. Реклама застройщика: сейчас 1,3, ценность минус 3,4. Спонсорская подборка: сейчас 9, польза 2,3, ценность 6,5. Чтобы выиграть здесь, рекламе нужно платить 15,8 рубля за показ вместо 1,3. Человек Б зашёл по ссылке и жильё не ищет, теневая цена внимания 0,3 рубля. Своё сообщение: ценность 0,3. Реклама застройщика: ценность 0,8, побеждает. Спонсорская подборка отсеяна фильтром уместности. Внизу как находят теневую цену: кривая по архиву на 100 тысячах решений, неделя на 2 процентах людей, долгий контроль, потому что слепота к рекламе копится с полупериодом около 60 дней. Справа совет по вниманию раз в квартал: утверждает теневую цену по слотам и долю рекламы на экранах.">
+        <defs>
+          <marker id="x2-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="x2-ip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="24" class="t-h">СЛОТ НА ЭКРАНЕ</text>
+        <rect x="20" y="40" width="150" height="412" rx="22" class="box"/>
+        <rect x="32" y="54" width="126" height="24" rx="6" class="soft"/>
+        <text x="44" y="71" class="t-s">Поиск</text>
+        <rect x="32" y="88" width="126" height="96" rx="8" class="b-prop"/>
+        <text x="44" y="116" class="t-b">СЛОТ №1</text>
+        <text x="44" y="136" class="t-s t-i">верхняя</text>
+        <text x="44" y="152" class="t-s t-i">карточка</text>
+        <rect x="32" y="196" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="232" class="t-s">Новые ЖК</text>
+        <rect x="32" y="272" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="308" class="t-s">Объекты</text>
+        <rect x="32" y="348" width="126" height="64" rx="8" class="soft"/>
+        <text x="44" y="384" class="t-s">Объекты</text>
+        <text x="44" y="432" class="t-s t-i">один слот,</text>
+        <text x="44" y="447" class="t-s t-i">два человека</text>
+        <path d="M158 130 H190" class="ln-prop" marker-end="url(#x2-ip)"/>
+        <path d="M158 176 H177 V331 H190" class="ln-prop" marker-end="url(#x2-ip)"/>
+        <text x="196" y="52" class="t-b">Человек А: шестой день ищет новостройку</text>
+        <rect x="626" y="36" width="314" height="26" rx="8" class="b-prop"/>
+        <text x="640" y="53" class="t-s t-i">теневая цена внимания: 4,5 ₽ за контакт</text>
+        <text x="204" y="78" class="t-h">КАНДИДАТ</text>
+        <text x="418" y="78" class="t-h">СЕЙЧАС</text>
+        <text x="488" y="78" class="t-h">ПОЛЬЗА</text>
+        <text x="554" y="78" class="t-h">ВНИМАНИЕ</text>
+        <text x="652" y="78" class="t-h">КАНАЛ</text>
+        <text x="720" y="78" class="t-h">ЦЕННОСТЬ</text>
+        <rect x="196" y="86" width="744" height="38" rx="8" class="b-prop"/>
+        <text x="204" y="102" class="t-b">Своё сообщение (CRM)</text>
+        <text x="204" y="117" class="t-s">«3 новых ЖК по вашему поиску»</text>
+        <text x="418" y="111" class="t-b">0</text>
+        <text x="488" y="111" class="t-b">+15,8</text>
+        <text x="554" y="111" class="t-b f-bad">−4,5</text>
+        <text x="652" y="111" class="t-b">−0,2</text>
+        <text x="720" y="113" class="t-n f-prop">11,1</text>
+        <line x1="852" y1="93" x2="852" y2="117" class="ln-m"/>
+        <rect x="852" y="100" width="55.5" height="10" class="f-prop"/>
+        <text x="858" y="97" class="t-s"></text>
+        <rect x="196" y="130" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="146" class="t-b">Промо вертикали</text>
+        <text x="204" y="161" class="t-s">Ипотека: «Рассчитайте платёж»</text>
+        <text x="418" y="155" class="t-b">0</text>
+        <text x="488" y="155" class="t-b">+10,5</text>
+        <text x="554" y="155" class="t-b f-bad">−4,5</text>
+        <text x="652" y="155" class="t-b">−0,2</text>
+        <text x="720" y="157" class="t-n">5,8</text>
+        <line x1="852" y1="137" x2="852" y2="161" class="ln-m"/>
+        <rect x="852" y="144" width="29" height="10" class="fill-muted"/>
+        <rect x="196" y="174" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="190" class="t-b">Реклама застройщика</text>
+        <text x="204" y="205" class="t-s">платит за клик, пользы людям нет</text>
+        <text x="418" y="199" class="t-b">1,3</text>
+        <text x="488" y="199" class="t-b">0</text>
+        <text x="554" y="199" class="t-b f-bad">−4,5</text>
+        <text x="652" y="199" class="t-b">−0,2</text>
+        <text x="720" y="201" class="t-n f-bad">−3,4</text>
+        <line x1="852" y1="181" x2="852" y2="205" class="ln-m"/>
+        <rect x="834.8" y="188" width="17.2" height="10" class="fill-bad"/>
+        <rect x="196" y="218" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="234" class="t-b">Спонсорская подборка</text>
+        <text x="204" y="249" class="t-s">платит за контакт, с лимитом</text>
+        <text x="418" y="243" class="t-b">9</text>
+        <text x="488" y="243" class="t-b">+2,3</text>
+        <text x="554" y="243" class="t-b f-bad">−4,5</text>
+        <text x="652" y="243" class="t-b">−0,2</text>
+        <text x="720" y="245" class="t-n">6,5</text>
+        <line x1="852" y1="225" x2="852" y2="249" class="ln-m"/>
+        <rect x="852" y="232" width="32.7" height="10" class="fill-muted"/>
+        <text x="196" y="274" class="t-s t-i">Чтобы выиграть здесь, рекламе нужно платить 15,8 ₽ за показ, а не 1,3 ₽.</text>
+        <text x="196" y="306" class="t-b">Человек Б: зашёл по ссылке, жильё не ищет</text>
+        <rect x="626" y="290" width="314" height="26" rx="8" class="b-prop"/>
+        <text x="640" y="307" class="t-s t-i">теневая цена внимания: 0,3 ₽ за контакт</text>
+        <rect x="196" y="318" width="744" height="38" rx="8" class="box"/>
+        <text x="204" y="334" class="t-b">Своё сообщение (CRM)</text>
+        <text x="204" y="349" class="t-s">«Подпишитесь на поиск»</text>
+        <text x="418" y="343" class="t-b">0</text>
+        <text x="488" y="343" class="t-b">+0,8</text>
+        <text x="554" y="343" class="t-b f-bad">−0,3</text>
+        <text x="652" y="343" class="t-b">−0,2</text>
+        <text x="720" y="345" class="t-n">0,3</text>
+        <line x1="852" y1="325" x2="852" y2="349" class="ln-m"/>
+        <rect x="852" y="332" width="11" height="10" class="fill-muted"/>
+        <rect x="196" y="362" width="744" height="38" rx="8" class="b-prop"/>
+        <text x="204" y="378" class="t-b">Реклама застройщика</text>
+        <text x="204" y="393" class="t-s">платит за клик, пользы людям нет</text>
+        <text x="418" y="387" class="t-b">1,3</text>
+        <text x="488" y="387" class="t-b">0</text>
+        <text x="554" y="387" class="t-b f-bad">−0,3</text>
+        <text x="652" y="387" class="t-b">−0,2</text>
+        <text x="720" y="389" class="t-n f-prop">0,8</text>
+        <line x1="852" y1="369" x2="852" y2="393" class="ln-m"/>
+        <rect x="852" y="376" width="21" height="10" class="f-prop"/>
+        <text x="858" y="373" class="t-s"></text>
+        <rect x="196" y="406" width="744" height="30" rx="8" class="soft"/>
+        <text x="208" y="426" class="t-s">Спонсорская подборка отсеяна до оценки: человек не ищет новостройку. Уместность — фильтр.</text>
+        <text x="196" y="452" class="t-s t-i">Внимание такого человека дёшево: слот получает реклама. Если у всех ценность ниже нуля, слот остаётся пустым.</text>
+        <text x="20" y="488" class="t-h">КАК НАХОДИМ ТЕНЕВУЮ ЦЕНУ ВНИМАНИЯ</text>
+        <text x="660" y="488" class="t-h">КТО УТВЕРЖДАЕТ</text>
+        <line x1="48" y1="508" x2="48" y2="668" class="ln-m"/>
+        <line x1="48" y1="668" x2="244" y2="668" class="ln-m"/>
+        <text x="54" y="504" class="t-s">₽ на человека</text>
+        <path d="M56 532 C100 572 170 642 240 660" class="ln-bad"/>
+        <path d="M56 662 C110 646 170 590 240 544" class="ln-task"/>
+        <path d="M56 600 C90 574 120 552 150 550 C185 550 215 578 240 606" class="ln-prop"/>
+        <line x1="150" y1="550" x2="150" y2="668" class="ln-m" stroke-dasharray="4 3"/>
+        <circle cx="150" cy="550" r="5" class="f-prop"/>
+        <text x="56" y="524" class="t-s f-bad">реклама</text>
+        <text x="244" y="532" class="t-s f-task" text-anchor="end">люди за 12 мес.</text>
+        <text x="60" y="622" class="t-s f-prop">сумма</text>
+        <text x="150" y="686" class="t-s t-i" text-anchor="middle">лучшая цена</text>
+        <text x="244" y="704" class="t-s" text-anchor="end">теневая цена внимания →</text>
+        <rect x="270" y="500" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="530" r="13" class="f-prop"/>
+        <text x="294" y="535" class="t-b t-on" text-anchor="middle">1</text>
+        <text x="318" y="522" class="t-b">Кривая по архиву</text>
+        <text x="318" y="540" class="t-s">100 тыс. решений: для каждой цены</text>
+        <text x="318" y="554" class="t-s">считаем выручку сейчас и за 12 месяцев</text>
+        <rect x="270" y="568" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="598" r="13" class="f-prop"/>
+        <text x="294" y="603" class="t-b t-on" text-anchor="middle">2</text>
+        <text x="318" y="590" class="t-b">Неделя на малой доле людей</text>
+        <text x="318" y="608" class="t-s">2% людей, четыре значения цены;</text>
+        <text x="318" y="622" class="t-s">берём лучшее по сумме двух выручек</text>
+        <rect x="270" y="636" width="360" height="60" rx="10" class="soft"/>
+        <circle cx="294" cy="666" r="13" class="f-prop"/>
+        <text x="294" y="671" class="t-b t-on" text-anchor="middle">3</text>
+        <text x="318" y="658" class="t-b">Долгий контроль</text>
+        <text x="318" y="676" class="t-s">слепота к рекламе копится, полупериод</text>
+        <text x="318" y="690" class="t-s">около 60 дней: цену сверяем по контролю</text>
+        <path d="M630 596 H654" class="ln" marker-end="url(#x2-i)"/>
+        <rect x="660" y="500" width="280" height="196" rx="10" class="b-prop"/>
+        <text x="676" y="526" class="t-b">Совет по вниманию</text>
+        <text x="676" y="544" class="t-s t-i">раз в квартал</text>
+        <text x="676" y="574" class="t-s t-b">Утверждает:</text>
+        <text x="676" y="594" class="t-s t-i">• теневую цену по слотам</text>
+        <text x="676" y="612" class="t-s t-i">• долю рекламы на экранах</text>
+        <text x="676" y="630" class="t-s t-i">• итоги тестов и журнал</text>
+        <text x="676" y="662" class="t-s t-i">Спор решают тест и формула,</text>
+        <text x="676" y="678" class="t-s t-i">а не переговоры</text>
+      </svg>
+    </div>
+    <figcaption>Числа условные (допущение). Теневая цена внимания входит в Δ каждого кандидата: Δ = польза − цена внимания. У человека А она 4,5 ₽, у человека Б — 0,3 ₽, поэтому победители разные. Кривая внизу схематична: настоящую строят по архиву решений.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">LinkedIn</span> · «теневая ставка» подбирается тестом: кривая по 100 тыс. запросов, затем неделя на 2% трафика; лучший из четырёх вариантов дал выручку +5,3% и вовлечённость +0,7% · статья, 2020 · <span class="src">Т</span> · <span class="fit mid">метод применим, числа соцсети нет</span> · <a href="https://dl.acm.org/doi/10.1145/3394486.3403391" rel="noopener">источник</a></li>
+    <li><span class="who">Google</span> · слепота к рекламе копится, полупериод около 60 дней: поэтому короткий тест вред недооценивает, а долгие группы нужны (вывод наш) · статья, 2015 · <span class="src">Т</span> · <span class="fit mid">давнее: берём метод, не числа</span> · <a href="https://gwern.net/doc/economics/advertising/2015-hohnhold.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Wayfair</span> · рекламных мест 12 из 48 вместо 6, лимит рекламы подряд: доход рекламы +35%, конверсия +1%; рекламе не режут места, а раздают по ценности · статья, 2025 · <span class="src">Т</span> · <span class="fit hi">применимо: общая оценка органики и рекламы</span> · <a href="https://papers.adkdd.org/2025/papers/adkdd25-kolbin-ads.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Facebook</span> · если скрыть 82% рекламы, время на платформе вырастет лишь на 6%: вред рекламы может быть мал, поэтому теневую цену мерят, а не берут «с потолка» · статья, 12.2025 · <span class="src">Т</span> · <span class="fit mid">соцсеть, не недвижимость</span> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5952337" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · одна точка решения: из 400+ кампаний в день человеку проходят лучшие в пределах лимита · 01.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка с вертикалями, РФ</span> · <a href="https://habr.com/ru/companies/avito/articles/875012/" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li><b>Один слот, одна оценка.</b> Свои сообщения и реклама сравниваются по ценности из <a href="#s-x1">Ц1</a>. Побеждает наибольшая; если у всех она ниже нуля, слот остаётся пустым.</li>
+      <li><b>Внимание у людей стоит по-разному.</b> У человека А теневая цена 4,5 ₽ за контакт, и рекламе нужно платить 15,8 ₽ за показ, чтобы выиграть. У человека Б она 0,3 ₽, и слот получает реклама.</li>
+      <li><b>Теневую цену находят тестом, а не назначают.</b> Кривая по архиву, неделя на 2% людей, долгий контроль: вред рекламы копится с полупериодом около 60 дней, недельный тест его недооценит.</li>
+      <li><b>Совет по вниманию раз в квартал</b> утверждает теневую цену по слотам и долю рекламы на экранах. Состав: директор по продукту, финансы, аналитика эффекта, владельцы экранов. Спор решают тест и формула, а не переговоры.</li>
+      <li><b>Когда включаем.</b> В первой версии платные места застройщиков живут на своих местах (<a href="#s-g4">Г4</a>). Единая оценка входит в места продукта в третьем квартале, на все слоты — во втором году.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Теневая цена — своя для слота и сегмента, ставится тестом</td><td>Одна цена на всю площадку или потолок доли рекламы</td><td>Тест на каждый слот; недельный тест недооценивает накопленный вред, нужна долгая контрольная группа</td><td>LinkedIn: кривая и неделя на 2%; Google: полупериод около 60 дней</td></tr>
+        <tr><td>Реклама и свои в одном слоте по одной оценке</td><td>Реклама на своих постоянных местах, свои на остальных (первая версия, <a href="#s-g4">Г4</a>)</td><td>Застройщик теряет гарантированное место: часть показов уходит своему сообщению; нужна понятная цена слота</td><td>Wayfair: 12 рекламных мест из 48 вместо 6 при общей оценке; Авито: одна точка решения</td></tr>
+        <tr><td>Совет раз в квартал утверждает цену и долю рекламы</td><td>Ручной комитет по каждому запросу</td><td>Цена устаревает внутри квартала; срочное идёт по быстрой полосе (<a href="#s-g2">Г2</a>)</td><td>Своё решение: тот же ритм, что у весов в <a href="#s-b5">Б5</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Места внутри продукта: баннеры, placements, stories; кто занимает место, сейчас решают вручную (<a href="#s-g4">Г4</a>).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Звонок застройщику — 22,6 тыс. ₽: так велика польза от одного ищущего. Медиа и реклама — 974 млн ₽ за полугодие, +33,2%: реклама растёт, поэтому спор за слот реальный.</li>
+      <li><span class="mark market">Практика рынка</span> LinkedIn: подбор ставки. Google: накопление вреда. Wayfair: общая оценка. Facebook: вред рекламы мал, значит цену измеряют. Авито: одна точка решения.</li>
+      <li><span class="mark assume">Допущение</span> Теневая цена 4,5 и 0,3 ₽, польза сообщений, цена показа 0,2 ₽. Публичных значений для недвижимости нет; находим тестом с контрольной группой.</li>
+      <li><span class="mark prop">Предложение</span> Совет по вниманию раз в квартал и единая оценка в местах продукта с третьего квартала.</li>
+    </ul>
+  </div>
+</article>
+
+
+<article class="scheme" id="s-x3">
+  <header>
+    <p class="code"><span>Схема Ц3</span><span class="core">★ ядро</span><span>Вопрос 1.4 · выручка от внимания и её цена для людей</span></p>
+    <h2>Спонсорскую коммуникацию продаём по цене не ниже теневой, с лимитом частоты, согласием и оплатой за результат</h2>
+    <p class="sub">Застройщик или банк покупает не баннер, а коммуникацию для тех, кому она уместна. Платформа не продаёт её с аукциона: цена не ниже цены внимания, частота ограничена, нужно согласие, часть оплаты идёт за результат.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 640" role="img" aria-label="Слева заказчик, застройщик или банк: ЦИАН уже продаёт им Продвижение 360, аукцион звонков и тарифы за лид, медиа 974 миллиона рублей за полугодие, рост 33,2 процента. Новое: спонсорская коммуникация, пуш, письмо или подборка. В центре пять правил продукта. Один: цена не ниже теневой, 4,5 плюс канал 0,2 равно 4,7 рубля, продаём по 9 рублей за контакт. Два: не больше 2 пушей бренда в месяц человеку, пауза от 14 дней, как у Wildberries. Три: отдельное согласие на рекламу, без него не шлём, штраф от 300 тысяч рублей. Четыре: только тем, кто ищет по теме заказа. Пять: часть цены за звонок или заявку сверх контрольной группы. Дальше слот и оценка: спонсор получает слот, если его ценность выше своих сообщений; у человека А спонсор 6,5, своё 11,1, слот у своего. Потом замер и оплата: группа контроля без спонсорских контактов, отписки и жалобы, отчёт заказчику. Внизу шкала цены за контакт. Ниже 4,7 рубля не продаём. Цена 9 рублей: слот получают люди, у которых лучшее своё сообщение стоит меньше 6,5. С 13,6 рубля спонсор выигрывает даже у человека А. Допущение: плюс 5–10 процентов к медиа, 100–200 миллионов рублей в год, при цене 9 рублей это 11–22 миллиона контактов в год, 1–2 миллиона в месяц, 5–9 процентов месячной аудитории 20,2 миллиона.">
+        <defs>
+          <marker id="x3-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="x3-ip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="24" class="t-h">ЗАКАЗЧИК</text>
+        <text x="200" y="24" class="t-h">ПЯТЬ ПРАВИЛ ПРОДУКТА</text>
+        <text x="590" y="24" class="t-h">СЛОТ</text>
+        <text x="790" y="24" class="t-h">ЗАМЕР И ОПЛАТА</text>
+        <rect x="20" y="36" width="160" height="190" rx="10" class="b-cian"/>
+        <text x="34" y="60" class="t-b">Застройщик, банк</text>
+        <text x="34" y="90" class="t-s">Покупает у ЦИАН:</text>
+        <text x="34" y="110" class="t-s t-i">«Продвижение 360»,</text>
+        <text x="34" y="126" class="t-s t-i">аукцион звонков,</text>
+        <text x="34" y="142" class="t-s t-i">CPL-тарифы</text>
+        <text x="34" y="186" class="t-n f-cian">974 млн ₽</text>
+        <text x="34" y="204" class="t-s t-i">медиа за полугодие,</text>
+        <text x="34" y="220" class="t-s t-i">рост +33,2%</text>
+        <rect x="20" y="238" width="160" height="104" rx="10" class="b-prop"/>
+        <text x="34" y="262" class="t-b">Новое:</text>
+        <text x="34" y="280" class="t-s t-i">спонсорская</text>
+        <text x="34" y="296" class="t-s t-i">коммуникация:</text>
+        <text x="34" y="312" class="t-s t-i">пуш, письмо,</text>
+        <text x="34" y="328" class="t-s t-i">подборка</text>
+        <rect x="200" y="36" width="370" height="58" rx="10" class="box"/>
+        <circle cx="224" cy="65" r="13" class="f-prop"/>
+        <text x="224" y="70" class="t-b t-on" text-anchor="middle">1</text>
+        <text x="246" y="56" class="t-b">Цена не ниже теневой</text>
+        <text x="246" y="73" class="t-s">теневая 4,5 + канал 0,2 = 4,7 ₽;</text>
+        <text x="246" y="87" class="t-s">продаём по 9 ₽ за контакт</text>
+        <rect x="200" y="98" width="370" height="58" rx="10" class="box"/>
+        <circle cx="224" cy="127" r="13" class="f-prop"/>
+        <text x="224" y="132" class="t-b t-on" text-anchor="middle">2</text>
+        <text x="246" y="118" class="t-b">Лимит частоты</text>
+        <text x="246" y="135" class="t-s">не больше 2 пушей бренда в месяц человеку,</text>
+        <text x="246" y="149" class="t-s">пауза от 14 дней, как у Wildberries</text>
+        <rect x="200" y="160" width="370" height="58" rx="10" class="box"/>
+        <circle cx="224" cy="189" r="13" class="f-prop"/>
+        <text x="224" y="194" class="t-b t-on" text-anchor="middle">3</text>
+        <text x="246" y="180" class="t-b">Согласие на рекламу</text>
+        <text x="246" y="197" class="t-s">отдельно от сервисных уведомлений;</text>
+        <text x="246" y="211" class="t-s">без него не шлём: штраф от 300 тыс. ₽</text>
+        <rect x="200" y="222" width="370" height="58" rx="10" class="box"/>
+        <circle cx="224" cy="251" r="13" class="f-prop"/>
+        <text x="224" y="256" class="t-b t-on" text-anchor="middle">4</text>
+        <text x="246" y="242" class="t-b">Уместность</text>
+        <text x="246" y="259" class="t-s">только тем, кто ищет по теме заказа:</text>
+        <text x="246" y="273" class="t-s">фильтр до оценки, а не множитель</text>
+        <rect x="200" y="284" width="370" height="58" rx="10" class="box"/>
+        <circle cx="224" cy="313" r="13" class="f-prop"/>
+        <text x="224" y="318" class="t-b t-on" text-anchor="middle">5</text>
+        <text x="246" y="304" class="t-b">Оплата за результат</text>
+        <text x="246" y="321" class="t-s">часть цены — за звонок или заявку</text>
+        <text x="246" y="335" class="t-s">сверх контрольной группы</text>
+        <rect x="590" y="36" width="180" height="306" rx="10" class="b-prop"/>
+        <text x="606" y="62" class="t-b">Оценка из Ц1 и Ц2</text>
+        <text x="606" y="84" class="t-s t-i">спонсор получает</text>
+        <text x="606" y="100" class="t-s t-i">слот, если его</text>
+        <text x="606" y="116" class="t-s t-i">ценность выше,</text>
+        <text x="606" y="132" class="t-s t-i">чем у своих</text>
+        <text x="606" y="166" class="t-s t-b">Человек А (Ц2):</text>
+        <text x="606" y="184" class="t-s">спонсор 6,5 ₽</text>
+        <text x="606" y="200" class="t-s">своё 11,1 ₽</text>
+        <text x="606" y="218" class="t-s t-i">→ слот у своего</text>
+        <text x="606" y="252" class="t-s t-b">Если лучшее своё</text>
+        <text x="606" y="268" class="t-s t-b">дешевле 6,5 ₽,</text>
+        <text x="606" y="284" class="t-s t-b">слот у спонсора</text>
+        <rect x="790" y="36" width="150" height="306" rx="10" class="box"/>
+        <text x="806" y="62" class="t-b">После показа</text>
+        <text x="806" y="86" class="t-s">группа контроля</text>
+        <text x="806" y="102" class="t-s">без спонсорских</text>
+        <text x="806" y="118" class="t-s">контактов</text>
+        <text x="806" y="148" class="t-s">отписки, жалобы:</text>
+        <text x="806" y="164" class="t-s">защитные метрики</text>
+        <text x="806" y="194" class="t-s">отчёт заказчику:</text>
+        <text x="806" y="210" class="t-s">прирост против</text>
+        <text x="806" y="226" class="t-s">контроля</text>
+        <text x="806" y="256" class="t-s t-b">Платит:</text>
+        <text x="806" y="272" class="t-s">за контакт и</text>
+        <text x="806" y="288" class="t-s">за результат</text>
+        <path d="M180 190 H196" class="ln" marker-end="url(#x3-i)"/>
+        <path d="M570 190 H586" class="ln" marker-end="url(#x3-i)"/>
+        <path d="M770 190 H786" class="ln" marker-end="url(#x3-i)"/>
+        <text x="20" y="372" class="t-h">ЦЕНА ЗА ОДИН КОНТАКТ, ₽: ГДЕ СПОНСОР ПОЛУЧАЕТ СЛОТ (ЧЕЛОВЕК А)</text>
+        <rect x="40.0" y="388" width="259.6" height="44" rx="6" class="b-bad"/>
+        <rect x="299.6" y="388" width="486.19999999999993" height="44" rx="6" class="soft"/>
+        <rect x="785.8" y="388" width="134.20000000000005" height="44" rx="6" class="b-prop"/>
+        <text x="169.8" y="414" class="t-s t-i" text-anchor="middle">ниже планки: не продаём</text>
+        <text x="542.7" y="414" class="t-s t-i" text-anchor="middle">слот получают люди, у которых свои сообщения слабее</text>
+        <text x="852.9" y="406" class="t-s t-i" text-anchor="middle">выигрывает</text>
+        <text x="852.9" y="422" class="t-s t-i" text-anchor="middle">и у самых ценных</text>
+        <line x1="40.0" y1="440" x2="920" y2="440" class="ln"/>
+        <line x1="299.6" y1="432" x2="299.6" y2="448" class="ln"/>
+        <line x1="535.0" y1="432" x2="535.0" y2="448" class="ln"/>
+        <line x1="785.8" y1="432" x2="785.8" y2="448" class="ln"/>
+        <text x="299.6" y="466" class="t-s t-b" text-anchor="middle">планка 4,7 ₽</text>
+        <text x="299.6" y="482" class="t-s" text-anchor="middle">теневая 4,5 + канал 0,2</text>
+        <text x="535.0" y="466" class="t-s t-b" text-anchor="middle">наша цена 9 ₽</text>
+        <text x="535.0" y="482" class="t-s" text-anchor="middle">слот, если своё дешевле</text>
+        <text x="535.0" y="498" class="t-s" text-anchor="middle">6,5 ₽</text>
+        <text x="785.8" y="466" class="t-s t-b" text-anchor="middle">13,6 ₽</text>
+        <text x="785.8" y="482" class="t-s" text-anchor="middle">побеждает</text>
+        <text x="785.8" y="498" class="t-s" text-anchor="middle">у человека А</text>
+        <rect x="20" y="520" width="920" height="104" rx="12" class="b-assume"/>
+        <text x="36" y="546" class="t-h">ДОПУЩЕНИЕ · СКОЛЬКО ЭТО МОЖЕТ ДАТЬ</text>
+        <text x="36" y="568" class="t-b">Прирост медиа от 5% до 10% ≈ 100–200 млн ₽ в год.</text>
+        <text x="36" y="590" class="t-s t-i">При цене 9 ₽ за контакт это 11–22 млн контактов в год: 1–2 млн в месяц, от 5% до 9% месячной аудитории (20,2 млн).</text>
+        <text x="36" y="610" class="t-s t-i">Значит, спонсорская коммуникация редкая и точечная, а не рассылка по всей базе.</text>
+      </svg>
+    </div>
+    <figcaption>Числа условные (допущение), кроме данных ЦИАН и рынка. Цена 9 ₽ за контакт лежит у нижней границы рекламного SMS (8–35 ₽). Планка и порог победы считаются из Ц1 и Ц2 для человека А; у других людей они другие, поэтому одна цена даёт разную аудиторию.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Wildberries</span> · реклама брендов в пушах: бренду не больше 2 пушей в месяц, пауза не меньше 14 дней; таргет по полу, возрасту, региону и поведению; подборка не меньше 15 товаров · инструкция, без даты · <span class="src">П</span> · <span class="fit hi">применимо: продажа пушей рекламодателям, РФ</span> · <a href="https://static-basket-01.wbbasket.ru/vol1/adsf/InstructionsForPushNotifications.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">УФАС Москвы</span> · предупредил Wildberries: нельзя отказаться от рекламных пушей, не отключив сервисные; согласия надо разделять; один случай, не общая норма · 04.2026 · <span class="src">Т</span> · <span class="fit hi">применимо: закон, РФ</span> · <a href="https://deloprava.ru/ufas-potrebovalo-razdelit-reklamnye-i-servisnye-push-uvedomleniya/" rel="noopener">источник</a></li>
+    <li><span class="who">Магнит ADS</span> · кампания Сбера: окно при запуске приложения и баннер, оплата за результат; числа не приводим · 04.2026 · сниппет, страница не открыта · <span class="src">В</span> · <span class="fit mid">применимо: оплата за результат в ритейле</span> · <a href="https://sostav.ru/blogs/262075/83968" rel="noopener">источник</a></li>
+    <li><span class="who">X5 и Магнит</span> · реклама в приложениях ритейла растёт: 1 полугодие 2026 — X5 17,3 млрд ₽ (×1,5), Магнит 12,1 млрд ₽ (+36%) · 09.2026 · <span class="src">Т</span> · <span class="fit mid">масштаб больше, чем у ЦИАН</span> · <a href="https://retail-life.ru/riteyl-media-x5-magnit-lenta-reklama/" rel="noopener">источник</a></li>
+    <li><span class="who">Zillow</span> · нагрузка на получателя платных контактов: лучше всего 10–15 контактов на агента в месяц, больше 15 — конверсия падает · без даты · <span class="src">П</span> · <span class="fit hi">применимо: платные контакты в недвижимости</span> · <a href="https://zillow.com/premier-agent/operational-blueprint/" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li><b>Что продаём.</b> Одну коммуникацию — пуш, письмо или подборку — для людей, у которых она уместна. Доступа ко всей базе нет.</li>
+      <li><b>Цена.</b> Не ниже теневой цены внимания плюс цена канала: 4,7 ₽ в примере. Продаём не с аукциона: иначе слот получит тот, кто платит, а не тот, кому уместно (<a href="#s-m1">Э1</a>). Больше цена — шире аудитория: слот получают люди, у которых свои сообщения слабее.</li>
+      <li><b>Частота и согласие.</b> Не больше 2 пушей бренда в месяц человеку, пауза от 14 дней. Согласие на рекламу отдельное; без него не шлём: штраф юрлицу 300 тыс.–1 млн ₽ (КоАП 14.3).</li>
+      <li><b>Оплата за результат</b> там, где возможно: часть цены — за звонок или заявку сверх контрольной группы. Нагрузку на отдел продаж застройщика ограничиваем по его мощности, как у Zillow.</li>
+      <li><b>Контроль и сроки.</b> Постоянная группа без спонсорских контактов, защитные метрики отписок и жалоб, отчёт заказчику. Пилот — в третьем квартале; теневую цену пересматривает совет по вниманию (<a href="#s-x2">Ц2</a>).</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Цена не ниже теневой, без аукциона</td><td>Аукцион: слот получает тот, кто больше платит</td><td>Часть спроса уйдёт туда, где планки нет; доход растёт медленнее, но не в минус по выручке людей</td><td>Авито: ставка корректируется по вероятности действия, средняя цена не растёт</td></tr>
+        <tr><td>Лимит частоты на человека и бренд</td><td>Без лимита, пока заказчик платит</td><td>Меньше проданных контактов: потолок дохода задан заранее</td><td>Wildberries: бренду не больше 2 пушей в месяц, пауза не меньше 14 дней</td></tr>
+        <tr><td>Часть оплаты за результат</td><td>Оплата только за контакт</td><td>Заказчик платит позже; нужны контрольная группа и доверие к измерению</td><td>Магнит ADS: оплата за результат (сниппет)</td></tr>
+        <tr><td>Отдельное согласие на рекламу</td><td>Одно согласие на всё</td><td>База для спонсорских коммуникаций — только согласившиеся; она меньше всей аудитории</td><td>УФАС Москвы предупредил Wildberries (04.2026)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Застройщикам уже продают «Продвижение 360», аукцион звонков 2.0 и CPL-тарифы; медиа — 974 млн ₽ за полугодие, +33,2%. Звонок застройщику — 22,6 тыс. ₽. Аудитория — 20,2 млн в месяц.</li>
+      <li><span class="mark market">Практика рынка</span> Wildberries: лимит частоты и таргет. УФАС Москвы: отдельное согласие. Магнит ADS и X5: ритейл-медиа и оплата за результат. Zillow: потолок нагрузки на получателя. Лимитов частоты спонсорских писем у ритейла и банков в открытых данных нет.</li>
+      <li><span class="mark assume">Допущение</span> Цена 9 ₽ за контакт; лимит 2 в месяц взят у Wildberries и проверяется по отпискам; прирост медиа +5–10% ≈ 100–200 млн ₽ в год (оценка в записке CPO); число контактов — расчёт из цены.</li>
+      <li><span class="mark prop">Предложение</span> Продукт «спонсорская коммуникация» как часть монетизации внимания: правила продукта, расчёт цены по <a href="#s-x1">Ц1</a> и <a href="#s-x2">Ц2</a>, пилот в третьем квартале.</li>
     </ul>
   </div>
 </article>
@@ -5253,14 +5798,14 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 759" role="img" aria-label="Четыре зоны данных. Внутри контура: свой поток событий и вход через Яндекс ID, Сбер ID, VK ID, T-ID. Снаружи без выгрузки персональных данных: открытые данные ЦБ и ДОМ.РФ, партнёры через обезличенный ID и чистую комнату. Выводы из данных: жизненные события и добыча данных. Право — граница для всех: согласие отдельным документом, cookie — персональные данные, штрафы за утечки, реклама только с согласия. Для каждой строки показано, что она даёт платформе и что с ней нельзя. Любой новый источник проходит три шага: согласие и цель, персональные данные остаются внутри, эффект в рублях по контрольной группе.">
+      <svg viewBox="0 0 960 775" role="img" aria-label="Четыре зоны данных. Внутри контура: свой поток событий и вход через Яндекс ID, Сбер ID, VK ID, T-ID. Снаружи без выгрузки персональных данных: открытые данные ЦБ и ДОМ.РФ, партнёры через обезличенный ID и чистую комнату. Выводы из данных: жизненные события и добыча данных. Право — граница для всех: согласие отдельным документом, cookie — персональные данные, штрафы за утечки, реклама только с согласия. Для каждой строки показано, что она даёт платформе и что с ней нельзя. Любой новый источник проходит три шага: согласие и цель, персональные данные остаются внутри, эффект в рублях по контрольной группе.">
         <defs><marker id="i1-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker><marker id="i1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
         <text x="48" y="22" class="t-h">ИСТОЧНИК И ОПОРА РЫНКА</text>
         <text x="290" y="22" class="t-h">ЧТО ДАЁТ ПЛАТФОРМЕ</text>
         <text x="622" y="22" class="t-h">ЧТО НЕЛЬЗЯ</text>
         <rect x="48" y="34" width="212" height="70" rx="10" class="b-prop"/>
         <text x="62" y="56" class="t-b">1. Свой поток событий</text>
-        <text x="62" y="74" class="t-s t-i">Авито: 20 млн событий в</text>
+        <text x="62" y="74" class="t-s t-i">Авито: 20 млн событий в</text>
         <text x="62" y="90" class="t-s t-i">минуту, 500+ источников</text>
         <path d="M262 69 H284" class="ln" marker-end="url(#i1-a)"/>
         <rect x="290" y="34" width="322" height="70" rx="10" class="box"/>
@@ -5273,7 +5818,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="636" y="88" class="t-s t-i">общие устройства и сотрудников</text>
         <rect x="48" y="111" width="212" height="70" rx="10" class="b-market"/>
         <text x="62" y="133" class="t-b">2. Вход и опознание</text>
-        <text x="62" y="151" class="t-s t-i">Яндекс ID: 136 млн</text>
+        <text x="62" y="151" class="t-s t-i">Яндекс ID: 136 млн</text>
         <text x="62" y="167" class="t-s t-i">аккаунтов в день</text>
         <path d="M262 146 H284" class="ln" marker-end="url(#i1-a)"/>
         <rect x="290" y="111" width="322" height="70" rx="10" class="box"/>
@@ -5286,7 +5831,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="636" y="165" class="t-s t-i">семейные поля без цели</text>
         <rect x="48" y="188" width="212" height="70" rx="10" class="b-market"/>
         <text x="62" y="210" class="t-b">3. Открытые данные</text>
-        <text x="62" y="228" class="t-s t-i">ЕИСЖС ДОМ.РФ: 9,3 млн</text>
+        <text x="62" y="228" class="t-s t-i">ЕИСЖС ДОМ.РФ: 9,3 млн</text>
         <text x="62" y="244" class="t-s t-i">квартир</text>
         <path d="M262 223 H284" class="ln" marker-end="url(#i1-a)"/>
         <rect x="290" y="188" width="322" height="70" rx="10" class="box"/>
@@ -5299,8 +5844,8 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="636" y="242" class="t-s t-i">др.</text>
         <rect x="48" y="265" width="212" height="70" rx="10" class="b-market"/>
         <text x="62" y="287" class="t-b">4. Партнёрские данные</text>
-        <text x="62" y="305" class="t-s t-i">Stable ID МТС: конверсии</text>
-        <text x="62" y="321" class="t-s t-i">+11%</text>
+        <text x="62" y="305" class="t-s t-i">Stable ID МТС:</text>
+        <text x="62" y="321" class="t-s t-i">конверсии +11%</text>
         <path d="M262 300 H284" class="ln" marker-end="url(#i1-a)"/>
         <rect x="290" y="265" width="322" height="70" rx="10" class="box"/>
         <text x="304" y="287" class="t-s t-i">Обезличенный ID связывает показы и</text>
@@ -5308,81 +5853,82 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="304" y="319" class="t-s t-i">VK: совместное обучение</text>
         <rect x="622" y="265" width="318" height="70" rx="10" class="b-bad"/>
         <text x="636" y="287" class="t-s t-i">Выгружать хэши своей базы в чужой DSP: ПД</text>
-        <text x="636" y="303" class="t-s t-i">уходят из контура, нужны согласие и ст.</text>
-        <text x="636" y="319" class="t-s t-i">18 38-ФЗ</text>
-        <rect x="48" y="342" width="212" height="70" rx="10" class="b-market"/>
+        <text x="636" y="303" class="t-s t-i">уходят из контура, нужны согласие и</text>
+        <text x="636" y="319" class="t-s t-i">ст. 18 38-ФЗ</text>
+        <rect x="48" y="342" width="212" height="86" rx="10" class="b-market"/>
         <text x="62" y="364" class="t-b">5. Жизненные события</text>
         <text x="62" y="382" class="t-s t-i">44% купили или планируют</text>
-        <text x="62" y="398" class="t-s t-i">жильё при рождении ребёнка</text>
-        <path d="M262 377 H284" class="ln" marker-end="url(#i1-a)"/>
-        <rect x="290" y="342" width="322" height="70" rx="10" class="box"/>
+        <text x="62" y="398" class="t-s t-i">жильё при рождении или</text>
+        <text x="62" y="414" class="t-s t-i">взрослении ребёнка</text>
+        <path d="M262 385 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="342" width="322" height="86" rx="10" class="box"/>
         <text x="304" y="364" class="t-s t-i">Контакт до начала поиска: рост дохода,</text>
         <text x="304" y="380" class="t-s t-i">рождение ребёнка, новоселье</text>
-        <rect x="622" y="342" width="318" height="70" rx="10" class="b-bad"/>
+        <rect x="622" y="342" width="318" height="86" rx="10" class="b-bad"/>
         <text x="636" y="364" class="t-s t-i">Считать сигнал фактом: у Сбера точность</text>
         <text x="636" y="380" class="t-s t-i">40–65%. Называть событие в тексте</text>
-        <rect x="48" y="419" width="212" height="70" rx="10" class="b-market"/>
-        <text x="62" y="441" class="t-b">6. Добыча данных</text>
-        <text x="62" y="459" class="t-s t-i">Т-Банк Perseus: +3–17%</text>
-        <text x="62" y="475" class="t-s t-i">метрик</text>
-        <path d="M262 454 H284" class="ln" marker-end="url(#i1-a)"/>
-        <rect x="290" y="419" width="322" height="70" rx="10" class="box"/>
-        <text x="304" y="441" class="t-s t-i">Все события в одну последовательность и</text>
-        <text x="304" y="457" class="t-s t-i">трансформер; граф «человек — ЖК»;</text>
-        <text x="304" y="473" class="t-s t-i">look-alike на своих данных: у Сбера ×1,6</text>
-        <rect x="622" y="419" width="318" height="70" rx="10" class="b-bad"/>
-        <text x="636" y="441" class="t-s t-i">Look-alike площадок: чёрный ящик и</text>
-        <text x="636" y="457" class="t-s t-i">выгрузка ПД. Верить модели без</text>
-        <text x="636" y="473" class="t-s t-i">контрольной группы</text>
-        <rect x="48" y="496" width="212" height="126" rx="10" class="box"/>
-        <text x="62" y="518" class="t-b">7. Право</text>
-        <text x="62" y="536" class="t-s t-i">Закон задаёт, что можно</text>
-        <text x="62" y="552" class="t-s t-i">собирать и слать</text>
-        <path d="M262 559 H284" class="ln" marker-end="url(#i1-a)"/>
-        <rect x="290" y="496" width="322" height="126" rx="10" class="box"/>
-        <text x="304" y="518" class="t-s t-i">Условия в самом согласии: цель, срок,</text>
-        <text x="304" y="534" class="t-s t-i">третьи лица. Обезличенные данные по методу</text>
-        <text x="304" y="550" class="t-s t-i">РКН — без согласия. Реестр согласий —</text>
-        <text x="304" y="566" class="t-s t-i">условие любого запроса к данным</text>
-        <rect x="622" y="496" width="318" height="126" rx="10" class="b-bad"/>
-        <text x="636" y="518" class="t-s t-i">—</text>
-        <text x="652" y="518" class="t-s t-i">Согласие на ПД — отдельным документом с</text>
-        <text x="652" y="534" class="t-s t-i">01.09.2025; cookie — ПД</text>
-        <text x="636" y="554" class="t-s t-i">—</text>
-        <text x="652" y="554" class="t-s t-i">Утечка: от 3 до 15 млн ₽; повторная —</text>
-        <text x="652" y="570" class="t-s t-i">1–3% выручки</text>
-        <text x="636" y="590" class="t-s t-i">—</text>
-        <text x="652" y="590" class="t-s t-i">Реклама без согласия: 300 тыс.–1 млн ₽</text>
-        <text x="652" y="606" class="t-s t-i">(38-ФЗ)</text>
+        <rect x="48" y="435" width="212" height="70" rx="10" class="b-market"/>
+        <text x="62" y="457" class="t-b">6. Добыча данных</text>
+        <text x="62" y="475" class="t-s t-i">Т-Банк Perseus: +3–17%</text>
+        <text x="62" y="491" class="t-s t-i">метрик</text>
+        <path d="M262 470 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="435" width="322" height="70" rx="10" class="box"/>
+        <text x="304" y="457" class="t-s t-i">Все события в одну последовательность и</text>
+        <text x="304" y="473" class="t-s t-i">трансформер; граф «человек — ЖК»;</text>
+        <text x="304" y="489" class="t-s t-i">look-alike на своих данных: у Сбера ×1,6</text>
+        <rect x="622" y="435" width="318" height="70" rx="10" class="b-bad"/>
+        <text x="636" y="457" class="t-s t-i">Look-alike площадок: чёрный ящик и</text>
+        <text x="636" y="473" class="t-s t-i">выгрузка ПД. Верить модели без</text>
+        <text x="636" y="489" class="t-s t-i">контрольной группы</text>
+        <rect x="48" y="512" width="212" height="126" rx="10" class="box"/>
+        <text x="62" y="534" class="t-b">7. Право</text>
+        <text x="62" y="552" class="t-s t-i">Закон задаёт, что можно</text>
+        <text x="62" y="568" class="t-s t-i">собирать и слать</text>
+        <path d="M262 575 H284" class="ln" marker-end="url(#i1-a)"/>
+        <rect x="290" y="512" width="322" height="126" rx="10" class="box"/>
+        <text x="304" y="534" class="t-s t-i">Условия в самом согласии: цель, срок,</text>
+        <text x="304" y="550" class="t-s t-i">третьи лица. Обезличенные данные по методу</text>
+        <text x="304" y="566" class="t-s t-i">РКН — без согласия. Реестр согласий —</text>
+        <text x="304" y="582" class="t-s t-i">условие любого запроса к данным</text>
+        <rect x="622" y="512" width="318" height="126" rx="10" class="b-bad"/>
+        <text x="636" y="534" class="t-s t-i">—</text>
+        <text x="652" y="534" class="t-s t-i">Согласие на ПД — отдельным документом с</text>
+        <text x="652" y="550" class="t-s t-i">01.09.2025; cookie — ПД</text>
+        <text x="636" y="570" class="t-s t-i">—</text>
+        <text x="652" y="570" class="t-s t-i">Утечка: от 3 до 15 млн ₽; повторная —</text>
+        <text x="652" y="586" class="t-s t-i">1–3% выручки</text>
+        <text x="636" y="606" class="t-s t-i">—</text>
+        <text x="652" y="606" class="t-s t-i">Реклама без согласия: 300 тыс.–1 млн ₽</text>
+        <text x="652" y="622" class="t-s t-i">(38-ФЗ)</text>
         <rect x="20" y="34" width="22" height="147" rx="6" class="soft"/>
         <text transform="translate(35 107.5) rotate(-90)" text-anchor="middle" class="t-h">ВНУТРИ КОНТУРА</text>
         <rect x="20" y="188" width="22" height="147" rx="6" class="soft"/>
         <text transform="translate(35 261.5) rotate(-90)" text-anchor="middle" class="t-h">СНАРУЖИ, БЕЗ ПД</text>
-        <rect x="20" y="342" width="22" height="147" rx="6" class="soft"/>
-        <text transform="translate(35 415.5) rotate(-90)" text-anchor="middle" class="t-h">ВЫВОДЫ</text>
-        <rect x="20" y="496" width="22" height="126" rx="6" class="soft"/>
-        <text transform="translate(35 559) rotate(-90)" text-anchor="middle" class="t-h">ГРАНИЦА</text>
-        <text x="20" y="643" class="t-h">ПРАВИЛО ПОДКЛЮЧЕНИЯ ЛЮБОГО ИСТОЧНИКА · ПРЕДЛОЖЕНИЕ</text>
-        <path d="M20 649 H940" class="grid"/>
-        <rect x="20" y="659" width="290" height="86" rx="10" class="b-prop"/>
-        <text x="34" y="681" class="t-b">1. Согласие и цель</text>
-        <text x="34" y="699" class="t-s t-i">Источник записан в реестр: цель,</text>
-        <text x="34" y="715" class="t-s t-i">срок, третьи лица. Нет записи — нет</text>
-        <text x="34" y="731" class="t-s t-i">данных</text>
-        <path d="M312 702 H333" class="ln-prop" marker-end="url(#i1-p)"/>
-        <rect x="335" y="659" width="290" height="86" rx="10" class="b-prop"/>
-        <text x="349" y="681" class="t-b">2. ПД остаются внутри</text>
-        <text x="349" y="699" class="t-s t-i">Наружу идёт только обезличенный ID.</text>
-        <text x="349" y="715" class="t-s t-i">Чужие данные приходят без ПД</text>
-        <path d="M627 702 H648" class="ln-prop" marker-end="url(#i1-p)"/>
-        <rect x="650" y="659" width="290" height="86" rx="10" class="b-prop"/>
-        <text x="664" y="681" class="t-b">3. Эффект в рублях</text>
-        <text x="664" y="699" class="t-s t-i">Контрольная группа показывает</text>
-        <text x="664" y="715" class="t-s t-i">добавленную выручку на человека. Нет</text>
-        <text x="664" y="731" class="t-s t-i">прироста — закрываем</text>
+        <rect x="20" y="342" width="22" height="163" rx="6" class="soft"/>
+        <text transform="translate(35 423.5) rotate(-90)" text-anchor="middle" class="t-h">ВЫВОДЫ</text>
+        <rect x="20" y="512" width="22" height="126" rx="6" class="soft"/>
+        <text transform="translate(35 575) rotate(-90)" text-anchor="middle" class="t-h">ГРАНИЦА</text>
+        <text x="20" y="659" class="t-h">ПРАВИЛО ПОДКЛЮЧЕНИЯ ЛЮБОГО ИСТОЧНИКА · ПРЕДЛОЖЕНИЕ</text>
+        <path d="M20 665 H940" class="grid"/>
+        <rect x="20" y="675" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="34" y="697" class="t-b">1. Согласие и цель</text>
+        <text x="34" y="715" class="t-s t-i">Источник записан в реестр: цель,</text>
+        <text x="34" y="731" class="t-s t-i">срок, третьи лица. Нет записи — нет</text>
+        <text x="34" y="747" class="t-s t-i">данных</text>
+        <path d="M312 718 H333" class="ln-prop" marker-end="url(#i1-p)"/>
+        <rect x="335" y="675" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="349" y="697" class="t-b">2. ПД остаются внутри</text>
+        <text x="349" y="715" class="t-s t-i">Наружу идёт только обезличенный ID.</text>
+        <text x="349" y="731" class="t-s t-i">Чужие данные приходят без ПД</text>
+        <path d="M627 718 H648" class="ln-prop" marker-end="url(#i1-p)"/>
+        <rect x="650" y="675" width="290" height="86" rx="10" class="b-prop"/>
+        <text x="664" y="697" class="t-b">3. Эффект в рублях</text>
+        <text x="664" y="715" class="t-s t-i">Контрольная группа показывает</text>
+        <text x="664" y="731" class="t-s t-i">добавленную выручку на человека. Нет</text>
+        <text x="664" y="747" class="t-s t-i">прироста — закрываем</text>
       </svg>
     </div>
-    <figcaption>Розовым — что строит платформа, оранжевым — практика рынка, красным — запреты. Цифры слева — опора рынка, а не обещание для ЦИАН. В первом квартале платформа делает строки 1 и 2: поток, согласия и долю опознанных; остальное подключается по правилу внизу. Данные собственников из ЕГРН закрыты законом; что для платформы доступны только открытые сводки — наш вывод.</figcaption>
+    <figcaption>Розовым — что строит платформа, оранжевым — практика рынка, красным — запреты. Цифры слева — опора рынка, а не обещание для ЦИАН. В первом квартале платформа делает строки 1 и 2: поток, согласия и долю опознанных; остальное подключается по правилу внизу.</figcaption>
   </figure>
 
   <div class="market"><h3>Рынок</h3><ul>
@@ -5410,9 +5956,9 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
       <tbody>
         <tr><td>Свой поток событий и граф «устройство — логин»</td><td>Вендор CDP</td><td>Дольше стартуем и сами держим схему событий; зато схема и данные не у вендора</td><td>Авито: свой поток и выгрузка в кабинеты без ПД; Elama: граф с вырезанием «мостов»</td></tr>
         <tr><td>Внешний ID: Яндекс ID, Сбер ID, VK ID, T-ID</td><td>Свой вход по SMS</td><td>Зависим от чужого входа, а Сбер ID усиливает Домклик; зато доля опознанных выше и нет расходов на SMS и трения</td><td>Яндекс ID: 136 млн аккаунтов в день; Сбер ID: 81 млн</td></tr>
-        <tr><td>Партнёры через обезличенный ID и чистую комнату</td><td>Хэши своей базы в чужой DSP</td><td>Охват и точность ниже, рынок ранний; зато ПД не уходят из контура и не нужно отдельное согласие на передачу</td><td>МТС AdTech: конверсии +11%; VK: пилот «Рив Гош»</td></tr>
+        <tr><td>Партнёры через обезличенный ID и чистую комнату</td><td>Хэши своей базы в чужой DSP</td><td>Охват уже, рынок ранний: в РФ нет результатов чистых комнат с цифрами; зато ПД не уходят из контура</td><td>МТС AdTech: конверсии +11%; VK: пилот «Рив Гош»</td></tr>
         <tr><td>Жизненные события как ранний сигнал</td><td>Только поведение на сайте</td><td>Точность 40–65%: нужны осторожные тексты без названия события; зато видим человека до начала поиска</td><td>Сбер «Ромашка»; Авито Реклама: рост дохода как сигнал</td></tr>
-        <tr><td>Согласия по всем целям, реклама только с согласия</td><td>Только сервисные сообщения</td><td>Охват CRM меньше; зато нет штрафа за рекламу без согласия — 300 тыс.–1 млн ₽ — и нет риска для базы</td><td>Требование 38-ФЗ и закона о ПД; Wildberries: УФАС просит отделять рекламные пуши от сервисных</td></tr>
+        <tr><td>Согласия по целям, реклама только с согласия</td><td>Только сервисные сообщения</td><td>Нужны реестр согласий и юристы, а рекламный охват ограничен согласиями; зато нет штрафа 300 тыс.–1 млн ₽ за рекламу без согласия</td><td>Требование 38-ФЗ и закона о ПД; Wildberries: УФАС предупредил, что отказ от рекламы не должен отключать сервисные пуши (один случай)</td></tr>
         <tr><td>Свои модели на потоке событий</td><td>Look-alike площадок</td><td>Нужна своя команда; зато нет чёрного ящика и выгрузки ПД</td><td>Т-Банк Perseus: +3–17% метрик; Сбер: look-alike ×1,6</td></tr>
       </tbody>
     </table>
@@ -5421,9 +5967,9 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
-      <li><span class="mark market">Практика рынка</span> Т-Банк: все события клиента в одну последовательность, трансформер, плюс 3–17% метрик, даже без покупок (<a href="https://habr.com/ru/companies/tbank/articles/1061236/" rel="noopener">Perseus, 07.2026</a>). Сбер: look-alike на 900+ признаках, конверсия ×1,6 (<a href="https://osp.ru/articles/2024/0313/13058159" rel="noopener">03.2024</a>); трансформер прогнозирует 18 потребностей с точностью 40–65% (<a href="https://vc.ru/marketing/846365-kak-ii-i-metodologiya-romashka" rel="noopener">«Ромашка», 09.2023</a>). По данным Авито, 44% россиян купили или планируют жильё при рождении или взрослении ребёнка (<a href="https://ruinformer.com/page/kak-rozhdenie-detej-izmenjaet-otnoshenie-rossijan-k-zhilju" rel="noopener">пересказ, проверено 02.10.2026</a>).</li>
-      <li><span class="mark cian">ЦИАН, открытые данные</span> Аудитория 20,2 млн человек в месяц; 20% целевых действий уже идут от ИИ-рекомендаций. Модели работают на тех же событиях, которые собирает платформа. Единого журнала отправок и согласий в ЦИАН нет (схема А2).</li>
-      <li><span class="mark assume">Допущение</span> Доля опознанных у ЦИАН неизвестна: у площадок открыты только числа аккаунтов ID, а не доли авторизованных. Меряем в первые недели. Слово «агрегаты» про ЕГРН — наш вывод: закон закрывает данные собственников, но слова не использует.</li>
+      <li><span class="mark market">Практика рынка</span> Т-Банк: все события клиента в одну последовательность, трансформер, плюс 3–17% метрик, даже без покупок (<a href="https://habr.com/ru/companies/tbank/articles/1061236/" rel="noopener">Perseus, 07.2026</a>). Сбер: look-alike на 900+ признаках, конверсия ×1,6, B2B, метод тот же (<a href="https://osp.ru/articles/2024/0313/13058159" rel="noopener">03.2024</a>); трансформер прогнозирует 18 потребностей с точностью 40–65% (<a href="https://vc.ru/marketing/846365-kak-ii-i-metodologiya-romashka" rel="noopener">«Ромашка», 09.2023</a>). По данным Авито, 44% россиян купили или планируют жильё при рождении или взрослении ребёнка (<a href="https://ruinformer.com/page/kak-rozhdenie-detej-izmenjaet-otnoshenie-rossijan-k-zhilju" rel="noopener">пересказ, проверено 02.10.2026</a>).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Аудитория 20,2 млн человек в месяц; 20% целевых действий уже идут от ИИ-рекомендаций. Модели работают на тех же событиях, которые собирает платформа.</li>
+      <li><span class="mark assume">Допущение</span> Доля опознанных у ЦИАН неизвестна: у площадок открыты только числа аккаунтов ID, а не доли авторизованных. Меряем в первые недели. Единого журнала отправок и согласий в ЦИАН нет: так показано на схеме А2, проверяем интервью в первые три недели. Слово «агрегаты» про ЕГРН — наш вывод: закон закрывает данные собственников, но слова не использует.</li>
       <li><span class="mark prop">Предложение</span> Правило подключения источника из трёх шагов, реестр согласий как условие любого запроса к данным, запрет на склейку по отпечатку браузера и на показ события человеку в тексте.</li>
     </ul>
   </div>
@@ -5453,7 +5999,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <rect x="154" y="114" width="210" height="70" rx="10" class="box"/>
         <text x="168" y="136" class="t-b">4. Оптимизатор выручки</text>
         <text x="168" y="154" class="t-s t-i">Одна модель на все слоты.</text>
-        <text x="168" y="170" class="t-s t-i">Версия 0 — кв. 4</text>
+        <text x="168" y="170" class="t-s t-i">Версия 0 — кв. 4</text>
         <rect x="374" y="114" width="280" height="70" rx="10" class="box"/>
         <text x="388" y="136" class="t-s t-i">На добавленной выручке за 12</text>
         <text x="388" y="152" class="t-s t-i">месяцев. Ограничения: лимит,</text>
@@ -5466,7 +6012,7 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="128" y="256" text-anchor="middle" class="t-n f-prop">3</text>
         <rect x="154" y="214" width="210" height="70" rx="10" class="box"/>
         <text x="168" y="236" class="t-b">3. Бандиты</text>
-        <text x="168" y="254" class="t-s t-i">Выбор текста и темы. Кв. 4</text>
+        <text x="168" y="254" class="t-s t-i">Выбор текста и темы. Кв. 4</text>
         <rect x="374" y="214" width="280" height="70" rx="10" class="box"/>
         <text x="388" y="236" class="t-s t-i">На ответах людей на варианты текста,</text>
         <text x="388" y="252" class="t-s t-i">со штрафом за повтор. Вариантов</text>
@@ -5474,13 +6020,13 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <rect x="664" y="214" width="276" height="70" rx="10" class="b-market"/>
         <text x="678" y="236" class="t-s t-i">Duolingo: DAU +0,5%. Uber: 100+</text>
         <text x="678" y="252" class="t-s t-i">вариантов за недели; A/B на 2–3</text>
-        <text x="678" y="268" class="t-s t-i">варианта идёт 4–6 недель</text>
+        <text x="678" y="268" class="t-s t-i">варианта идёт 4–6 недель</text>
         <rect x="68" y="314" width="72" height="70" rx="10" class="b-prop"/>
         <text x="128" y="356" text-anchor="middle" class="t-n f-prop">2</text>
         <rect x="154" y="314" width="210" height="70" rx="10" class="box"/>
         <text x="168" y="336" class="t-b">2. Недельный план</text>
         <text x="168" y="354" class="t-s t-i">Частота на человека и</text>
-        <text x="168" y="370" class="t-s t-i">день. Кв. 3, допущение</text>
+        <text x="168" y="370" class="t-s t-i">день. Кв. 3, допущение</text>
         <rect x="374" y="314" width="280" height="70" rx="10" class="box"/>
         <text x="388" y="336" class="t-s t-i">На логах случайной отправки: 1%</text>
         <text x="388" y="352" class="t-s t-i">решений случайные. Цели — визит и</text>
@@ -5494,21 +6040,21 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <rect x="154" y="414" width="210" height="70" rx="10" class="box"/>
         <text x="168" y="436" class="t-b">1. Модель прироста</text>
         <text x="168" y="454" class="t-s t-i">Промо тем, на кого оно</text>
-        <text x="168" y="470" class="t-s t-i">влияет. Кв. 2</text>
+        <text x="168" y="470" class="t-s t-i">влияет. Кв. 2</text>
         <rect x="374" y="414" width="280" height="70" rx="10" class="box"/>
         <text x="388" y="436" class="t-s t-i">На случайном контроле: показали и не</text>
         <text x="388" y="452" class="t-s t-i">показали. Цель — ближние действия;</text>
-        <text x="388" y="468" class="t-s t-i">рубли — по заменителю за 14–28 дней</text>
+        <text x="388" y="468" class="t-s t-i">рубли — по заменителю за 14–28 дней</text>
         <rect x="664" y="414" width="276" height="70" rx="10" class="b-market"/>
         <text x="678" y="436" class="t-s t-i">Купер: цена возврата −25%,</text>
         <text x="678" y="452" class="t-s t-i">возвращённых ×1,8. Альфа: модель за</text>
-        <text x="678" y="468" class="t-s t-i">4–8 ч вместо 5–7 дней</text>
+        <text x="678" y="468" class="t-s t-i">4–8 ч вместо 5–7 дней</text>
         <rect x="20" y="514" width="120" height="70" rx="10" class="b-prop"/>
         <text x="128" y="556" text-anchor="middle" class="t-n f-prop">0</text>
         <rect x="154" y="514" width="210" height="70" rx="10" class="box"/>
         <text x="168" y="536" class="t-b">0. Правила</text>
-        <text x="168" y="554" class="t-s t-i">Шлюз, лимит, контроль. Кв.</text>
-        <text x="168" y="570" class="t-s t-i">1</text>
+        <text x="168" y="554" class="t-s t-i">Шлюз, лимит, контроль.</text>
+        <text x="168" y="570" class="t-s t-i">Кв. 1</text>
         <rect x="374" y="514" width="280" height="70" rx="10" class="box"/>
         <text x="388" y="536" class="t-s t-i">Не учится: правила пишут по журналу</text>
         <text x="388" y="552" class="t-s t-i">отправок и событий. Контроль даёт</text>
@@ -5541,14 +6087,14 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
         <text x="34" y="690" class="t-s">Опора: Купер — 3 ML-инженера на uplift-реактивацию; Uber — продакт-лид, учёный и инженер в авторах работы</text>
       </svg>
     </div>
-    <figcaption>Розовым — то, что строит платформа: ступени и условия перехода. Оранжевым — опора рынка. Номера кварталов — из роадмапа роли; для ступени 2 квартал наш (допущение). Каждая ступень остаётся на пути, пока не обыграна следующей: правила работают рядом с моделями и служат запасным вариантом.</figcaption>
+    <figcaption>Розовым — то, что строит платформа: ступени и условия перехода. Оранжевым — опора рынка. Номера кварталов — из роадмапа роли; для ступени 2 квартал наш (допущение). Правила остаются под моделями как запасной вариант.</figcaption>
   </figure>
 
   <div class="market"><h3>Рынок</h3><ul>
     <li><span class="who">Авито</span> · ступень 0: общий контроль 10% без рассылок с 2022 года; балансировщик с лимитом уведомлений на человека в день и лучшим временем, 400+ регулярных кампаний в день; сумма прироста отдельных тестов не равна общему эффекту CRM · 01.2025 · <span class="src">П</span> · <span class="fit hi">применимо: площадка, РФ, прямой аналог</span> · <a href="https://habr.com/ru/companies/avito/articles/875012" rel="noopener">источник</a></li>
     <li><span class="who">Купер, Альфа-Банк</span> · ступень 1: у Купера uplift-реактивация силами 3 ML-инженеров — цена возврата −25%, возвращённых ×1,8 (до и после); Альфа-Банк строит модель за 4–8 часов вместо 5–7 дней, 4 модели в проде · 04.2026 · <span class="src">П</span> · <span class="fit hi">применимо: повторные касания, РФ; у банка метод тот же</span> · <a href="https://unisender.com/ru/blog/kak-sdelat-reaktivacziyu-effektivnoj-i-sekonomit/" rel="noopener">Купер</a> · <a href="https://habr.com/ru/companies/alfa/articles/1024090" rel="noopener">Альфа</a></li>
     <li><span class="who">Netflix, Uber</span> · ступень 2: у Netflix недельный план по каналам решается отдельно от выбора сообщения, числа не раскрыты; у Uber расписание на 7 дней с лимитами (пример — не больше 2 в день), отписок меньше, числа нет · 06.2026, 11.2022 · <span class="src">П</span> · <span class="fit hi">применимо: люди заходят редко, как на ЦИАН</span> · <a href="https://netflixtechblog.com/thinking-fast-slow-for-a-personalized-notification-system-4d89b26525cd" rel="noopener">Netflix</a> · <a href="https://uber.com/us/en/blog/how-uber-optimizes-push-notifications-using-ml/" rel="noopener">Uber</a></li>
-    <li><span class="who">Duolingo, Uber</span> · ступень 3: бандит по шаблонам пуша со штрафом за повтор — DAU +0,5%; у Uber бандит для темы письма: 100+ вариантов за недели вместо 2–3 за 4–6 недель, эффект не раскрыт · 2020, 03.2025 · <span class="src">Т, П</span> · <span class="fit mid">применимо: у Duolingo частые пуши, у ЦИАН контактов меньше</span> · <a href="https://research.duolingo.com/papers/yancey.kdd20.pdf" rel="noopener">Duolingo</a> · <a href="https://uber.com/us/en/blog/enhancing-personalized-crm/" rel="noopener">Uber</a></li>
+    <li><span class="who">Duolingo, Uber</span> · ступень 3: бандит по шаблонам пуша со штрафом за повтор — DAU +0,5%; у Uber бандит для темы письма: 100+ вариантов за недели вместо 2–3 за 4–6 недель, эффект не раскрыт · 2020, 03.2025 · <span class="src">П</span> · <span class="fit mid">применимо: у Duolingo частые пуши, у ЦИАН контактов меньше</span> · <a href="https://research.duolingo.com/papers/yancey.kdd20.pdf" rel="noopener">Duolingo</a> · <a href="https://uber.com/us/en/blog/enhancing-personalized-crm/" rel="noopener">Uber</a></li>
     <li><span class="who">Kuaishou, LinkedIn</span> · ступень 4: оптимизатор с uplift и множителями Лагранжа при 2 ограничениях — DAU +0,5% в A/B; LinkedIn, Decision Transformer — сессии +0,72% к CQL при меньшем объёме данных · 05.2026, 09.2025 · <span class="src">Т</span> · <span class="fit lo">применимо: масштаб соцсетей; для ЦИАН ступень поздняя</span> · <a href="https://icml.cc/virtual/2026/poster/65977" rel="noopener">Kuaishou</a> · <a href="https://arxiv.org/abs/2509.02458" rel="noopener">LinkedIn</a></li>
   </ul></div>
 
@@ -5588,16 +6134,198 @@ table.qa tr:nth-child(5) th, table.qa tr:nth-child(6) th { color: var(--muted); 
   </div>
 </article>
 
+
+<article class="scheme" id="s-i3">
+  <header>
+    <p class="code"><span>Схема И3</span><span class="core">★ ядро</span><span>Вопрос 1.4 · AI и бизнес-эффект в рублях</span></p>
+    <h2>AI пишет тексты и собирает кампании по редполитике, а его работу мерим в рублях, а не в кликах</h2>
+    <p class="sub">Три задачи AI: тексты, сборка кампаний, вход и ответы ИИ. Все идут через один контроль качества и сравниваются с контрольной группой по добавленной выручке на человека за 12 месяцев.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 700" role="img" aria-label="Три задачи AI. Первая: тексты с редполитикой; опора Сбер, около 30 правил проверки; нельзя выпускать без проверки и мерить по CTR. Вторая: агенты сборки кампаний; опора МТС, запуск за две минуты вместо часов; нельзя давать агенту менять лимит и согласия. Третья: AI-вход ЦианGPT и оптимизация под ответы ИИ; нельзя считать показ в нейроответе результатом. Контроль качества: редполитика, автопроверка с перегенерацией, человек утверждает шаблон, шлюз и журнал. Мерить в рублях: в примере ОТП у текстов ИИ выше CTR и ниже конверсия в клике, но лидов на двадцать процентов больше и цена лида ниже на четверть. Решает добавленная выручка на человека за 12 месяцев против контрольной группы.">
+        <defs><marker id="i3-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker><marker id="i3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker></defs>
+        <text x="20" y="22" class="t-h">ЗАДАЧА AI И ОПОРА РЫНКА</text>
+        <text x="290" y="22" class="t-h">ЧТО ДЕЛАЕТ AI</text>
+        <text x="640" y="22" class="t-h">ЧТО НЕЛЬЗЯ</text>
+        <rect x="20" y="34" width="240" height="86" rx="10" class="b-market"/>
+        <text x="34" y="56" class="t-b">1. Тексты с редполитикой</text>
+        <text x="34" y="74" class="t-s t-i">Сбер: около 30 правил</text>
+        <text x="34" y="90" class="t-s t-i">проверки; больше 60% контента</text>
+        <text x="34" y="106" class="t-s t-i">предложений делает ИИ</text>
+        <path d="M262 77 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="34" width="330" height="86" rx="10" class="box"/>
+        <text x="304" y="56" class="t-s t-i">Пишет варианты пуша, письма и подборки под</text>
+        <text x="304" y="72" class="t-s t-i">сегмент и состояние поиска. Цены, адреса и</text>
+        <text x="304" y="88" class="t-s t-i">числа подставляет шаблон из каталога</text>
+        <rect x="640" y="34" width="300" height="86" rx="10" class="b-bad"/>
+        <text x="654" y="56" class="t-s t-i">Выпускать текст без проверки</text>
+        <text x="654" y="72" class="t-s t-i">правилами. Мерить текст по CTR. Верить</text>
+        <text x="654" y="88" class="t-s t-i">длинным промптам: Сберу они не помогли</text>
+        <rect x="20" y="128" width="240" height="70" rx="10" class="b-market"/>
+        <text x="34" y="150" class="t-b">2. Агенты сборки кампаний</text>
+        <text x="34" y="168" class="t-s t-i">МТС: запуск рекламы «часы →</text>
+        <text x="34" y="184" class="t-s t-i">2 минуты»</text>
+        <path d="M262 163 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="128" width="330" height="70" rx="10" class="box"/>
+        <text x="304" y="150" class="t-s t-i">Собирает черновик: текст, аудиторию,</text>
+        <text x="304" y="166" class="t-s t-i">расписание. Человек утверждает, запуск идёт</text>
+        <text x="304" y="182" class="t-s t-i">через общий шлюз</text>
+        <rect x="640" y="128" width="300" height="70" rx="10" class="b-bad"/>
+        <text x="654" y="150" class="t-s t-i">Давать агенту менять лимит,</text>
+        <text x="654" y="166" class="t-s t-i">контрольную группу и согласия.</text>
+        <text x="654" y="182" class="t-s t-i">Запускать без утверждения человеком</text>
+        <rect x="20" y="206" width="240" height="86" rx="10" class="b-cian"/>
+        <text x="34" y="228" class="t-b">3. AI-вход и ИИ-ответы</text>
+        <text x="34" y="246" class="t-s t-i">ЦианGPT: 3,9 млн человек за</text>
+        <text x="34" y="262" class="t-s t-i">первый год</text>
+        <path d="M262 249 H284" class="ln" marker-end="url(#i3-a)"/>
+        <rect x="290" y="206" width="330" height="86" rx="10" class="box"/>
+        <text x="304" y="228" class="t-s t-i">Свой AI-вход приводит и опознаёт людей.</text>
+        <text x="304" y="244" class="t-s t-i">Страницы районов, метро и ЖК держим в</text>
+        <text x="304" y="260" class="t-s t-i">топ-10: вне него в нейроответ попадают всё</text>
+        <text x="304" y="276" class="t-s t-i">реже</text>
+        <rect x="640" y="206" width="300" height="86" rx="10" class="b-bad"/>
+        <text x="654" y="228" class="t-s t-i">Считать показ в нейроответе</text>
+        <text x="654" y="244" class="t-s t-i">результатом: нужен достижимый человек.</text>
+        <text x="654" y="260" class="t-s t-i">Отдавать ассистенту весь путь</text>
+        <text x="20" y="316" class="t-h">КОНТРОЛЬ КАЧЕСТВА: ОДИН КОНВЕЙЕР ДЛЯ ВСЕХ ТРЁХ ЗАДАЧ · ПРЕДЛОЖЕНИЕ</text>
+        <path d="M20 322 H940" class="grid"/>
+        <rect x="20" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="34" y="354" class="t-b">1. Редполитика</text>
+        <text x="34" y="372" class="t-s t-i">Правила тона, закона и</text>
+        <text x="34" y="388" class="t-s t-i">согласий. У Сбера около 30</text>
+        <text x="34" y="404" class="t-s t-i">правил</text>
+        <path d="M237 375 H253" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="255" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="269" y="354" class="t-b">2. Автопроверка</text>
+        <text x="269" y="372" class="t-s t-i">Правила кодом и LLM. Не</text>
+        <text x="269" y="388" class="t-s t-i">прошёл — перегенерация, а</text>
+        <text x="269" y="404" class="t-s t-i">не отправка</text>
+        <path d="M472 375 H488" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="490" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="504" y="354" class="t-b">3. Человек</text>
+        <text x="504" y="372" class="t-s t-i">Утверждает шаблон, сегмент</text>
+        <text x="504" y="388" class="t-s t-i">и границы, а не каждый</text>
+        <text x="504" y="404" class="t-s t-i">текст</text>
+        <path d="M707 375 H723" class="ln-prop" marker-end="url(#i3-p)"/>
+        <rect x="725" y="332" width="215" height="86" rx="10" class="b-prop"/>
+        <text x="739" y="354" class="t-b">4. Шлюз и журнал</text>
+        <text x="739" y="372" class="t-s t-i">Лимит, согласия, контроль</text>
+        <text x="739" y="388" class="t-s t-i">как у любого сообщения.</text>
+        <text x="739" y="404" class="t-s t-i">Версия текста — в журнале</text>
+        <text x="20" y="442" class="t-h">МЕРИТЬ В РУБЛЯХ, А НЕ В КЛИКАХ</text>
+        <path d="M20 448 H940" class="grid"/>
+        <rect x="20" y="458" width="480" height="230" rx="10" class="box"/>
+        <text x="34" y="482" class="t-b">ОТП: тексты ИИ против текстов специалиста</text>
+        <rect x="34" y="494" width="12" height="12" rx="3" class="f-market"/>
+        <text x="52" y="505" class="t-s t-i">тексты ИИ</text>
+        <rect x="126" y="494" width="12" height="12" rx="3" class="fill-muted"/>
+        <text x="144" y="505" class="t-s t-i">тексты специалиста</text>
+        <text x="34" y="540" class="t-s t-i">CTR</text>
+        <rect x="170" y="524" width="200.0" height="14" rx="3" class="f-market"/>
+        <rect x="170" y="542" width="74.7" height="14" rx="3" class="fill-muted"/>
+        <text x="378" y="536" class="t-s t-i">10,01%</text>
+        <text x="253" y="554" class="t-s t-i">3,74%</text>
+        <text x="34" y="588" class="t-s t-i">Конверсия в клике</text>
+        <rect x="170" y="572" width="67.7" height="14" rx="3" class="f-market"/>
+        <rect x="170" y="590" width="200.0" height="14" rx="3" class="fill-muted"/>
+        <text x="246" y="584" class="t-s t-i">0,85%</text>
+        <text x="378" y="602" class="t-s t-i">2,51%</text>
+        <text x="34" y="636" class="t-s t-i">Лиды и цена лида</text>
+        <text x="170" y="640" class="t-n f-market">+20%</text>
+        <text x="226" y="640" class="t-s t-i">лидов</text>
+        <text x="300" y="640" class="t-n f-market">−25%</text>
+        <text x="356" y="640" class="t-s t-i">цена лида</text>
+        <text x="34" y="662" class="t-s t-b t-i">У ИИ выше CTR, но ниже конверсия в клике; лидов больше, а</text>
+        <text x="34" y="678" class="t-s t-b t-i">цена лида ниже. Решает рубль, а не одна метрика</text>
+        <rect x="520" y="458" width="420" height="230" rx="10" class="b-prop"/>
+        <text x="534" y="482" class="t-b">Как мерим AI</text>
+        <text x="534" y="504" class="t-s t-i">—</text>
+        <text x="550" y="504" class="t-s t-i">Добавленная выручка на человека за 12 месяцев: группа</text>
+        <text x="550" y="520" class="t-s t-i">с AI-версией минус контрольная группа</text>
+        <text x="534" y="544" class="t-s t-i">—</text>
+        <text x="550" y="544" class="t-s t-i">Ранний заменитель: прогноз по 14–28 дням поведения;</text>
+        <text x="550" y="560" class="t-s t-i">проверка — постоянная контрольная группа</text>
+        <text x="534" y="584" class="t-s t-i">—</text>
+        <text x="550" y="584" class="t-s t-i">AI-вход: новые достижимые люди × их добавленная</text>
+        <text x="550" y="600" class="t-s t-i">выручка за 12 месяцев</text>
+        <text x="534" y="624" class="t-s t-i">—</text>
+        <text x="550" y="624" class="t-s t-i">Защитные метрики: отписки, жалобы, доля текстов, не</text>
+        <text x="550" y="640" class="t-s t-i">прошедших проверку</text>
+        <text x="534" y="672" class="t-s t-b t-i">Решение по AI принимает рубль, а не клик</text>
+      </svg>
+    </div>
+    <figcaption>Розовым — что добавляет платформа, оранжевым — практика рынка, зелёным — ЦИАН по открытым данным, красным — запреты. Пример ОТП показывает, почему мерить надо в рублях: тексты ИИ выигрывают по одним метрикам и проигрывают по другим. Столбцы в примере даны в масштабе внутри каждой пары.</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Сбер</span> · GigaChat пишет SMS по полу и поколению; около 30 правил проверяют PyMorphy и LLM, плохой текст перегенерируют; «сотни млн ₽» допдохода; длинные промпты и агенты не помогли; больше 60% контента персональных предложений делает ИИ · 04.2025, 11.2025 · <span class="src">П</span> · <span class="fit hi">применимо: шаблоны по сегментам, РФ</span> · <a href="https://habr.com/ru/companies/sberbank/articles/890262" rel="noopener">GigaChat</a> · <a href="https://sberbank.ru/ru/sberpress/all/article?blockID=1303&amp;newsID=7706b0f6-97fe-438a-ab46-b99ea335e480" rel="noopener">Сбер</a></li>
+    <li><span class="who">ОТП Банк</span> · тексты YandexGPT против текстов специалиста: CTR 10,01% против 3,74%, конверсия в клике 0,85% против 2,51%, но лидов +20% и цена лида −25% · 04.2025 · <span class="src">В</span> · <span class="fit mid">применимо: банк; урок один: клики и рубли расходятся</span> · <a href="https://adpass.ru/ii-v-marketinge-kejs-otp-banka-i-adventum/" rel="noopener">источник</a></li>
+    <li><span class="who">МТС AdTech</span> · ИИ-агент собирает текст, аудиторию и кампанию; запуск рекламы сокращается «с нескольких часов до 2 минут» · 03.2026 · <span class="src">П</span> · <span class="fit mid">применимо: реклама для малого бизнеса, но тот же приём сборки</span> · <a href="https://adpass.ru/mts-adtech-predstavila-chat-s-ii-agentom-dlya-zapuska-reklamy/" rel="noopener">источник</a></li>
+    <li><span class="who">Яндекс</span> · нейроответ показывается в 42% поисковых запросов (+7 п.п. за квартал); в ответах Алисы доля источников вне топ-10 упала с 40% до 10%; органика сайтов РФ за 2025 год — минус 33–38% · 07.2026, 06.2026 · <span class="src">Т</span> · <span class="fit hi">применимо: РФ, прямой вход в ответ</span> · <a href="https://habr.com/ru/news/1064406/" rel="noopener">нейроответ</a> · <a href="https://kommersant.ru/doc/8728568" rel="noopener">вне топ-10</a> · <a href="https://vc.ru/marketing/3043185-yandeks-neiro-zabiraet-trafik-u-saytov" rel="noopener">органика</a></li>
+    <li><span class="who">Zillow</span> · приложение в ChatGPT ведёт человека обратно за туром, агентом и ипотекой · 05.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка недвижимости, тот же путь «ассистент → сайт»</span> · <a href="https://zillow.com/news/strategy-behind-zillows-strong-q1-results/" rel="noopener">Zillow</a> · <a href="https://rismedia.com/2025/10/06/zillow-debuts-real-estate-app-chatgpt/" rel="noopener">запуск</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Тексты пишет AI, но по редполитике: правила кодом и LLM-проверка, перегенерация, шаблон утверждает человек. Цены, адреса и числа подставляются из каталога, а не придумываются моделью. У Сбера таких правил около 30.</li>
+      <li>Агент собирает черновик кампании: текст, аудиторию, расписание. Человек утверждает, запуск идёт через общий шлюз, поэтому лимит, согласия и контроль не обойти. У МТС запуск сократился с часов до 2 минут.</li>
+      <li>AI-вход и ИИ-ответы — привлечение. ЦианGPT приводит и опознаёт людей, а страницы районов, метро и ЖК борются за место в нейроответе: у Яндекса он стоит в 42% запросов, а органика сайтов за 2025 год упала на 33–38%.</li>
+      <li>Качество — один конвейер для всех задач: редполитика, автопроверка, утверждение шаблона человеком, шлюз и журнал версий. Не прошёл проверку — не отправляем, а перегенерируем.</li>
+      <li>AI меряем в рублях. У ОТП тексты ИИ дали CTR 10,01% против 3,74%, но конверсия в клике была 0,85% против 2,51%; лидов вышло на 20% больше, а лид подешевел на −25%. Поэтому сравниваем AI-версию с контролем по добавленной выручке на человека за 12 месяцев, а не по кликам.</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>AI пишет варианты, человек утверждает шаблон и правила</td><td>Человек пишет, AI предлагает</td><td>Ошибка в шаблоне уходит всем получателям, поэтому нужны автопроверка и откат; зато быстрее</td><td>Сбер: правила и перегенерация. Против: в ПромоСтраницах Т-Банка нейросетевых текстов нет (сниппет)</td></tr>
+        <tr><td>Агент собирает кампанию, человек утверждает</td><td>Шаблоны без кода</td><td>Агенту нужен доступ к каталогу и шлюзу; зато есть персонализация и запуск за минуты</td><td>МТС AdTech; Iterable: Journey Assist, +25% конверсий (данные вендора, сниппет)</td></tr>
+        <tr><td>Мерить AI по добавленной выручке с контролем</td><td>Мерить по CTR и конверсии в клике</td><td>Дольше ждать результата (ранний заменитель — 14–28 дней) и нужна контрольная группа; зато клики не обманывают</td><td>ОТП: CTR, конверсия и лиды дали три разных ответа</td></tr>
+        <tr><td>Свой AI-вход и присутствие в ассистентах</td><td>Только чужие ответы</td><td>Свой вход — свои затраты и поддержка; зато контакт и согласие остаются у ЦИАН, а не у ассистента</td><td>ЦианGPT; Zillow: приложение в ChatGPT возвращает человека на сайт</td></tr>
+        <tr><td>Оптимизация страниц под нейроответ</td><td>Больше статей</td><td>Нужна SEO-команда по вертикалям и страницы под вопрос; зато вне топ-10 в ответ попадают всё реже: доля таких источников упала с 40% до 10%</td><td>Яндекс: нейроответ; SEO-команда ЦИАН уже работает по вертикалям</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark task">Из задания</span> Средний CTR — 3,2%. Это клик, а не рубли: решение по AI принимается по добавленной выручке, а CTR остаётся диагностикой.</li>
+      <li><span class="mark market">Практика рынка</span> Сбер, ОТП, МТС, Яндекс и Zillow — в полосе «Рынок». Против AI-текстов: Т-Банк в ПромоСтраницах не использует нейросетевые тексты (<a href="https://vc.ru/marketing/1998211-kontent-marketing-v-t-banke" rel="noopener">vc.ru, 05.2025, сниппет</a>). Iterable заявляет +25% конверсий от Journey Assist (<a href="https://globenewswire.com/news-release/2024/10/17/2964938/0/en/Iterable-s-GenAI-Journey-Assist-Soars-as-Marketers-Report-a-25-Increase-in-Conversions-Due-to-Enhanced-Efficiency.html" rel="noopener">вендор, 10.2024, сниппет</a>). Вывод «мерить надо по выручке» — наш, из примера ОТП.</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> 20% целевых действий приходят от ИИ-рекомендаций (<a href="https://ir.ciangroup.ru/files/ru/Cian_Investor_Day_2025_Presentation.pdf" rel="noopener">Investor Day, 11.2025</a>). ЦианGPT — 3,9 млн пользователей за первый год (<a href="https://sostav.ru/blogs/271015/68761" rel="noopener">данные вендора, 10.2025</a>). Бесплатных каналов (органика, прямой заход, email, push) — больше 85% трафика; часть органики уходит в нейроответы.</li>
+      <li><span class="mark assume">Допущение</span> Доля нейроответов по запросам о недвижимости и клики из них неизвестны: открытых данных нет. Эффект AI-текстов на выручку ЦИАН не известен; кейс ОТП — банк, а не площадка.</li>
+      <li><span class="mark prop">Предложение</span> Конвейер из четырёх проверок для всех AI-задач, числа и факты из каталога, право агента только собирать черновик, метрика в рублях против контрольной группы.</li>
+    </ul>
+  </div>
+</article>
+
 </section>
 <section class="panel" id="p-assume" role="tabpanel" aria-label="Допущения и пробелы">
 
 <article class="doc"><p class="code"><span>Что мы приняли без данных</span></p><h2>Реестр допущений</h2>
-<div class="tablewrap"><table><thead><tr><th>№</th><th>Допущение</th><th>На что влияет</th><th>Что изменится, если оно неверно</th></tr></thead><tbody><tr><td>1</td><td>Цифры кейса условные, но масштаб совпадает с ЦИАН: 20 млн человек в месяц</td><td>Все расчёты</td><td>Числа другие, логика та же</td></tr><tr><td>2</td><td>14% считаются от получателей за сутки</td><td>Схема давления, цель «меньше 2%»</td><td>Размер перегретой группы другой</td></tr><tr><td>3</td><td>Пуши — половина из 12 млн отправок</td><td>Число отписок: 15 тыс. в неделю</td><td>Меняется пропорционально</td></tr><tr><td>4</td><td>В 12 млн не входят показы внутри продукта</td><td>Оценка давления</td><td>Реальное давление выше</td></tr><tr><td>5</td><td>30% кампаний без контроля и 40% сценариев через общий инструмент не связаны</td><td>«Под правилами и с замером — 28%»</td><td>Доля от 10% до 40%</td></tr><tr><td>6</td><td>Шанс отписки одинаков на каждой отправке</td><td>Кривая отписок</td><td>В жизни отписок больше</td></tr><tr><td>7</td><td>Общий номер человека есть для вошедших, единого профиля событий нет</td><td>Состав MVP</td><td>Есть профиль — модели раньше. Нет номера — запасной вариант</td></tr><tr><td>8</td><td>Директор по продукту готов объявить узкий мандат: сквозной лимит, журнал, контрольная группа. Цели директоров направлений первый квартал не меняются</td><td>Вся модель взаимодействия</td><td>Без мандата платформа только советует: начинаем с добровольного пилота и открытого счётчика давления</td></tr><tr><td>9</td><td>Платформа живёт рядом с CRM-аналитикой под директором по продукту; точное место решается по интервью первых трёх недель</td><td>Кто владелец</td><td>Меняется подчинение, но не роли: правила у платформы, замер у аналитики</td></tr><tr><td>10</td><td>Агенты, агентства и застройщики вне платформы: решение принято 2 октября 2026</td><td>Охват</td><td>Если их включить, нужны отдельные лимиты и отдельная мера ценности</td></tr><tr><td>11</td><td>Платные места застройщиков внутри продукта — отдельный товар</td><td>Спор за места</td><td>Часть мест уходит из общей оценки</td></tr><tr><td>12</td><td>Состояние поиска можно понять по поведению</td><td>Сегменты, уместность</td><td>Больше опоры на явные вопросы человеку</td></tr><tr><td>13</td><td>Заказанное человеком не ограничивается и не кладётся в контроль</td><td>Механизм, контрольные группы</td><td>Эффект оповещений не измерить</td></tr><tr><td>14</td><td>Вес действий вертикалей задаёт совет</td><td>Оценка, доли</td><td>Нужна другая общая мера</td></tr><tr><td>15</td><td>Доли: минимум у каждой вертикали, потолок 40%, 10% на пробы</td><td>Спор вертикалей</td><td>Числа подбираются, принцип тот же</td></tr><tr><td>16</td><td>Общая контрольная группа 5% на полгода</td><td>Замер</td><td>2,5–10% по расчёту мощности</td></tr><tr><td>17</td><td>Пороги защитных метрик</td><td>Автоматические остановки</td><td>Подбираются по базовым уровням</td></tr><tr><td>18</td><td>Цели на 3 и 6 месяцев</td><td>План запуска</td><td>Сдвигаются, порядок целей тот же</td></tr><tr><td>19</td><td>Компания оптимизирует целевые действия</td><td>Единица ценности</td><td>Если деньги — нужен пересчёт в рубли по вертикалям</td></tr><tr><td>20</td><td>Внутри ЦИАН нет общего решения между командами</td><td>Весь кейс</td><td>Если есть — задача сужается до замера и мест внутри продукта</td></tr></tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>№</th><th>Допущение</th><th>На что влияет</th><th>Что изменится, если оно неверно</th></tr></thead><tbody><tr><td>1</td><td>Цифры кейса условные, но масштаб совпадает с ЦИАН: 20 млн человек в месяц</td><td>Все расчёты</td><td>Числа другие, логика та же</td></tr><tr><td>2</td><td>14% считаются от получателей за сутки</td><td>Схема давления, цель «меньше 2%»</td><td>Размер перегретой группы другой</td></tr><tr><td>3</td><td>Пуши — половина из 12 млн отправок</td><td>Число отписок: 15 тыс. в неделю</td><td>Меняется пропорционально</td></tr><tr><td>4</td><td>В 12 млн не входят показы внутри продукта</td><td>Оценка давления</td><td>Реальное давление выше</td></tr><tr><td>5</td><td>30% кампаний без контроля и 40% сценариев через общий инструмент не связаны</td><td>«Под правилами и с замером — 28%»</td><td>Доля от 10% до 40%</td></tr><tr><td>6</td><td>Шанс отписки одинаков на каждой отправке</td><td>Кривая отписок</td><td>В жизни отписок больше</td></tr><tr><td>7</td><td>Общий номер человека есть для вошедших, единого профиля событий нет</td><td>Состав MVP</td><td>Есть профиль — модели раньше. Нет номера — запасной вариант</td></tr><tr><td>8</td><td>Директор по продукту готов объявить узкий мандат: сквозной лимит, журнал, контрольная группа. Цели директоров направлений первый квартал не меняются</td><td>Вся модель взаимодействия</td><td>Без мандата платформа только советует: начинаем с добровольного пилота и открытого счётчика давления</td></tr><tr><td>9</td><td>Платформа живёт рядом с CRM-аналитикой под директором по продукту; точное место решается по интервью первых трёх недель</td><td>Кто владелец</td><td>Меняется подчинение, но не роли: правила у платформы, замер у аналитики</td></tr><tr><td>10</td><td>Рассылки самим агентам и застройщикам (B2B) — во второй версии. Их реклама, промо и проданные коммуникации на сайте уже оцениваются в общей валюте (схемы <a href="#s-x1">Ц1</a>–<a href="#s-x3">Ц3</a>)</td><td>Охват, ранжирование мест</td><td>Если B2B-рассылки включить сразу, нужны отдельные лимиты; валюта та же</td></tr><tr><td>11</td><td>Платные места застройщиков внутри продукта — отдельный товар</td><td>Спор за места</td><td>Часть мест уходит из общей оценки</td></tr><tr><td>12</td><td>Состояние поиска можно понять по поведению</td><td>Сегменты, уместность</td><td>Больше опоры на явные вопросы человеку</td></tr><tr><td>13</td><td>Заказанное человеком не ограничивается и не кладётся в контроль</td><td>Механизм, контрольные группы</td><td>Эффект оповещений не измерить</td></tr><tr><td>14</td><td>Рубли за действие по вертикалям (комиссия банка, цена размещения, доля k) утверждает «Аналитика и финансы»; совет внимания решает только споры</td><td>Модель ценности, ранжирование</td><td>Если цен нет — первый квартал на весах в целевых действиях, затем перевод в рубли</td></tr><tr><td>15</td><td>Доли: минимум у каждой вертикали, потолок 40%, 10% на пробы</td><td>Спор вертикалей</td><td>Числа подбираются, принцип тот же</td></tr><tr><td>16</td><td>Общая контрольная группа 5% на полгода</td><td>Замер</td><td>2,5–10% по расчёту мощности</td></tr><tr><td>17</td><td>Пороги защитных метрик</td><td>Автоматические остановки</td><td>Подбираются по базовым уровням</td></tr><tr><td>18</td><td>Цели на 3 и 6 месяцев</td><td>План запуска</td><td>Сдвигаются, порядок целей тот же</td></tr><tr><td>19</td><td>Компания готова принять одну валюту для всех: добавленную выручку на человека за 12 месяцев</td><td>Главная метрика, модель ценности</td><td>Если CPO вертикалей держатся за свои целевые действия — они остаются опережающими показателями, а решение о месте всё равно в рублях</td></tr><tr><td>20</td><td>Внутри ЦИАН нет общего решения между командами</td><td>Весь кейс</td><td>Если есть — задача сужается до замера и мест внутри продукта</td></tr></tbody></table></div>
 </article>
 <article class="doc"><p class="code"><span>Пробелы</span></p><h2>Что остаётся неизвестным</h2>
 <ol><li>Как на самом деле устроены рассылки внутри ЦИАН: сколько инструментов, кто владеет, есть ли общий лимит. Публично сказано только «оптимизация частоты».</li><li>Полный список тем пушей и рассылок. Нужен вход в аккаунт. Это закрыл бы дневник сообщений.</li><li>Веса действий, доли вертикалей, пороги. Их никто не публикует. В документе это наши предложения.</li><li>Как площадки узнают, что человек закончил поиск. Не публикует никто.</li><li>Право: тексты законов собраны, но перед сдачей их нужно сверить с юристом.</li></ol>
 </article>
 
+<article class="doc"><p class="code"><span>Допущения версии 4</span></p><h2>Главная метрика, модель ценности, каналы, данные и ML: что приняли и как проверим</h2>
+<div class="tablewrap"><table><thead><tr><th>Допущение</th><th>Где используется</th><th>Как проверим</th></tr></thead><tbody>
+<tr><td>Главная метрика — добавленная выручка на человека за 12 месяцев к контрольной группе; ранний заменитель — модель по первым 30–90 дням</td><td><a href="#s-r2">С2</a>, <a href="#s-v1">В1</a></td><td>Сверка заменителя с фактом 12 месяцев на когортах постоянной контрольной группы 1%</td></tr>
+<tr><td>Доля k выручки размещения, зависящая от контактов, в бюджете равна нулю</td><td>С2, Э2, Ц1</td><td>Когорты агентов: контакты против продлений и тарифа, 2-й квартал</td></tr>
+<tr><td>1 п.п. маржи ≈ 180 млн ₽ в год при выручке 2026 года 17,7–18,5 млрд ₽; цель маржи — из пересказа прогноза брокером</td><td><a href="#s-r1">С1</a>, С3, К1</td><td>Сверка с отчётностью ЦИАН за 2026 год</td></tr>
+<tr><td>Числа примера четырёх кандидатов в одном слоте и теневая цена внимания (4,5 и 0,3 ₽) — иллюстрация</td><td><a href="#s-x1">Ц1</a>, <a href="#s-x2">Ц2</a></td><td>Обратный эксперимент с контрольной группой: ослабить рекламу в слоте и замерить удержание</td></tr>
+<tr><td>Продажа коммуникаций: цена 9 ₽ за контакт, лимит 2 в месяц с паузой 14 дней (взят у Wildberries), +5–10% к медиа</td><td><a href="#s-x3">Ц3</a></td><td>Пилот с одним рекламодателем, отписки и выручка против контроля</td></tr>
+<tr><td>Доли входов (SEO, AI-ответы, приложение, внутренний трафик) и выручка новых людей за 12 месяцев не публикуются</td><td><a href="#s-k1">К1</a></td><td>Когорты по источнику входа в первые 6 недель</td></tr>
+<tr><td>Доставляемость RuStore, FCM, HMS и цена MAX после бесплатного периода неизвестны; владелец нового канала — PM жизненного цикла</td><td><a href="#s-k2">К2</a>, <a href="#s-k3">К3</a></td><td>Технический пилот канала по правилам К3 до выхода на охват</td></tr>
+<tr><td>Доля опознанных людей у ЦИАН и наличие единого журнала согласий неизвестны</td><td><a href="#s-i1">И1</a></td><td>Замер в первые две недели, интервью в первые три недели</td></tr>
+<tr><td>Ступени ML: правила → модели прироста → бандиты → оптимизатор долгой выручки; срок ступени 2 (квартал 3) выбран нами</td><td><a href="#s-i2">И2</a>, <a href="#s-r4">С4</a></td><td>Переход на ступень — только если прирост к прошлой ступени виден в контрольной группе</td></tr>
+<tr><td>Эффект AI-текстов на выручку ЦИАН неизвестен; кейс ОТП — банк, доля нейроответов по недвижимости не раскрыта</td><td><a href="#s-i3">И3</a></td><td>AI-тексты против текстов специалиста в одной контрольной схеме, мерим в рублях</td></tr>
+</tbody></table></div></article>
 <article class="doc"><p class="code"><span>Допущения второй версии</span></p><h2>Что мы приняли в расчётах и как это проверим</h2>
 <div class="tablewrap"><table><thead><tr><th>Допущение</th><th>Где используется</th><th>Как проверим</th></tr></thead><tbody>
 <tr><td>Платформа стоит 60–100 млн руб. в год: 8–12 человек и провайдеры</td><td>Э2, окупаемость</td><td>Смета с финансами на 3-й неделе; два предложения российских вендоров к 6-й неделе</td></tr>
