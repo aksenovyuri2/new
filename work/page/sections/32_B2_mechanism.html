@@ -130,16 +130,17 @@
   <div class="basis">
     <h3>Псевдокод первой версии</h3>
 <pre>def gate(person, msg, now):                    # ответ за {{b1_gate_ms|num0}} мс
-    if person in EXCLUSIONS:           return deny("исключение")
+    if msg.cls == "service":       return allow(msg)   # код, сделка, ответ продавца
+    if person in EXCLUSIONS[msg.cls]:  return deny("исключение")
+        # отписка, жалоба, нет согласия; диалог с продавцом и сделка — только для промо
     if msg.cls == "promo" and person in CONTROL:  return deny("контроль")
-    if msg.cls == "promo" and over_limit(person): # {{limit_push_day|num0}} в сутки, {{limit_week|num0}} в неделю
-        return wait_or_deny(msg)
-    if msg.cls == "subscription" and over_cap(person):  # потолок {{b1_sub_cap_day|num0}} в сутки
-        return wait_or_deny(msg)
-    if quiet_hours(person.region, now) and msg.cls != "service":
+    if over_limit(person, person.stage, msg.cls):  # промо {{limit_push_day|num0}} в сутки и {{limit_week|num0}} в неделю,
+        return wait_or_deny(msg)                    # подписки {{b1_sub_cap_day|num0}} в сутки; новичку и «поиск закончен» — без промо
+    if quiet_hours(person.search_tz, now) or quiet_hours(person.device_tz, now):
         return wait_or_deny(msg, until=morning, ttl_hours={{b1_ttl_hours|num0}})
     if same_event_seen(person, msg, hours={{b1_dedup_hours|num0}}):  return deny("дубль")
     return allow(msg)           # любой исход пишется в журнал
+# режим журнала, пока вертикаль не включена: ответ всегда allow, исход пишется
 # сбой шлюза: промо не уходит, сервисные уходят</pre>
   </div>
 
@@ -158,6 +159,7 @@
       <li><b>В каком канале и когда.</b> По схеме Б3: в продукте — место внутри, не в продукте и срочно — пуш, иначе письмо; ночью ждёт утра.</li>
       <li>«Не отправлять» — полноправный исход. У каждого отказа есть причина, и отправщик её видит.</li>
       <li>Оценка пользы, бюджет отписок и порог по сегменту — вторая версия, после квартала данных. Решение «свой слой или российский вендор» принимаем на 6-й неделе по двум предложениям.</li>
+      <li><b>Включение по шагам.</b> Ключи пуша за шлюзом к {{b4_w_keys|num0}}-й неделе, почты — к 12-й. Сначала режим журнала: для ещё не включённых вертикалей шлюз отвечает «разрешено» и только пишет. Запрет включается по вертикалям, первая — к 3-му месяцу. Частота по стадии поиска: новичку и «поиск закончен» — без промо, в паузе — одно промо в 7 дней <span class="mark assume">Допущение</span>.</li>
     </ul>
   </div>
 
