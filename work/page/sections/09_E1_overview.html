@@ -1,0 +1,87 @@
+<!-- tab: position -->
+<article class="scheme" id="s-e1">
+  <header>
+    <p class="code"><span>Схема Е1</span><span>Вся система на одном листе</span></p>
+    <h2>Было: каждая команда решает сама. Стало: команда подаёт заявку, решает платформа</h2>
+    <p class="sub">Слева то, что описано в кейсе. Справа то, что мы предлагаем. Подробности каждой части — во вкладках.</p>
+  </header>
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 380" role="img" aria-label="Слева: пять команд сами выбирают, кому, что, когда и как часто писать, через единый инструмент или свои, и всё приходит одному человеку без общего счётчика. Справа: команды подают заявки, платформа проходит допуск, оценку, выбор или молчание, канал и момент, человеку приходит одно решение, а общий журнал и контрольные группы показывают прирост командам и совету.">
+        <defs>
+          <marker id="e1-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="e1-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-bad"/></marker>
+          <marker id="e1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="28" class="t-h">СЕЙЧАС</text>
+        <text x="510" y="28" class="t-h">ДОЛЖНО БЫТЬ</text>
+        <path d="M480 16 V364" class="grid"/>
+
+        <rect x="20" y="50" width="120" height="210" rx="10" class="box"/>
+        <text x="32" y="76" class="t-b">Команды</text>
+        <text x="32" y="100" class="t-s">вертикали</text>
+        <text x="32" y="118" class="t-s">и маркетинг</text>
+        <text x="32" y="150" class="t-s t-i">каждая сама:</text>
+        <text x="32" y="168" class="t-s t-i">кому, что,</text>
+        <text x="32" y="186" class="t-s t-i">когда,</text>
+        <text x="32" y="204" class="t-s t-i">как часто</text>
+
+        <rect x="180" y="70" width="140" height="62" rx="10" class="b-task"/>
+        <text x="192" y="96" class="t-b">Единый инструмент</text>
+        <text x="192" y="118" class="t-s f-task">{{unified|%0}} сценариев</text>
+        <rect x="180" y="178" width="140" height="62" rx="10" class="b-bad"/>
+        <text x="192" y="204" class="t-b">Свои инструменты</text>
+        <text x="192" y="226" class="t-s f-bad">{{outside_unified|%0}} сценариев</text>
+        <path d="M140 101 H172" class="ln-bad" marker-end="url(#e1-b)"/>
+        <path d="M140 209 H172" class="ln-bad" marker-end="url(#e1-b)"/>
+        <path d="M320 101 C344 101 340 140 362 140" class="ln-bad" marker-end="url(#e1-b)"/>
+        <path d="M320 209 C344 209 340 170 362 170" class="ln-bad" marker-end="url(#e1-b)"/>
+
+        <rect x="370" y="100" width="90" height="110" rx="10" class="box"/>
+        <text x="382" y="128" class="t-b">Человек</text>
+        <text x="382" y="152" class="t-s">шесть</text>
+        <text x="382" y="168" class="t-s">каналов,</text>
+        <text x="382" y="184" class="t-s">одно</text>
+        <text x="382" y="200" class="t-s">внимание</text>
+
+        <rect x="20" y="290" width="440" height="66" rx="10" class="b-bad"/>
+        <text x="34" y="316" class="t-b">Общего счётчика нет</text>
+        <text x="34" y="338" class="t-s t-i">{{heavy_promo|%0}} получают 3+ промо в сутки; у {{no_control|%0}} кампаний нет контроля</text>
+
+        <rect x="510" y="50" width="110" height="210" rx="10" class="box"/>
+        <text x="522" y="76" class="t-b">Команды</text>
+        <text x="522" y="100" class="t-s">вертикали</text>
+        <text x="522" y="118" class="t-s">и маркетинг</text>
+        <text x="522" y="150" class="t-s t-i">решают:</text>
+        <text x="522" y="168" class="t-s t-i">что сказать</text>
+        <text x="522" y="186" class="t-s t-i">и зачем</text>
+
+        <path d="M620 155 H652" class="ln" marker-end="url(#e1-i)"/>
+        <text x="636" y="145" text-anchor="middle" class="t-s">заявки</text>
+
+        <rect x="660" y="50" width="170" height="210" rx="10" class="b-prop"/>
+        <text x="674" y="76" class="t-b">Платформа</text>
+        <text x="674" y="104" class="t-s t-i">1. Допуск</text>
+        <text x="674" y="128" class="t-s t-i">2. Оценка</text>
+        <text x="674" y="152" class="t-s t-i">3. Выбор или молчание</text>
+        <text x="674" y="176" class="t-s t-i">4. Канал и момент</text>
+        <text x="674" y="212" class="t-s">решает: кому, что,</text>
+        <text x="674" y="228" class="t-s">когда и где</text>
+
+        <path d="M830 155 H852" class="ln" marker-end="url(#e1-i)"/>
+        <rect x="860" y="100" width="80" height="110" rx="10" class="box"/>
+        <text x="870" y="128" class="t-b">Человек</text>
+        <text x="870" y="152" class="t-s">одно</text>
+        <text x="870" y="168" class="t-s">решение</text>
+        <text x="870" y="184" class="t-s">за раз</text>
+
+        <rect x="510" y="290" width="430" height="66" rx="10" class="b-prop"/>
+        <text x="524" y="316" class="t-b">Общий журнал и контрольные группы</text>
+        <text x="524" y="338" class="t-s t-i">прирост виден командам и совету; правила учатся на замере</text>
+        <path d="M900 210 V282" class="ln-prop" marker-end="url(#e1-p)"/>
+        <path d="M565 290 V268" class="ln-prop" marker-end="url(#e1-p)"/>
+      </svg>
+    </div>
+    <figcaption>Красным слева — то, что сегодня идёт без общего решения. Розовым справа — то, что добавляет платформа. Агенты, агентства и застройщики на схеме не показаны: они вне платформы.</figcaption>
+  </figure>
+</article>
