@@ -2,81 +2,130 @@
 <article class="scheme" id="s-b3">
   <header>
     <p class="code"><span>Схема Б3</span><span>Вопрос 1.2 · канал, момент и места внутри продукта</span></p>
-    <h2>Канал выбирается по тому, где человек сейчас, а момент — по срочности</h2>
-    <p class="sub">Прерывать человека стоит только срочным. Если он уже в продукте, прерывать незачем: сообщение показывается на месте.</p>
+    <h2>Канал выбирается по тому, где человек сейчас, а момент — по срочности и тихим часам</h2>
+    <p class="sub">Прерывать человека стоит только срочным. Если он уже в продукте, прерывать незачем: сообщение показывается на месте. Ночью срочное ждёт утра, но не бесконечно.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 300" role="img" aria-label="Выбор канала: если человек сейчас в продукте, сообщение показывается на месте внутри продукта. Если нет и сообщение срочное, а пуш разрешён, уходит пуш. Иначе письмо или подборка в привычный час.">
+      <svg viewBox="0 0 960 500" role="img" aria-label="Выбор канала после разрешения шлюза. Если человек сейчас в продукте, сообщение показывается на месте внутри продукта. Если нет и сообщение срочное, а пуш разрешён, проверяются тихие часы региона поиска: ночью сообщение откладывается до утра с ограниченным сроком жизни, днём уходит пуш. Если пуш не доставлен, каскад переводит сообщение в письмо. Несрочное идёт письмом в привычный час. SMS только пилот. Редко заходящим срок жизни семь дней.">
         <defs>
           <marker id="b3-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
         </defs>
-        <rect x="20" y="110" width="170" height="76" rx="10" class="box"/>
-        <text x="34" y="142" class="t-b">Сообщение</text>
-        <text x="34" y="162" class="t-s">победило в выборе</text>
-        <path d="M190 148 H222" class="ln" marker-end="url(#b3-i)"/>
+        <rect x="20" y="200" width="130" height="70" rx="10" class="box"/>
+        <text x="34" y="224" class="t-b">Сообщение</text>
+        <text x="34" y="244" class="t-s">разрешено</text>
+        <text x="34" y="259" class="t-s">шлюзом</text>
+        <path d="M150 235 H172" class="ln" marker-end="url(#b3-i)"/>
 
-        <rect x="230" y="104" width="210" height="88" rx="44" class="b-prop"/>
-        <text x="335" y="144" text-anchor="middle" class="t-b">Человек сейчас</text>
-        <text x="335" y="162" text-anchor="middle" class="t-b">в продукте?</text>
+        <rect x="180" y="190" width="170" height="90" rx="45" class="b-prop"/>
+        <text x="265" y="231" text-anchor="middle" class="t-b">Человек сейчас</text>
+        <text x="265" y="249" text-anchor="middle" class="t-b">в продукте?</text>
 
-        <path d="M440 132 C470 132 470 62 502 62" class="ln" marker-end="url(#b3-i)"/>
-        <text x="452" y="84" class="t-s t-i">да</text>
-        <rect x="510" y="24" width="430" height="76" rx="10" class="box"/>
-        <text x="524" y="52" class="t-b">Место внутри продукта</text>
-        <text x="524" y="72" class="t-s">уведомление, баннер, placement, stories</text>
-        <text x="524" y="88" class="t-s">решается в момент открытия экрана</text>
+        <path d="M265 190 V52 H372" class="ln" marker-end="url(#b3-i)"/>
+        <text x="273" y="150" class="t-s t-i">да</text>
+        <rect x="380" y="20" width="560" height="64" rx="10" class="box"/>
+        <text x="396" y="44" class="t-b">Место внутри продукта</text>
+        <text x="396" y="62" class="t-s">уведомление, баннер, placement, stories; решается, когда открыт экран</text>
+        <text x="396" y="77" class="t-s">показ записывается в журнал как {{b1_placement_weight|num1}} контакта</text>
 
-        <path d="M440 164 C470 164 470 216 502 216" class="ln" marker-end="url(#b3-i)"/>
-        <text x="452" y="206" class="t-s t-i">нет</text>
-        <rect x="510" y="172" width="200" height="88" rx="44" class="b-prop"/>
-        <text x="610" y="212" text-anchor="middle" class="t-b">Срочное,</text>
-        <text x="610" y="230" text-anchor="middle" class="t-b">и пуш разрешён?</text>
+        <path d="M350 235 H382" class="ln" marker-end="url(#b3-i)"/>
+        <text x="354" y="227" class="t-s t-i">нет</text>
+        <rect x="390" y="190" width="170" height="90" rx="45" class="b-prop"/>
+        <text x="475" y="231" text-anchor="middle" class="t-b">Срочное, и пуш</text>
+        <text x="475" y="249" text-anchor="middle" class="t-b">разрешён?</text>
 
-        <path d="M710 200 C730 200 730 160 752 160" class="ln" marker-end="url(#b3-i)"/>
-        <text x="716" y="172" class="t-s t-i">да</text>
-        <rect x="760" y="126" width="180" height="66" rx="10" class="box"/>
-        <text x="774" y="152" class="t-b">Пуш</text>
-        <text x="774" y="172" class="t-s">сразу; ночью ждёт утра</text>
+        <path d="M560 235 H592" class="ln" marker-end="url(#b3-i)"/>
+        <text x="564" y="227" class="t-s t-i">да</text>
+        <rect x="600" y="190" width="170" height="90" rx="45" class="b-prop"/>
+        <text x="685" y="231" text-anchor="middle" class="t-b">Сейчас тихие часы</text>
+        <text x="685" y="249" text-anchor="middle" class="t-b">региона поиска?</text>
 
-        <path d="M710 232 C730 232 730 252 752 252" class="ln" marker-end="url(#b3-i)"/>
-        <text x="716" y="262" class="t-s t-i">нет</text>
-        <rect x="760" y="218" width="180" height="66" rx="10" class="box"/>
-        <text x="774" y="244" class="t-b">Письмо или подборка</text>
-        <text x="774" y="264" class="t-s">в привычный час</text>
+        <path d="M770 235 H802" class="ln" marker-end="url(#b3-i)"/>
+        <text x="774" y="227" class="t-s t-i">нет</text>
+        <rect x="810" y="200" width="130" height="70" rx="10" class="box"/>
+        <text x="826" y="228" class="t-b">Пуш</text>
+        <text x="826" y="248" class="t-s">сразу</text>
+
+        <path d="M685 190 V172" class="ln" marker-end="url(#b3-i)"/>
+        <text x="694" y="184" class="t-s t-i">да</text>
+        <rect x="590" y="100" width="210" height="70" rx="10" class="b-prop"/>
+        <text x="606" y="124" class="t-b">Отложить до утра</text>
+        <text x="606" y="143" class="t-s">срок жизни {{b1_ttl_hours|num0}} ч;</text>
+        <text x="606" y="159" class="t-s">не дождалось — отказ</text>
+        <path d="M800 135 H875 V198" class="ln" marker-end="url(#b3-i)"/>
+        <text x="808" y="127" class="t-s t-i">утром</text>
+
+        <path d="M475 280 V338" class="ln" marker-end="url(#b3-i)"/>
+        <text x="483" y="312" class="t-s t-i">нет</text>
+        <path d="M875 270 V338" class="ln" marker-end="url(#b3-i)"/>
+        <text x="867" y="304" text-anchor="end" class="t-s t-i">пуш не доставлен:</text>
+        <text x="867" y="320" text-anchor="end" class="t-s t-i">каскад в письмо</text>
+        <rect x="380" y="340" width="560" height="60" rx="10" class="box"/>
+        <text x="396" y="364" class="t-b">Письмо или подборка в привычный час</text>
+        <text x="396" y="384" class="t-s">час, когда человек обычно заходит; срочным не называем и ночью не шлём</text>
+
+        <text x="20" y="428" class="t-h">ПРАВИЛА К КАНАЛАМ</text>
+        <rect x="20" y="438" width="450" height="56" rx="10" class="b-assume"/>
+        <text x="36" y="460" class="t-b">SMS — только пилот</text>
+        <text x="36" y="478" class="t-s">малая доля; цена и согласия не проверены; в каскад не входит</text>
+        <rect x="490" y="438" width="450" height="56" rx="10" class="b-prop"/>
+        <text x="506" y="460" class="t-b">Окно для редко заходящих: {{b1_window_rare_days|num0}} дней</text>
+        <text x="506" y="478" class="t-s">несрочное живёт сутки у заходящих ежедневно, {{b1_window_rare_days|num0}} дней у редких</text>
       </svg>
     </div>
-    <figcaption>Срочное — то, что быстро теряет ценность: новый объект по сохранённому поиску, заметное изменение цены. Скорость в недвижимости стоит денег: ЦИАН сам продаёт «Ранний доступ» к контактам в первые {{early_access_hours|num0}}–{{early_access_hours_msk|num0}} часов после публикации.</figcaption>
+    <figcaption>Срочное — то, что быстро теряет ценность: новый объект по сохранённому поиску, заметное изменение цены. Скорость в недвижимости стоит денег: ЦИАН сам продаёт «Ранний доступ» к контактам в первые {{early_access_hours|num0}}–{{early_access_hours_msk|num0}} часов после публикации. Тихие часы считаются по поясу региона поиска, а не по поясу устройства.</figcaption>
   </figure>
 
   <div class="tablewrap">
     <table>
       <thead><tr><th>Место внутри продукта</th><th>Когда решается</th><th>Сколько победителей</th><th>Правило</th></tr></thead>
       <tbody>
-        <tr><td>Центр уведомлений</td><td>Когда сообщение создано</td><td>Лента: все прошедшие допуск</td><td>Сюда попадает всё, что не ушло пушем. Никого не прерывает</td></tr>
-        <tr><td>Баннер на главной</td><td>Когда человек открыл главную</td><td>Один</td><td>Лучшая оценка. Одно и то же не показывается больше трёх раз</td></tr>
+        <tr><td>Центр уведомлений</td><td>Когда сообщение создано</td><td>Лента: все прошедшие шлюз</td><td>Сюда попадает всё, что не ушло пушем. Никого не прерывает</td></tr>
+        <tr><td>Баннер на главной</td><td>Когда человек открыл главную</td><td>Один</td><td>Первый в очереди: класс, затем свежесть события. Одно и то же не показывается больше {{b1_banner_repeat|num0}} раз</td></tr>
         <tr><td>Placement в выдаче и в карточке</td><td>Когда открыта выдача или карточка</td><td>Один на место</td><td>Только то, что относится к этому поиску или объекту</td></tr>
-        <tr><td>Stories</td><td>Раз в сутки</td><td>Несколько, по порядку оценки</td><td>Подборки и новости. Срочного здесь нет</td></tr>
-        <tr><td>Платные места застройщиков</td><td>—</td><td>—</td><td>Отдельный товар, вне платформы. Показы записываются в общий счётчик давления</td></tr>
+        <tr><td>Stories</td><td>Раз в сутки</td><td>Несколько, по очереди</td><td>Подборки и новости. Срочного здесь нет</td></tr>
+        <tr><td>Платные места застройщиков</td><td>—</td><td>—</td><td>Проданный товар, вне платформы: считаются в давлении, но не режутся</td></tr>
       </tbody>
     </table>
   </div>
 
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Купер</span> · каскад: SMS, через 2 дня push, ещё через сутки email; тест «push вместо SMS» дешевле, но конверсия в заказ ниже, поэтому его не масштабировали · 04.2026 · <span class="src">В</span> · <span class="fit mid">применимо: каскад есть; у нас первым идёт пуш, SMS только пилот</span> · <a href="https://mindbox.ru/journal/cases/kuper/" rel="noopener">источник</a></li>
+    <li><span class="who">LinkedIn (патент)</span> · уведомление уходит, если прирост вероятности визита выше порога; окно 7 дней для недельных активных, 1 день для дневных; при отказе сообщение возвращается в очередь · 01.2026 · <span class="src">Т</span> · <span class="fit hi">применимо: окно под редко заходящих, как наши ищущие</span> · <a href="https://patents.google.com/patent/US12536414B2/en" rel="noopener">источник</a></li>
+    <li><span class="who">Papa Johns UK</span> · центральные лимиты расхода SMS и автоматические тихие часы; −72% жалоб на рассылки (самоотчёт вендора) · 10.2024 · <span class="src">В</span> · <span class="fit mid">применимо: тихие часы как правило шлюза, цифра слабая</span> · <a href="https://www.braze.com/customers/papa-johns-uk" rel="noopener">источник</a></li>
+    <li><span class="who">Rightmove</span> · повторное оповещение «сразу», если цена снижена на 2% и больше · 05.2026 · <span class="src">П</span> · <span class="fit hi">применимо: площадка недвижимости, порог заметного изменения цены</span> · <a href="https://customerfaq.rightmove.co.uk/support/solutions/articles/7000055339-i-want-one-of-my-properties-to-go-back-out-in-the-property-alerts" rel="noopener">источник</a></li>
+    <li><span class="who">Kcell</span> · полноэкранный баннер в приложении с гибкой контактной политикой дал в среднем ×5 конверсии против других каналов · 03.2025 · <span class="src">П</span> · <span class="fit mid">применимо: место внутри продукта; оператор связи, не площадка</span> · <a href="https://www.osp.ru/articles/2025/01/13059269" rel="noopener">источник</a></li>
+  </ul></div>
+
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li>Канал: в продукте — место внутри; не в продукте и срочно — пуш; иначе письмо.</li>
-      <li>Момент: срочное сразу, кроме тихих часов; несрочное — в час, когда человек обычно заходит.</li>
+      <li>Канал: в продукте — место внутри; не в продукте и срочно — пуш; иначе письмо. Если пуш не доставлен, каскад переводит сообщение в письмо. SMS — пилот.</li>
+      <li>Момент: срочное сразу, кроме тихих часов региона поиска; ночью оно ждёт утра с ограниченным сроком жизни, а не дождалось — отказ. Несрочное — в час, когда человек обычно заходит.</li>
+      <li>Редко заходящим окно ожидания шире: {{b1_window_rare_days|num0}} дней вместо суток.</li>
       <li>Заказанное человеком идёт с той частотой, которую он выбрал сам.</li>
       <li>Об изменении цены пишем, если оно заметное: от {{price_change_min|%0}}.</li>
     </ul>
   </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Каскад: пуш, потом письмо</td><td>SMS первым</td><td>Письмо читают реже и позже; зато нет цены SMS и запроса согласий</td><td>Купер: каскад SMS, push, email (R2-0050)</td></tr>
+        <tr><td>Тихие часы по поясу региона поиска</td><td>По поясу устройства</td><td>Человек в поездке получит срочное, когда у него день, а в регионе поиска ночь, или промолчим, когда ему удобно</td><td>Papa Johns UK: автоматические тихие часы (R2-0081)</td></tr>
+        <tr><td>Отложить с ограниченным сроком жизни</td><td>Отложить без срока</td><td>Часть срочных сообщений не дойдёт: объявление успеет устареть. Скорость стоит денег, ЦИАН продаёт «Ранний доступ» за {{early_access_min|num0}}–{{early_access_max|num0}} ₽</td><td>LinkedIn: окно решения и возврат в очередь при отказе (R3-0033)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
       <li><span class="mark cian">ЦИАН, открытые данные</span> «Ранний доступ» за {{early_access_min|num0}}–{{early_access_max|num0}} рублей. Частоту оповещений по сохранённому поиску человек задаёт сам. Время отправки пушей подбирает алгоритм.</li>
-      <li><span class="mark market">Практика рынка</span> Rightmove шлёт повторно при снижении цены от 2%, Zillow от 1000 долларов. Яндекс Недвижимость и Rightmove дают выбрать частоту: сразу, раз в день, раз в три дня. Баннер на весь экран в приложении дал Kcell в пять раз больше конверсии, чем другие каналы. Каталог мест с постоянными номерами: Braze.</li>
-      <li><span class="mark assume">Допущение</span> Список мест и их лимиты: как устроены поверхности ЦИАН сейчас, неизвестно.</li>
+      <li><span class="mark market">Практика рынка</span> Rightmove шлёт повторно при снижении цены от 2%, Zillow от 1000 долларов. Яндекс Недвижимость и Rightmove дают выбрать частоту: сразу, раз в день, раз в три дня. Каталог мест с постоянными номерами: Braze.</li>
+      <li><span class="mark prop">Предложение</span> Тихие часы по поясу региона поиска, отложить с ограниченным сроком жизни, каскад пуш и письмо, SMS как пилот.</li>
+      <li><span class="mark assume">Допущение</span> Часы {{b1_quiet_from|num0}}:00–{{b1_quiet_to|num0}}:00, срок жизни {{b1_ttl_hours|num0}} ч, список мест и их лимиты: как устроены поверхности ЦИАН сейчас, неизвестно.</li>
     </ul>
   </div>
 </article>
