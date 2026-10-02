@@ -2,92 +2,156 @@
 <article class="scheme" id="s-d2">
   <header>
     <p class="code"><span>Схема Д2</span><span class="core">★ ядро</span><span>Вопрос 4.2 · результаты через 3 и 6 месяцев</span></p>
-    <h2>Через три месяца — порядок и замер, через шесть — первые доказанные результаты</h2>
-    <p class="sub">Цели записаны в тех же девяти цифрах, что и проблема. Ни одну нельзя выполнить простым сокращением отправок: рядом стоит требование не потерять добавленные действия.</p>
+    <h2>Три месяца — процесс, шесть — первый замер, двенадцать — деньги</h2>
+    <p class="sub">Первые 90 дней разложены по неделям. Через 3 месяца мы обещаем порядок и контроль, через 6 — прирост действий против контрольной группы, через 12 — деньги. У других срок часто растягивался вдвое и больше.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 380" role="img" aria-label="План по месяцам. Опись сценариев — первый месяц. Журнал и лимит — первые два месяца. Общая контрольная группа запускается в первый месяц, первый результат к шестому. Пилот двух вертикалей — со второго по третий месяц. Перенос остальных сценариев — с четвёртого месяца и дальше шестого. Спор за места внутри продукта — с четвёртого. Личные модели — с пятого.">
+      <svg viewBox="0 0 960 660" role="img" aria-label="Первые 90 дней по неделям и цели на 3, 6 и 12 месяцев. Недели 1–3: интервью, карта точек отправки, замер достижимых по номеру, старт прогрева почты; неделя 3: письмо CPO о мандате и решение по MVP. Неделя 4: контрольная группа у всех отправщиков, проверка без воздействия четыре недели. Неделя 6: выбор своего слоя или вендора. Неделя 8: ключи провайдеров за шлюзом. Месяц 3: одна вертикаль на полном шлюзе. Месяц 6: первый замер, три-четыре вертикали. Месяц 12: деньги. Для сравнения сроки Gojek, Финуслуг, Газпромбанка и Магнит Доставки.">
+
+        <text x="20" y="30" class="t-h">ПЕРВЫЕ 90 ДНЕЙ · НЕДЕЛИ</text>
         <g class="grid">
-          <path d="M220 40 V350 M340 40 V350 M460 40 V350 M580 40 V350 M700 40 V350 M820 40 V350 M940 40 V350"/>
+          <path d="M260 38 V272 M312 38 V272 M364 38 V272 M416 38 V272 M468 38 V272 M520 38 V272 M572 38 V272 M624 38 V272 M676 38 V272 M728 38 V272 M780 38 V272 M832 38 V272 M884 38 V272 M936 38 V272"/>
         </g>
-        <path d="M580 30 V350" class="ln-task"/>
-        <path d="M940 30 V350" class="ln-task"/>
         <g text-anchor="middle">
-          <text x="280" y="30" class="t-s">месяц 1</text><text x="400" y="30" class="t-s">2</text><text x="520" y="30" class="t-s">3</text>
-          <text x="640" y="30" class="t-s">4</text><text x="760" y="30" class="t-s">5</text><text x="880" y="30" class="t-s">6</text>
+          <text x="286" y="30" class="t-s">1</text><text x="338" y="30" class="t-s">2</text><text x="390" y="30" class="t-s">3</text><text x="442" y="30" class="t-s">4</text><text x="494" y="30" class="t-s">5</text><text x="546" y="30" class="t-s">6</text><text x="598" y="30" class="t-s">7</text><text x="650" y="30" class="t-s">8</text><text x="702" y="30" class="t-s">9</text><text x="754" y="30" class="t-s">10</text><text x="806" y="30" class="t-s">11</text><text x="858" y="30" class="t-s">12</text><text x="910" y="30" class="t-s">13</text>
         </g>
-        <text x="576" y="368" text-anchor="end" class="t-b f-task">3 месяца</text>
-        <text x="936" y="368" text-anchor="end" class="t-b f-task">6 месяцев</text>
+        <text x="20" y="61" class="t-b">Опись и замер</text>
+        <text x="20" y="95" class="t-b">Прогрев почты</text>
+        <text x="20" y="129" class="t-b">Мандат и решение по MVP</text>
+        <text x="20" y="163" class="t-b">Контрольная группа</text>
+        <text x="20" y="197" class="t-b">Выбор: свой слой или вендор</text>
+        <text x="20" y="231" class="t-b">Шлюз и ключи провайдеров</text>
+        <text x="20" y="265" class="t-b">Первая вертикаль на шлюзе</text>
+        <rect x="260" y="46" width="156" height="20" rx="5" class="fill-task"/>
+        <text x="426" y="61" class="t-s t-i">{{b4_interviews_lo|num0}}–{{b4_interviews_hi|num0}} интервью, карта точек отправки, доля достижимых по номеру</text>
+        <rect x="260" y="80" width="416" height="20" rx="5" class="fill-task"/>
+        <rect x="676" y="80" width="208" height="20" rx="5" class="fill-muted"/>
+        <text x="270" y="95" class="t-s t-on">второй провайдер, прогрев {{b4_warm_lo|num0}}–{{b4_warm_hi|num0}} недель</text>
+        <text x="686" y="95" class="t-s t-i">до конца прогрева</text>
+        <circle cx="416" cy="124" r="9" class="b-prop"/>
+        <text x="434" y="129" class="t-s t-i">письмо CPO: мандат узкий, цели направлений не меняются</text>
+        <rect x="416" y="148" width="208" height="20" rx="5" class="fill-task"/>
+        <rect x="624" y="148" width="312" height="20" rx="5" class="fill-muted"/>
+        <text x="426" y="163" class="t-s t-on">проверка без воздействия</text>
+        <text x="634" y="163" class="t-s t-i">копит данные для замера</text>
+        <circle cx="572" cy="192" r="9" class="b-prop"/>
+        <text x="590" y="197" class="t-s t-i">два предложения, решение</text>
+        <rect x="416" y="216" width="260" height="20" rx="5" class="fill-task"/>
+        <text x="426" y="231" class="t-s t-on">сборка шлюза</text>
+        <circle cx="676" cy="226" r="9" class="b-prop"/>
+        <text x="694" y="231" class="t-s t-i">ключи провайдеров за шлюзом</text>
+        <rect x="676" y="250" width="260" height="20" rx="5" class="fill-task"/>
+        <text x="686" y="265" class="t-s t-on">полный шлюз</text>
+        <path d="M936 36 V276" class="ln-task"/>
+        <text x="932" y="292" text-anchor="end" class="t-b f-task">месяц {{b4_t3_months|num0}}: одна вертикаль на полном шлюзе</text>
 
-        <text x="20" y="68" class="t-b">Опись сценариев</text>
-        <rect x="220" y="50" width="120" height="28" rx="6" class="fill-task"/>
+        <text x="20" y="324" class="t-h">ЧТО МЫ МОЖЕМ ДОКАЗАТЬ</text>
+        <rect x="20" y="334" width="290" height="140" rx="10" class="b-prop"/>
+        <text x="36" y="358" class="t-b">{{b4_t3_months|num0}} месяца: процесс, не деньги</text>
+        <text x="36" y="380" class="t-s t-i">карта точек отправки готова</text>
+        <text x="36" y="398" class="t-s t-i">доля отправок через шлюз растёт</text>
+        <text x="36" y="416" class="t-s t-i">в контроле промо не больше {{b4_ctrl_promo_max|%0}}</text>
+        <text x="36" y="434" class="t-s t-i">3+ промо в сутки: {{heavy_promo|%0}} → {{t3_heavy|%0}} и ниже</text>
+        <text x="36" y="452" class="t-s t-i">одна вертикаль на полном шлюзе</text>
+        <rect x="335" y="334" width="290" height="140" rx="10" class="b-prop"/>
+        <text x="351" y="358" class="t-b">{{b4_t6_months|num0}} месяцев: первый замер</text>
+        <text x="351" y="380" class="t-s t-i">прирост действий против контроля</text>
+        <text x="351" y="398" class="t-s t-i">перенос вертикали: не хуже старого</text>
+        <text x="351" y="416" class="t-s t-i">пути, допуск {{b2_tolerance|%0}}</text>
+        <text x="351" y="434" class="t-s t-i">отправок меньше на {{t6_sends_cut_min|%0}}–{{t6_sends_cut_max|%0}} без потерь</text>
+        <text x="351" y="452" class="t-s t-i">{{b4_verticals_lo|num0}}–{{b4_verticals_hi|num0}} вертикали на шлюзе</text>
+        <rect x="650" y="334" width="290" height="140" rx="10" class="b-prop"/>
+        <text x="666" y="358" class="t-b">{{b4_t12_months|num0}} месяцев: деньги</text>
+        <text x="666" y="380" class="t-s t-i">платные звонки против контроля,</text>
+        <text x="666" y="398" class="t-s t-i">за год заметно от {{b2_mde_calls_y|%1}}</text>
+        <text x="666" y="416" class="t-s t-i">прирост не ниже порога окупаемости</text>
+        <text x="666" y="434" class="t-s t-i">{{b4_payback_lo|%1}}–{{b4_payback_hi|%1}} сверх +{{target_actions_growth|%0}}</text>
+        <text x="666" y="452" class="t-s t-i">решение о втором годе</text>
 
-        <text x="20" y="108" class="t-b">Журнал и общий лимит</text>
-        <rect x="220" y="90" width="240" height="28" rx="6" class="fill-task"/>
-        <rect x="460" y="90" width="480" height="28" rx="6" class="fill-muted"/>
-        <text x="472" y="109" class="t-s t-i">работает</text>
-
-        <text x="20" y="148" class="t-b">Общая контрольная группа</text>
-        <rect x="280" y="130" width="660" height="28" rx="6" class="fill-muted"/>
-        <rect x="280" y="130" width="60" height="28" rx="6" class="fill-task"/>
-        <text x="352" y="149" class="t-s t-i">копит данные</text>
-        <circle cx="880" cy="144" r="8" class="fill-task"/>
-        <text x="866" y="149" text-anchor="end" class="t-s t-i">первый результат</text>
-
-        <text x="20" y="188" class="t-b">Пилот: две вертикали</text>
-        <rect x="340" y="170" width="240" height="28" rx="6" class="fill-task"/>
-
-        <text x="20" y="228" class="t-b">Перенос остальных</text>
-        <rect x="580" y="210" width="360" height="28" rx="6" class="fill-task"/>
-        <text x="592" y="229" class="t-s t-on">до 9–12 месяца</text>
-
-        <text x="20" y="268" class="t-b">Места внутри продукта</text>
-        <rect x="220" y="250" width="360" height="28" rx="6" class="fill-muted"/>
-        <text x="232" y="269" class="t-s t-i">только считаются</text>
-        <rect x="580" y="250" width="360" height="28" rx="6" class="fill-task"/>
-        <text x="592" y="269" class="t-s t-on">общий выбор победителя</text>
-
-        <text x="20" y="308" class="t-b">Личные модели</text>
-        <rect x="700" y="290" width="240" height="28" rx="6" class="fill-task"/>
-        <text x="712" y="309" class="t-s t-on">первые две</text>
+        <text x="20" y="500" class="t-h">СРОКИ, МЕСЯЦЫ ОТ СТАРТА</text>
+        <g class="grid"><path d="M416 508 V640 M572 508 V640 M728 508 V640 M884 508 V640"/></g>
+        <g text-anchor="middle"><text x="260" y="500" class="t-s">0</text><text x="416" y="500" class="t-s">3</text><text x="572" y="500" class="t-s">6</text><text x="728" y="500" class="t-s">9</text><text x="884" y="500" class="t-s">12</text></g>
+        <text x="20" y="526" class="t-b">ЦИАН, наш план</text>
+        <text x="20" y="552" class="t-b">Gojek</text>
+        <text x="20" y="578" class="t-b">Финуслуги</text>
+        <text x="20" y="604" class="t-b">Газпромбанк</text>
+        <text x="20" y="630" class="t-b">Магнит Доставка</text>
+        <rect x="260" y="512" width="312" height="18" rx="4" class="b-prop"/>
+        <text x="268" y="525" class="t-s t-i">1 вертикаль к 3, {{b4_verticals_lo|num0}}–{{b4_verticals_hi|num0}} к 6</text>
+        <rect x="572" y="512" width="312" height="18" rx="4" class="b-assume"/>
+        <text x="580" y="525" class="t-s t-i">большинство к {{b4_adopt_lo|num0}}–{{b4_adopt_hi|num0}}, допущение</text>
+        <rect x="260" y="538" width="312" height="18" rx="4" class="b-market"/>
+        <text x="268" y="551" class="t-s t-i">система за {{b4_gojek_months|num0}}, результаты через 3–6</text>
+        <rect x="260" y="564" width="208" height="18" rx="4" class="b-market"/>
+        <text x="268" y="577" class="t-s t-i">MVP {{b4_fin_mvp|num0}}</text>
+        <rect x="468" y="564" width="208" height="18" rx="4" class="soft"/>
+        <text x="476" y="577" class="t-s t-i">целевое решение {{b4_fin_target|num0}}</text>
+        <rect x="260" y="590" width="260" height="18" rx="4" class="b-market"/>
+        <text x="268" y="603" class="t-s t-i">MVP около {{b4_gpb_mvp|num0}}</text>
+        <text x="528" y="603" class="t-s t-i">{{b4_gpb_share|%0}} кампаний перенесено к осени 2026</text>
+        <rect x="260" y="616" width="676" height="18" rx="4" class="b-bad"/>
+        <rect x="260" y="616" width="208" height="18" rx="4" class="fill-muted"/>
+        <text x="268" y="629" class="t-s t-i">план {{b4_mag_plan|num0}}</text>
+        <text x="476" y="629" class="t-s t-i">факт {{b4_mag_fact|num0}} месяцев</text>
       </svg>
     </div>
-    <figcaption>Синим — активная работа, серым — то, что уже работает или копит данные. Сроки срываются: в чужих проектах четыре месяца по плану превращались в год. Поэтому первая версия узкая, а перенос сценариев растянут.</figcaption>
+    <figcaption>Синим — работа, серым — то, что уже идёт или копит данные, розовым — решения и цели. Внизу для сравнения: оранжевым — сроки других компаний, красным — срыв срока.</figcaption>
   </figure>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th>Показатель</th><th>Сейчас</th><th>3 месяца</th><th>6 месяцев</th></tr></thead>
+      <thead><tr><th>Показатель</th><th>Сейчас</th><th>3 месяца</th><th>6 месяцев</th><th>12 месяцев</th></tr></thead>
       <tbody>
-        <tr><td>Сценарии в описи</td><td>неизвестно</td><td>все</td><td>все</td></tr>
-        <tr><td>Общий журнал и лимит на точке отправки, пуш и почта</td><td>нет</td><td>работает</td><td>работает</td></tr>
-        <tr><td>Сценарии через общий вход</td><td>{{unified|%0}} <span class="mark task">Из задания</span></td><td>{{t3_unified|%0}}</td><td>{{t6_unified|%0}}; остальное к 9–12 месяцу</td></tr>
-        <tr><td>Кампании с корректным контролем</td><td>{{with_control|%0}} <span class="mark task">Из задания</span></td><td>{{t3_control|%0}}</td><td>{{t6_control|%0}}</td></tr>
-        <tr><td>Получатели с 3+ промо в сутки</td><td>{{heavy_promo|%0}} <span class="mark task">Из задания</span></td><td>{{t3_heavy|%0}}</td><td>меньше {{t6_heavy|%0}}</td></tr>
-        <tr><td>Отписка от пуша на отправку</td><td>{{push_optout|%}} <span class="mark task">Из задания</span></td><td>не хуже</td><td>{{t6_optout|%}}</td></tr>
-        <tr><td>Отправки в неделю</td><td>{{sends_week|млн}} млн <span class="mark task">Из задания</span></td><td>измерены по классам</td><td>на {{t6_sends_cut_min|%0}}–{{t6_sends_cut_max|%0}} меньше</td></tr>
-        <tr><td>Добавленные целевые действия</td><td>не измеряются</td><td>снят базовый уровень</td><td>первый результат; не ниже базового уровня</td></tr>
-        <tr><td>Время запуска сценария</td><td>неизвестно</td><td>измерено</td><td>{{t6_launch_days|num0}} рабочих дней</td></tr>
+        <tr><td>Люди с 3+ промо в сутки (по журналу всех отправителей)</td><td>{{heavy_promo|%0}} <span class="mark task">Из задания</span></td><td>{{t3_heavy|%0}} и ниже</td><td>ниже {{t6_heavy|%0}}</td><td>держим</td></tr>
+        <tr><td>Контрольная группа</td><td>нет общей</td><td>соблюдается у всех отправщиков; в контроле промо не больше {{b4_ctrl_promo_max|%0}}; проверка без воздействия прошла</td><td>постоянная {{b2_holdout_perm|%0}} копит данные для оценки затухания</td><td>решение по затуханию</td></tr>
+        <tr><td>Доля отправок через шлюз</td><td>{{unified|%0}} сценариев через единый инструмент <span class="mark task">Из задания</span></td><td>карта точек отправки; одна вертикаль на полном шлюзе</td><td>{{b4_verticals_lo|num0}}–{{b4_verticals_hi|num0}} вертикали на шлюзе</td><td>большинство к {{b4_adopt_lo|num0}}–{{b4_adopt_hi|num0}} месяцу</td></tr>
+        <tr><td>Отправки в неделю</td><td>{{sends_week|млн0}} млн <span class="mark task">Из задания</span></td><td>измерены по классам</td><td>на {{t6_sends_cut_min|%0}}–{{t6_sends_cut_max|%0}} меньше без потерь целевых действий</td><td>—</td></tr>
+        <tr><td>Тест переноса первой вертикали</td><td>нет</td><td>запущен: {{b2_transfer_keep|%0}} остаются на старом пути</td><td>не хуже старого пути, допуск {{b2_tolerance|%0}}</td><td>—</td></tr>
+        <tr><td>Прирост целевых действий против контроля</td><td>не измеряется</td><td>снят базовый уровень</td><td>первый замер с интервалом; заметен от {{b2_mde_act_lo|%1}}–{{b2_mde_act_hi|%1}}</td><td>—</td></tr>
+        <tr><td>Платные звонки</td><td>не измеряется против контроля</td><td>не читаем: мощности нет</td><td>не читаем: заметно от {{b2_mde_calls_h|%0}}</td><td>заметно от {{b2_mde_calls_y|%1}}; решение о втором годе, если прирост не ниже порога окупаемости {{b4_payback_lo|%1}}–{{b4_payback_hi|%1}}</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="market">
+    <h3>Рынок</h3>
+    <ul>
+      <li><span class="who">Gojek</span> · опись, затем 6 месяцев на единую систему; за 3 месяца 32% пользователей стали получать на 10% меньше пушей · 09.2024 · <span class="src">П</span> · <span class="fit hi">применимо: много команд-отправителей, как в ЦИАН; самоотчёт</span> · <a href="https://medium.com/gojekengineering/behind-the-screens-the-evolution-of-gojeks-user-communications-63eb6f81acdb" rel="noopener">источник</a></li>
+      <li><span class="who">Финуслуги</span> · MVP и первые коммуникации за 4 месяца, целевое решение за 8 · 09.2024 · <span class="src">Т</span> · <span class="fit mid">применимо частично: финансы, массовые офферы</span> · <a href="https://www.cnews.ru/news/line/2024-09-18_finuslugi_v_partnerstve" rel="noopener">источник</a></li>
+      <li><span class="who">Газпромбанк</span> · MVP около 5 месяцев; к осени 2026 перенесено около 60% кампаний · 09.2026 · <span class="src">В</span> · <span class="fit mid">применимо частично: банк, перенос крупный</span> · <a href="https://www.osp.ru/articles/2026/0325/13060570" rel="noopener">источник</a></li>
+      <li><span class="who">Магнит Доставка</span> · план «максимум 4 месяца», первые механики с пушами через 13; причины: ошибки в ТЗ, цель не разбили на части · 06.2023 (вне окна) · <span class="src">В</span> · <span class="fit hi">применимо: российский e-commerce, тот же тип интеграции</span> · <a href="https://mindbox.ru/journal/cases/magnit-dostavka/" rel="noopener">источник</a></li>
+      <li><span class="who">Braze</span> · типовая цель интеграции 60–90 дней · 04.2026 · <span class="src">В</span> · <span class="fit lo">применимо слабо: готовая платформа, самоотчёт вендора</span> · <a href="https://www.braze.com/resources/articles/4-best-practices-braze-onboarding-integration" rel="noopener">источник</a></li>
+    </ul>
   </div>
 
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li><b>Через 3 месяца:</b> все сценарии описаны, общий журнал и лимит работают для пуша и почты, две вертикали и промо идут через общий вход, контрольная группа копит данные, базовые уровни сняты.</li>
-      <li><b>Через 6 месяцев:</b> первый результат общей контрольной группы; перегретая группа сократилась с {{heavy_promo|%0}} до менее чем {{t6_heavy|%0}}; отписка на пуш {{t6_optout|%}} вместо {{push_optout|%}}; отправок меньше, добавленных действий не меньше.</li>
-      <li>Парная цель обязательна: «меньше отписок» без «не меньше добавленных действий» выполняется простым отключением рассылок.</li>
-      <li><span class="mark prop">Предложение</span> Почему через 6 месяцев обещан замер, а не рубли. Общая группа в {{holdout_share|%0}} увидит прирост от {{mde_holdout5_base10%|%1}}, если базовый уровень действий 10%, и только от {{mde_holdout5_base2%|%1}}, если 2%. Обещание: добавленные действия не ниже базового уровня при отправках на {{t6_sends_cut_min|%0}}–{{t6_sends_cut_max|%0}} меньше. Выручку по звонкам застройщикам видно напрямую, потому что ЦИАН получает деньги за каждый звонок.</li>
+      <li><b>Через {{b4_t3_months|num0}} месяца — процесс, не деньги:</b> карта точек отправки; доля отправок через шлюз; контрольная группа соблюдается у всех отправщиков; проверка без воздействия прошла; люди с 3+ промо в сутки — с {{heavy_promo|%0}} до {{t3_heavy|%0}} и ниже; одна вертикаль на полном шлюзе.</li>
+      <li><b>Через {{b4_t6_months|num0}} месяцев — первый замер:</b> прирост действий всей системы против контроля с интервалом; тест переноса первой вертикали не хуже старого пути с допуском {{b2_tolerance|%0}}; отправок меньше на {{t6_sends_cut_min|%0}}–{{t6_sends_cut_max|%0}} без потерь действий; {{b4_verticals_lo|num0}}–{{b4_verticals_hi|num0}} вертикали на шлюзе.</li>
+      <li><b>Через {{b4_t12_months|num0}} месяцев — деньги:</b> платные звонки и решение о втором годе, если прирост не ниже порога окупаемости.</li>
+      <li><span class="mark prop">Предложение</span> Первые 90 дней цели директоров направлений не меняются. Письмо CPO о мандате — на {{b4_w_letter|num0}}-й неделе. Парная цель обязательна: меньше отправок, добавленные действия не меньше.</li>
     </ul>
   </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Цели на 3 месяца — процесс, деньги — через {{b4_t12_months|num0}}</td><td>Цели по выручке с первых месяцев</td><td>Бизнесу нечего показать кроме порядка и скорости; зато нет обещаний, которых не измерить</td><td>Klaviyo: результат контрольной группы через 3 месяца; вехи 3 и 6 месяцев в источниках — этапы проекта</td></tr>
+        <tr><td>Одна вертикаль к {{b4_t3_months|num0}} месяцам, большинство к {{b4_adopt_lo|num0}}–{{b4_adopt_hi|num0}}</td><td>Быстрый перенос всех сценариев</td><td>Часть команд долго живёт на старом пути; вертикали долго сравниваем</td><td>Магнит Доставка: план 4 месяца, факт 13; Газпромбанк: 60% кампаний через полгода после MVP</td></tr>
+        <tr><td>Контрольная группа со {{b4_w_holdout|num0}}-й недели, до шлюза</td><td>Запустить группу вместе со шлюзом</td><td>Группа заработает раньше шлюза и нужен список у всех отправщиков</td><td>Авито, Купер, Monzo держат общую группу отдельным слоем</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
-      <li><span class="mark task">Из задания</span> Исходные значения: 40%, 30% без контроля, 14%, 0,25%, 12 млн.</li>
-      <li><span class="mark market">Практика рынка</span> Целей на 3 и 6 месяцев не публикует никто. Есть сроки: 90 дней до запуска — цель вендора Braze; у российских банков первая версия заняла 4–5 месяцев (вендор). Gojek за 3 месяца: трети пользователей стало приходить на 10% меньше пушей. Магнит Доставка планировал 4 месяца, ушло больше года (вендор).</li>
-      <li><span class="mark assume">Допущение</span> Все целевые значения. Опора для снижения объёма слабая: Альфа-Банк −25% (самоотчёт), Compare the Market −25% (вендор), Gojek около −3%; все три — не недвижимость.</li>
+      <li><span class="mark task">Из задания</span> Исходные значения: {{unified|%0}} сценариев через единый инструмент, {{no_control|%0}} кампаний без контроля, {{heavy_promo|%0}} получателей с 3+ промо в сутки, {{sends_week|млн0}} млн отправок в неделю.</li>
+      <li><span class="mark market">Практика рынка</span> Целей на 3 и 6 месяцев крупные B2C не публикуют; в источниках есть сроки проектов. Gojek, Финуслуги, Газпромбанк, Магнит Доставка.</li>
+      <li><span class="mark assume">Допущение</span> Все целевые значения и недели. Порог окупаемости {{b4_payback_lo|%1}}–{{b4_payback_hi|%1}} сверх +{{target_actions_growth|%0}} — оценка при стоимости платформы {{b4_cost_lo|млн0}}–{{b4_cost_hi|млн0}} млн руб. в год.</li>
     </ul>
   </div>
 </article>
