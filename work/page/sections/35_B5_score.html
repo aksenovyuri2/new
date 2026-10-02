@@ -2,154 +2,205 @@
 <article class="scheme" id="s-b5">
   <header>
     <p class="code"><span>Схема Б5</span><span class="core">★ ядро</span><span>Вопрос 1.4 · эффект, уместность, усталость, риск</span></p>
-    <h2>Оценка сообщения: польза минус цена контакта</h2>
-    <p class="sub">Четыре множителя дают ожидаемую пользу, два вычитаемых — цену контакта для человека и для канала. В первой версии все числа берутся из таблиц, без личных моделей.</p>
+    <h2>Первая версия решает правилами и запрещает; оценка во второй версии добавит право промолчать</h2>
+    <p class="sub">На четыре вопроса — эффект, уместность, усталость, риск — первая версия отвечает контролем, классами, лимитом и исключениями. Баллов и формулы в ней нет: они появятся во второй версии, когда будет квартал данных.</p>
   </header>
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 250" role="img" aria-label="Оценка равна произведению шанса действия, добавленной доли, веса действия и уместности, минус штраф за усталость и минус риск отписки, умноженный на цену канала. Сообщение отправляется, если оценка выше порога.">
-        <text x="20" y="28" class="t-h">ПОЛЬЗА</text>
-        <text x="644" y="28" class="t-h">ЦЕНА КОНТАКТА</text>
-        <path d="M20 38 H596" class="ln-task"/>
-        <path d="M644 38 H940" class="ln-bad"/>
+      <svg viewBox="0 0 960 372" role="img" aria-label="Четыре вопроса и два ответа. Эффект: в первой версии меряет общая контрольная группа, во второй версии польза равна добавленному шансу действия на вес вертикали. Уместность: в первой версии аудиторию выбирает заказчик, шлюз проверяет класс и исключения; во второй версии состояние поиска и ответ продавца входят в оценку. Усталость: в первой версии общий лимит, во второй порог по сегменту активности. Риск: в первой версии исключения и защитные пороги, во второй бюджет отписок как ограничение.">
+        <defs>
+          <marker id="b5-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+        </defs>
+        <text x="20" y="28" class="t-h">ВОПРОС</text>
+        <text x="250" y="28" class="t-h">ПЕРВАЯ ВЕРСИЯ: ПРАВИЛА</text>
+        <text x="620" y="28" class="t-h">ВТОРАЯ ВЕРСИЯ: ОЦЕНКА</text>
 
-        <rect x="20" y="52" width="128" height="120" rx="10" class="box"/>
-        <text x="32" y="78" class="t-b">Шанс</text>
-        <text x="32" y="96" class="t-b">действия</text>
-        <text x="32" y="124" class="t-s">история по типу</text>
-        <text x="32" y="140" class="t-s">сообщения</text>
-        <text x="32" y="156" class="t-s">и состоянию поиска</text>
-        <text x="158" y="118" class="t-n">×</text>
+        <rect x="20" y="40" width="220" height="74" rx="10" class="box"/>
+        <text x="36" y="66" class="t-b">Эффект</text>
+        <text x="36" y="86" class="t-s">сколько действий добавило</text>
+        <text x="36" y="102" class="t-s">сообщение</text>
+        <rect x="250" y="40" width="340" height="74" rx="10" class="b-prop"/>
+        <text x="266" y="64" class="t-s t-i">не считаем по каждому сообщению;</text>
+        <text x="266" y="80" class="t-s t-i">прирост системы меряет общая</text>
+        <text x="266" y="96" class="t-s t-i">контрольная группа {{holdout_share|%0}}</text>
+        <path d="M590 77 H612" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="620" y="40" width="320" height="74" rx="10" class="soft"/>
+        <text x="636" y="64" class="t-s">польза = Δшанс × вес вертикали;</text>
+        <text x="636" y="80" class="t-s">у активных шанс ниже: на них</text>
+        <text x="636" y="96" class="t-s">{{already_active|%0}} действий</text>
 
-        <rect x="176" y="52" width="128" height="120" rx="10" class="b-task"/>
-        <text x="188" y="78" class="t-b">Добавленная</text>
-        <text x="188" y="96" class="t-b">доля</text>
-        <text x="188" y="124" class="t-s t-i">ниже для активных:</text>
-        <text x="188" y="140" class="t-s t-i">на них {{already_active|%0}} действий</text>
-        <text x="188" y="156" class="t-s">таблица, потом замер</text>
-        <text x="314" y="118" class="t-n">×</text>
+        <rect x="20" y="122" width="220" height="74" rx="10" class="box"/>
+        <text x="36" y="148" class="t-b">Уместность</text>
+        <text x="36" y="168" class="t-s">совпадает ли сообщение</text>
+        <text x="36" y="184" class="t-s">с поиском человека</text>
+        <rect x="250" y="122" width="340" height="74" rx="10" class="b-prop"/>
+        <text x="266" y="146" class="t-s t-i">аудиторию выбирает заказчик;</text>
+        <text x="266" y="162" class="t-s t-i">шлюз проверяет класс сообщения</text>
+        <text x="266" y="178" class="t-s t-i">и список исключений</text>
+        <path d="M590 159 H612" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="620" y="122" width="320" height="74" rx="10" class="soft"/>
+        <text x="636" y="146" class="t-s">состояние поиска и ответ продавца</text>
+        <text x="636" y="162" class="t-s">входят в оценку; несовпадение</text>
+        <text x="636" y="178" class="t-s">снижает пользу</text>
 
-        <rect x="332" y="52" width="128" height="120" rx="10" class="box"/>
-        <text x="344" y="78" class="t-b">Вес</text>
-        <text x="344" y="96" class="t-b">действия</text>
-        <text x="344" y="124" class="t-s">по вертикалям,</text>
-        <text x="344" y="140" class="t-s">утверждает совет,</text>
-        <text x="344" y="156" class="t-s">а не заказчик</text>
-        <text x="470" y="118" class="t-n">×</text>
+        <rect x="20" y="204" width="220" height="74" rx="10" class="box"/>
+        <text x="36" y="230" class="t-b">Усталость</text>
+        <text x="36" y="250" class="t-s">сколько контактов уже</text>
+        <text x="36" y="266" class="t-s">получил человек</text>
+        <rect x="250" y="204" width="340" height="74" rx="10" class="b-prop"/>
+        <text x="266" y="228" class="t-s t-i">общий лимит промо: {{limit_push_day|num0}} в сутки,</text>
+        <text x="266" y="244" class="t-s t-i">{{limit_week|num0}} в неделю; в счётчике и сервисное,</text>
+        <text x="266" y="260" class="t-s t-i">и подписки, и показы</text>
+        <path d="M590 241 H612" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="620" y="204" width="320" height="74" rx="10" class="soft"/>
+        <text x="636" y="228" class="t-s">порог по сегменту активности;</text>
+        <text x="636" y="244" class="t-s">объём держит регулятор,</text>
+        <text x="636" y="260" class="t-s">а не ручной потолок</text>
 
-        <rect x="488" y="52" width="108" height="120" rx="10" class="box"/>
-        <text x="500" y="78" class="t-b">Уместность</text>
-        <text x="500" y="124" class="t-s">совпадает</text>
-        <text x="500" y="140" class="t-s">с поиском:</text>
-        <text x="500" y="156" class="t-s">1 · 0,5 · 0</text>
-        <text x="610" y="118" class="t-n">−</text>
-
-        <rect x="644" y="52" width="128" height="120" rx="10" class="box"/>
-        <text x="656" y="78" class="t-b">Штраф</text>
-        <text x="656" y="96" class="t-b">за усталость</text>
-        <text x="656" y="124" class="t-s">ступени по числу</text>
-        <text x="656" y="140" class="t-s">контактов</text>
-        <text x="656" y="156" class="t-s">за 7 дней</text>
-        <text x="782" y="118" class="t-n">−</text>
-
-        <rect x="800" y="52" width="140" height="120" rx="10" class="b-task"/>
-        <text x="812" y="78" class="t-b">Риск отписки</text>
-        <text x="812" y="96" class="t-b">× цена канала</text>
-        <text x="812" y="124" class="t-s t-i">{{push_optout|%}} на пуш;</text>
-        <text x="812" y="140" class="t-s">цена — потерянные</text>
-        <text x="812" y="156" class="t-s">действия за год</text>
-
-        <text x="20" y="206" class="t-b">Оценка выше порога и лимит не исчерпан — отправляем. Иначе молчим.</text>
-        <text x="20" y="230" class="t-s">Синим отмечены два места, где в формулу прямо входят цифры задания.</text>
+        <rect x="20" y="286" width="220" height="74" rx="10" class="box"/>
+        <text x="36" y="312" class="t-b">Риск негатива</text>
+        <text x="36" y="332" class="t-s">отписка, жалоба, потеря</text>
+        <text x="36" y="348" class="t-s">канала для всех команд</text>
+        <rect x="250" y="286" width="340" height="74" rx="10" class="b-prop"/>
+        <text x="266" y="310" class="t-s t-i">исключения: отписки и жалобы;</text>
+        <text x="266" y="326" class="t-s t-i">защита: сценарий стоп, если отписка</text>
+        <text x="266" y="342" class="t-s t-i">на пуш выше {{guard_optout_stop|%3}} (норма {{push_optout|%2}})</text>
+        <path d="M590 323 H612" class="ln" marker-end="url(#b5-i)"/>
+        <rect x="620" y="286" width="320" height="74" rx="10" class="soft"/>
+        <text x="636" y="310" class="t-s">бюджет отписок как ограничение,</text>
+        <text x="636" y="326" class="t-s">а не штраф в формуле: сумма</text>
+        <text x="636" y="342" class="t-s">ожидаемых отписок не выше бюджета</text>
       </svg>
     </div>
-    <figcaption>Формула — целевое состояние. В первой версии за каждым числом стоит простая таблица: источники перечислены в блоках. Личные модели появятся, когда накопится журнал.</figcaption>
+    <figcaption>Розовым выделено то, что платформа делает в первой версии. Серым — вторая версия, месяцы {{b1_v2_from|num0}}–{{b1_v2_to|num0}}. Цену отписки в рублях не приводим: оценки расходятся в десятки раз, это пробел, который закрываем по когортам.</figcaption>
   </figure>
 
   <figure>
     <div class="draw">
-      <svg viewBox="0 0 960 440" role="img" aria-label="Пример: один человек, один вечер, пять претендентов. Оповещение о цене идёт пушем сразу. Подсказка про ипотеку набирает четырнадцать баллов, но пуш уже был, и она уходит на место в карточке квартиры. Новостройка набирает семь с четвертью, это ниже порога, она идёт в письмо-подборку. Розыгрыш получает отрицательную оценку и не отправляется. Аренда отсечена как неуместная.">
+      <svg viewBox="0 0 960 520" role="img" aria-label="Пример: один человек, один вечер, пять заявок. Подписка о цене из избранного идёт пушем сразу, вне лимита промо; во второй версии так же. Старт продаж первичного рынка идёт по быстрой полосе, пуш сразу; вторая версия оценит пользу. Подсказка про ипотеку получает слот дня, который занят, и откладывается на завтра; вторая версия сравнит её со стартом продаж по пользе. Розыгрыш маркетинга отказан: слоты заняты, срок жизни истекает сегодня; вторая версия отказала бы и при свободном слоте. Письмо с тем же событием о цене отказано как дубль.">
         <defs>
-          <marker id="b5-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="b5e-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
         </defs>
-        <text x="20" y="24" class="t-s t-i">Человек ищет двухкомнатную квартиру для покупки. Активный поиск, заходил сегодня, пуш включён, за неделю получил {{ex_contacts_7d|num0}} сообщений.</text>
-        <text x="20" y="54" class="t-h">ЗАЯВКА</text>
-        <text x="350" y="54" class="t-h">РАСЧЁТ: ПОЛЬЗА НА 1000 ПОКАЗОВ − УСТАЛОСТЬ − РИСК</text>
-        <text x="720" y="54" class="t-h">РЕШЕНИЕ</text>
+        <text x="20" y="24" class="t-s t-i">Человек ищет двухкомнатную квартиру для покупки. Активный поиск, пуш включён, вечер. Промо сегодня не получал,</text>
+        <text x="20" y="42" class="t-s t-i">за неделю получил {{b1_ex_week_promo|num0}} из {{limit_week|num0}} возможных. Все пять заявок пришли в один час.</text>
+        <text x="20" y="72" class="t-h">ЗАЯВКА</text>
+        <text x="330" y="72" class="t-h">ПЕРВАЯ ВЕРСИЯ: ШЛЮЗ ТОЛЬКО ЗАПРЕЩАЕТ</text>
+        <text x="690" y="72" class="t-h">ВТОРАЯ ВЕРСИЯ</text>
 
-        <rect x="20" y="66" width="310" height="62" rx="10" class="box"/>
-        <text x="34" y="90" class="t-b">Вторичный рынок · класс Б</text>
-        <text x="34" y="112" class="t-s">«Квартира из избранного подешевела на {{ex_drop|%0}}»</text>
-        <text x="350" y="94" class="t-s t-i">заказано человеком: без оценки</text>
-        <text x="350" y="112" class="t-s">цена изменилась больше чем на {{price_change_min|%0}}</text>
-        <path d="M690 97 H712" class="ln" marker-end="url(#b5-i)"/>
-        <rect x="720" y="66" width="220" height="62" rx="10" class="b-cian"/>
-        <text x="734" y="90" class="t-b">Пуш сразу</text>
-        <text x="734" y="112" class="t-s t-i">в счётчик записан</text>
+        <rect x="20" y="84" width="290" height="70" rx="10" class="box"/>
+        <text x="36" y="108" class="t-b">Вторичка · подписка</text>
+        <text x="36" y="128" class="t-s">«Квартира из избранного подешевела</text>
+        <text x="36" y="144" class="t-s">на {{b1_ex_drop|%0}}»</text>
+        <path d="M310 119 H322" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="330" y="84" width="340" height="70" rx="10" class="box"/>
+        <text x="346" y="108" class="t-b">Пуш сейчас</text>
+        <text x="346" y="128" class="t-s t-i">класс Б: вне лимита промо,</text>
+        <text x="346" y="144" class="t-s t-i">потолок подписок не исчерпан</text>
+        <path d="M670 119 H682" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="690" y="84" width="250" height="70" rx="10" class="soft"/>
+        <text x="706" y="108" class="t-s">так же: заказанное человеком</text>
+        <text x="706" y="124" class="t-s">идёт вне оценки</text>
 
-        <rect x="20" y="140" width="310" height="62" rx="10" class="box"/>
-        <text x="34" y="164" class="t-b">Ипотека · класс В</text>
-        <text x="34" y="186" class="t-s">«Рассчитайте платёж по этой квартире»</text>
-        <text x="350" y="164" class="t-s t-i">1000 × {{ex_mortgage_p|%1}} × {{u_active_hint|num1}} × {{w_mortgage|num0}} × 1 = {{ex_mortgage_raw|num2}}</text>
-        <text x="350" y="186" class="t-s">{{ex_mortgage_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
-        <text x="680" y="180" text-anchor="end" class="t-n f-task">{{ex_mortgage_push|num2}}</text>
-        <path d="M690 171 H712" class="ln" marker-end="url(#b5-i)"/>
-        <rect x="720" y="140" width="220" height="62" rx="10" class="b-prop"/>
-        <text x="734" y="164" class="t-b">Место в карточке квартиры</text>
-        <text x="734" y="186" class="t-s t-i">пуш уже был: пауза {{push_gap_hours|num0}} часа</text>
+        <rect x="20" y="164" width="290" height="70" rx="10" class="box"/>
+        <text x="36" y="188" class="t-b">Первичка · промо</text>
+        <text x="36" y="208" class="t-s">«Старт продаж рядом с поиском»</text>
+        <path d="M310 199 H322" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="330" y="164" width="340" height="70" rx="10" class="box"/>
+        <text x="346" y="188" class="t-b">Пуш сейчас</text>
+        <text x="346" y="208" class="t-s t-i">быстрая полоса: первое в очереди;</text>
+        <text x="346" y="224" class="t-s t-i">сегодня {{b1_ex_today_promo|num0}} из {{limit_push_day|num0}}, за неделю {{b1_ex_week_promo|num0}} из {{limit_week|num0}}</text>
+        <path d="M670 199 H682" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="690" y="164" width="250" height="70" rx="10" class="soft"/>
+        <text x="706" y="188" class="t-s">в оценку: польза = Δшанс</text>
+        <text x="706" y="204" class="t-s">× вес первички; быстрая</text>
+        <text x="706" y="220" class="t-s">полоса остаётся</text>
 
-        <rect x="20" y="214" width="310" height="62" rx="10" class="box"/>
-        <text x="34" y="238" class="t-b">Первичный рынок · класс В</text>
-        <text x="34" y="260" class="t-s">«Старт продаж в комплексе рядом с вашим поиском»</text>
-        <text x="350" y="238" class="t-s t-i">1000 × {{ex_newbuild_p|%1}} × {{u_active_hint|num1}} × {{w_dev_call|num0}} × {{ex_newbuild_fit|num1}} = {{ex_newbuild_raw|num2}}</text>
-        <text x="350" y="260" class="t-s">{{ex_newbuild_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
-        <text x="680" y="254" text-anchor="end" class="t-n f-task">{{ex_newbuild_push|num2}}</text>
-        <path d="M690 245 H712" class="ln" marker-end="url(#b5-i)"/>
-        <rect x="720" y="214" width="220" height="62" rx="10" class="b-prop"/>
-        <text x="734" y="238" class="t-b">В письмо-подборку</text>
-        <text x="734" y="260" class="t-s t-i">ниже порога {{threshold_push|num0}}</text>
+        <rect x="20" y="244" width="290" height="70" rx="10" class="box"/>
+        <text x="36" y="268" class="t-b">Ипотека · промо</text>
+        <text x="36" y="288" class="t-s">«Рассчитайте платёж по этой</text>
+        <text x="36" y="304" class="t-s">квартире»</text>
+        <path d="M310 279 H322" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="330" y="244" width="340" height="70" rx="10" class="b-prop"/>
+        <text x="346" y="268" class="t-b">Отложено до завтра</text>
+        <text x="346" y="288" class="t-s t-i">слот дня занят стартом продаж;</text>
+        <text x="346" y="304" class="t-s t-i">завтра идёт первой: событие свежее</text>
+        <path d="M670 279 H682" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="690" y="244" width="250" height="70" rx="10" class="soft"/>
+        <text x="706" y="268" class="t-s">сравнится со стартом продаж</text>
+        <text x="706" y="284" class="t-s">по пользе, а не по свежести:</text>
+        <text x="706" y="300" class="t-s">может занять слот дня первой</text>
 
-        <rect x="20" y="288" width="310" height="62" rx="10" class="box"/>
-        <text x="34" y="312" class="t-b">Маркетинг · класс Г</text>
-        <text x="34" y="334" class="t-s">«Розыгрыш для пользователей»</text>
-        <text x="350" y="312" class="t-s t-i">1000 × {{ex_promo_p|%0}} × {{u_active_promo|num1}} × {{w_promo|num1}} × {{ex_promo_fit|num1}} = {{ex_promo_raw|num2}}</text>
-        <text x="350" y="334" class="t-s">{{ex_promo_raw|num2}} − {{ex_fatigue|num0}} − {{ex_optout|num0}} =</text>
-        <text x="680" y="328" text-anchor="end" class="t-n f-bad">{{ex_promo_push|num2}}</text>
-        <path d="M690 319 H712" class="ln" marker-end="url(#b5-i)"/>
-        <rect x="720" y="288" width="220" height="62" rx="10" class="b-bad"/>
-        <text x="734" y="312" class="t-b">Не отправлять</text>
-        <text x="734" y="334" class="t-s t-i">цена контакта выше пользы</text>
+        <rect x="20" y="324" width="290" height="70" rx="10" class="box"/>
+        <text x="36" y="348" class="t-b">Маркетинг · промо</text>
+        <text x="36" y="368" class="t-s">«Розыгрыш для пользователей»</text>
+        <path d="M310 359 H322" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="330" y="324" width="340" height="70" rx="10" class="b-bad"/>
+        <text x="346" y="348" class="t-b">Отказ</text>
+        <text x="346" y="368" class="t-s t-i">слот дня занят, завтра он у ипотеки;</text>
+        <text x="346" y="384" class="t-s t-i">срок жизни розыгрыша — сегодня</text>
+        <path d="M670 359 H682" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="690" y="324" width="250" height="70" rx="10" class="soft"/>
+        <text x="706" y="348" class="t-s">польза ниже порога сегмента:</text>
+        <text x="706" y="364" class="t-s">отказ, даже если слот</text>
+        <text x="706" y="380" class="t-s">свободен</text>
 
-        <rect x="20" y="362" width="310" height="62" rx="10" class="box"/>
-        <text x="34" y="386" class="t-b">Аренда · класс В</text>
-        <text x="34" y="408" class="t-s">«Новые квартиры в аренду рядом с вами»</text>
-        <text x="350" y="390" class="t-s t-i">уместность 0: человек покупает, а не снимает</text>
-        <path d="M690 393 H712" class="ln" marker-end="url(#b5-i)"/>
-        <rect x="720" y="362" width="220" height="62" rx="10" class="b-bad"/>
-        <text x="734" y="386" class="t-b">Отсечено на допуске</text>
-        <text x="734" y="408" class="t-s t-i">до оценки не дошло</text>
+        <rect x="20" y="404" width="290" height="70" rx="10" class="box"/>
+        <text x="36" y="428" class="t-b">Вторичка · подписка, письмо</text>
+        <text x="36" y="448" class="t-s">«Цена в избранном снизилась»;</text>
+        <text x="36" y="464" class="t-s">другой отправитель</text>
+        <path d="M310 439 H322" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="330" y="404" width="340" height="70" rx="10" class="b-bad"/>
+        <text x="346" y="428" class="t-b">Отказ: дубль</text>
+        <text x="346" y="448" class="t-s t-i">то же событие по той же квартире</text>
+        <text x="346" y="464" class="t-s t-i">уже ушло пушем; события склеены</text>
+        <path d="M670 439 H682" class="ln" marker-end="url(#b5e-i)"/>
+        <rect x="690" y="404" width="250" height="70" rx="10" class="soft"/>
+        <text x="706" y="428" class="t-s">так же: дубль оценкой</text>
+        <text x="706" y="444" class="t-s">не отменяется</text>
+
+        <text x="20" y="500" class="t-s t-i">Итог первой версии: ушло {{b1_ex_sent|num0}} сообщения, отложено {{b1_ex_wait|num0}}, отказано {{b1_ex_deny|num0}}. Решали класс, лимит, очередь и дубль; пользу никто не считал.</text>
       </svg>
     </div>
-    <figcaption>Числа в примере условные: веса действий ({{w_mortgage|num0}} у ипотечной заявки, {{w_dev_call|num0}} у звонка застройщику, {{w_promo|num1}} у участия в акции), добавленная доля для активного человека ({{u_active_hint|num1}} у подсказки, {{u_active_promo|num1}} у промо), штраф {{fatigue_step|num0}} балл за каждый контакт сверх двух за неделю. Расчёт делает скрипт по формуле из схемы выше, руками можно проверить каждую строку.</figcaption>
+    <figcaption>Пример условный. Нижняя планка в нём не видна: её считают по вертикали за квартал, а не по одному человеку. Вертикаль, у которой за квартал недобор до планки, получала бы слот в очереди раньше. Вторая версия не отменяет запреты первой, она добавляет право промолчать при свободном слоте.</figcaption>
   </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">LinkedIn, NOAH</span> · бюджет ожидаемых отписок вместо штрафа с множителем: индекс 12-месячной ценности +2,16%, отписки +1,52% против +8,08% у прежней системы с расширением аудитории · 06.2024 · <span class="src">Т</span> · <span class="fit mid">применимо: письма, вторая версия</span> · <a href="https://arxiv.org/abs/2405.10490" rel="noopener">источник</a></li>
+    <li><span class="who">Pinterest</span> · порог отправки по сегменту активности, объём держит регулятор, 1% решений случайные · 08.2024 · <span class="src">П</span> · <span class="fit hi">применимо: порог по сегменту активности</span> · <a href="https://medium.com/pinterest-engineering/nep-notification-system-and-relevance-a7fff21986c7" rel="noopener">источник</a></li>
+    <li><span class="who">Tencent QQ Browser</span> · одна награда и порог из лимита объёма; A/B 7 дней: DAU +0,99%, CTR +10,12%, открытие +1,04% · около 2024 · <span class="src">П</span> · <span class="fit mid">применимо: ежедневное использование, у недвижимости реже</span> · <a href="https://sites.ualberta.ca/~dniu/Homepage/Publications_files/Online_Volume_Optimization_for_Notifications_via_Long_Short_Term_Value_Modeling.pdf" rel="noopener">источник</a></li>
+    <li><span class="who">Т-Банк</span> · клиентам из топ-4% по модели негатива рассылку не доставляли: отписки −5,08%, продукты не пострадали · 08.2024 · <span class="src">П</span> · <span class="fit hi">применимо: реклама и редкий контакт</span> · <a href="https://habr.com/ru/companies/tbank/articles/838148/" rel="noopener">источник</a></li>
+    <li><span class="who">Baek и соавторы</span> · письмо раз в два дня вместо ежедневного: отписки −59,2%, выручка в день −7,6%; после отписки выручка следующего месяца −36…44% · эксперимент на 603 тыс. клиентов ритейлера · <span class="src">Т</span> · <span class="fit mid">применимо: цена отписки, розница</span> · <a href="http://www.columbia.edu/~wm2428/papers/customer_engagement.pdf" rel="noopener">источник</a></li>
+  </ul></div>
 
   <div class="answer">
     <h3>Ответ на вопрос кейса</h3>
     <ul>
-      <li><b>Бизнес-эффект</b> — шанс действия, умноженный на вес действия, и только та доля, которой без сообщения не случилось бы.</li>
-      <li><b>Уместность</b> — множитель: совпадает ли сообщение с текущим поиском человека. Несовпадение обнуляет оценку.</li>
-      <li><b>Усталость</b> — вычитаемое: чем больше контактов за неделю, тем выше планка для следующего.</li>
-      <li><b>Риск негативной реакции</b> — шанс отписки, умноженный на цену потерянного канала. Отписка закрывает канал для всех команд.</li>
-      <li>Поверх формулы — простые правила: {{ignored_to_pause|num0}} сообщения подряд без реакции включают паузу на {{pause_days|num0}} дней; у сообщений про ипотеку, деньги и адрес личные детали не выносятся на экран блокировки.</li>
-      <li><span class="mark prop">Предложение</span> Откуда стартовые веса. Где ЦИАН получает деньги прямо за действие, вес равен выручке на действие: звонок застройщику от {{lead_call_seconds|num0}} секунд приносит в среднем {{rev_per_lead|тыс1}} тыс. ₽. Где платят за размещение, вес считают финансы: выручка направления за квартал, делённая на число контактов. Совет меняет веса раз в квартал и только по замеру: если действие не ведёт к контакту, его вес снижается.</li>
+      <li><b>Эффект.</b> В первой версии не считаем по каждому сообщению: прирост системы меряет общая контрольная группа {{holdout_share|%0}}. Во второй версии польза равна добавленному шансу действия на вес вертикали; модели учатся на просмотрах и контактах, а не на платных звонках: их около {{econ_calls_year|тыс0}} тыс. в год.</li>
+      <li><b>Уместность.</b> Аудиторию выбирает заказчик, шлюз проверяет класс и исключения. Состояние поиска входит в оценку во второй версии.</li>
+      <li><b>Усталость.</b> Общий лимит промо и счётчик давления: в нём сервисное, подписки и показы внутри продукта как {{b1_placement_weight|num1}} контакта. Во второй версии добавится порог по сегменту активности.</li>
+      <li><b>Риск негатива.</b> Исключения и защитный порог отписок; во второй версии бюджет отписок как ограничение. Отписка закрывает канал для всех команд.</li>
+      <li><span class="mark prop">Предложение</span> Откуда веса во второй версии. Новостройки: плата за звонок {{rev_per_lead|тыс1}} тыс. ₽ с поправкой на перетекание между застройщиками. Вторичка и аренда: доля выручки размещения, зависящая от контактов, — гипотеза, в бюджете ноль. До согласования — ручные доли. Утверждает CPO с финансами раз в квартал.</li>
     </ul>
   </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Бюджет отписок как ограничение</td><td>Штраф за отписку в формуле</td><td>Часть ценных сообщений не уйдёт, когда бюджет исчерпан</td><td>LinkedIn NOAH (R3-0046)</td></tr>
+        <tr><td>Модели учим на ближних действиях: просмотр, контакт</td><td>Учить на платных звонках застройщикам</td><td>Ближнее действие не всегда ведёт к звонку; связь проверяем по когортам</td><td>Платных звонков около {{econ_calls_year|тыс0}} тыс. в год: мало для обучения (оценка)</td></tr>
+        <tr><td>Порог по сегменту активности</td><td>Один порог для всех</td><td>Значения порогов никто не публикует: подбираем тестами</td><td>Pinterest, Tencent (R2-0050, R2-0044)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="basis">
     <h3>Откуда это</h3>
     <ul>
-      <li><span class="mark task">Из задания</span> Отписка 0,25% на пуш. 60% действий совершают уже активные: отсюда понижающий коэффициент.</li>
-      <li><span class="mark market">Практика рынка</span> Цена каждого сообщения в оценке: Netflix. Блокировка сообщений людям с высоким риском негатива: Т‑Банк, отписок на 5% меньше без потерь в продажах. Штраф за сходство с недавними сообщениями: Instagram. Отписавшийся клиент тратит на 36% меньше: эксперимент на 603 тыс. клиентов магазина (наука; розница).</li>
-      <li><span class="mark assume">Допущение</span> Все веса, пороги и ступени. Их никто не публикует; подбираются тестами, в которых частоту меняют намеренно.</li>
+      <li><span class="mark task">Из задания</span> Отписка {{push_optout|%2}} на пуш. {{already_active|%0}} целевых действий совершают уже активные: отсюда понижающий коэффициент в оценке.</li>
+      <li><span class="mark market">Практика рынка</span> Бюджет отписок: LinkedIn NOAH. Блокировка рассылки людям с высоким риском негатива: Т‑Банк. Порог по сегменту активности: Pinterest, Tencent. Цена отписки: Baek с соавторами (наука, розница).</li>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Звонок застройщику от {{lead_call_seconds|num0}} секунд приносит в среднем {{rev_per_lead|тыс1}} тыс. ₽; размещение даёт {{rev_share_listing|%0}} выручки.</li>
+      <li><span class="mark assume">Допущение</span> Лимит промо, защитные пороги и все значения примера. Их никто не публикует; подбираются тестами, в которых частоту меняют намеренно.</li>
     </ul>
   </div>
 </article>
