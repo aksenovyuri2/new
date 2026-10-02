@@ -2,7 +2,7 @@
 import glob, os, re, ssl, sys, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 WORK = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-URL = re.compile(r"https?://[^\s)\]>»\"']+")
+URL = re.compile(r"(?:https?://)?((?:[a-z0-9-]+\.)+(?:ru|com|org|net|tech|io|ai|blog|dev|kz|app|me|info|co|pro|media|news|site|online|tv|рф|uk|de|in|br)(?:/[^\s·)\]»\"']*)?)", re.I)
 DATE = re.compile(r"\b(0[1-9]|1[0-2])\.(20\d\d)\b|\b(20\d\d)\b")
 ctx = ssl.create_default_context(cafile=os.environ.get("SSL_CERT_FILE") or "/root/.ccr/ca-bundle.crt") if os.path.exists("/root/.ccr/ca-bundle.crt") else None
 
@@ -20,7 +20,7 @@ def main():
     allurls = {}
     for p in sorted(glob.glob(os.path.join(WORK, "brief", "W*.md"))):
         txt = open(p, encoding="utf-8").read()
-        urls = sorted(set(u.rstrip(".,;:") for u in URL.findall(txt)))
+        urls = sorted(set("https://" + u.rstrip(".,;:") for u in URL.findall(txt) if "/" in u or u.count(".") >= 1))
         facts = [l for l in txt.splitlines() if l.strip().startswith("- ") and URL.search(l)]
         fresh = sum(1 for l in facts if any(int(y or y2) >= 2023 for _, y, y2 in DATE.findall(l) if (y or y2)))
         allurls[os.path.basename(p)] = urls
