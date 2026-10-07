@@ -7,7 +7,7 @@ Head of Product «Привлечение и удержание» · Юрий А�
 ## Как смотреть
 
 - **PDF** — [cian-main.pdf](cian-main.pdf): 12 страниц, открывается прямо на GitHub.
-- **Живая версия с анимацией** — онлайн: https://rawcdn.githack.com/aksenovyuri2/new/c21766266858a776b78c105433b71466487c6917/presentation/index.html · или скачайте папку `presentation` и откройте [index.html](index.html) в браузере.
+- **Живая версия с анимацией** — онлайн: https://aksenovyuri2.github.io/new/ · или скачайте папку `presentation` и откройте [index.html](index.html) в браузере.
   - ← → / пробел / клик — листать
   - F — полный экран
   - N — заметки докладчика
