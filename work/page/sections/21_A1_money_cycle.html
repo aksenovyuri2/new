@@ -1,0 +1,188 @@
+<!-- tab: asis -->
+<article class="scheme" id="s-a1">
+  <header>
+    <p class="code"><span>Схема А1</span><span class="core">★ ядро</span><span>Как есть · деньги и цикл</span></p>
+    <h2>Ищущий не платит: {{asis_pro_share|%0}} выручки платят профессионалы — за контакт в лидах ({{p1_sh_leads|%1}}), за размещение — за срок, за медиа — за показы</h2>
+    <p class="sub">Сообщение получает человек, а деньги ЦИАН получает от продавцов: за размещение, за звонок застройщику, за рекламу. Эффект сообщения считается по тому, что человек сделал у продавца, но платой за контакт служит только звонок застройщику — размещение оплачено за срок.</p>
+  </header>
+
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 470" role="img" aria-label="ЦИАН отправляет сообщение ищущему. Ищущий звонит или пишет продавцу. Продавцы платят ЦИАН: размещение {{p1_sh_listing|%1}} выручки за срок, звонки застройщикам {{p1_sh_leads|%1}} за контакт, медиа {{p1_sh_media|%1}}, сделки и ипотека {{p1_sh_trans|%1}}, прочее {{p1_sh_other|%0}}. Размещение, лиды и медиа вместе дают {{asis_pro_share|%0}} выручки: так платят профессионалы. Ответ продавца возвращается к ищущему и служит сигналом для платформы.">
+        <defs>
+          <marker id="a1-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="a1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-prop"/></marker>
+        </defs>
+        <text x="20" y="28" class="t-h">ЦИАН</text>
+        <text x="250" y="28" class="t-h">ЧЕЛОВЕК</text>
+        <text x="500" y="28" class="t-h">КТО ПЛАТИТ ЦИАН · ДОЛЯ ВЫРУЧКИ 1 ПОЛ. 2026</text>
+
+        <rect x="20" y="175" width="170" height="80" rx="10" class="box"/>
+        <text x="36" y="205" class="t-b">Сообщение</text>
+        <text x="36" y="226" class="t-s">пуш, письмо,</text>
+        <text x="36" y="242" class="t-s">место в продукте</text>
+        <path d="M190 215 H242" class="ln" marker-end="url(#a1-i)"/>
+
+        <rect x="250" y="130" width="200" height="170" rx="10" class="b-cian"/>
+        <text x="266" y="158" class="t-b">Ищущий</text>
+        <text x="266" y="190" class="t-n f-cian">{{cian_mau|млн1}} млн</text>
+        <text x="266" y="208" class="t-s">человек в месяц</text>
+        <text x="266" y="238" class="t-b">за поиск не платит</text>
+        <text x="266" y="264" class="t-s">более {{organic_share|%0}} трафика</text>
+        <text x="266" y="280" class="t-s">приходит бесплатно</text>
+        <text x="250" y="324" class="t-s t-i">исключение: «Ранний доступ»</text>
+        <text x="250" y="340" class="t-s">{{early_access_min|num0}}–{{early_access_max|num0}} ₽ за первые часы</text>
+
+        <path d="M450 170 C478 170 472 80 498 80" class="ln" marker-end="url(#a1-i)"/>
+        <path d="M450 200 C478 200 472 154 498 154" class="ln" marker-end="url(#a1-i)"/>
+        <path d="M450 230 C478 230 472 228 498 228" class="ln" marker-end="url(#a1-i)"/>
+        <path d="M450 260 C478 260 472 302 498 302" class="ln" marker-end="url(#a1-i)"/>
+
+        <rect x="500" y="48" width="320" height="64" rx="10" class="b-cian"/>
+        <text x="514" y="70" class="t-b">Размещение</text>
+        <text x="806" y="72" text-anchor="end" class="t-n f-cian">{{p1_sh_listing|%1}}</text>
+        <text x="514" y="89" class="t-s">агенты · {{rev_per_listing_day|num0}} ₽ в сутки за объявление</text>
+        <rect x="514" y="96" width="149" height="8" class="fill-task"/>
+        <text x="806" y="104" text-anchor="end" class="t-s">+{{asis_g_listing|%1}} за полугодие</text>
+
+        <rect x="500" y="122" width="320" height="64" rx="10" class="b-cian"/>
+        <text x="514" y="144" class="t-b">Лиды</text>
+        <text x="806" y="146" text-anchor="end" class="t-n f-cian">{{p1_sh_leads|%1}}</text>
+        <text x="514" y="163" class="t-s">застройщик · {{rev_per_lead|тыс1}} тыс. ₽ за звонок от {{lead_call_seconds|num0}} с</text>
+        <rect x="514" y="170" width="92" height="8" class="fill-task"/>
+        <text x="806" y="178" text-anchor="end" class="t-s">+{{asis_g_leads|%1}} за полугодие</text>
+
+        <rect x="500" y="196" width="320" height="64" rx="10" class="b-cian"/>
+        <text x="514" y="218" class="t-b">Медиа</text>
+        <text x="806" y="220" text-anchor="end" class="t-n f-cian">{{p1_sh_media|%1}}</text>
+        <text x="514" y="237" class="t-s">реклама на площадке</text>
+        <rect x="514" y="244" width="35" height="8" class="fill-task"/>
+        <text x="806" y="252" text-anchor="end" class="t-s">+{{asis_g_media|%1}} за полугодие</text>
+
+        <rect x="500" y="270" width="320" height="64" rx="10" class="b-cian"/>
+        <text x="514" y="292" class="t-b">Сделки и ипотека</text>
+        <text x="806" y="294" text-anchor="end" class="t-n f-cian">{{p1_sh_trans|%1}}</text>
+        <text x="514" y="311" class="t-s">банки · комиссия за ипотеку</text>
+        <rect x="514" y="318" width="9" height="8" class="fill-task"/>
+        <text x="806" y="326" text-anchor="end" class="t-s f-bad">{{asis_g_trans|%1}} за полугодие</text>
+
+        <path d="M820 80 H846 M820 154 H846 M820 228 H846 M820 302 H846 M846 80 V420 H105 V257" class="ln" marker-end="url(#a1-i)"/>
+        <text x="858" y="130" class="t-n f-cian">{{asis_pro_share|%0}}</text>
+        <text x="858" y="150" class="t-s">выручки платят</text>
+        <text x="858" y="166" class="t-s">профессионалы:</text>
+        <text x="858" y="188" class="t-s t-i">размещение,</text>
+        <text x="858" y="204" class="t-s t-i">лиды, медиа</text>
+        <text x="858" y="232" class="t-s t-b">за контакт —</text>
+        <text x="858" y="248" class="t-s t-b">только лиды;</text>
+        <text x="858" y="264" class="t-s t-b">размещение —</text>
+        <text x="858" y="280" class="t-s t-b">за срок</text>
+
+        <path d="M560 334 V352 H430 V303" class="ln-prop" marker-end="url(#a1-p)"/>
+        <text x="442" y="374" class="t-b f-prop">Ответ продавца — сигнал для платформы</text>
+        <text x="442" y="391" class="t-s">без ответа звонок не оплачивается: лид — от {{lead_call_seconds|num0}} секунд</text>
+
+        <text x="120" y="412" class="t-s">деньги: {{rev_h1_2026|млн0}} млн ₽ выручки за первое полугодие 2026 года</text>
+        <text x="20" y="440" class="t-s">Полоска — доля в выручке, рост — к первому полугодию 2025 года.</text>
+        <text x="20" y="458" class="t-s">Доли: {{p1_sh_listing|%1}} + {{p1_sh_leads|%1}} + {{p1_sh_media|%1}} + {{p1_sh_trans|%1}} + прочее {{p1_sh_other|%0}} ({{p1_other_h1|млн0}} млн ₽) = 100%.</text>
+      </svg>
+    </div>
+    <figcaption>Одно и то же сообщение ведёт к действиям разной цены: звонок застройщику приносит {{rev_per_lead|тыс1}} тыс. рублей, сутки объявления — в среднем {{rev_per_listing_day|num0}} рублей, считая бесплатные. Это разные единицы, и сравнивать их в одних рублях нельзя. Розовая стрелка — то, что добавляет платформа: она берёт ответ продавца в решение о том, что слать ищущему.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="draw">
+      <svg viewBox="0 0 960 300" role="img" aria-label="Поиск жилья проходит пять состояний: разведка, активный поиск, близко к сделке, сделка вне площадки и годы между сделками. Удержание распадается на три задачи: удержать в окне поиска, не сжечь канал после сделки, вернуть к новой потребности.">
+        <defs>
+          <marker id="a1c-i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker>
+          <marker id="a1c-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah-m"/></marker>
+        </defs>
+        <text x="20" y="28" class="t-h">ОДИН ПОИСК ОДНОГО ЧЕЛОВЕКА</text>
+
+        <rect x="20" y="44" width="170" height="76" rx="10" class="box"/>
+        <text x="34" y="74" class="t-b">Разведка</text>
+        <text x="34" y="96" class="t-s">смотрит без цели</text>
+
+        <rect x="206" y="44" width="170" height="76" rx="10" class="box"/>
+        <text x="220" y="74" class="t-b">Активный поиск</text>
+        <text x="220" y="94" class="t-s f-market">аренда: около {{search_rent_weeks|num0}} недель</text>
+        <text x="220" y="110" class="t-s f-market">покупка: {{search_buy_months_min|num0}}–{{search_buy_months_max|num0}} месяца</text>
+
+        <rect x="392" y="44" width="170" height="76" rx="10" class="box"/>
+        <text x="406" y="74" class="t-b">Близко к сделке</text>
+        <text x="406" y="96" class="t-s">звонки, показы, ипотека</text>
+
+        <rect x="578" y="44" width="170" height="76" rx="10" class="b-market"/>
+        <text x="592" y="74" class="t-b">Сделка</text>
+        <text x="592" y="94" class="t-s t-i">проходит вне площадки,</text>
+        <text x="592" y="110" class="t-s t-i">её почти не видно</text>
+
+        <rect x="764" y="44" width="176" height="76" rx="10" class="box"/>
+        <text x="778" y="74" class="t-b">Между сделками</text>
+        <text x="778" y="94" class="t-s f-market">годы: в США {{us_tenure_years|num0}} лет</text>
+        <text x="778" y="110" class="t-s f-market">до следующей продажи</text>
+
+        <path d="M190 82 H200" class="ln" marker-end="url(#a1c-i)"/>
+        <path d="M376 82 H386" class="ln" marker-end="url(#a1c-i)"/>
+        <path d="M562 82 H572" class="ln" marker-end="url(#a1c-i)"/>
+        <path d="M748 82 H758" class="ln" marker-end="url(#a1c-i)"/>
+
+        <path d="M852 120 V152 H105 V128" class="ln-m" marker-end="url(#a1c-m)"/>
+        <text x="478" y="146" text-anchor="middle" class="t-s">новая потребность — новый поиск</text>
+
+        <text x="20" y="190" class="t-h">ТРИ РАЗНЫЕ ЗАДАЧИ УДЕРЖАНИЯ</text>
+        <rect x="20" y="202" width="542" height="76" rx="10" class="b-prop"/>
+        <text x="34" y="232" class="t-b">1. Удержать в окне поиска</text>
+        <text x="34" y="254" class="t-s t-i">Скорость важнее частоты: новый объект по сохранённому поиску, упала цена</text>
+
+        <rect x="578" y="202" width="170" height="76" rx="10" class="b-prop"/>
+        <text x="592" y="232" class="t-b">2. Не сжечь канал</text>
+        <text x="592" y="254" class="t-s t-i">замолчать после сделки</text>
+
+        <rect x="764" y="202" width="176" height="76" rx="10" class="b-prop"/>
+        <text x="778" y="232" class="t-b">3. Вернуть позже</text>
+        <text x="778" y="254" class="t-s t-i">цена своей квартиры, ставка</text>
+      </svg>
+    </div>
+    <figcaption>Окно активного поиска короткое, а между сделками проходят годы. Сроки взяты из опросов тех, кто уже купил или снял; от первой мысли до покупки проходит около года. Успешный поиск заканчивается тем, что человек уходит. Поэтому «давно не заходил» здесь чаще значит «нашёл жильё», чем «мы его теряем».</figcaption>
+  </figure>
+
+  <div class="market"><h3>Рынок</h3><ul>
+    <li><span class="who">Авито Недвижимость</span> · канал по размеру клиента: крупным менеджер, средним контакт-центр, малым автоматика; открытие рассылки +15 п.п., отписки не изменились · 12.2024 · <span class="src">П</span> · <span class="fit hi">применимо: недвижимость, РФ, продавцы разного размера</span> · <a href="https://habr.com/ru/companies/avito/articles/863960/" rel="noopener">источник</a></li>
+    <li><span class="who">Авито Недвижимость</span> · ранний доступ к контактам собственников аренды на 4 часа за 129 руб. за контакт; планирует вернуть деньги, если арендодатель не ответил · 08.2025 · <span class="src">Т</span> · <span class="fit hi">применимо: ответ продавца как часть продукта</span> · <a href="https://aif.ru/realty/price/ranniy-dostup-avito-nedvizhimost-zapustila-instrument-dlya-arendatorov" rel="noopener">источник</a></li>
+    <li><span class="who">Авито</span> · метрики готовы по шести вертикалям и двум типам пользователей, продавцам и покупателям: 12 наборов · 06.2025 · <span class="src">П</span> · <span class="fit hi">применимо: две стороны в одной платформе</span> · <a href="https://habr.com/ru/companies/avito/articles/918634/" rel="noopener">источник</a></li>
+    <li><span class="who">Zillow</span> · целевым сигналом считает контакт ищущего с агентом, а не просмотр страницы · 04.2020, фон · <span class="src">П</span> · <span class="fit mid">применимо: недвижимость США, цель та же, цифр нет</span> · <a href="https://medium.com/zillow-tech-hub/predicting-sparse-down-funnel-events-in-home-shopping-with-transfer-and-multi-target-learning-e6cd7f7de989" rel="noopener">источник</a></li>
+    <li><span class="who">Ozon, Яндекс Маркет</span> · дали продавцам собственные рассылки через общий контроль частоты · 03–05.2025 · <span class="src">Т</span> · <span class="fit mid">применимо: двусторонняя площадка, но не недвижимость</span> · <a href="https://saasmarket.ru/blog/news/yandeks-market-rasshiryaet-vozmozhnosti-prodavcam-dostupna-samostoyatelnaya-otpravka-push-uvedomleniy" rel="noopener">источник</a></li>
+  </ul></div>
+
+  <div class="answer">
+    <h3>Ответ на вопрос кейса</h3>
+    <ul>
+      <li>Бизнес-эффект сообщения — добавленное целевое действие у продавца: звонок, чат, заявка. ЦИАН мерит эффект CRM похожей мерой: +{{target_actions_growth|%0}} целевых действий за квартал. Что в неё входит, компания не раскрывает.</li>
+      <li>Цена действий различается на порядки: {{rev_per_lead|тыс1}} тыс. рублей за звонок против {{rev_per_listing_day|num0}} рублей в сутки за объявление. Но звонок застройщику оплачивает застройщик, а не ценит ищущий. Общая мера в рублях отдала бы внимание новостройкам и оставила без него вторичку и аренду.</li>
+      <li>{{asis_pro_share|%0}} выручки платят профессионалы. За контакт платят только в лидах ({{p1_sh_leads|%1}}); размещение ({{p1_sh_listing|%1}}) оплачено за срок, медиа ({{p1_sh_media|%1}}) — за показы. Какая доля размещения зависит от контактов (k), неизвестно; в бюджете k = 0.</li>
+      <li>Ответ продавца нужен платформе как сигнал: звонок короче {{lead_call_seconds|num0}} секунд денег не приносит. В первой версии платформа берёт этот сигнал в решение об ищущем, а рассылки самим профессионалам не включает.</li>
+      <li>Ищущий почти не платит, больше {{organic_share|%0}} трафика бесплатный. Поэтому канал возврата — способ вернуть человека, а не источник денег; что стоит его потеря в рублях, неизвестно.</li>
+      <li>Решение принимается для человека и его текущего поиска; у платформы три разные задачи удержания (рисунок ниже).</li>
+    </ul>
+  </div>
+
+  <div class="tablewrap">
+    <table class="tradeoff">
+      <thead><tr><th>Решение</th><th>Альтернатива</th><th>Цена выбора</th><th>Кто так делал</th></tr></thead>
+      <tbody>
+        <tr><td>Мерить добавленные целевые действия по вертикалям</td><td>Одна общая мера в рублях</td><td>Нужны веса вертикалей; до замера они ручные</td><td>Авито: 12 наборов метрик по вертикалям и сторонам</td></tr>
+        <tr><td>Брать ответ продавца как сигнал</td><td>Сразу слать рассылки профессионалам</td><td>Данные о продавцах нужны от B2B, срок не раньше второго квартала</td><td>Авито: возврат денег при отсутствии ответа; Zillow: контакт с агентом</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="basis">
+    <h3>Откуда это</h3>
+    <ul>
+      <li><span class="mark cian">ЦИАН, открытые данные</span> Аудитория, структура выручки, выручка на звонок и на объявление, кто платит: <a href="https://ir.ciangroup.ru/upload/iblock/22c/xgpx1d8etk5n3qmfc7h6k3fprejjareu/Cian_Q2_2026_financial_results_RUS.pdf" rel="noopener">результаты за второй квартал и первое полугодие 2026 года</a> и <a href="https://ir.ciangroup.ru/upload/reports/godovoj-otchet-mkpao-cian-za-2025-god.pdf" rel="noopener">годовой отчёт за 2025 год</a>. Лид — платный целевой звонок, в годовом отчёте — от 30 секунд. «Ранний доступ»: <a href="https://support.cian.ru/ru/knowledge_base/art/9714/cat/103/rannij-dostup-k-kontaktam-sobstvennika" rel="noopener">справочный центр</a>.</li>
+      <li><span class="mark assume">Допущение</span> Доля {{asis_pro_share|%0}} — наш расчёт: размещение, лиды и медиа вместе, делённые на выручку полугодия ({{p1_sh_listing|%1}} + {{p1_sh_leads|%1}} + {{p1_sh_media|%1}}). Прочая выручка — {{p1_other_h1|млн0}} млн ₽, {{p1_sh_other|%0}}: разница до целого; доли даны с десятыми, чтобы сумма сходилась. Границы состояний поиска во втором рисунке: ни одна площадка не публикует, как узнаёт, что поиск закончен.</li>
+      <li><span class="mark market">Практика рынка</span> Сроки поиска: опрос купивших жильё в России (2024) и исследование аренды с Авито (2026). В США {{us_agent_share|%0}} покупок идут через агента, жильём владеют {{us_tenure_years|num0}} лет до продажи (NAR, 2025). В России {{ru_self_search_share|%0}} покупателей искали сами по объявлениям.</li>
+      <li><span class="mark prop">Предложение</span> Ответ продавца как сигнал для платформы; три задачи удержания.</li>
+    </ul>
+  </div>
+</article>
