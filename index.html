@@ -45,6 +45,7 @@ iframe.embed{border:0;background:transparent}
 @keyframes bi-scale{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
 @keyframes bi-pop{0%{opacity:0;scale:.6}70%{opacity:1;scale:1.06}100%{opacity:1;scale:1}}
 body.print{overflow:visible;background:#fff}
+body.print *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 body.print #viewport{position:static;display:block}
 body.print #stage{width:auto;height:auto;transform:none!important;box-shadow:none}
 body.print .slide{position:relative;display:block;width:1920px;height:1080px;break-after:page}
@@ -356,7 +357,8 @@ function show(i){
 }
 if(print){
   document.body.classList.add('print');
-  slides.forEach(s=>s.querySelectorAll('iframe.embed').forEach(f=>{f.srcdoc=f.getAttribute('data-src')}));
+  const PCA='<style>*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}</style>';
+  slides.forEach(s=>s.querySelectorAll('iframe.embed').forEach(f=>{f.srcdoc=f.getAttribute('data-src').replace('<meta charset="utf-8">','<meta charset="utf-8">'+PCA)}));
 }else{
   addEventListener('resize',fit);fit();
   addEventListener('keydown',e=>{
